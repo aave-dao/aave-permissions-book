@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/bgd-labs/aave-permissions-list#readme",
   "devDependencies": {
-    "@bgd-labs/aave-address-book": "4.28.0",
+    "@bgd-labs/aave-address-book": "4.28.2",
     "@types/node": "^18.8.3",
     "dotenv": "^16.0.3",
     "prettier": "^3.5.2",
@@ -29,7 +29,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@bgd-labs/toolbox": "0.0.32",
+    "@bgd-labs/toolbox": "0.0.40",
     "viem": "^2.33.1"
   }
 }
