@@ -118,6 +118,13 @@ export const generateTable = (network: string, pool: string): string => {
     return readmeDirectoryTable;
   }
 
+  if (pool === Pools.LIDO || pool === Pools.ETHERFI) {
+    poolPermitsByContract.contracts = {
+      ...poolPermitsByContract.contracts,
+      PoolExposureSteward: getPermissionsByNetwork(network)['V3'].contracts['PoolExposureSteward'],
+    };
+  }
+
   // create pool table
   readmeByNetwork += `## ${pool} \n`;
 
@@ -129,6 +136,7 @@ export const generateTable = (network: string, pool: string): string => {
       ...mainnetPermissions[Pools.GOV_V2].contracts,
     });
   }
+
   let v3Contracts;
   if (
     pool === Pools.LIDO ||
@@ -321,6 +329,7 @@ export const generateTable = (network: string, pool: string): string => {
         ...getPermissionsByNetwork(ChainId.mainnet)['GHO'].contracts,
       },
     pool === Pools.V3_WHITE_LABEL ? true : false,
+    networkConfigs[Number(network)].addressesNames
   );
   for (let actionName of Object.keys(actionExecutors)) {
     if (Array.from(actionExecutors[actionName]).length > 0) {

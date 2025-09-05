@@ -202,18 +202,17 @@ export const networkConfigs: NetworkConfigs = {
       '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
       '0x6c1DC85f2aE71C3DAcd6E44Bb57DEeF61b540a5A': 'Deficit Offset Clinic Steward',
-      '0xf721bE7AA57a987F3e4D05DAc6fcb5aBF9F7cE9A': 'Edge Risk Steward EMode',
-      '0x9F76954f5b55B4908d178f31C07F9537AC8328E7': 'Edge Risk Steward Discount Rate',
       '0x593B09afc075B3c326CE2AD7750888645BA8943d': 'Gho Core Direct Minter',
       '0x46Aa1063e5265b43663E81329333B47c517A5409': 'Gho Bucket Steward',
       '0x29F8c924B7aB50649c9597B8811d08f9Ef0310c3': 'USDC Oracle Swap Freezer',
       '0xD1E856a947CdF56b4f000ee29d34F5808E0A6848': 'Gho Gsm Steward',
       '0x6439DA186BD3d37fE7Fd36036543b403e9FAbaE7': 'USDT Oracle Swap Freezer',
       '0x2cE01c87Fec1b71A9041c52CaED46Fc5f4807285': 'Gho Lido Direct Minter',
-      '0x22aC12a6937BBBC0a301AF9154d08EaD95673122': 'Lido Pool Exposure Steward',
       '0x5C905d62B22e4DAa4967E517C4a047Ff6026C731': 'Lido Gho Aave Steward',
-      '0x81aFd0F99c2Afa2f2DD7E387c2Ef9CD2a29b6E1A': 'Lido Edge Risk Steward',
       '0x1EBdbE77bbDDD284BdCE8D7981D7eD26D6af58cA': 'Etherfi Caps Plus Risk Steward',
+      '0x834a5aC6e9D05b92F599A031941262F761c34859': 'Lido Aave Steward Injector',
+      '0x15885A83936EB943e98EeFFb91e9A49040d93993': 'AaveStewardInjectorDiscountRate',
+      '0x83ab600cE8a61b43e1757b89C0589928f765c1C4': 'AaveStewardInjectorEMode'
     },
     pools: {
       [Pools.V3]: {
@@ -397,7 +396,7 @@ export const networkConfigs: NetworkConfigs = {
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0xc8a2ADC4261c6b669CdFf69E717E77C9cFeB420d': 'Old VotingMachine',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x35B09a414F6003346cA2E2553b3ea91Cd3524af3': 'Edge Risk Steward Caps',
+      '0x7683177b05a92e8B169D833718BDF9d0ce809aA9': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {
@@ -459,7 +458,7 @@ export const networkConfigs: NetworkConfigs = {
       '0xdeadD8aB03075b7FBA81864202a2f59EE25B312b': 'CleanUp Admin',
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x655252250f4A453854040A49E8280951A76f3033': 'Edge Risk Steward Caps'
+      '0xB5ABc2BcB050bE70EF53338E547d87d06F7c877d': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {
@@ -515,8 +514,8 @@ export const networkConfigs: NetworkConfigs = {
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0x9b6f5ef589A3DD08670Dd146C11C4Fb33E04494F': 'Old VotingMachine',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x54714FAc85b0bf627288CC3a186dE81A42f1D635': 'Aave Steward Injector Caps',
-      '0xA5Ba213867E175A182a5dd6A9193C6158738105A': 'Gho Aave Steward'
+      '0xA5Ba213867E175A182a5dd6A9193C6158738105A': 'Gho Aave Steward',
+      '0xD68c00a1A4a33876C5EC71A2Bf7bBd8676d72BF6': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {
@@ -584,7 +583,7 @@ export const networkConfigs: NetworkConfigs = {
       '0xdeadD8aB03075b7FBA81864202a2f59EE25B312b': 'CleanUp Admin',
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x14a6801DBEBbd6CBE009c10eCFDA98C1c7B89012': 'Edge Risk Steward Caps',
+      '0x9867Ce43D2a574a152fE6b134F64c9578ce3cE03': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {
@@ -633,8 +632,8 @@ export const networkConfigs: NetworkConfigs = {
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x35d53dEB2F6f40Ea7af32B6F8BEd88eA966DF1D9': 'Aave Steward Injector Caps',
-      '0xd2D586f849620ef042FE3aF52eAa10e9b78bf7De': 'Arbitrum Gho Aave Steward'
+      '0xd2D586f849620ef042FE3aF52eAa10e9b78bf7De': 'Arbitrum Gho Aave Steward',
+      '0x87dFb794364f2B117C8dbaE29EA622938b3Ce465': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {
@@ -722,9 +721,9 @@ export const networkConfigs: NetworkConfigs = {
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x4f84A364B66Eb6280350da011829a6BD02B4712f': 'Aave Steward Injector Caps',
       '0xA9F30e6ED4098e9439B2ac8aEA2d3fc26BcEbb45': 'Bridge Executor',
-      '0xC5BcC58BE6172769ca1a78B8A45752E3C5059c39': 'Base Gho Aave Steward'
+      '0xC5BcC58BE6172769ca1a78B8A45752E3C5059c39': 'Base Gho Aave Steward',
+      '0x1B7e7b282Dff5661704E32838CAE4677FEB4C1F2': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {
@@ -776,8 +775,8 @@ export const networkConfigs: NetworkConfigs = {
       '0xdeadD8aB03075b7FBA81864202a2f59EE25B312b': 'CleanUp Admin',
       '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
       '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
-      '0x655252250f4A453854040A49E8280951A76f3033': 'Edge Risk Steward Caps',
-      '0x6e637e1E48025E51315d50ab96d5b3be1971A715': 'Gnosis Gho Aave Steward'
+      '0x6e637e1E48025E51315d50ab96d5b3be1971A715': 'Gnosis Gho Aave Steward',
+      '0x4bBBcfF03E94B2B661c5cA9c3BD34f6504591764': 'BGD Steward Injector Guardian'
     },
     pools: {
       [Pools.V3]: {

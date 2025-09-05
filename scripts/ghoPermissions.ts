@@ -393,7 +393,6 @@ export const resolveGHOModifiers = async (
           modifier: 'onlyPoolAdmin',
           addresses: uniqueAddresses([
             ...poolRoles['POOL_ADMIN'].map((roleAddress) => {
-              console.log('roleAddress---> ', roleAddress);
               return {
                 address: roleAddress,
                 owners: poolOwners['POOL_ADMIN'][roleAddress].owners || [],

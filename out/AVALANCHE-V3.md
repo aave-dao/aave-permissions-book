@@ -19,6 +19,7 @@
 |  [ACLManager](https://snowscan.xyz/address/0xa72636CbcAa8F5FF95B2cc47F3CDEe83F3294a0B) |  not upgradeable | |--------|--------|
 |  [AaveMerkleDistributor](https://snowscan.xyz/address/0xA065d5A299E618CD84a87641d5eEbC7916Fdf32E) |  not upgradeable | |--------|--------|
 |  [EdgeRiskStewardCaps](https://snowscan.xyz/address/0x57218F3aB422A39115951c3Eb06881a7A719DfdD) |  not upgradeable | |--------|--------|
+|  [AaveStewardInjectorCaps](https://snowscan.xyz/address/0x54714FAc85b0bf627288CC3a186dE81A42f1D635) |  not upgradeable | |--------|--------|
 |  [PoolExposureSteward](https://snowscan.xyz/address/0x0d68D50DB848dfE6012456781c1D79A11eD12a2e) |  not upgradeable | |--------|--------|
 |  [Manual AGRS](https://snowscan.xyz/address/0x23AceD103f5E22bD22B9272c82f29C0E51abC5c2) |  not upgradeable | |--------|--------|
 |  [Collector](https://snowscan.xyz/address/0x5ba7fd868c40c16f7aDfAe6CF87121E13FC2F7a0) |  Governance | |--------|--------|
@@ -38,21 +39,21 @@
 |----------|----------|
 |  updateReserveBorrowSettings |  Governance | |--------|--------|
 |  configureProtocolFees |  Governance | |--------|--------|
-|  updateReserveCaps |  Governance,External Contract,Multi-sig | |--------|--------|
+|  updateReserveCaps |  Governance,Steward | |--------|--------|
 |  updateReserveSettings |  Governance | |--------|--------|
 |  configureCollateral |  Governance | |--------|--------|
 |  upgradeAaveTokens (a/v/s) |  Governance | |--------|--------|
 |  upgradeAaveOracles |  Governance | |--------|--------|
 |  reserveUpgradeability |  Governance | |--------|--------|
 |  pausePool |  Governance,Multi-sig | |--------|--------|
-|  pauseAndFreezeReserve |  Governance,External Contract,Multi-sig | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,Steward,Multi-sig | |--------|--------|
 |  reserveListing |  Governance | |--------|--------|
 |  adminsConfiguration |  Governance | |--------|--------|
 |  protocolUpgradeablity |  Governance | |--------|--------|
 |  adiConfigurations |  Governance | |--------|--------|
 |  retryAndInvalidateMessages |  Multi-sig,Governance | |--------|--------|
 |  configureGovernance |  Governance | |--------|--------|
-|  updateRiskParameters |  External Contract,Multi-sig | |--------|--------|
+|  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -77,8 +78,10 @@
 |  [ProxyAdmin](https://snowscan.xyz/address/0xD3cF979e676265e4f6379749DECe4708B9A22476) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
 |  [ACLManager](https://snowscan.xyz/address/0xa72636CbcAa8F5FF95B2cc47F3CDEe83F3294a0B) |  - |  onlyRole |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  setRoleAdmin | |--------|--------|--------|--------|--------|
 |  [AaveMerkleDistributor](https://snowscan.xyz/address/0xA065d5A299E618CD84a87641d5eEbC7916Fdf32E) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  addDistributions, emergencyTokenTransfer, emergencyEtherTransfer | |--------|--------|--------|--------|--------|
-|  [EdgeRiskStewardCaps](https://snowscan.xyz/address/0x57218F3aB422A39115951c3Eb06881a7A719DfdD) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  setRiskConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
-|  [EdgeRiskStewardCaps](https://snowscan.xyz/address/0x57218F3aB422A39115951c3Eb06881a7A719DfdD) |  - |  onlyRiskCouncil |  [Aave Steward Injector Caps](https://snowscan.xyz/address/0x54714FAc85b0bf627288CC3a186dE81A42f1D635) |  updateRates, updateCollateralSide, updateLstPriceCaps, updateStablePriceCaps, updateCaps | |--------|--------|--------|--------|--------|
+|  [EdgeRiskStewardCaps](https://snowscan.xyz/address/0x57218F3aB422A39115951c3Eb06881a7A719DfdD) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  setRiskConfig, setAddressRestricted, setEModeCategoryRestricted, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [EdgeRiskStewardCaps](https://snowscan.xyz/address/0x57218F3aB422A39115951c3Eb06881a7A719DfdD) |  - |  onlyRiskCouncil |  [AaveStewardInjectorCaps](https://snowscan.xyz/address/0x54714FAc85b0bf627288CC3a186dE81A42f1D635) |  updateRates, updateCollateralSide, updateEModeCategories, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates, updateCaps | |--------|--------|--------|--------|--------|
+|  [AaveStewardInjectorCaps](https://snowscan.xyz/address/0x54714FAc85b0bf627288CC3a186dE81A42f1D635) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  addMarkets, removeMarkets, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [AaveStewardInjectorCaps](https://snowscan.xyz/address/0x54714FAc85b0bf627288CC3a186dE81A42f1D635) |  - |  onlyOwnerOrGuardian |  [BGD Steward Injector Guardian](https://snowscan.xyz/address/0xD68c00a1A4a33876C5EC71A2Bf7bBd8676d72BF6), [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  disableUpdateById, pauseInjector, updateGuardian | |--------|--------|--------|--------|--------|
 |  [PoolExposureSteward](https://snowscan.xyz/address/0x0d68D50DB848dfE6012456781c1D79A11eD12a2e) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  approvePool, revokePool | |--------|--------|--------|--------|--------|
 |  [PoolExposureSteward](https://snowscan.xyz/address/0x0d68D50DB848dfE6012456781c1D79A11eD12a2e) |  - |  onlyOwnerOrGuardian |  [Finance Risk Council](https://snowscan.xyz/address/0x22740deBa78d5a0c24C58C740e3715ec29de1bFa), [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  depositV3, withdrawV3, withdrawV2, migrateV2toV3, migrateBetweenV3 | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://snowscan.xyz/address/0x23AceD103f5E22bD22B9272c82f29C0E51abC5c2) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  setRiskConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
@@ -114,6 +117,7 @@
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
 |  [Aave Protocol Guardian Avalanche](https://snowscan.xyz/address/0x56C1a4b54921DEA9A344967a8693C7E661D72968) |  5/9 |  0x56C1a4b54921DEA9A344967a8693C7E661D72968 |  [0x5d49dBcdd300aECc2C311cFB56593E71c445d60d](https://snowscan.xyz/address/0x5d49dBcdd300aECc2C311cFB56593E71c445d60d), [0xbA037E4746ff58c55dc8F27a328C428F258DDACb](https://snowscan.xyz/address/0xbA037E4746ff58c55dc8F27a328C428F258DDACb), [0x818C277dBE886b934e60aa047250A73529E26A99](https://snowscan.xyz/address/0x818C277dBE886b934e60aa047250A73529E26A99), [0x4f96743057482a2E10253AFDacDA3fd9CF2C1DC9](https://snowscan.xyz/address/0x4f96743057482a2E10253AFDacDA3fd9CF2C1DC9), [0xb647055A9915bF9c8021a684E175A353525b9890](https://snowscan.xyz/address/0xb647055A9915bF9c8021a684E175A353525b9890), [0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922](https://snowscan.xyz/address/0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922), [0xC5bE5c0134857B4b96F45AA6f6B77DB96Ac1487e](https://snowscan.xyz/address/0xC5bE5c0134857B4b96F45AA6f6B77DB96Ac1487e), [0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E](https://snowscan.xyz/address/0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E), [0xf71fc92e2949ccF6A5Fd369a0b402ba80Bc61E02](https://snowscan.xyz/address/0xf71fc92e2949ccF6A5Fd369a0b402ba80Bc61E02) | |--------|--------|--------|--------|
+|  [BGD Steward Injector Guardian](https://snowscan.xyz/address/0xD68c00a1A4a33876C5EC71A2Bf7bBd8676d72BF6) |  1/2 |  0xD68c00a1A4a33876C5EC71A2Bf7bBd8676d72BF6 |  [0xe3FD707583932a99513a5c65c8463De769f5DAdF](https://snowscan.xyz/address/0xe3FD707583932a99513a5c65c8463De769f5DAdF), [0x246E20bF778b3e16cB71eca535f40f8C4E6c4185](https://snowscan.xyz/address/0x246E20bF778b3e16cB71eca535f40f8C4E6c4185) | |--------|--------|--------|--------|
 |  [Finance Risk Council](https://snowscan.xyz/address/0x22740deBa78d5a0c24C58C740e3715ec29de1bFa) |  3/4 |  0x22740deBa78d5a0c24C58C740e3715ec29de1bFa |  [0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4](https://snowscan.xyz/address/0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4), [0xb647055A9915bF9c8021a684E175A353525b9890](https://snowscan.xyz/address/0xb647055A9915bF9c8021a684E175A353525b9890), [0x5d49dBcdd300aECc2C311cFB56593E71c445d60d](https://snowscan.xyz/address/0x5d49dBcdd300aECc2C311cFB56593E71c445d60d), [0xbA037E4746ff58c55dc8F27a328C428F258DDACb](https://snowscan.xyz/address/0xbA037E4746ff58c55dc8F27a328C428F258DDACb) | |--------|--------|--------|--------|
 |  [Risk Council](https://snowscan.xyz/address/0xCa66149425E7DC8f81276F6D80C4b486B9503D1a) |  2/2 |  0xCa66149425E7DC8f81276F6D80C4b486B9503D1a |  [0xc2cf0387f2a83A7F5C6675F4CDe7F367ea1B989a](https://snowscan.xyz/address/0xc2cf0387f2a83A7F5C6675F4CDe7F367ea1B989a), [0x5d49dBcdd300aECc2C311cFB56593E71c445d60d](https://snowscan.xyz/address/0x5d49dBcdd300aECc2C311cFB56593E71c445d60d) | |--------|--------|--------|--------|
 |  [BGD](https://snowscan.xyz/address/0x3DBA1c4094BC0eE4772A05180B7E0c2F1cFD9c36) |  2/3 |  0x3DBA1c4094BC0eE4772A05180B7E0c2F1cFD9c36 |  [0xf71fc92e2949ccF6A5Fd369a0b402ba80Bc61E02](https://snowscan.xyz/address/0xf71fc92e2949ccF6A5Fd369a0b402ba80Bc61E02), [0x5811d9FF80ff4B73A8F9bA42A6082FaB82E89Ea7](https://snowscan.xyz/address/0x5811d9FF80ff4B73A8F9bA42A6082FaB82E89Ea7), [0x0650302887619fa7727D8BD480Cda11A638B219B](https://snowscan.xyz/address/0x0650302887619fa7727D8BD480Cda11A638B219B) | |--------|--------|--------|--------|

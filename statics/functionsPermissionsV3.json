@@ -788,53 +788,6 @@
     ]
   },
   {
-    "contract": "EdgeRiskStewardCaps",
-    "functions": [
-      {
-        "name": "updateRates",
-        "roles": [
-          "onlyRiskCouncil"
-        ]
-      },
-      {
-        "name": "updateCollateralSide",
-        "roles": [
-          "onlyRiskCouncil"
-        ]
-      },
-      {
-        "name": "updateLstPriceCaps",
-        "roles": [
-          "onlyRiskCouncil"
-        ]
-      },
-      {
-        "name": "updateStablePriceCaps",
-        "roles": [
-          "onlyRiskCouncil"
-        ]
-      },
-      {
-        "name": "updateCaps",
-        "roles": [
-          "onlyRiskCouncil"
-        ]
-      },
-      {
-        "name": "setRiskConfig",
-        "roles": [
-          "onlyOwner"
-        ]
-      },
-      {
-        "name": "setAddressRestricted",
-        "roles": [
-          "onlyOwner"
-        ]
-      }
-    ]
-  },
-  {
     "contract": "PoolExposureSteward",
     "functions": [
       {
@@ -1062,6 +1015,253 @@
     "functions": [
       {
         "name": "executeTransaction",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "EdgeRiskStewardCaps",
+    "functions": [
+      {
+        "name": "updateRates",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "updateCollateralSide",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "updateEModeCategories",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "updateLstPriceCaps",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "updateStablePriceCaps",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "updatePendleDiscountRates",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "updateCaps",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "setRiskConfig",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAddressRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setEModeCategoryRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "AaveStewardInjectorCaps",
+    "functions": [
+      {
+        "name": "disableUpdateById",
+        "roles": [
+          "onlyOwnerOrGuardian"
+        ]
+      },
+      {
+        "name": "pauseInjector",
+        "roles": [
+          "onlyOwnerOrGuardian"
+        ]
+      },
+      {
+        "name": "addMarkets",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "removeMarkets",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "updateGuardian",
+        "roles": [
+          "onlyOwnerOrGuardian"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "EdgeRiskStewardEMode",
+    "functions": [
+      {
+        "name": "updateEModeCategories",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "setRiskConfig",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAddressRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setEModeCategoryRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "EdgeRiskStewardDiscountRate",
+    "functions": [
+      {
+        "name": "updatePendleDiscountRates",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "setRiskConfig",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAddressRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setEModeCategoryRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "EdgeRiskStewardRates",
+    "functions": [
+      {
+        "name": "updateRates",
+        "roles": [
+          "onlyRiskCouncil"
+        ]
+      },
+      {
+        "name": "setRiskConfig",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAddressRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setEModeCategoryRestricted",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
         "roles": [
           "onlyOwner"
         ]
