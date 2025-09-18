@@ -34,32 +34,6 @@ These documents contain tables with the following information:
 ### Permissions directory
 | Network |System type |Tables |
 |----------|----------|----------|
-|  ETHEREUM |  V3 |  [Permissions](./out/ETHEREUM-V3.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  LIDO |  [Permissions](./out/ETHEREUM-LIDO.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  ETHERFI |  [Permissions](./out/ETHEREUM-ETHERFI.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  GHO |  [Permissions](./out/ETHEREUM-GHO.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  V2 |  [Permissions](./out/ETHEREUM-V2.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  V2_AMM |  [Permissions](./out/ETHEREUM-V2_AMM.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  SAFETY_MODULE |  [Permissions](./out/ETHEREUM-SAFETY_MODULE.md#contracts) | |--------|--------|--------|
-|  ETHEREUM |  V2_MISC |  [Permissions](./out/ETHEREUM-V2_MISC.md#contracts) | |--------|--------|--------|
-|  OPTIMISM |  V3 |  [Permissions](./out/OPTIMISM-V3.md#contracts) | |--------|--------|--------|
-|  BINANCE |  V3 |  [Permissions](./out/BINANCE-V3.md#contracts) | |--------|--------|--------|
-|  GNOSIS |  V3 |  [Permissions](./out/GNOSIS-V3.md#contracts) | |--------|--------|--------|
-|  POLYGON |  V3 |  [Permissions](./out/POLYGON-V3.md#contracts) | |--------|--------|--------|
-|  POLYGON |  V2 |  [Permissions](./out/POLYGON-V2.md#contracts) | |--------|--------|--------|
-|  SONIC |  V3 |  [Permissions](./out/SONIC-V3.md#contracts) | |--------|--------|--------|
-|  ZKSYNC |  V3 |  [Permissions](./out/ZKSYNC-V3.md#contracts) | |--------|--------|--------|
-|  METIS |  V3 |  [Permissions](./out/METIS-V3.md#contracts) | |--------|--------|--------|
-|  SONEIUM |  V3 |  [Permissions](./out/SONEIUM-V3.md#contracts) | |--------|--------|--------|
-|  BASE |  V3 |  [Permissions](./out/BASE-V3.md#contracts) | |--------|--------|--------|
-|  PLASMA |  V3 |  [Permissions](./out/PLASMA-V3.md#contracts) | |--------|--------|--------|
-|  ARBITRUM |  V3 |  [Permissions](./out/ARBITRUM-V3.md#contracts) | |--------|--------|--------|
-|  CELO |  V3 |  [Permissions](./out/CELO-V3.md#contracts) | |--------|--------|--------|
-|  AVALANCHE |  V3 |  [Permissions](./out/AVALANCHE-V3.md#contracts) | |--------|--------|--------|
-|  AVALANCHE |  V2 |  [Permissions](./out/AVALANCHE-V2.md#contracts) | |--------|--------|--------|
-|  INK |  V3_WHITE_LABEL |  [Permissions](./out/INK-V3_WHITE_LABEL.md#contracts) | |--------|--------|--------|
-|  LINEA |  V3 |  [Permissions](./out/LINEA-V3.md#contracts) | |--------|--------|--------|
-|  SCROLL |  V3 |  [Permissions](./out/SCROLL-V3.md#contracts) | |--------|--------|--------|
        
     
 ## Usage
