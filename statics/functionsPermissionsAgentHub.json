@@ -1,0 +1,226 @@
+[
+  {
+    "contract": "AgentHub",
+    "proxyAdmin": true,
+    "functions": [
+      {
+        "name": "registerAgent",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAgentAdmin",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setMaxBatchSize",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAgentAddress",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setAgentAsPermissioned",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "addPermissionedSender",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "removePermissionedSender",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "addAllowedMarket",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "removeAllowedMarket",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "addRestrictedMarket",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "removeRestrictedMarket",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "setExpirationPeriod",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "setAgentEnabled",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "setMinimumDelay",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "setAgentContext",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "setMarketsFromAgentEnabled",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "addAllowedMarket",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "addAllowedMarket",
+        "roles": [
+          "onlyOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "RangeValidationModule",
+    "functions": [
+      {
+        "name": "setDefaultRangeConfig",
+        "roles": [
+          "onlyHubOwnerOrAgentAdmin"
+        ]
+      },
+      {
+        "name": "setRangeConfigByMarket",
+        "roles": [
+          "onlyHubOwnerOrAgentAdmin"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "RiskOracle",
+    "functions": [
+      {
+        "name": "addAuthorizedSender",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "removeAuthorizedSender",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "addUpdateType",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "publishRiskParameterUpdate",
+        "roles": [
+          "onlyAuthorized"
+        ]
+      },
+      {
+        "name": "publishBulkRiskParameterUpdates",
+        "roles": [
+          "onlyAuthorized"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "Agent",
+    "functions": [
+      {
+        "name": "inject",
+        "roles": [
+          "onlyAgentHub"
+        ]
+      }
+    ]
+  },
+  {
+    "contract": "ProxyAdmin",
+    "functions": [
+      {
+        "name": "changeProxyAdmin",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "upgrade",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "upgradeAndCall",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
+  }
+]
