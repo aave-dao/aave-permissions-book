@@ -48,6 +48,8 @@ const abiByEventType: Record<string, any> = {
   'RoleGranted': aclManagerAbi,
   'RoleRevoked': aclManagerAbi,
   'SenderUpdated': crossChainControllerAbi,
+  'AuthorizedSenderAdded': hubRiskOracleAbi,
+  'AuthorizedSenderRemoved': hubRiskOracleAbi,
 };
 
 const getEventTypeAbi = (event: string): AbiEvent => {
