@@ -54,6 +54,17 @@ export type Roles = {
   role: Record<string, string[]>;
 };
 
+export type AgentHubRiskOracleInfo = {
+  address: string;
+  authorizedSenders: string[];
+  latestBlockNumber: number;
+};
+
+export type AgentHub = {
+  contracts: Contracts;
+  agentHubRiskOracleInfo: Record<string, AgentHubRiskOracleInfo>;
+};
+
 export type PoolInfo = {
   roles?: Roles;
   gsmRoles?: Record<string, Roles>;
@@ -63,6 +74,7 @@ export type PoolInfo = {
   clinicSteward?: ClinicSteward;
   umbrella?: Umbrella;
   ppc?: Ppc;
+  agentHub?: AgentHub;
 };
 
 export type Pool = Record<string, PoolInfo>;
@@ -96,6 +108,9 @@ export type PoolConfigs = {
 
   ppcPermissionsJson?: string;
   ppcAddressBook?: any;
+
+  agentHubAddressBook?: any;
+  agentHubBlock?: number;
 };
 export type Network = {
   name: string;

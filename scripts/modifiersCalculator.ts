@@ -19,7 +19,7 @@ import { getCurrentRoleAdmins } from '../helpers/adminRoles.js';
 import { resolveV2Modifiers } from './v2Permissions.js';
 import { resolveV3Modifiers } from './v3Permissions.js';
 import { resolveGovV2Modifiers } from './governancePermissions.js';
-import { ClinicSteward, Collector, Contracts, GovV3, Ppc, Roles, Umbrella } from '../helpers/types.js';
+import { AgentHub, AgentHubRiskOracleInfo, ClinicSteward, Collector, Contracts, GovV3, Ppc, Roles, Umbrella } from '../helpers/types.js';
 import { resolveSafetyV2Modifiers } from './safetyPermissions.js';
 import { resolveV2MiscModifiers } from './v2MiscPermissions.js';
 import { getCCCSendersAndAdapters } from '../helpers/crossChainControllerLogs.js';
@@ -31,6 +31,7 @@ import { resolveClinicStewardModifiers } from './clinicStewardPermissions.js';
 import { resolveUmbrellaModifiers } from './umbrellaPermissions.js';
 import { getRPCClient, getRpcClientFromUrl } from '../helpers/rpc.js';
 import { resolvePpcModifiers } from './ppcPermissions.js';
+import { resolveAgentHubModifiers } from './agentHubPermissions.js';
 
 const generateNetworkPermissions = async (network: string) => {
   // get current permissions
@@ -61,6 +62,7 @@ const generateNetworkPermissions = async (network: string) => {
     let govV3 = {} as GovV3;
     let ppc = {} as Ppc;
     govV3.ggRoles = {} as Roles;
+    let agentHub = {} as AgentHub;
 
     if (
       poolKey !== Pools.GOV_V2 &&
@@ -489,6 +491,43 @@ const generateNetworkPermissions = async (network: string) => {
       }
     }
 
+    if (pool.agentHubAddressBook && pool.agentHubBlock) {
+      if (pool.tenderlyBasePool) {
+        await overwriteBaseTenderlyPool(
+          poolKey,
+          network,
+          pool.tenderlyBasePool,
+        );
+        // get current permissions
+        fullJson = getPermissionsByNetwork(network);
+      }
+
+      console.log(`
+        ------------------------------------
+          network: ${network}
+          pool: ${poolKey}
+          Agent Hub Table
+        ------------------------------------
+        `);
+      fullJson[poolKey]?.agentHub?.agentHubRiskOracleInfo || {} as Record<string, AgentHubRiskOracleInfo>;
+
+      const { agentHubPermissions, agentHubRiskOracleInfo } = await resolveAgentHubModifiers(
+        pool.agentHubAddressBook,
+        poolKey === Pools.TENDERLY
+          ? getRpcClientFromUrl(pool.tenderlyRpcUrl!)
+          : provider,
+        permissionsJson,
+        Number(network),
+        fullJson[poolKey]?.agentHub?.agentHubRiskOracleInfo || {} as Record<string, AgentHubRiskOracleInfo>,
+        pool.agentHubBlock,
+        pool.tenderlyBlock
+      );
+      agentHub.contracts = agentHubPermissions;
+      agentHub.agentHubRiskOracleInfo = agentHubRiskOracleInfo;
+    }
+
+
+
     if (
       pool.crossChainControllerBlock &&
       pool.crossChainPermissionsJson &&
@@ -591,6 +630,7 @@ const generateNetworkPermissions = async (network: string) => {
           clinicSteward: clinicSteward,
           umbrella: umbrella,
           ppc: ppc,
+          agentHub: agentHub,
         },
       };
     } else {
@@ -604,6 +644,7 @@ const generateNetworkPermissions = async (network: string) => {
         clinicSteward: clinicSteward,
         umbrella: umbrella,
         ppc: ppc,
+        agentHub: agentHub,
       };
     }
     console.log(`----${network} : ${poolKey} finished`);
