@@ -28,7 +28,9 @@ export const getRPCClient = (chainId: number): Client => {
   } if (chainId === ChainId.ink) {
     return getRpcClientFromUrl(`https://${env.QUICKNODE_ENDPOINT_NAME}.ink-mainnet.quiknode.pro/${env.QUICKNODE_TOKEN}`);
   }
-
+  if (chainId === ChainId.xLayer) {
+    return getRpcClientFromUrl(`https://${env.QUICKNODE_ENDPOINT_NAME}.xlayer-mainnet.quiknode.pro/${env.QUICKNODE_TOKEN}`);
+  }
   return getClient(chainId, {
     httpConfig: getHttpConfig(),
     clientConfig: {

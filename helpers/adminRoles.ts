@@ -138,6 +138,7 @@ export const getCurrentRoleAdmins = async (
 
     latestBlockNumber = preTenderlyForkCurrentBlock;
   } else {
+    console.log
     const { logs: networkEvents, currentBlock: eventsCurrentBlock } = await getEvents({
       client,
       fromBlock,
