@@ -4,6 +4,7 @@ import { AbiEvent, Client, http, getAbiItem, getAddress, Log, createClient, crea
 import { aclManagerAbi } from "../abis/aclManager.js";
 import { getBlockNumber } from "viem/actions";
 import { crossChainControllerAbi } from "../abis/crossChainControllerAbi.js";
+import { RISK_ORACLE_ABI } from "../abis/riskOracle.js";
 
 const getHttpConfig = () => {
   return {
@@ -42,13 +43,12 @@ export const getRPCClient = (chainId: number): Client => {
   });
 };
 
-
-
-
 const abiByEventType: Record<string, any> = {
   'RoleGranted': aclManagerAbi,
   'RoleRevoked': aclManagerAbi,
   'SenderUpdated': crossChainControllerAbi,
+  'AuthorizedSenderAdded': RISK_ORACLE_ABI,
+  'AuthorizedSenderRemoved': RISK_ORACLE_ABI,
 };
 
 const getEventTypeAbi = (event: string): AbiEvent => {

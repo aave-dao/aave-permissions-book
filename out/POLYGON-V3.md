@@ -116,6 +116,13 @@
 |  [CrossChainController](https://polygonscan.com/address/0xF6B99959F0b5e79E1CC7062E12aF632CEb18eF0d) |  [ProxyAdmin](https://polygonscan.com/address/0xD3cF979e676265e4f6379749DECe4708B9A22476) |  onlyApprovedBridges |  [CCIP adapter](https://polygonscan.com/address/0xe79757D55a1600eF28D816a893E78E9FCDE2019E), [Polygon native adapter](https://polygonscan.com/address/0x853649f897383f89d8441346Cf26a9ed02720B02), [LayerZero adapter](https://polygonscan.com/address/0x7FAE7765abB4c8f778d57337bB720d0BC53057e3), [Hyperlane adapter](https://polygonscan.com/address/0x3e72665008dC237bdd91C04C10782Ed1987a4019) |  receiveCrossChainMessage | |--------|--------|--------|--------|--------|
 |  [CrossChainController](https://polygonscan.com/address/0xF6B99959F0b5e79E1CC7062E12aF632CEb18eF0d) |  [ProxyAdmin](https://polygonscan.com/address/0xD3cF979e676265e4f6379749DECe4708B9A22476) |  onlyGuardian |  [BGD](https://polygonscan.com/address/0xbCEB4f363f2666E2E8E430806F37e97C405c130b) |  solveEmergency | |--------|--------|--------|--------|--------|
 
+### Agent Hub Contracts 
+| contract |proxyAdmin |modifier |permission owner |functions |
+|----------|----------|----------|----------|----------|
+|  [AgentHub](https://polygonscan.com/address/0xd44342b1aC132353d3148Ea6ed330d1Ae6F0c664) |  [AgentHubProxyAdmin](https://polygonscan.com/address/0x65a66830E5EaA91f4e40ba08cBfb88b6B6E80104) |  onlyOwner |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  registerAgent, setAgentAdmin, setMaxBatchSize, setAgentAddress, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [AgentHub](https://polygonscan.com/address/0xd44342b1aC132353d3148Ea6ed330d1Ae6F0c664) |  [AgentHubProxyAdmin](https://polygonscan.com/address/0x65a66830E5EaA91f4e40ba08cBfb88b6B6E80104) |  onlyOwnerOrAgentAdmin |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  setAgentAsPermissioned, addPermissionedSender, removePermissionedSender, addAllowedMarket, removeAllowedMarket, addRestrictedMarket, removeRestrictedMarket, setExpirationPeriod, setAgentEnabled, setMinimumDelay, setAgentContext, setMarketsFromAgentEnabled, addAllowedMarket, addAllowedMarket | |--------|--------|--------|--------|--------|
+|  [AgentHubProxyAdmin](https://polygonscan.com/address/0x65a66830e5eaa91f4e40ba08cbfb88b6b6e80104) |  - |  onlyOwner |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
+
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
