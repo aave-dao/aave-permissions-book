@@ -319,6 +319,7 @@ const generateNetworkPermissions = async (network: string) => {
           Collector Table
         ------------------------------------
         `);
+
       if (fromBlock) {
         cAdmins = await getCurrentRoleAdmins(
           poolKey === Pools.TENDERLY ||

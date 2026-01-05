@@ -222,6 +222,8 @@ export const networkConfigs: NetworkConfigs = {
       '0xE1e62c3ee0c581F715fBb0e23CDA536Fc29eeB2c': 'ClinicStewardV2 AMM',
       '0xff37939808EcF199A2D599ef91D699Fb13dab7F7': 'BGD Injector Guardian',
       '0xDe841Bf4B67970f5a19165443B0e9ec808E1cC85': 'Risk Oracle Guardian',
+      '0x22aC12a6937BBBC0a301AF9154d08EaD95673122': 'PoolExposureSteward',
+      '0xf00E2de0E78DFf055A92AD4719a179CE275b6Ef7': 'ClinicSteward',
       '0xb7D402138Cb01BfE97d95181C849379d6AD14d19': 'SwapSteward'
     },
     pools: {
@@ -272,6 +274,8 @@ export const networkConfigs: NetworkConfigs = {
       [Pools.LIDO_TENDERLY]: {
         permissionsJson: './statics/functionsPermissionsV3.json',
         aclBlock: 20262410,
+        collectorBlock: 21765718,
+        clinicStewardBlock: 21967120,
         addressBook: {
           ...AaveV3EthereumLido,
           ...MiscEthereum,
@@ -472,9 +476,11 @@ export const networkConfigs: NetworkConfigs = {
       //     'https://rpc.tenderly.co/fork/567780b8-9555-4c31-b084-ad573ea79609',
       // },
       [Pools.TENDERLY]: {
+        collectorBlock: 67485143,
         aclBlock: 25824416,
         crossChainControllerBlock: 45029910,
         granularGuardianBlock: 59461826,
+        clinicStewardBlock: 68599710,
         crossChainPermissionsJson: './statics/functionsPermissionsGovV3.json',
         permissionsJson: './statics/functionsPermissionsV3.json',
         functionsPermissionsAgentHubJson: './statics/functionsPermissionsAgentHub.json',
@@ -532,6 +538,7 @@ export const networkConfigs: NetworkConfigs = {
         aclBlock: 33571625,
         crossChainControllerBlock: 31558150,
         granularGuardianBlock: 40546332,
+        clinicStewardBlock: 47144040,
         crossChainPermissionsJson: './statics/functionsPermissionsGovV3.json',
         permissionsJson: './statics/functionsPermissionsV3.json',
         addressBook: { ...AaveV3BNB, ...MiscBNB },
@@ -613,6 +620,8 @@ export const networkConfigs: NetworkConfigs = {
       //     'https://rpc.tenderly.co/fork/fd8c12b8-5ad9-454b-bde9-f7ea0e244ae5',
       // },
       [Pools.TENDERLY]: {
+        collectorBlock: 57114737,
+        clinicStewardBlock: 58156580,
         aclBlock: 11970456,
         crossChainControllerBlock: 32549880,
         granularGuardianBlock: 48074792,
@@ -730,6 +739,8 @@ export const networkConfigs: NetworkConfigs = {
       //   addressBook: { ...AaveV3Arbitrum, ...MiscArbitrum, ...GhoArbitrum },
       // },
       [Pools.TENDERLY]: {
+        collectorBlock: 302176258,
+        clinicStewardBlock: 311843330,
         aclBlock: 7740502,
         crossChainControllerBlock: 112113800,
         granularGuardianBlock: 233088975,
@@ -827,9 +838,11 @@ export const networkConfigs: NetworkConfigs = {
       //   addressBook: { ...AaveV3Base, ...MiscBase, ...GhoBase },
       // },
       [Pools.TENDERLY]: {
+        collectorBlock: 25895171,
         aclBlock: 2357130,
         crossChainControllerBlock: 3686170,
         granularGuardianBlock: 17207502,
+        clinicStewardBlock: 27111930,
         crossChainPermissionsJson: './statics/functionsPermissionsGovV3.json',
         permissionsJson: './statics/functionsPermissionsV3.json',
         addressBook: { ...AaveV3Base, ...MiscBase },

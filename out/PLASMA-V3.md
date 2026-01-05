@@ -1,5 +1,5 @@
 # PLASMA 
-## V3 
+## TENDERLY 
 ### Contracts upgradeability
 | contract |upgradeable by |
 |----------|----------|
@@ -20,7 +20,6 @@
 |  [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba) |  not upgradeable | |--------|--------|
 |  [Collector](https://plasmascan.to//address/0x5E2d083417D12d4B0824E14Ecd48D26831F4Da7D) |  Governance | |--------|--------|
 |  [CollectorProxyAdmin](https://plasmascan.to//address/0xd5dc085ffd52bbc19a934fcf67d56a998e0f9472) |  not upgradeable | |--------|--------|
-|  Aave a/v/s tokens |  Governance | |--------|--------|
 |  [GranularGuardian](https://plasmascan.to//address/0x60665b4F4FF7073C5fed2656852dCa271DfE2684) |  not upgradeable | |--------|--------|
 |  [PayloadsController](https://plasmascan.to//address/0xe76EB348E65eF163d85ce282125FF5a7F5712A1d) |  Governance | |--------|--------|
 |  [PayloadsControllerProxyAdmin](https://plasmascan.to//address/0x4a195262caf35d94832458fd7b8d2c92bd355482) |  not upgradeable | |--------|--------|
@@ -36,14 +35,14 @@
 |----------|----------|
 |  updateReserveBorrowSettings |  Governance | |--------|--------|
 |  configureProtocolFees |  Governance | |--------|--------|
-|  updateReserveCaps |  Governance,Multi-sig,Steward | |--------|--------|
+|  updateReserveCaps |  Governance,Multi-sig,Steward,External Contract | |--------|--------|
 |  updateReserveSettings |  Governance | |--------|--------|
 |  configureCollateral |  Governance | |--------|--------|
 |  upgradeAaveTokens (a/v/s) |  Governance,Multi-sig | |--------|--------|
 |  upgradeAaveOracles |  Governance,Multi-sig | |--------|--------|
 |  reserveUpgradeability |  Governance | |--------|--------|
 |  pausePool |  Governance,Multi-sig | |--------|--------|
-|  pauseAndFreezeReserve |  Governance,Multi-sig,Steward | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,Multi-sig,Steward,External Contract | |--------|--------|
 |  reserveListing |  Governance,Multi-sig | |--------|--------|
 |  adminsConfiguration |  Governance | |--------|--------|
 |  protocolUpgradeablity |  Governance | |--------|--------|
@@ -59,8 +58,8 @@
 |  [Pool](https://plasmascan.to//address/0x925a2A7214Ed92428B5b1B090F80b25700095e12) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyPoolAdmin |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) |  rescueTokens | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyPoolAdmin |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) |  initReserves | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1), [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [EdgeRiskStewardDiscountRate](https://plasmascan.to//address/0x530034d1A739Afd261291B86A5c3b95eC30c4b44), [EdgeRiskStewardEMode](https://plasmascan.to//address/0xe1472037C9f17Ac00bf5336272ab74e423B9254d) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1), [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [EdgeRiskStewardDiscountRate](https://plasmascan.to//address/0x530034d1A739Afd261291B86A5c3b95eC30c4b44), [EdgeRiskStewardEMode](https://plasmascan.to//address/0xe1472037C9f17Ac00bf5336272ab74e423B9254d) |  setReserveFreeze | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1), [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [EModeCategoryAgent](https://plasmascan.to//address/0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177), [PendleDiscountRateAgent](https://plasmascan.to//address/0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1), [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [EModeCategoryAgent](https://plasmascan.to//address/0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177), [PendleDiscountRateAgent](https://plasmascan.to//address/0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9) |  setReserveFreeze | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://plasmascan.to//address/0xc022B6c71c30A8Ad52Dac504eFA132d13D99d2D9) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
 |  [AaveOracle](https://plasmascan.to//address/0x33E0b3fc976DC9C516926BA48CfC0A9E10a2aAA5) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A), [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
 |  [RewardsController](https://plasmascan.to//address/0x3A57eAa3Ca3794D66977326af7991eB3F6dD5a5A) |  [PoolAddressesProvider](https://plasmascan.to//address/0x061D8e131F26512348ee5FA42e2DF1bA9d6505E9) |  onlyEmissionManager |  [EmissionManager](https://plasmascan.to//address/0x5117F170716eCEAC8ef63d375bc7416Afa6f4497) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
@@ -108,9 +107,14 @@
 ### Risk Agent Contracts 
 | contract |proxyAdmin |modifier |permission owner |functions |
 |----------|----------|----------|----------|----------|
+|  [EModeCategoryAgent](https://plasmascan.to//address/0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177) |  - |  onlyAgentHub |  [AgentHub](https://plasmascan.to//address/0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D) |  inject | |--------|--------|--------|--------|--------|
+|  [PendleDiscountRateAgent](https://plasmascan.to//address/0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9) |  - |  onlyAgentHub |  [AgentHub](https://plasmascan.to//address/0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D) |  inject | |--------|--------|--------|--------|--------|
 |  [AgentHub](https://plasmascan.to//address/0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D) |  [AgentHubProxyAdmin](https://plasmascan.to//address/0xC3ba7a3b8357b32df987ddEfb6bAf9dcc0bD8791) |  onlyOwner |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A) |  registerAgent, setAgentAdmin, setMaxBatchSize, setAgentAddress, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
 |  [AgentHub](https://plasmascan.to//address/0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D) |  [AgentHubProxyAdmin](https://plasmascan.to//address/0xC3ba7a3b8357b32df987ddEfb6bAf9dcc0bD8791) |  onlyOwnerOrAgentAdmin |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A) |  setAgentAsPermissioned, addPermissionedSender, removePermissionedSender, addAllowedMarket, removeAllowedMarket, addRestrictedMarket, removeRestrictedMarket, setExpirationPeriod, setAgentEnabled, setMinimumDelay, setAgentContext, setMarketsFromAgentEnabled, addAllowedMarket, addAllowedMarket | |--------|--------|--------|--------|--------|
 |  [AgentHubProxyAdmin](https://plasmascan.to//address/0xc3ba7a3b8357b32df987ddefb6baf9dcc0bd8791) |  - |  onlyOwner |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
+|  [RangeValidationModule](https://plasmascan.to//address/0x9240a6669CC4782FC98620212862DF5CB2e0Df10) |  - |  onlyHubOwnerOrAgentAdmin |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A) |  setDefaultRangeConfig, setRangeConfigByMarket | |--------|--------|--------|--------|--------|
+|  [RiskOracle](https://plasmascan.to//address/0xAe48F22903d43f13f66Cc650F57Bd4654ac222cb) |  - |  onlyOwner |  [Risk Oracle Guardian](https://plasmascan.to//address/0xDe841Bf4B67970f5a19165443B0e9ec808E1cC85) |  addAuthorizedSender, removeAuthorizedSender, addUpdateType, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [RiskOracle](https://plasmascan.to//address/0xAe48F22903d43f13f66Cc650F57Bd4654ac222cb) |  - |  onlyAuthorized |  [0x42939e82DF15afc586bb95f7dD69Afb6Dc24A6f9](https://plasmascan.to//address/0x42939e82DF15afc586bb95f7dD69Afb6Dc24A6f9) |  publishRiskParameterUpdate, publishBulkRiskParameterUpdates | |--------|--------|--------|--------|--------|
 
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
@@ -130,7 +134,7 @@
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
 |  FLASH_BORROWER |  [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://plasmascan.to//address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7) | |--------|--------|
-|  RISK_ADMIN |  [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [EdgeRiskStewardDiscountRate](https://plasmascan.to//address/0x530034d1A739Afd261291B86A5c3b95eC30c4b44), [EdgeRiskStewardEMode](https://plasmascan.to//address/0xe1472037C9f17Ac00bf5336272ab74e423B9254d) | |--------|--------|
+|  RISK_ADMIN |  [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [EModeCategoryAgent](https://plasmascan.to//address/0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177), [PendleDiscountRateAgent](https://plasmascan.to//address/0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9) | |--------|--------|
 
 ### Granular Guardian Admins 
 | Role |Contract |

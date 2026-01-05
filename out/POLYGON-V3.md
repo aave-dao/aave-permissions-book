@@ -1,5 +1,5 @@
 # POLYGON 
-## V3 
+## TENDERLY 
 ### Contracts upgradeability
 | contract |upgradeable by |
 |----------|----------|
@@ -24,7 +24,6 @@
 |  [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b) |  not upgradeable | |--------|--------|
 |  [Collector](https://polygonscan.com/address/0xe8599F3cc5D38a9aD6F3684cd5CEa72f10Dbc383) |  Governance | |--------|--------|
 |  [ClinicSteward](https://polygonscan.com/address/0x476B3D5509f600cC377Ab86658b623337Fc6A717) |  not upgradeable | |--------|--------|
-|  Aave a/v/s tokens |  Governance | |--------|--------|
 |  [GranularGuardian](https://polygonscan.com/address/0x0D2CccD3dD420dC6DE2f24DB44aA22fADE290a02) |  not upgradeable | |--------|--------|
 |  [PayloadsController](https://polygonscan.com/address/0x401B5D0294E23637c18fcc38b1Bca814CDa2637C) |  Governance | |--------|--------|
 |  [VotingMachine](https://polygonscan.com/address/0x44c8b753229006A8047A05b90379A7e92185E97C) |  not upgradeable | |--------|--------|
@@ -40,14 +39,14 @@
 |----------|----------|
 |  updateReserveBorrowSettings |  Governance | |--------|--------|
 |  configureProtocolFees |  Governance | |--------|--------|
-|  updateReserveCaps |  Governance,Steward | |--------|--------|
+|  updateReserveCaps |  Governance,Steward,External Contract | |--------|--------|
 |  updateReserveSettings |  Governance | |--------|--------|
 |  configureCollateral |  Governance | |--------|--------|
 |  upgradeAaveTokens (a/v/s) |  Governance | |--------|--------|
 |  upgradeAaveOracles |  Governance | |--------|--------|
 |  reserveUpgradeability |  Governance | |--------|--------|
 |  pausePool |  Governance,Multi-sig | |--------|--------|
-|  pauseAndFreezeReserve |  Governance,Steward,Multi-sig | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,Steward,External Contract,Multi-sig | |--------|--------|
 |  reserveListing |  Governance | |--------|--------|
 |  adminsConfiguration |  Governance | |--------|--------|
 |  protocolUpgradeablity |  Governance | |--------|--------|
@@ -64,8 +63,8 @@
 |  [Pool](https://polygonscan.com/address/0x794a61358D6845594F94dc1DB02A252b5b4814aD) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyPoolAdmin |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  rescueTokens | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyPoolAdmin |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  initReserves | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233), [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b), [EdgeRiskStewardCaps](https://polygonscan.com/address/0x35B09a414F6003346cA2E2553b3ea91Cd3524af3) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233), [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b), [EdgeRiskStewardCaps](https://polygonscan.com/address/0x35B09a414F6003346cA2E2553b3ea91Cd3524af3), [Aave Protocol Guardian Polygon](https://polygonscan.com/address/0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6) |  setReserveFreeze | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233), [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b), [SupplyCapAgent](https://polygonscan.com/address/0xd99D0A740AF7B68f1CB635294C013552423666b1), [BorrowCapAgent](https://polygonscan.com/address/0xA512909edCf6D9aE46b0414ce0aD724968448177) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233), [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b), [SupplyCapAgent](https://polygonscan.com/address/0xd99D0A740AF7B68f1CB635294C013552423666b1), [BorrowCapAgent](https://polygonscan.com/address/0xA512909edCf6D9aE46b0414ce0aD724968448177), [Aave Protocol Guardian Polygon](https://polygonscan.com/address/0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6) |  setReserveFreeze | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://polygonscan.com/address/0x8145eddDf43f50276641b55bd3AD95944510021E) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233), [Aave Protocol Guardian Polygon](https://polygonscan.com/address/0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
 |  [AaveOracle](https://polygonscan.com/address/0xb023e699F5a33916Ea823A16485e259257cA8Bd1) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
 |  [RewardsController](https://polygonscan.com/address/0x929EC64c34a17401F460460D4B9390518E5B473e) |  [PoolAddressesProvider](https://polygonscan.com/address/0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb) |  onlyEmissionManager |  [EmissionManager](https://polygonscan.com/address/0x048f2228D7Bf6776f99aB50cB1b1eaB4D1d4cA73) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
@@ -119,9 +118,14 @@
 ### Risk Agent Contracts 
 | contract |proxyAdmin |modifier |permission owner |functions |
 |----------|----------|----------|----------|----------|
+|  [SupplyCapAgent](https://polygonscan.com/address/0xd99D0A740AF7B68f1CB635294C013552423666b1) |  - |  onlyAgentHub |  [AgentHub](https://polygonscan.com/address/0xd44342b1aC132353d3148Ea6ed330d1Ae6F0c664) |  inject | |--------|--------|--------|--------|--------|
+|  [BorrowCapAgent](https://polygonscan.com/address/0xA512909edCf6D9aE46b0414ce0aD724968448177) |  - |  onlyAgentHub |  [AgentHub](https://polygonscan.com/address/0xd44342b1aC132353d3148Ea6ed330d1Ae6F0c664) |  inject | |--------|--------|--------|--------|--------|
 |  [AgentHub](https://polygonscan.com/address/0xd44342b1aC132353d3148Ea6ed330d1Ae6F0c664) |  [AgentHubProxyAdmin](https://polygonscan.com/address/0x65a66830E5EaA91f4e40ba08cBfb88b6B6E80104) |  onlyOwner |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  registerAgent, setAgentAdmin, setMaxBatchSize, setAgentAddress, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
 |  [AgentHub](https://polygonscan.com/address/0xd44342b1aC132353d3148Ea6ed330d1Ae6F0c664) |  [AgentHubProxyAdmin](https://polygonscan.com/address/0x65a66830E5EaA91f4e40ba08cBfb88b6B6E80104) |  onlyOwnerOrAgentAdmin |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  setAgentAsPermissioned, addPermissionedSender, removePermissionedSender, addAllowedMarket, removeAllowedMarket, addRestrictedMarket, removeRestrictedMarket, setExpirationPeriod, setAgentEnabled, setMinimumDelay, setAgentContext, setMarketsFromAgentEnabled, addAllowedMarket, addAllowedMarket | |--------|--------|--------|--------|--------|
 |  [AgentHubProxyAdmin](https://polygonscan.com/address/0x65a66830e5eaa91f4e40ba08cbfb88b6b6e80104) |  - |  onlyOwner |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
+|  [RangeValidationModule](https://polygonscan.com/address/0x9240a6669CC4782FC98620212862DF5CB2e0Df10) |  - |  onlyHubOwnerOrAgentAdmin |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) |  setDefaultRangeConfig, setRangeConfigByMarket | |--------|--------|--------|--------|--------|
+|  [RiskOracle](https://polygonscan.com/address/0x9f6aA2aB14bFF53e4b79A81ce1554F1DFdbb6608) |  - |  onlyOwner |  [Risk Oracle Guardian](https://polygonscan.com/address/0xDe841Bf4B67970f5a19165443B0e9ec808E1cC85) |  addAuthorizedSender, removeAuthorizedSender, addUpdateType, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [RiskOracle](https://polygonscan.com/address/0x9f6aA2aB14bFF53e4b79A81ce1554F1DFdbb6608) |  - |  onlyAuthorized |  [0x42939e82DF15afc586bb95f7dD69Afb6Dc24A6f9](https://polygonscan.com/address/0x42939e82DF15afc586bb95f7dD69Afb6Dc24A6f9) |  publishRiskParameterUpdate, publishBulkRiskParameterUpdates | |--------|--------|--------|--------|--------|
 
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
@@ -142,7 +146,7 @@
 |  POOL_ADMIN |  [Executor_lvl1](https://polygonscan.com/address/0xDf7d0e6454DB638881302729F5ba99936EaAB233) | |--------|--------|
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Polygon](https://polygonscan.com/address/0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
-|  RISK_ADMIN |  [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b), [EdgeRiskStewardCaps](https://polygonscan.com/address/0x35B09a414F6003346cA2E2553b3ea91Cd3524af3) | |--------|--------|
+|  RISK_ADMIN |  [Manual AGRS](https://polygonscan.com/address/0x1e0A5985D58B45C38598e293189aa5228054629b), [SupplyCapAgent](https://polygonscan.com/address/0xd99D0A740AF7B68f1CB635294C013552423666b1), [BorrowCapAgent](https://polygonscan.com/address/0xA512909edCf6D9aE46b0414ce0aD724968448177) | |--------|--------|
 |  FLASH_BORROWER |  [0xb58Fd91558fa213D97Ac94C97F831c7289278084](https://polygonscan.com/address/0xb58Fd91558fa213D97Ac94C97F831c7289278084), [0xab515542d621574f9b5212d50593cD0C07e641bD](https://polygonscan.com/address/0xab515542d621574f9b5212d50593cD0C07e641bD), [0x86C3Dd18bAF4370495d9228b58fD959771285C55](https://polygonscan.com/address/0x86C3Dd18bAF4370495d9228b58fD959771285C55), [0xdB88AB5b485b38EDbEEf866314F9E49d095BCe39](https://polygonscan.com/address/0xdB88AB5b485b38EDbEEf866314F9E49d095BCe39), [0x79D2aeFE6A21b26B024d9341A51f6b7897852499](https://polygonscan.com/address/0x79D2aeFE6A21b26B024d9341A51f6b7897852499), [0x460b60565cb73845d56564384ab84BF84c13e47D](https://polygonscan.com/address/0x460b60565cb73845d56564384ab84BF84c13e47D), [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://polygonscan.com/address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7) | |--------|--------|
 
 ### Granular Guardian Admins 
