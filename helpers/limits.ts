@@ -25,7 +25,10 @@ export const getLimit = (chainId: string) => {
     limit = 9999;
   } else if (Number(chainId) === Number(ChainId.soneium)) {
     limit = 9999;
-  } else {
+  } else if (Number(chainId) === Number(ChainId.megaeth)) {
+    limit = 9999;
+  }
+  else {
     limit = 9999; // @TODO: for now we have this limit for everything
   }
 

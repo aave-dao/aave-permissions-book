@@ -25,6 +25,10 @@ export const getRPCClient = (chainId: number): Client => {
     if (env.QUICKNODE_ENDPOINT_NAME && env.QUICKNODE_TOKEN) {
       return getRpcClientFromUrl(`https://${env.QUICKNODE_ENDPOINT_NAME}.avalanche-mainnet.quiknode.pro/${env.QUICKNODE_TOKEN}/ext/bc/C/rpc`);
     }
+  } else if (chainId === ChainId.megaeth) {
+    if (env.RPC_MEGAETH) {
+      return getRpcClientFromUrl(env.RPC_MEGAETH);
+    }
   }
 
   return getClient(chainId, {
