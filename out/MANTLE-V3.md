@@ -1,5 +1,5 @@
 # MANTLE 
-## V3 
+## TENDERLY 
 ### Contracts upgradeability
 | contract |upgradeable by |
 |----------|----------|
@@ -15,7 +15,6 @@
 |  [Manual AGRS](https://explorer.mantle.xyz//address/0xa35358159F42E11C5689C68f181a71d51BB22de3) |  not upgradeable | |--------|--------|
 |  [Collector](https://explorer.mantle.xyz//address/0x0cd2670339Cd520BF9428Ad881bE60A698aB9B32) |  Governance | |--------|--------|
 |  [CollectorProxyAdmin](https://explorer.mantle.xyz//address/0xfd354205874d8ff57a724fc7c7d84b6aed502800) |  not upgradeable | |--------|--------|
-|  Aave a/v/s tokens |  Governance | |--------|--------|
 |  [GranularGuardian](https://explorer.mantle.xyz//address/0xb26670d2800DBB9cfCe2f2660FfDcA48C799c86d) |  not upgradeable | |--------|--------|
 |  [PayloadsController](https://explorer.mantle.xyz//address/0xF089f77173A3009A98c45f49D547BF714A7B1e01) |  Governance | |--------|--------|
 |  [PayloadsControllerProxyAdmin](https://explorer.mantle.xyz//address/0x18a2374354ebbae707e613d58bc9035400477bdf) |  not upgradeable | |--------|--------|
@@ -29,15 +28,15 @@
 |----------|----------|
 |  updateReserveBorrowSettings |  Governance | |--------|--------|
 |  configureProtocolFees |  Governance | |--------|--------|
-|  updateReserveCaps |  Governance | |--------|--------|
+|  updateReserveCaps |  Governance,Multi-sig,Steward | |--------|--------|
 |  updateReserveSettings |  Governance | |--------|--------|
 |  configureCollateral |  Governance | |--------|--------|
-|  upgradeAaveTokens (a/v/s) |  Governance | |--------|--------|
-|  upgradeAaveOracles |  Governance | |--------|--------|
+|  upgradeAaveTokens (a/v/s) |  Governance,Multi-sig | |--------|--------|
+|  upgradeAaveOracles |  Governance,Multi-sig | |--------|--------|
 |  reserveUpgradeability |  Governance | |--------|--------|
 |  pausePool |  Governance,Multi-sig | |--------|--------|
-|  pauseAndFreezeReserve |  Governance,Multi-sig | |--------|--------|
-|  reserveListing |  Governance | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,Multi-sig,Steward | |--------|--------|
+|  reserveListing |  Governance,Multi-sig | |--------|--------|
 |  adminsConfiguration |  Governance | |--------|--------|
 |  protocolUpgradeablity |  Governance | |--------|--------|
 |  adiConfigurations |  Governance | |--------|--------|
@@ -49,13 +48,13 @@
 |----------|----------|----------|----------|----------|
 |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  - |  onlyOwner |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  setMarketId, setAddress, setAddressAsProxy, setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, setPoolDataProvider | |--------|--------|--------|--------|--------|
 |  [Pool](https://explorer.mantle.xyz//address/0x458F293454fE0d67EC0655f3672301301DD51422) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyPoolConfigurator |  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  initReserve, dropReserve, setReserveInterestRateStrategyAddress, setConfiguration, updateBridgeProtocolFee, updateFlashloanPremiums, configureEModeCategory, resetIsolationModeTotalDebt | |--------|--------|--------|--------|--------|
-|  [Pool](https://explorer.mantle.xyz//address/0x458F293454fE0d67EC0655f3672301301DD51422) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyPoolAdmin |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  rescueTokens | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyPoolAdmin |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  initReserves | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) |  setReserveFreeze | |--------|--------|--------|--------|--------|
+|  [Pool](https://explorer.mantle.xyz//address/0x458F293454fE0d67EC0655f3672301301DD51422) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyPoolAdmin |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) |  rescueTokens | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyPoolAdmin |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) |  initReserves | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686), [Manual AGRS](https://explorer.mantle.xyz//address/0xa35358159F42E11C5689C68f181a71d51BB22de3) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686), [Manual AGRS](https://explorer.mantle.xyz//address/0xa35358159F42E11C5689C68f181a71d51BB22de3) |  setReserveFreeze | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://explorer.mantle.xyz//address/0x719755fC1ACf2f9079B0Cbc56e23712c09Ab8626) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
-|  [AaveOracle](https://explorer.mantle.xyz//address/0x47a063CfDa980532267970d478EC340C0F80E8df) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
+|  [AaveOracle](https://explorer.mantle.xyz//address/0x47a063CfDa980532267970d478EC340C0F80E8df) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
 |  [RewardsController](https://explorer.mantle.xyz//address/0x682482a584eE20fefc01f4575c45C5d84de6F619) |  [PoolAddressesProvider](https://explorer.mantle.xyz//address/0xba50Cd2A20f6DA35D788639E581bca8d0B5d4D5f) |  onlyEmissionManager |  [EmissionManager](https://explorer.mantle.xyz//address/0x67eD9aC2b65F2ACa57ef2B6BA709251BC2B5036d) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
 |  [WrappedTokenGatewayV3](https://explorer.mantle.xyz//address/0x9C6cCAC66b1c9AbA4855e2dD284b9e16e41E06eA) |  - |  onlyOwner |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  emergencyTokenTransfer, emergencyEtherTransfer | |--------|--------|--------|--------|--------|
 |  [EmissionManager](https://explorer.mantle.xyz//address/0x67eD9aC2b65F2ACa57ef2B6BA709251BC2B5036d) |  - |  onlyOwner |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) |  setClaimer, setEmissionAdmin, setRewardsController | |--------|--------|--------|--------|--------|
@@ -99,11 +98,11 @@
 | Role |Contract |
 |----------|----------|
 |  DEFAULT_ADMIN |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) | |--------|--------|
-|  POOL_ADMIN |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b) | |--------|--------|
+|  POOL_ADMIN |  [Executor_lvl1](https://explorer.mantle.xyz//address/0x70884634D0098782592111A2A6B8d223be31CB7b), [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) | |--------|--------|
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Mantle](https://explorer.mantle.xyz//address/0x172867391d690Eb53896623DaD22208624230686) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
 |  FLASH_BORROWER |   | |--------|--------|
-|  RISK_ADMIN |   | |--------|--------|
+|  RISK_ADMIN |  [Manual AGRS](https://explorer.mantle.xyz//address/0xa35358159F42E11C5689C68f181a71d51BB22de3) | |--------|--------|
 
 ### Granular Guardian Admins 
 | Role |Contract |
