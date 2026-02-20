@@ -2,7 +2,7 @@ import {
   AaveV3Optimism,
   GovernanceV3Optimism,
   MiscOptimism,
-} from '@bgd-labs/aave-address-book';
+} from '@aave-dao/aave-address-book';
 import { Pools } from '../constants.js';
 import { NetworkConfig } from '../../types.js';
 import { createV3Pool, createTenderlyPool } from '../poolBuilder.js';

@@ -2,7 +2,7 @@ import { AddressBook, Contracts, PermissionsJson } from '../helpers/types.js';
 import { ChainId } from '@bgd-labs/toolbox';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { generateRoles } from '../helpers/jsonParsers.js';
-import { IWithGuardian_ABI, IOwnable_ABI } from '@bgd-labs/aave-address-book/abis';
+import { IWithGuardian_ABI } from '@aave-dao/aave-address-book/abis';
 import { baseAdapter } from '../abis/BaseAdapter.js';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { PayloadsController_ABI } from '../abis/payloadsController.js';
@@ -56,7 +56,7 @@ export const resolveGovV3Modifiers = async (
   // only valid while 2.5 is active
   if (addressBook.GOVERNANCE && addressBook.GOVERNANCE !== zeroAddress) {
     const govContractGuardian = getContract({ address: getAddress(addressBook.GOVERNANCE), abi: IWithGuardian_ABI, client: provider });
-    const govContractOwner = getContract({ address: getAddress(addressBook.GOVERNANCE), abi: IOwnable_ABI, client: provider });
+    const govContractOwner = getContract({ address: getAddress(addressBook.GOVERNANCE), abi: onlyOwnerAbi, client: provider });
     const govGuardian = await govContractGuardian.read.guardian() as Address;
     const govOwner = await govContractOwner.read.owner() as Address;
 
@@ -90,7 +90,7 @@ export const resolveGovV3Modifiers = async (
 
   if (addressBook.PAYLOADS_CONTROLLER && addressBook.PAYLOADS_CONTROLLER !== zeroAddress) {
     const pcContractGuardian = getContract({ address: getAddress(addressBook.PAYLOADS_CONTROLLER), abi: IWithGuardian_ABI, client: provider });
-    const pcContractOwner = getContract({ address: getAddress(addressBook.PAYLOADS_CONTROLLER), abi: IOwnable_ABI, client: provider });
+    const pcContractOwner = getContract({ address: getAddress(addressBook.PAYLOADS_CONTROLLER), abi: onlyOwnerAbi, client: provider });
     const pcContractRescue = getContract({ address: getAddress(addressBook.PAYLOADS_CONTROLLER), abi: PayloadsController_ABI, client: provider });
 
     const pcGuardian = await pcContractGuardian.read.guardian() as Address;
@@ -150,7 +150,7 @@ export const resolveGovV3Modifiers = async (
   }
 
   if (addressBook.VOTING_MACHINE && addressBook.VOTING_MACHINE !== zeroAddress) {
-    const vmContract = getContract({ address: getAddress(addressBook.VOTING_MACHINE), abi: IOwnable_ABI, client: provider });
+    const vmContract = getContract({ address: getAddress(addressBook.VOTING_MACHINE), abi: onlyOwnerAbi, client: provider });
     const owner = await vmContract.read.owner() as Address;
     const ownerInfo = await ownerResolver.resolve(owner);
 
@@ -175,7 +175,7 @@ export const resolveGovV3Modifiers = async (
 
   for (const portal of votingPortals) {
     if (addressBook[portal.key] && addressBook[portal.key] !== zeroAddress) {
-      const vpContract = getContract({ address: getAddress(addressBook[portal.key]), abi: IOwnable_ABI, client: provider });
+      const vpContract = getContract({ address: getAddress(addressBook[portal.key]), abi: onlyOwnerAbi, client: provider });
       const owner = await vpContract.read.owner() as Address;
       const ownerInfo = await ownerResolver.resolve(owner);
 
@@ -200,7 +200,7 @@ export const resolveGovV3Modifiers = async (
 
   for (const executor of executors) {
     if (addressBook[executor.key] && addressBook[executor.key] !== zeroAddress) {
-      const executorContract = getContract({ address: getAddress(addressBook[executor.key]), abi: IOwnable_ABI, client: provider });
+      const executorContract = getContract({ address: getAddress(addressBook[executor.key]), abi: onlyOwnerAbi, client: provider });
       const owner = await executorContract.read.owner() as Address;
       const ownerInfo = await ownerResolver.resolve(owner);
 
@@ -218,7 +218,7 @@ export const resolveGovV3Modifiers = async (
   }
 
   if (addressBook.EMERGENCY_REGISTRY && addressBook.EMERGENCY_REGISTRY !== zeroAddress) {
-    const emergencyRegistryContract = getContract({ address: getAddress(addressBook.EMERGENCY_REGISTRY), abi: IOwnable_ABI, client: provider });
+    const emergencyRegistryContract = getContract({ address: getAddress(addressBook.EMERGENCY_REGISTRY), abi: onlyOwnerAbi, client: provider });
     const owner = await emergencyRegistryContract.read.owner() as Address;
     const ownerInfo = await ownerResolver.resolve(owner);
 
@@ -236,7 +236,7 @@ export const resolveGovV3Modifiers = async (
 
   if (addressBook.CROSS_CHAIN_CONTROLLER && addressBook.CROSS_CHAIN_CONTROLLER !== zeroAddress) {
     const cccContract = getContract({ address: getAddress(addressBook.CROSS_CHAIN_CONTROLLER), abi: ICrossChainController_ABI, client: provider });
-    const cccContractOwner = getContract({ address: getAddress(addressBook.CROSS_CHAIN_CONTROLLER), abi: IOwnable_ABI, client: provider });
+    const cccContractOwner = getContract({ address: getAddress(addressBook.CROSS_CHAIN_CONTROLLER), abi: onlyOwnerAbi, client: provider });
     const cccContractGuardian = getContract({ address: getAddress(addressBook.CROSS_CHAIN_CONTROLLER), abi: IWithGuardian_ABI, client: provider });
     const cccContractRescue = getContract({ address: getAddress(addressBook.CROSS_CHAIN_CONTROLLER), abi: ICrossChainController_ABI, client: provider });
     const owner = await cccContractOwner.read.owner() as Address;

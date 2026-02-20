@@ -2,7 +2,7 @@ import { generateRoles } from '../helpers/jsonParsers.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { AddressBook, Contracts, PermissionsJson } from '../helpers/types.js';
-import { MiscEthereum } from '@bgd-labs/aave-address-book';
+import { MiscEthereum } from '@aave-dao/aave-address-book';
 import { erABI } from '../abis/EcosystemReserve.js';
 import { Address, Client, getAddress, getContract } from 'viem';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';

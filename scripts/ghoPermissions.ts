@@ -6,7 +6,8 @@ import {
 } from '../helpers/types.js';
 import { generateRoles } from '../helpers/jsonParsers.js';
 import { ghoABI } from '../abis/ghoABI.js';
-import { IOwnable_ABI, IWithGuardian_ABI } from '@bgd-labs/aave-address-book/abis';
+import { IWithGuardian_ABI } from '@aave-dao/aave-address-book/abis';
+import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { ghoStewardV2 } from '../abis/ghoStewardV2.js';
 import { Address, Client, getAddress, getContract } from 'viem';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
@@ -81,7 +82,7 @@ export const resolveGHOModifiers = async (
     
     obj['GHO'].proxyAdmin = ghoProxyAdmin;
 
-    const ghoProxyAdminContract = getContract({ address: getAddress(ghoProxyAdmin), abi: IOwnable_ABI, client: provider });
+    const ghoProxyAdminContract = getContract({ address: getAddress(ghoProxyAdmin), abi: onlyOwnerAbi, client: provider });
     const ghoProxyAdminOwner = await ghoProxyAdminContract.read.owner() as Address;
     const ghoProxyAdminOwnerInfo = await ownerResolver.resolve(ghoProxyAdminOwner);
 
@@ -138,7 +139,7 @@ export const resolveGHOModifiers = async (
     };
 
     // GSM proxy admin
-    const gsmProxyAdminContract = getContract({ address: getAddress(gsmProxyAdmin), abi: IOwnable_ABI, client: provider });
+    const gsmProxyAdminContract = getContract({ address: getAddress(gsmProxyAdmin), abi: onlyOwnerAbi, client: provider });
     const gsmProxyAdminOwner = await gsmProxyAdminContract.read.owner() as Address;
     const gsmProxyAdminOwnerInfo = await ownerResolver.resolve(gsmProxyAdminOwner);
 
@@ -184,7 +185,7 @@ export const resolveGHOModifiers = async (
 
   // Facilitator contracts (owner + guardian pattern)
   for (const [index, facilitator] of facilitators.entries()) {
-    const facilitatorOwnableContract = getContract({ address: getAddress(facilitator), abi: IOwnable_ABI, client: provider });
+    const facilitatorOwnableContract = getContract({ address: getAddress(facilitator), abi: onlyOwnerAbi, client: provider });
     const facilitatorGuardianContract = getContract({ address: getAddress(facilitator), abi: IWithGuardian_ABI, client: provider });
     try {
       const facilitatorOwner = await facilitatorOwnableContract.read.owner() as Address;
@@ -236,7 +237,7 @@ export const resolveGHOModifiers = async (
 
       // Skip aave proxy admin (already handled elsewhere)
       if (addressBook.PROXY_ADMIN && getAddress(proxyAdmin) !== getAddress(addressBook.PROXY_ADMIN as string)) {
-        const proxyAdminContract = getContract({ address: getAddress(proxyAdmin), abi: IOwnable_ABI, client: provider });
+        const proxyAdminContract = getContract({ address: getAddress(proxyAdmin), abi: onlyOwnerAbi, client: provider });
         const proxyAdminOwner = await proxyAdminContract.read.owner() as Address;
         const proxyAdminOwnerInfo = await ownerResolver.resolve(proxyAdminOwner);
 

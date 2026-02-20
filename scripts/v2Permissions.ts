@@ -4,7 +4,7 @@ import { poolAddressProviderAbi } from '../abis/lendingPoolAddressProviderAbi.js
 import { lendingPoolConfigurator } from '../abis/lendingPoolConfigurator.js';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { arcTimelockAbi } from '../abis/arcTimelockAbi.js';
-import { AaveV2EthereumArc } from '@bgd-labs/aave-address-book';
+import { AaveV2EthereumArc } from '@aave-dao/aave-address-book';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { ChainId } from '@bgd-labs/toolbox';
 import { AddressBook, Contracts, PermissionsJson } from '../helpers/types.js';
