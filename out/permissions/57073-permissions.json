@@ -321,6 +321,45 @@
             ]
           }
         ]
+      },
+      "Manual AGRS": {
+        "address": "0x2F9fDD0D80843b21A7e2c7bfe2A6278231A5683e",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x1dF462e2712496373A347f8ad10802a5E95f053D",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setRiskConfig",
+              "setAddressRestricted"
+            ]
+          },
+          {
+            "modifier": "onlyRiskCouncil",
+            "addresses": [
+              {
+                "address": "0xEcD37F855bB9814D75A83F0021815dc5cd6fd889",
+                "owners": [
+                  "0x5d49dBcdd300aECc2C311cFB56593E71c445d60d",
+                  "0x2F52F9D56E19650806E469665d4DcA055B4AcE42"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "updateCaps",
+              "updateRates",
+              "updateCollateralSide",
+              "updateLstPriceCaps",
+              "updateStablePriceCaps"
+            ]
+          }
+        ]
       }
     },
     "roles": {

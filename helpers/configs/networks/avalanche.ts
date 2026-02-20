@@ -3,7 +3,7 @@ import {
   AaveV3Avalanche,
   GovernanceV3Avalanche,
   MiscAvalanche,
-} from '@bgd-labs/aave-address-book';
+} from '@aave-dao/aave-address-book';
 import { Pools } from '../constants.js';
 import { NetworkConfig } from '../../types.js';
 import { createV3Pool, createV2PoRPool, createTenderlyPool } from '../poolBuilder.js';

@@ -2,7 +2,7 @@ import {
   AaveV3MegaEth,
   GovernanceV3MegaEth,
   MiscMegaEth,
-} from '@bgd-labs/aave-address-book';
+} from '@aave-dao/aave-address-book';
 import { Pools } from '../constants.js';
 import { NetworkConfig } from '../../types.js';
 import { createV3Pool } from '../poolBuilder.js';

@@ -3,7 +3,6 @@ import { AddressBook, Contracts, PermissionsJson } from '../helpers/types.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { PERMISSIONED_PAYLOADS_CONTROLLER_ABI } from '../abis/permissionedPayloadsController.js';
-import { IOwnable_ABI } from '@bgd-labs/aave-address-book/abis';
 import { Address, Client, getAddress, getContract, zeroAddress } from 'viem';
 import { uniqueAddresses } from '../helpers/addressUtils.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
@@ -186,7 +185,7 @@ export const resolveUmbrellaModifiers = async (
     addressBook.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR &&
     addressBook.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR !== zeroAddress
   ) {
-    const executorContract = getContract({ address: getAddress(addressBook.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR), abi: IOwnable_ABI, client: provider });
+    const executorContract = getContract({ address: getAddress(addressBook.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR), abi: onlyOwnerAbi, client: provider });
     const owner = await executorContract.read.owner() as Address;
     const ownerInfo = await ownerResolver.resolve(owner);
 
