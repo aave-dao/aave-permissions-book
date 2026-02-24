@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 24516261,
+    "latestBlockNumber": 24523427,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
@@ -40,7 +40,7 @@
     }
   },
   "V2": {
-    "latestBlockNumber": 24516263,
+    "latestBlockNumber": 24523430,
     "indexedContracts": {
       "COLLECTOR": {
         "address": "0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c",
@@ -50,7 +50,7 @@
     }
   },
   "V2_AMM": {
-    "latestBlockNumber": 24516263,
+    "latestBlockNumber": 24523430,
     "indexedContracts": {
       "COLLECTOR": {
         "address": "0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c",
@@ -60,7 +60,7 @@
     }
   },
   "LIDO": {
-    "latestBlockNumber": 24516262,
+    "latestBlockNumber": 24523429,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x013E2C7567b6231e865BB9273F8c7656103611c0",
@@ -80,7 +80,7 @@
     }
   },
   "ETHERFI": {
-    "latestBlockNumber": 24516263,
+    "latestBlockNumber": 24523429,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x3cE8E2eb6501d4705477643E96881B1bef6A2DB3",
@@ -145,7 +145,7 @@
     }
   },
   "GHO": {
-    "latestBlockNumber": 24516263,
+    "latestBlockNumber": 24523430,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
