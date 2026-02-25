@@ -613,7 +613,78 @@
       }
     },
     "agentHub": {
-      "contracts": {}
+      "contracts": {
+        "AgentHub": {
+          "address": "0x17781Ba226b359e5C1E1ee5ac9E28Ec5b84fd039",
+          "proxyAdmin": "0xd397e90c8c489c92fd7d1d8b11082c675c3190c9",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x1dF462e2712496373A347f8ad10802a5E95f053D",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "registerAgent",
+                "setAgentAdmin",
+                "setMaxBatchSize",
+                "setAgentAddress",
+                "renounceOwnership",
+                "transferOwnership"
+              ]
+            },
+            {
+              "modifier": "onlyOwnerOrAgentAdmin",
+              "addresses": [
+                {
+                  "address": "0x1dF462e2712496373A347f8ad10802a5E95f053D",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "setAgentAsPermissioned",
+                "addPermissionedSender",
+                "removePermissionedSender",
+                "addAllowedMarket",
+                "removeAllowedMarket",
+                "addRestrictedMarket",
+                "removeRestrictedMarket",
+                "setExpirationPeriod",
+                "setAgentEnabled",
+                "setMinimumDelay",
+                "setAgentContext",
+                "setMarketsFromAgentEnabled",
+                "addAllowedMarket",
+                "addAllowedMarket"
+              ]
+            }
+          ]
+        },
+        "AgentHubProxyAdmin": {
+          "address": "0xd397e90c8c489c92fd7d1d8b11082c675c3190c9",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x1dF462e2712496373A347f8ad10802a5E95f053D",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "changeProxyAdmin",
+                "upgrade",
+                "upgradeAndCall"
+              ]
+            }
+          ]
+        }
+      }
     }
   },
   "V3": {
