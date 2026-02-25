@@ -58,6 +58,13 @@
 |  [Collector](https://explorer.inkonchain.com//address/0x9138E2cAdFEB23AFFdc0419F2912CaB8F135dba9) |  [CollectorProxyAdmin](https://explorer.inkonchain.com//address/0xd059Ec2CF261858e23fB5a3a5debD929501e99e8) |  onlyAdminOrRecipient |  [CollectorProxyAdmin](https://explorer.inkonchain.com//address/0xd059Ec2CF261858e23fB5a3a5debD929501e99e8), [PermissionedExecutor](https://explorer.inkonchain.com//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  withdrawFromStream, cancelStream | |--------|--------|--------|--------|--------|
 |  [CollectorProxyAdmin](https://explorer.inkonchain.com//address/0xd059ec2cf261858e23fb5a3a5debd929501e99e8) |  - |  onlyOwner |  [PermissionedExecutor](https://explorer.inkonchain.com//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
 
+### Risk Agent Contracts
+| contract |proxyAdmin |modifier |permission owner |functions |
+|----------|----------|----------|----------|----------|
+|  [AgentHub](https://explorer.inkonchain.com//address/0x17781Ba226b359e5C1E1ee5ac9E28Ec5b84fd039) |  [AgentHubProxyAdmin](https://explorer.inkonchain.com//address/0xd397E90C8c489C92FD7d1d8B11082C675C3190C9) |  onlyOwner |  [PermissionedExecutor](https://explorer.inkonchain.com//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  registerAgent, setAgentAdmin, setMaxBatchSize, setAgentAddress, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [AgentHub](https://explorer.inkonchain.com//address/0x17781Ba226b359e5C1E1ee5ac9E28Ec5b84fd039) |  [AgentHubProxyAdmin](https://explorer.inkonchain.com//address/0xd397E90C8c489C92FD7d1d8B11082C675C3190C9) |  onlyOwnerOrAgentAdmin |  [PermissionedExecutor](https://explorer.inkonchain.com//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  setAgentAsPermissioned, addPermissionedSender, removePermissionedSender, addAllowedMarket, removeAllowedMarket, addRestrictedMarket, removeRestrictedMarket, setExpirationPeriod, setAgentEnabled, setMinimumDelay, setAgentContext, setMarketsFromAgentEnabled, addAllowedMarket, addAllowedMarket | |--------|--------|--------|--------|--------|
+|  [AgentHubProxyAdmin](https://explorer.inkonchain.com//address/0xd397e90c8c489c92fd7d1d8b11082c675c3190c9) |  - |  onlyOwner |  [PermissionedExecutor](https://explorer.inkonchain.com//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
+
 ### Permissioned Payloads Controller Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
 |----------|----------|----------|----------|----------|
