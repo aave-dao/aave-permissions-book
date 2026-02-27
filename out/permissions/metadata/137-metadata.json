@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 83474353,
+    "latestBlockNumber": 83517484,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xa72636CbcAa8F5FF95B2cc47F3CDEe83F3294a0B",
@@ -30,7 +30,7 @@
     }
   },
   "V2": {
-    "latestBlockNumber": 83474356,
+    "latestBlockNumber": 83517487,
     "indexedContracts": {
       "COLLECTOR": {
         "address": "0xe8599F3cc5D38a9aD6F3684cd5CEa72f10Dbc383",
