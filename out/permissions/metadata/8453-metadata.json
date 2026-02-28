@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 42682824,
+    "latestBlockNumber": 42725866,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x43955b0899Ab7232E3a454cf84AedD22Ad46FD33",
@@ -50,7 +50,7 @@
     }
   },
   "GHO": {
-    "latestBlockNumber": 42682830,
+    "latestBlockNumber": 42725870,
     "indexedContracts": {
       "GHO_TOKEN": {
         "address": "0x6Bb7a212910682DCFdbd5BCBb3e28FB4E8da10Ee",
