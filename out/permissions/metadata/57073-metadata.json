@@ -1,6 +1,6 @@
 {
   "V3_WHITE_LABEL": {
-    "latestBlockNumber": 38742670,
+    "latestBlockNumber": 38830028,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x86E2938daE289763D4e09a7e42c5cCcA62Cf9809",
@@ -15,7 +15,7 @@
     }
   },
   "V3": {
-    "latestBlockNumber": 38742671,
+    "latestBlockNumber": 38830030,
     "indexedContracts": {
       "CROSS_CHAIN_CONTROLLER": {
         "address": "0x990B75fD1a2345D905a385dBC6e17BEe0Cb2f505",
@@ -30,7 +30,7 @@
     }
   },
   "GHO": {
-    "latestBlockNumber": 38742671,
+    "latestBlockNumber": 38830031,
     "indexedContracts": {
       "GHO_TOKEN": {
         "address": "0xfc421aD3C883Bf9E7C4f42dE845C4e4405799e73",
