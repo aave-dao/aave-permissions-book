@@ -1,6 +1,22 @@
 import { AddressBook, PoolConfigs } from '../types.js';
 
 // ============================================================================
+// V4 Pool Config Type
+// ============================================================================
+
+/**
+ * Configuration for V4 pools using OZ AccessManager.
+ */
+export interface V4PoolConfig {
+  accessManagerBlock: number;
+  addressBook: AddressBook;
+  roleLabels?: Record<string, string>;
+  governanceAddressBook?: AddressBook;
+  crossChainControllerBlock?: number;
+  granularGuardianBlock?: number;
+}
+
+// ============================================================================
 // Pool Config Types
 // ============================================================================
 
@@ -101,5 +117,14 @@ export const createGhoPool = (config: GhoPoolConfig): PoolConfigs => ({
 export const createSafetyPool = (addressBook: AddressBook): PoolConfigs => ({
   permissionsJson: './statics/functionsPermissionsSafety.json',
   addressBook,
+});
+
+/**
+ * Creates a V4 pool configuration using OZ AccessManager.
+ */
+export const createV4Pool = (config: V4PoolConfig): PoolConfigs => ({
+  permissionsJson: './statics/functionsPermissionsV4.json',
+  crossChainPermissionsJson: './statics/functionsPermissionsGovV3.json',
+  ...config,
 });
 

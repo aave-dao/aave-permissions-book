@@ -18,6 +18,7 @@ import {
   createV2AmmPool,
   createGhoPool,
   createSafetyPool,
+  createV4Pool,
 } from '../poolBuilder.js';
 import { mergeAddressNames } from '../addresses/index.js';
 
@@ -109,6 +110,28 @@ const v2MiscPool = {
 };
 
 // ============================================================================
+// V4 Pool
+// ============================================================================
+const v4Pool = createV4Pool({
+  accessManagerBlock: 24687900,
+  addressBook: {
+    ACCESS_MANAGER: '0x4940dB23bD0f02de91ffC620508a44F46fDead37',
+    CORE_HUB: '0xDA21DF2D9297f3E1CB564A54190a2984DF42B934',
+    PLUS_HUB: '0x85F9b1d60f9F6fbD51006EA2FE6a5456ad2f8B90',
+    PRIME_HUB: '0x502B96A1A31572264e27474C2f1439E7FB69b6E8',
+    HUB_CONFIGURATOR: '0x022B3f60a58efaef200fF0B5D599B9b18223EE1F',
+    SPOKE_CONFIGURATOR: '0x5B45da42DF121aD69502f3E6BC32F129F7549782',
+    BLUECHIP_SPOKE: '0x2454A04E149bceB0263654740427A035023af642',
+    ETHENA_SPOKE: '0x3B8Ccc60E1e1090C1BF2089A8E3EAdb8D43E78e6',
+    TREASURY_SPOKE: '0x73F0C5c9F959CF8c1C76DFc30F519b09Ab83E5D5',
+  },
+  roleLabels: {},
+  governanceAddressBook: GovernanceV3Ethereum,
+  crossChainControllerBlock: 18090380,
+  granularGuardianBlock: 20324867,
+});
+
+// ============================================================================
 // Safety Module
 // ============================================================================
 const safetyPool = createSafetyPool(AaveSafetyModule);
@@ -172,5 +195,6 @@ export const mainnetConfig: NetworkConfig = {
     [Pools.V2_AMM]: v2AmmPool,
     [Pools.SAFETY_MODULE]: safetyPool,
     [Pools.V2_MISC]: v2MiscPool,
+    [Pools.V4]: v4Pool,
   },
 };

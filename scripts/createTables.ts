@@ -68,6 +68,12 @@ const buildPoolInfoContracts = (
   const networkPermits = getPermissionsByNetwork(network);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
   const isLidoOrEtherfi = pool === Pools.LIDO || pool === Pools.ETHERFI;
+  const isV4 = pool === Pools.V4;
+
+  if (isV4) {
+    // V4 uses only its own contracts + its own governance
+    return extractPoolContracts(networkPermits[Pools.V4]) as Contracts;
+  }
 
   if (isWhiteLabel) {
     // V3_WHITE_LABEL uses only its own pool data
@@ -103,6 +109,14 @@ const buildGovPermissions = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
 
+  if (pool === Pools.V4) {
+    // V4 reuses V3's governance contracts
+    return {
+      ...networkPermits['V3']?.govV3?.contracts,
+      ...networkPermits[Pools.V4]?.govV3?.contracts,
+    } as Contracts;
+  }
+
   if (pool === Pools.V3_WHITE_LABEL) {
     return {
       ...networkPermits['V3_WHITE_LABEL']?.govV3?.contracts,
@@ -134,6 +148,14 @@ const buildActionPoolInfo = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
+  const isV4 = pool === Pools.V4;
+
+  if (isV4) {
+    return {
+      ...currentPoolContracts,
+      ...networkPermits[Pools.V4]?.govV3?.contracts,
+    } as Contracts;
+  }
 
   if (isWhiteLabel) {
     return {
@@ -167,6 +189,13 @@ const buildActionGovInfo = (
   pool: string,
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
+
+  if (pool === Pools.V4) {
+    return {
+      ...networkPermits['V3']?.govV3?.contracts,
+      ...networkPermits[Pools.V4]?.govV3?.contracts,
+    } as Contracts;
+  }
 
   if (pool === Pools.V3_WHITE_LABEL) {
     return {
@@ -510,6 +539,20 @@ export const generateTable = (network: string, pool: string): string => {
     { title: 'Admins', roles: poolPermitsByContract.roles?.role },
     tableCtx,
   );
+
+  // V4 AccessManager Roles table
+  if (poolPermitsByContract.v4AccessManager) {
+    const am = poolPermitsByContract.v4AccessManager;
+    const labeledRoles: Record<string, string[]> = {};
+    for (const [roleId, addresses] of Object.entries(am.roles)) {
+      const label = am.roleLabels[roleId] || `Role #${roleId}`;
+      labeledRoles[label] = addresses;
+    }
+    readmeByNetwork += generateRoleTable(
+      { title: 'AccessManager Roles', roles: labeledRoles },
+      tableCtx,
+    );
+  }
 
   // Granular Guardian Admins table
   readmeByNetwork += generateRoleTable(

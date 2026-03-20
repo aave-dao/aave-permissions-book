@@ -126,7 +126,13 @@ export const findContractNameByAddress = (
     if (found) return found;
   }
 
-  // 3. Search GHO contracts (only for mainnet)
+  // 3. Search V4 pool (if current pool is not V4)
+  if (pool !== 'V4' && networkPermits['V4']) {
+    found = findInPool(networkPermits['V4']);
+    if (found) return found;
+  }
+
+  // 4. Search GHO contracts (only for mainnet)
   if (network === '1') {
     found = findInPool(networkPermits['GHO']);
     if (found) return found;

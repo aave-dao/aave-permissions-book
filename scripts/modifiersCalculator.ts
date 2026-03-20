@@ -52,6 +52,9 @@ import { resolveV2MiscModifiers } from './v2MiscPermissions.js';
 import { getSenders } from '../helpers/crossChainControllerLogs.js';
 import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
+import { resolveV4Modifiers } from './v4Permissions.js';
+import { getAccessManagerRoles, getFunctionRoleMappings } from '../helpers/accessManagerRoles.js';
+import { V4AccessManager } from '../helpers/types.js';
 import { resolveCollectorModifiers } from './collectorPermissions.js';
 import { resolveClinicStewardModifiers } from './clinicStewardPermissions.js';
 import { resolveUmbrellaModifiers } from './umbrellaPermissions.js';
@@ -141,7 +144,8 @@ const generateNetworkPermissions = async (
       pool.clinicStewardBlock ||
       pool.umbrellaBlock ||
       pool.crossChainControllerBlock ||
-      pool.granularGuardianBlock;
+      pool.granularGuardianBlock ||
+      pool.accessManagerBlock;
 
     // Store indexed events for later processing
     let indexedEvents: Record<string, import('viem').Log[]> = {};
@@ -162,6 +166,7 @@ const generateNetworkPermissions = async (
         granularGuardianBlock: pool.granularGuardianBlock,
         ghoBlock: pool.ghoBlock,
         gsmBlocks: pool.gsmBlocks,
+        accessManagerBlock: pool.accessManagerBlock,
       });
 
       if (contractConfigs.length > 0) {
@@ -200,7 +205,40 @@ const generateNetworkPermissions = async (
     const poolProvider = getProviderForPool(provider, forkRpcUrl);
     const v3PoolProvider = getV3ProviderForPool(provider, forkRpcUrl);
 
-    if (
+    if (poolKey === Pools.V4) {
+      logTableGeneration(network, poolKey, undefined, indexedLatestBlock || pool.accessManagerBlock);
+
+      if (Object.keys(pool.addressBook).length > 0 && pool.accessManagerBlock) {
+        // Process ACCESS_MANAGER events
+        const amEvents = indexedEvents['ACCESS_MANAGER'] || [];
+        const v4Roles = getAccessManagerRoles({
+          oldRoles: (fullJson[poolKey]?.v4AccessManager?.roles) || {},
+          eventLogs: amEvents,
+        });
+        const v4FunctionRoles = getFunctionRoleMappings({
+          oldMappings: (fullJson[poolKey]?.v4AccessManager?.functionRoles) || {},
+          eventLogs: amEvents,
+        });
+
+        const roleLabels = pool.roleLabels || {};
+
+        poolPermissions = await resolveV4Modifiers(
+          pool.addressBook,
+          poolProvider,
+          permissionsJson,
+          v4Roles,
+          v4FunctionRoles,
+          roleLabels,
+        );
+
+        // Store V4 access manager data for later use
+        (fullJson as any).__v4AccessManager = {
+          roles: v4Roles,
+          functionRoles: v4FunctionRoles,
+          roleLabels,
+        } as V4AccessManager;
+      }
+    } else if (
       poolKey !== Pools.GOV_V2 &&
       poolKey !== Pools.SAFETY_MODULE &&
       poolKey !== Pools.V2_MISC &&
@@ -479,33 +517,30 @@ const generateNetworkPermissions = async (
       govV3.senders = senders;
     }
 
+    // Extract V4 access manager data if present
+    const v4AccessManager = (fullJson as any).__v4AccessManager as V4AccessManager | undefined;
+    delete (fullJson as any).__v4AccessManager;
+
     // Merge this pool's results into the network-wide JSON.
+    const poolResult = {
+      contracts: poolPermissions,
+      roles: admins,
+      gsmRoles: gsmAdmins,
+      govV3: govV3,
+      collector: collector,
+      clinicSteward: clinicSteward,
+      umbrella: umbrella,
+      ppc: ppc,
+      agentHub: agentHub,
+      ...(v4AccessManager ? { v4AccessManager } : {}),
+    };
+
     if (Object.keys(fullJson).length === 0) {
       fullJson = {
-        [poolKey]: {
-          contracts: poolPermissions,
-          roles: admins,
-          gsmRoles: gsmAdmins,
-          govV3: govV3,
-          collector: collector,
-          clinicSteward: clinicSteward,
-          umbrella: umbrella,
-          ppc: ppc,
-          agentHub: agentHub,
-        },
+        [poolKey]: poolResult,
       };
     } else {
-      fullJson[poolKey] = {
-        contracts: poolPermissions,
-        roles: admins,
-        gsmRoles: gsmAdmins,
-        govV3: govV3,
-        collector: collector,
-        clinicSteward: clinicSteward,
-        umbrella: umbrella,
-        ppc: ppc,
-        agentHub: agentHub,
-      };
+      fullJson[poolKey] = poolResult;
     }
     logger.poolFinished(String(network), poolKey);
   }

@@ -1,0 +1,343 @@
+[
+  {
+    "contract": "Hub",
+    "functions": [
+      {
+        "name": "addAsset",
+        "roles": ["restricted"],
+        "selector": "0x298410e5"
+      },
+      {
+        "name": "updateAssetConfig",
+        "roles": ["restricted"],
+        "selector": "0xd9fe6a0d"
+      },
+      {
+        "name": "addSpoke",
+        "roles": ["restricted"],
+        "selector": "0xde2f5b9b"
+      },
+      {
+        "name": "updateSpokeConfig",
+        "roles": ["restricted"],
+        "selector": "0x1d69ff42"
+      },
+      {
+        "name": "setInterestRateData",
+        "roles": ["restricted"],
+        "selector": "0xaf121544"
+      },
+      {
+        "name": "mintFeeShares",
+        "roles": ["restricted"],
+        "selector": "0xefef2807"
+      },
+      {
+        "name": "eliminateDeficit",
+        "roles": ["restricted"],
+        "selector": "0xd2256c66"
+      }
+    ]
+  },
+  {
+    "contract": "HubConfigurator",
+    "functions": [
+      {
+        "name": "addAsset",
+        "roles": ["restricted"],
+        "selector": "0x298410e5"
+      },
+      {
+        "name": "addAssetWithDecimals",
+        "roles": ["restricted"],
+        "selector": "0x72ceaaed"
+      },
+      {
+        "name": "updateLiquidityFee",
+        "roles": ["restricted"],
+        "selector": "0x96e68209"
+      },
+      {
+        "name": "updateFeeReceiver",
+        "roles": ["restricted"],
+        "selector": "0xf160d369"
+      },
+      {
+        "name": "updateFeeConfig",
+        "roles": ["restricted"],
+        "selector": "0x1845f2fa"
+      },
+      {
+        "name": "updateInterestRateStrategy",
+        "roles": ["restricted"],
+        "selector": "0xfb901252"
+      },
+      {
+        "name": "updateReinvestmentController",
+        "roles": ["restricted"],
+        "selector": "0xb4caec8a"
+      },
+      {
+        "name": "resetAssetCaps",
+        "roles": ["restricted"],
+        "selector": "0xb8af0654"
+      },
+      {
+        "name": "deactivateAsset",
+        "roles": ["restricted"],
+        "selector": "0x88c88449"
+      },
+      {
+        "name": "haltAsset",
+        "roles": ["restricted"],
+        "selector": "0x2e5ae7c5"
+      },
+      {
+        "name": "addSpoke",
+        "roles": ["restricted"],
+        "selector": "0xde2f5b9b"
+      },
+      {
+        "name": "addSpokeToAssets",
+        "roles": ["restricted"],
+        "selector": "0x6e8f9bad"
+      },
+      {
+        "name": "updateSpokeActive",
+        "roles": ["restricted"],
+        "selector": "0x88c74fd5"
+      },
+      {
+        "name": "updateSpokeHalted",
+        "roles": ["restricted"],
+        "selector": "0x9c6a5c6e"
+      },
+      {
+        "name": "updateSpokeAddCap",
+        "roles": ["restricted"],
+        "selector": "0xf2a19c5d"
+      },
+      {
+        "name": "updateSpokeDrawCap",
+        "roles": ["restricted"],
+        "selector": "0xaa7f4d23"
+      },
+      {
+        "name": "updateSpokeRiskPremiumThreshold",
+        "roles": ["restricted"],
+        "selector": "0x2b0b5f82"
+      },
+      {
+        "name": "updateSpokeCaps",
+        "roles": ["restricted"],
+        "selector": "0x8aeeff2a"
+      },
+      {
+        "name": "deactivateSpoke",
+        "roles": ["restricted"],
+        "selector": "0x52a7f186"
+      },
+      {
+        "name": "haltSpoke",
+        "roles": ["restricted"],
+        "selector": "0x25a7f2a7"
+      },
+      {
+        "name": "resetSpokeCaps",
+        "roles": ["restricted"],
+        "selector": "0xf3afce89"
+      },
+      {
+        "name": "updateInterestRateData",
+        "roles": ["restricted"],
+        "selector": "0x5e10a96e"
+      }
+    ]
+  },
+  {
+    "contract": "Spoke",
+    "functions": [
+      {
+        "name": "updateLiquidationConfig",
+        "roles": ["restricted"],
+        "selector": "0xe37ec227"
+      },
+      {
+        "name": "addReserve",
+        "roles": ["restricted"],
+        "selector": "0xacb0e47f"
+      },
+      {
+        "name": "updateReserveConfig",
+        "roles": ["restricted"],
+        "selector": "0x437a70d8"
+      },
+      {
+        "name": "updateReservePriceSource",
+        "roles": ["restricted"],
+        "selector": "0x22b0b56c"
+      },
+      {
+        "name": "addDynamicReserveConfig",
+        "roles": ["restricted"],
+        "selector": "0x96e5b30d"
+      },
+      {
+        "name": "updateDynamicReserveConfig",
+        "roles": ["restricted"],
+        "selector": "0x0d84e587"
+      },
+      {
+        "name": "updatePositionManager",
+        "roles": ["restricted"],
+        "selector": "0x73237e82"
+      }
+    ]
+  },
+  {
+    "contract": "SpokeConfigurator",
+    "functions": [
+      {
+        "name": "updateReservePriceSource",
+        "roles": ["restricted"],
+        "selector": "0x22b0b56c"
+      },
+      {
+        "name": "updateLiquidationTargetHealthFactor",
+        "roles": ["restricted"],
+        "selector": "0x7ca54ba8"
+      },
+      {
+        "name": "updateHealthFactorForMaxBonus",
+        "roles": ["restricted"],
+        "selector": "0x4de7f7ca"
+      },
+      {
+        "name": "updateLiquidationBonusFactor",
+        "roles": ["restricted"],
+        "selector": "0xfb38eb5a"
+      },
+      {
+        "name": "updateLiquidationConfig",
+        "roles": ["restricted"],
+        "selector": "0xe37ec227"
+      },
+      {
+        "name": "addReserve",
+        "roles": ["restricted"],
+        "selector": "0xacb0e47f"
+      },
+      {
+        "name": "updatePaused",
+        "roles": ["restricted"],
+        "selector": "0xf47ae6d3"
+      },
+      {
+        "name": "updateFrozen",
+        "roles": ["restricted"],
+        "selector": "0x15c2a47a"
+      },
+      {
+        "name": "updateBorrowable",
+        "roles": ["restricted"],
+        "selector": "0x5f8c27e4"
+      },
+      {
+        "name": "updateReceiveSharesEnabled",
+        "roles": ["restricted"],
+        "selector": "0x9a38e5c8"
+      },
+      {
+        "name": "updateCollateralRisk",
+        "roles": ["restricted"],
+        "selector": "0xf0b57a6c"
+      },
+      {
+        "name": "addCollateralFactor",
+        "roles": ["restricted"],
+        "selector": "0x3e4e4f4e"
+      },
+      {
+        "name": "updateCollateralFactor",
+        "roles": ["restricted"],
+        "selector": "0x7e2ba0a0"
+      },
+      {
+        "name": "addMaxLiquidationBonus",
+        "roles": ["restricted"],
+        "selector": "0xa47d5fba"
+      },
+      {
+        "name": "updateMaxLiquidationBonus",
+        "roles": ["restricted"],
+        "selector": "0x3b2b1e4e"
+      },
+      {
+        "name": "addLiquidationFee",
+        "roles": ["restricted"],
+        "selector": "0xa5e9535a"
+      },
+      {
+        "name": "updateLiquidationFee",
+        "roles": ["restricted"],
+        "selector": "0x3e7a47b4"
+      },
+      {
+        "name": "addDynamicReserveConfig",
+        "roles": ["restricted"],
+        "selector": "0x96e5b30d"
+      },
+      {
+        "name": "updateDynamicReserveConfig",
+        "roles": ["restricted"],
+        "selector": "0x0d84e587"
+      },
+      {
+        "name": "pauseAllReserves",
+        "roles": ["restricted"],
+        "selector": "0xa5834e06"
+      },
+      {
+        "name": "freezeAllReserves",
+        "roles": ["restricted"],
+        "selector": "0xf58b3c8d"
+      },
+      {
+        "name": "pauseReserve",
+        "roles": ["restricted"],
+        "selector": "0x49d9ceb2"
+      },
+      {
+        "name": "freezeReserve",
+        "roles": ["restricted"],
+        "selector": "0x7f5e0e03"
+      },
+      {
+        "name": "updatePositionManager",
+        "roles": ["restricted"],
+        "selector": "0x73237e82"
+      }
+    ]
+  },
+  {
+    "contract": "TreasurySpoke",
+    "functions": [
+      {
+        "name": "supply",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "supplySkimmed",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "withdraw",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transfer",
+        "roles": ["onlyOwner"]
+      }
+    ]
+  }
+]

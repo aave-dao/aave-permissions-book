@@ -15,6 +15,7 @@ export enum Pools {
   LIDO = 'LIDO',
   ETHERFI = 'ETHERFI',
   V3_WHITE_LABEL = 'V3_WHITE_LABEL',
+  V4 = 'V4',
 }
 
 // ============================================================================

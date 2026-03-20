@@ -275,6 +275,11 @@ export const ROLE_EVENT_TYPES = ['RoleGranted', 'RoleRevoked'];
 export const CCC_EVENT_TYPES = ['SenderUpdated'];
 
 /**
+ * Event types for OZ AccessManager (V4)
+ */
+export const ACCESS_MANAGER_EVENT_TYPES = ['RoleGrantedAM', 'RoleRevokedAM', 'TargetFunctionRoleUpdated'];
+
+/**
  * Pool configuration for building contract configs.
  */
 interface PoolConfig {
@@ -292,6 +297,8 @@ interface PoolConfig {
   // GHO blocks
   ghoBlock?: number;
   gsmBlocks?: Record<string, number>;
+  // V4 blocks
+  accessManagerBlock?: number;
 }
 
 /**
@@ -374,6 +381,17 @@ export const buildPoolContractConfigs = (pool: PoolConfig): ContractEventConfig[
       address: pool.governanceAddressBook.GRANULAR_GUARDIAN,
       deploymentBlock: pool.granularGuardianBlock,
       eventTypes: ROLE_EVENT_TYPES,
+    });
+  }
+
+  // ===== V4 AccessManager =====
+
+  if (pool.addressBook.ACCESS_MANAGER && pool.accessManagerBlock) {
+    configs.push({
+      id: 'ACCESS_MANAGER',
+      address: pool.addressBook.ACCESS_MANAGER,
+      deploymentBlock: pool.accessManagerBlock,
+      eventTypes: ACCESS_MANAGER_EVENT_TYPES,
     });
   }
 
