@@ -5,15 +5,12 @@ import { AddressBook, PoolConfigs } from '../types.js';
 // ============================================================================
 
 /**
- * Configuration for V4 pools using OZ AccessManager.
+ * Configuration for Aave V4 using OZ AccessManager.
  */
 export interface V4PoolConfig {
   accessManagerBlock: number;
   addressBook: AddressBook;
   roleLabels?: Record<string, string>;
-  governanceAddressBook?: AddressBook;
-  crossChainControllerBlock?: number;
-  granularGuardianBlock?: number;
 }
 
 // ============================================================================
@@ -120,11 +117,10 @@ export const createSafetyPool = (addressBook: AddressBook): PoolConfigs => ({
 });
 
 /**
- * Creates a V4 pool configuration using OZ AccessManager.
+ * Creates an Aave V4 configuration using OZ AccessManager.
  */
 export const createV4Pool = (config: V4PoolConfig): PoolConfigs => ({
   permissionsJson: './statics/functionsPermissionsV4.json',
-  crossChainPermissionsJson: './statics/functionsPermissionsGovV3.json',
   ...config,
 });
 

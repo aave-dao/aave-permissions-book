@@ -220,22 +220,22 @@ const generateNetworkPermissions = async (
           eventLogs: amEvents,
         });
 
-        const roleLabels = pool.roleLabels || {};
-
-        poolPermissions = await resolveV4Modifiers(
+        const v4Result = await resolveV4Modifiers(
           pool.addressBook,
           poolProvider,
           permissionsJson,
           v4Roles,
           v4FunctionRoles,
-          roleLabels,
+          pool.roleLabels || {},
+          Number(network),
         );
+        poolPermissions = v4Result.contracts;
 
         // Store V4 access manager data for later use
         (fullJson as any).__v4AccessManager = {
           roles: v4Roles,
           functionRoles: v4FunctionRoles,
-          roleLabels,
+          roleLabels: v4Result.roleLabels,
         } as V4AccessManager;
       }
     } else if (

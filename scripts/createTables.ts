@@ -349,11 +349,16 @@ export const generateTable = (network: string, pool: string): string => {
     });
   }
 
-  // Add current pool's contracts to contractsByAddress
+  // Add current pool's contracts to contractsByAddress (filter _-prefixed synthetic entries)
   // Additional lookups across pools are done lazily via findContractNameByAddress
+  const visibleContracts = poolPermitsByContract?.contracts
+    ? Object.fromEntries(
+        Object.entries(poolPermitsByContract.contracts).filter(([name]) => !name.startsWith('_')),
+      )
+    : {};
   contractsByAddress = {
     ...contractsByAddress,
-    ...generateContractsByAddress(poolPermitsByContract?.contracts || {}),
+    ...generateContractsByAddress(visibleContracts),
   };
 
   let decentralizationTable = `### Contracts upgradeability\n`;
@@ -366,18 +371,34 @@ export const generateTable = (network: string, pool: string): string => {
   const govPermissions = buildGovPermissions(network, pool);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
 
-  // fill pool table
+  // fill pool table (skip _-prefixed synthetic entries like _X ProxyAdmin)
   let decentralizationTableBody = '';
   for (let contractName of Object.keys(poolPermitsByContract.contracts)) {
+    if (contractName.startsWith('_')) continue;
     const contract = poolPermitsByContract.contracts[contractName];
     const { upgradeable, ownedBy }: Decentralization =
       getLevelOfDecentralization(contract, poolInfoContracts, govPermissions, isWhiteLabel);
+
+    // For upgradeable contracts, try to resolve the proxy admin owner to a known label
+    let upgradeLabel = upgradeable ? ownedBy : 'not upgradeable';
+    if (upgradeable && contract.proxyAdmin) {
+      const syntheticKey = `_${contractName} ProxyAdmin`;
+      const proxyAdminEntry = poolPermitsByContract.contracts[syntheticKey];
+      if (proxyAdminEntry?.modifiers?.[0]?.addresses?.[0]) {
+        const ownerAddr = proxyAdminEntry.modifiers[0].addresses[0].address;
+        const knownName = addressesNames[ownerAddr] || addressesNames[getAddress(ownerAddr)];
+        if (knownName) {
+          upgradeLabel = knownName;
+        }
+      }
+    }
+
     decentralizationTableBody += getTableBody([
       `[${contractName}](${explorerAddressUrlComposer(
         contract.address,
         network,
       )})`,
-      `${upgradeable ? ownedBy : 'not upgradeable'}`,
+      upgradeLabel,
     ]);
     decentralizationTableBody += getLineSeparator(
       decentralizationHeaderTitles.length,
@@ -469,10 +490,15 @@ export const generateTable = (network: string, pool: string): string => {
     generateTableAddress,
   };
 
-  // Contracts table
-  if (poolPermitsByContract.contracts && Object.keys(poolPermitsByContract.contracts).length > 0) {
+  // Contracts table (filter out _-prefixed synthetic entries)
+  const displayContracts = poolPermitsByContract.contracts
+    ? Object.fromEntries(
+        Object.entries(poolPermitsByContract.contracts).filter(([name]) => !name.startsWith('_')),
+      )
+    : {};
+  if (Object.keys(displayContracts).length > 0) {
     readmeByNetwork += generateContractTable(
-      { title: 'Contracts', contracts: poolPermitsByContract.contracts },
+      { title: 'Contracts', contracts: displayContracts },
       tableCtx,
     );
 
