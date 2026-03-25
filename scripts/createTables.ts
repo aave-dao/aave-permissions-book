@@ -71,7 +71,7 @@ const buildPoolInfoContracts = (
   const isV4 = pool === Pools.V4;
 
   if (isV4) {
-    // V4 uses only its own contracts + its own governance
+    // V4 uses only its own contracts
     return extractPoolContracts(networkPermits[Pools.V4]) as Contracts;
   }
 
