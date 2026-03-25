@@ -18,7 +18,7 @@ import {
   createV2AmmPool,
   createGhoPool,
   createSafetyPool,
-  createV4Pool,
+  createV4,
 } from '../poolBuilder.js';
 import { mergeAddressNames } from '../addresses/index.js';
 
@@ -112,7 +112,7 @@ const v2MiscPool = {
 // ============================================================================
 // Aave V4
 // ============================================================================
-const aaveV4 = createV4Pool({
+const aaveV4 = createV4({
   accessManagerBlock: 24720870,
   addressBook: {
     ACCESS_MANAGER: '0x08aE3BE30958cDd1847ec58fFfd4C451a87fDF01',

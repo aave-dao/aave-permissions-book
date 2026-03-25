@@ -1,13 +1,13 @@
 import { AddressBook, PoolConfigs } from '../types.js';
 
 // ============================================================================
-// V4 Pool Config Type
+// V4 Config Type
 // ============================================================================
 
 /**
- * Configuration for Aave V4 using OZ AccessManager.
+ * Configuration for Aave V4 using AccessManagerEnumerable.
  */
-export interface V4PoolConfig {
+export interface V4Config {
   accessManagerBlock: number;
   addressBook: AddressBook;
   roleLabels?: Record<string, string>;
@@ -119,7 +119,7 @@ export const createSafetyPool = (addressBook: AddressBook): PoolConfigs => ({
 /**
  * Creates an Aave V4 configuration using OZ AccessManager.
  */
-export const createV4Pool = (config: V4PoolConfig): PoolConfigs => ({
+export const createV4 = (config: V4Config): PoolConfigs => ({
   permissionsJson: './statics/functionsPermissionsV4.json',
   ...config,
 });
