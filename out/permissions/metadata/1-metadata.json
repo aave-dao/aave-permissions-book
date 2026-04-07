@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 24826327,
+    "latestBlockNumber": 24808366,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
@@ -60,7 +60,7 @@
     }
   },
   "LIDO": {
-    "latestBlockNumber": 24826328,
+    "latestBlockNumber": 24826242,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x013E2C7567b6231e865BB9273F8c7656103611c0",
@@ -80,7 +80,7 @@
     }
   },
   "ETHERFI": {
-    "latestBlockNumber": 24826328,
+    "latestBlockNumber": 24826247,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x3cE8E2eb6501d4705477643E96881B1bef6A2DB3",

@@ -755,16 +755,16 @@
     "symbol": "PT-srUSDe-2APR2026",
     "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
   },
-  "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072": {
-    "symbol": "BTC.b",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
-  },
   "0x12b70410D60f926558245f769059eA3Fc7A7353E": {
     "symbol": "aEthBTCb",
     "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
   },
   "0x6C67e666BB954d4bE23e9F1cE20e7E8699d29339": {
     "symbol": "variableDebtEthBTCb",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072": {
+    "symbol": "BTC.b",
     "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
   }
 }
