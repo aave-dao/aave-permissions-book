@@ -227,7 +227,6 @@ const generateNetworkPermissions = async (
           v4Roles,
           v4FunctionRoles,
           pool.roleLabels || {},
-          Number(network),
         );
         poolPermissions = v4Result.contracts;
 

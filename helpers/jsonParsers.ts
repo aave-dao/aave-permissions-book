@@ -110,7 +110,8 @@ export const findContractNameByAddress = (
     const contracts = extractPoolContracts(poolData);
     for (const [contractName, contractInfo] of Object.entries(contracts)) {
       if (contractInfo.address?.toLowerCase() === normalizedAddress) {
-        return contractName;
+        // Strip _ prefix used by synthetic entries (e.g. V4 proxy admins)
+        return contractName.startsWith('_') ? contractName.slice(1) : contractName;
       }
     }
     return undefined;

@@ -1,5 +1,4 @@
-import { Address, Client, getAddress, getContract, toFunctionSelector } from 'viem';
-import { getSourceCode } from '@bgd-labs/toolbox';
+import { Address, Client, getAddress, getContract } from 'viem';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
@@ -50,12 +49,15 @@ const buildV4ContractInstances = (addressBook: AddressBook): V4ContractInstance[
     });
   }
 
-  // Spoke instances (e.g., BLUECHIP_SPOKE, ETHENA_SPOKE)
+  // Spoke instances (e.g., BLUECHIP_SPOKE, ETHERFI_E_SPOKE)
   for (const key of Object.keys(addressBook)) {
     if ((key.endsWith('_SPOKE') || key.endsWith('_ESPOKE')) && !key.startsWith('SPOKE_') && !key.startsWith('TREASURY_') && typeof addressBook[key] === 'string') {
-      const prefix = key.replace(/_E?SPOKE$/, '');
+      const isESpoke = key.endsWith('_E_SPOKE') || key.endsWith('_ESPOKE');
+      const prefix = isESpoke
+        ? key.replace(/_E_SPOKE$|_ESPOKE$/, '')
+        : key.replace(/_SPOKE$/, '');
       instances.push({
-        displayName: `${prefix} Spoke`,
+        displayName: `${prefix} ${isESpoke ? 'ESpoke' : 'Spoke'}`,
         addressKey: key,
         contractType: 'Spoke',
       });
@@ -176,55 +178,22 @@ const resolveProxyAdminWithOwner = async (
  */
 
 /**
- * Fetches the verified ABI from Etherscan for a contract and builds a selector → name map.
- * Caches results per address to avoid redundant API calls.
+ * Builds a selector → name map from the static permissions JSON for a given contract type.
+ * This avoids external Etherscan API calls and matches the V3 approach.
  */
-const selectorMapCache = new Map<string, Record<string, string>>();
-
-const fetchSelectorMapFromEtherscan = async (
-  contractAddress: string,
-  chainId: number,
-): Promise<Record<string, string>> => {
-  const key = contractAddress.toLowerCase();
-  if (selectorMapCache.has(key)) return selectorMapCache.get(key)!;
-
+const buildSelectorMap = (
+  permissionsObject: PermissionsJson,
+  contractType: string,
+): Record<string, string> => {
   const map: Record<string, string> = {};
-  try {
-    // Rate limit: Etherscan free tier allows 3 calls/sec
-    await new Promise((r) => setTimeout(r, 350));
-    const source = await getSourceCode({
-      chainId,
-      address: getAddress(contractAddress) as `0x${string}`,
-      apiKey: process.env.ETHERSCAN_API_KEY,
-    });
-    let abi = JSON.parse(source.ABI as string);
+  const contractDef = permissionsObject.find((c) => c.contract === contractType);
+  if (!contractDef) return map;
 
-    // If proxy, fetch the implementation's ABI instead
-    const impl = (source as any).Implementation as string | undefined;
-    if (impl && impl.length > 0) {
-      await new Promise((r) => setTimeout(r, 350));
-      const implSource = await getSourceCode({
-        chainId,
-        address: getAddress(impl) as `0x${string}`,
-        apiKey: process.env.ETHERSCAN_API_KEY,
-      });
-      abi = JSON.parse(implSource.ABI as string);
+  for (const fn of contractDef.functions) {
+    if (fn.selector) {
+      map[fn.selector] = fn.name;
     }
-    for (const item of abi) {
-      if (item.type === 'function') {
-        try {
-          const selector = toFunctionSelector(item);
-          map[selector] = item.name;
-        } catch {
-          // Skip entries that can't be parsed
-        }
-      }
-    }
-  } catch (e) {
-    console.log(`  Warning: could not fetch ABI for ${contractAddress}: ${e}`);
   }
-
-  selectorMapCache.set(key, map);
   return map;
 };
 
@@ -235,7 +204,6 @@ export const resolveV4Modifiers = async (
   roleAddresses: Record<string, string[]>,
   functionRoles: Record<string, Record<string, string>>,
   configRoleLabels: Record<string, string>,
-  chainId: number,
 ): Promise<{ contracts: Contracts; roleLabels: Record<string, string> }> => {
   const obj: Contracts = {};
   const ownerResolver = createOwnerResolver(provider);
@@ -310,7 +278,7 @@ export const resolveV4Modifiers = async (
     } else {
       // Use ON-CHAIN selectors as source of truth
       const targetFnRoles = functionRoles[address.toLowerCase()] || {};
-      const selectorToName = await fetchSelectorMapFromEtherscan(address, chainId);
+      const selectorToName = buildSelectorMap(permissionsObject, instance.contractType);
 
       // Group on-chain selectors by their assigned roleId
       const fnsByRole: Record<string, string[]> = {};
