@@ -569,8 +569,8 @@ export const generateTable = (network: string, pool: string): string => {
   );
 
   // V4 AccessManager Roles table
-  if (poolPermitsByContract.v4AccessManager) {
-    const am = poolPermitsByContract.v4AccessManager;
+  if (poolPermitsByContract.accessManager) {
+    const am = poolPermitsByContract.accessManager;
     const labeledRoles: Record<string, string[]> = {};
     for (const [roleId, addresses] of Object.entries(am.roles)) {
       const label = am.roleLabels[roleId] || `Role #${roleId}`;

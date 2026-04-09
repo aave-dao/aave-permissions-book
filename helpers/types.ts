@@ -66,7 +66,7 @@ export type AgentHub = {
   contracts: Contracts;
 };
 
-export type V4AccessManager = {
+export type AccessManager = {
   roles: Record<string, string[]>;
   functionRoles: Record<string, Record<string, string>>;
   roleLabels: Record<string, string>;
@@ -84,7 +84,7 @@ export type PoolInfo = {
   umbrella?: Umbrella;
   ppc?: Ppc;
   agentHub?: AgentHub;
-  v4AccessManager?: V4AccessManager;
+  accessManager?: AccessManager;
 };
 
 export type Pool = Record<string, PoolInfo>;
@@ -137,6 +137,7 @@ export type Function = {
   name: string;
   roles: string[];
   selector?: string;
+  signature?: string;
 };
 
 export type PermissionsJson = {

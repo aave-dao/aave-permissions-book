@@ -10067,25 +10067,25 @@
               }
             ],
             "functions": [
-              "0x1e83287e",
-              "0x24e4c1af",
-              "0xc25d82fe",
-              "0xa2763d29",
-              "0xa467cc59"
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
             ]
           },
           {
             "modifier": "HUB_FEE_MINTER_ROLE",
             "addresses": [],
             "functions": [
-              "0x033a0695"
+              "mintFeeShares"
             ]
           },
           {
             "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
             "addresses": [],
             "functions": [
-              "0xbe105280"
+              "eliminateDeficit"
             ]
           }
         ],
@@ -10129,25 +10129,25 @@
               }
             ],
             "functions": [
-              "0x1e83287e",
-              "0x24e4c1af",
-              "0xc25d82fe",
-              "0xa2763d29",
-              "0xa467cc59"
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
             ]
           },
           {
             "modifier": "HUB_FEE_MINTER_ROLE",
             "addresses": [],
             "functions": [
-              "0x033a0695"
+              "mintFeeShares"
             ]
           },
           {
             "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
             "addresses": [],
             "functions": [
-              "0xbe105280"
+              "eliminateDeficit"
             ]
           }
         ],
@@ -10191,25 +10191,25 @@
               }
             ],
             "functions": [
-              "0x1e83287e",
-              "0x24e4c1af",
-              "0xc25d82fe",
-              "0xa2763d29",
-              "0xa467cc59"
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
             ]
           },
           {
             "modifier": "HUB_FEE_MINTER_ROLE",
             "addresses": [],
             "functions": [
-              "0x033a0695"
+              "mintFeeShares"
             ]
           },
           {
             "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
             "addresses": [],
             "functions": [
-              "0xbe105280"
+              "eliminateDeficit"
             ]
           }
         ],
@@ -10253,28 +10253,28 @@
               }
             ],
             "functions": [
-              "0xa7aeae20",
-              "0x1947e190",
-              "0x0f8916cf",
-              "0xe25867bf",
-              "0x27e732a9",
-              "0xc279178b",
-              "0xdc3848de",
-              "0xa9fe6404",
-              "0x7f0633c5",
-              "0x486b0e0e",
-              "0x7cf1dbc5",
-              "0xbc3a425e",
-              "0x98456711",
-              "0x91c28cf9",
-              "0x493e28ae",
-              "0x7427ca5f",
-              "0x7441ce91",
-              "0xa3254c90",
-              "0x0e50f67a",
-              "0xa2455af2",
-              "0x86803a1f",
-              "0xc987da38"
+              "addAsset",
+              "addAssetWithDecimals",
+              "updateLiquidityFee",
+              "updateFeeReceiver",
+              "updateFeeConfig",
+              "updateInterestRateStrategy",
+              "updateReinvestmentController",
+              "resetAssetCaps",
+              "deactivateAsset",
+              "haltAsset",
+              "addSpoke",
+              "addSpokeToAssets",
+              "updateSpokeActive",
+              "updateSpokeHalted",
+              "updateSpokeAddCap",
+              "updateSpokeDrawCap",
+              "updateSpokeRiskPremiumThreshold",
+              "updateSpokeCaps",
+              "deactivateSpoke",
+              "haltSpoke",
+              "resetSpokeCaps",
+              "updateInterestRateData"
             ]
           }
         ]
@@ -10292,21 +10292,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10350,21 +10350,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10408,21 +10408,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10466,21 +10466,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10524,21 +10524,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10582,21 +10582,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10640,21 +10640,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10698,21 +10698,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10756,21 +10756,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10814,21 +10814,21 @@
               }
             ],
             "functions": [
-              "0x87107a6d",
-              "0x4de8d2ba",
-              "0xa0f5b9ab",
-              "0xe903e1bd",
-              "0x9290fa00",
-              "0x9ca9c134",
-              "0xb2380e93"
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
             ]
           },
           {
             "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
             "addresses": [],
             "functions": [
-              "0x826002e2",
-              "0x91c46d09"
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
             ]
           }
         ],
@@ -10866,30 +10866,30 @@
             "modifier": "SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE",
             "addresses": [],
             "functions": [
-              "0x7f1e3675",
-              "0x98e7856f",
-              "0xde3487b8",
-              "0x579b47eb",
-              "0xd15916be",
-              "0x727ae397",
-              "0x5f42a73b",
-              "0x3a84f85a",
-              "0x46bfdc72",
-              "0x722c65ee",
-              "0xf165fdea",
-              "0xdf517545",
-              "0x092622b7",
-              "0x710bc180",
-              "0x3b0beccf",
-              "0x063c7dc0",
-              "0xfd19d8f7",
-              "0xcb51c394",
-              "0x404f0b2c",
-              "0x6a8b9a27",
-              "0x99b44258",
-              "0x36f1dfa0",
-              "0x7492b5ec",
-              "0x152ef832"
+              "updateReservePriceSource",
+              "updateLiquidationTargetHealthFactor",
+              "updateHealthFactorForMaxBonus",
+              "updateLiquidationBonusFactor",
+              "updateLiquidationConfig",
+              "addReserve",
+              "updatePaused",
+              "updateFrozen",
+              "updateBorrowable",
+              "updateReceiveSharesEnabled",
+              "updateCollateralRisk",
+              "addCollateralFactor",
+              "updateCollateralFactor",
+              "addMaxLiquidationBonus",
+              "updateMaxLiquidationBonus",
+              "addLiquidationFee",
+              "updateLiquidationFee",
+              "addDynamicReserveConfig",
+              "updateDynamicReserveConfig",
+              "pauseAllReserves",
+              "freezeAllReserves",
+              "pauseReserve",
+              "freezeReserve",
+              "updatePositionManager"
             ]
           }
         ]
@@ -10961,7 +10961,7 @@
     "umbrella": {},
     "ppc": {},
     "agentHub": {},
-    "v4AccessManager": {
+    "accessManager": {
       "roles": {
         "0": [
           "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",

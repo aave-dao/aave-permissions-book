@@ -56,7 +56,7 @@ import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
 import { resolveV4Modifiers } from './v4Permissions.js';
 import { getAccessManagerRoles, getFunctionRoleMappings } from '../helpers/accessManagerRoles.js';
-import { V4AccessManager } from '../helpers/types.js';
+import { AccessManager } from '../helpers/types.js';
 import { resolveCollectorModifiers } from './collectorPermissions.js';
 import { resolveClinicStewardModifiers } from './clinicStewardPermissions.js';
 import { resolveUmbrellaModifiers } from './umbrellaPermissions.js';
@@ -319,11 +319,11 @@ const generateNetworkPermissions = async (
         // Process ACCESS_MANAGER events
         const amEvents = indexedEvents['ACCESS_MANAGER'] || [];
         const v4Roles = getAccessManagerRoles({
-          oldRoles: (fullJson[poolKey]?.v4AccessManager?.roles) || {},
+          oldRoles: (fullJson[poolKey]?.accessManager?.roles) || {},
           eventLogs: amEvents,
         });
         const v4FunctionRoles = getFunctionRoleMappings({
-          oldMappings: (fullJson[poolKey]?.v4AccessManager?.functionRoles) || {},
+          oldMappings: (fullJson[poolKey]?.accessManager?.functionRoles) || {},
           eventLogs: amEvents,
         });
 
@@ -338,11 +338,11 @@ const generateNetworkPermissions = async (
         poolPermissions = v4Result.contracts;
 
         // Store V4 access manager data for later use
-        (fullJson as any).__v4AccessManager = {
+        (fullJson as any).__accessManager = {
           roles: v4Roles,
           functionRoles: v4FunctionRoles,
           roleLabels: v4Result.roleLabels,
-        } as V4AccessManager;
+        } as AccessManager;
       }
     } else if (
       poolKey !== Pools.GOV_V2 &&
@@ -625,8 +625,8 @@ const generateNetworkPermissions = async (
     }
 
     // Extract V4 access manager data if present
-    const v4AccessManager = (fullJson as any).__v4AccessManager as V4AccessManager | undefined;
-    delete (fullJson as any).__v4AccessManager;
+    const accessManager = (fullJson as any).__accessManager as AccessManager | undefined;
+    delete (fullJson as any).__accessManager;
 
     // Merge this pool's results into the network-wide JSON.
     const poolResult = {
@@ -639,7 +639,7 @@ const generateNetworkPermissions = async (
       umbrella: umbrella,
       ppc: ppc,
       agentHub: agentHub,
-      ...(v4AccessManager ? { v4AccessManager } : {}),
+      ...(accessManager ? { accessManager } : {}),
     };
 
     if (Object.keys(fullJson).length === 0) {

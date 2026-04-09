@@ -1,4 +1,4 @@
-import { Address, Client, getAddress, getContract } from 'viem';
+import { Address, Client, getAddress, getContract, toFunctionSelector } from 'viem';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
@@ -190,7 +190,10 @@ const buildSelectorMap = (
   if (!contractDef) return map;
 
   for (const fn of contractDef.functions) {
-    if (fn.selector) {
+    if (fn.signature) {
+      const selector = toFunctionSelector(`function ${fn.signature}`);
+      map[selector] = fn.name;
+    } else if (fn.selector) {
       map[fn.selector] = fn.name;
     }
   }

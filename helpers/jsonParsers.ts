@@ -127,7 +127,7 @@ export const findContractNameByAddress = (
     if (found) return found;
   }
 
-  // 3. Search V4 pool (if current pool is not V4)
+  // 3. Search V4 contracts (if current pool is not V4)
   if (pool !== 'V4' && networkPermits['V4']) {
     found = findInPool(networkPermits['V4']);
     if (found) return found;

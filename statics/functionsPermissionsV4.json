@@ -5,37 +5,37 @@
       {
         "name": "addAsset",
         "roles": ["restricted"],
-        "selector": "0x298410e5"
+        "signature": "addAsset(address,uint8,address,address,bytes)"
       },
       {
         "name": "updateAssetConfig",
         "roles": ["restricted"],
-        "selector": "0xd9fe6a0d"
+        "signature": "updateAssetConfig(uint256,(address,uint16,address,address),bytes)"
       },
       {
         "name": "addSpoke",
         "roles": ["restricted"],
-        "selector": "0xde2f5b9b"
+        "signature": "addSpoke(uint256,address,(uint40,uint40,uint24,bool,bool))"
       },
       {
         "name": "updateSpokeConfig",
         "roles": ["restricted"],
-        "selector": "0x1d69ff42"
+        "signature": "updateSpokeConfig(uint256,address,(uint40,uint40,uint24,bool,bool))"
       },
       {
         "name": "setInterestRateData",
         "roles": ["restricted"],
-        "selector": "0xaf121544"
+        "signature": "setInterestRateData(uint256,bytes)"
       },
       {
         "name": "mintFeeShares",
         "roles": ["restricted"],
-        "selector": "0xefef2807"
+        "signature": "mintFeeShares(uint256)"
       },
       {
         "name": "eliminateDeficit",
         "roles": ["restricted"],
-        "selector": "0xd2256c66"
+        "signature": "eliminateDeficit(uint256,uint256,address)"
       }
     ]
   },
@@ -45,112 +45,112 @@
       {
         "name": "addAsset",
         "roles": ["restricted"],
-        "selector": "0x298410e5"
+        "signature": "addAsset(address,address,address,uint256,address,bytes)"
       },
       {
         "name": "addAssetWithDecimals",
         "roles": ["restricted"],
-        "selector": "0x72ceaaed"
+        "signature": "addAssetWithDecimals(address,address,uint8,address,uint256,address,bytes)"
       },
       {
         "name": "updateLiquidityFee",
         "roles": ["restricted"],
-        "selector": "0x96e68209"
+        "signature": "updateLiquidityFee(address,uint256,uint256)"
       },
       {
         "name": "updateFeeReceiver",
         "roles": ["restricted"],
-        "selector": "0xf160d369"
+        "signature": "updateFeeReceiver(address,uint256,address)"
       },
       {
         "name": "updateFeeConfig",
         "roles": ["restricted"],
-        "selector": "0x1845f2fa"
+        "signature": "updateFeeConfig(address,uint256,uint256,address)"
       },
       {
         "name": "updateInterestRateStrategy",
         "roles": ["restricted"],
-        "selector": "0xfb901252"
+        "signature": "updateInterestRateStrategy(address,uint256,address,bytes)"
       },
       {
         "name": "updateReinvestmentController",
         "roles": ["restricted"],
-        "selector": "0xb4caec8a"
+        "signature": "updateReinvestmentController(address,uint256,address)"
       },
       {
         "name": "resetAssetCaps",
         "roles": ["restricted"],
-        "selector": "0xb8af0654"
+        "signature": "resetAssetCaps(address,uint256)"
       },
       {
         "name": "deactivateAsset",
         "roles": ["restricted"],
-        "selector": "0x88c88449"
+        "signature": "deactivateAsset(address,uint256)"
       },
       {
         "name": "haltAsset",
         "roles": ["restricted"],
-        "selector": "0x2e5ae7c5"
+        "signature": "haltAsset(address,uint256)"
       },
       {
         "name": "addSpoke",
         "roles": ["restricted"],
-        "selector": "0xde2f5b9b"
+        "signature": "addSpoke(address,address,uint256,(uint40,uint40,uint24,bool,bool))"
       },
       {
         "name": "addSpokeToAssets",
         "roles": ["restricted"],
-        "selector": "0x6e8f9bad"
+        "signature": "addSpokeToAssets(address,address,uint256[],(uint40,uint40,uint24,bool,bool)[])"
       },
       {
         "name": "updateSpokeActive",
         "roles": ["restricted"],
-        "selector": "0x88c74fd5"
+        "signature": "updateSpokeActive(address,uint256,address,bool)"
       },
       {
         "name": "updateSpokeHalted",
         "roles": ["restricted"],
-        "selector": "0x9c6a5c6e"
+        "signature": "updateSpokeHalted(address,uint256,address,bool)"
       },
       {
         "name": "updateSpokeAddCap",
         "roles": ["restricted"],
-        "selector": "0xf2a19c5d"
+        "signature": "updateSpokeAddCap(address,uint256,address,uint256)"
       },
       {
         "name": "updateSpokeDrawCap",
         "roles": ["restricted"],
-        "selector": "0xaa7f4d23"
+        "signature": "updateSpokeDrawCap(address,uint256,address,uint256)"
       },
       {
         "name": "updateSpokeRiskPremiumThreshold",
         "roles": ["restricted"],
-        "selector": "0x2b0b5f82"
+        "signature": "updateSpokeRiskPremiumThreshold(address,uint256,address,uint256)"
       },
       {
         "name": "updateSpokeCaps",
         "roles": ["restricted"],
-        "selector": "0x8aeeff2a"
+        "signature": "updateSpokeCaps(address,uint256,address,uint256,uint256)"
       },
       {
         "name": "deactivateSpoke",
         "roles": ["restricted"],
-        "selector": "0x52a7f186"
+        "signature": "deactivateSpoke(address,address)"
       },
       {
         "name": "haltSpoke",
         "roles": ["restricted"],
-        "selector": "0x25a7f2a7"
+        "signature": "haltSpoke(address,address)"
       },
       {
         "name": "resetSpokeCaps",
         "roles": ["restricted"],
-        "selector": "0xf3afce89"
+        "signature": "resetSpokeCaps(address,address)"
       },
       {
         "name": "updateInterestRateData",
         "roles": ["restricted"],
-        "selector": "0x5e10a96e"
+        "signature": "updateInterestRateData(address,uint256,bytes)"
       }
     ]
   },
@@ -160,37 +160,47 @@
       {
         "name": "updateLiquidationConfig",
         "roles": ["restricted"],
-        "selector": "0xe37ec227"
+        "signature": "updateLiquidationConfig((uint128,uint64,uint16))"
       },
       {
         "name": "addReserve",
         "roles": ["restricted"],
-        "selector": "0xacb0e47f"
+        "signature": "addReserve(address,uint256,address,(uint24,bool,bool,bool,bool),(uint16,uint32,uint16))"
       },
       {
         "name": "updateReserveConfig",
         "roles": ["restricted"],
-        "selector": "0x437a70d8"
+        "signature": "updateReserveConfig(uint256,(uint24,bool,bool,bool,bool))"
       },
       {
         "name": "updateReservePriceSource",
         "roles": ["restricted"],
-        "selector": "0x22b0b56c"
+        "signature": "updateReservePriceSource(uint256,address)"
       },
       {
         "name": "addDynamicReserveConfig",
         "roles": ["restricted"],
-        "selector": "0x96e5b30d"
+        "signature": "addDynamicReserveConfig(uint256,(uint16,uint32,uint16))"
       },
       {
         "name": "updateDynamicReserveConfig",
         "roles": ["restricted"],
-        "selector": "0x0d84e587"
+        "signature": "updateDynamicReserveConfig(uint256,uint32,(uint16,uint32,uint16))"
       },
       {
         "name": "updatePositionManager",
         "roles": ["restricted"],
-        "selector": "0x73237e82"
+        "signature": "updatePositionManager(address,bool)"
+      },
+      {
+        "name": "updateUserDynamicConfig",
+        "roles": ["restricted"],
+        "signature": "updateUserDynamicConfig(address)"
+      },
+      {
+        "name": "updateUserRiskPremium",
+        "roles": ["restricted"],
+        "signature": "updateUserRiskPremium(address)"
       }
     ]
   },
@@ -200,122 +210,122 @@
       {
         "name": "updateReservePriceSource",
         "roles": ["restricted"],
-        "selector": "0x22b0b56c"
+        "signature": "updateReservePriceSource(address,uint256,address)"
       },
       {
         "name": "updateLiquidationTargetHealthFactor",
         "roles": ["restricted"],
-        "selector": "0x7ca54ba8"
+        "signature": "updateLiquidationTargetHealthFactor(address,uint256)"
       },
       {
         "name": "updateHealthFactorForMaxBonus",
         "roles": ["restricted"],
-        "selector": "0x4de7f7ca"
+        "signature": "updateHealthFactorForMaxBonus(address,uint256)"
       },
       {
         "name": "updateLiquidationBonusFactor",
         "roles": ["restricted"],
-        "selector": "0xfb38eb5a"
+        "signature": "updateLiquidationBonusFactor(address,uint256)"
       },
       {
         "name": "updateLiquidationConfig",
         "roles": ["restricted"],
-        "selector": "0xe37ec227"
+        "signature": "updateLiquidationConfig(address,(uint128,uint64,uint16))"
       },
       {
         "name": "addReserve",
         "roles": ["restricted"],
-        "selector": "0xacb0e47f"
+        "signature": "addReserve(address,address,uint256,address,(uint24,bool,bool,bool,bool),(uint16,uint32,uint16))"
       },
       {
         "name": "updatePaused",
         "roles": ["restricted"],
-        "selector": "0xf47ae6d3"
+        "signature": "updatePaused(address,uint256,bool)"
       },
       {
         "name": "updateFrozen",
         "roles": ["restricted"],
-        "selector": "0x15c2a47a"
+        "signature": "updateFrozen(address,uint256,bool)"
       },
       {
         "name": "updateBorrowable",
         "roles": ["restricted"],
-        "selector": "0x5f8c27e4"
+        "signature": "updateBorrowable(address,uint256,bool)"
       },
       {
         "name": "updateReceiveSharesEnabled",
         "roles": ["restricted"],
-        "selector": "0x9a38e5c8"
+        "signature": "updateReceiveSharesEnabled(address,uint256,bool)"
       },
       {
         "name": "updateCollateralRisk",
         "roles": ["restricted"],
-        "selector": "0xf0b57a6c"
+        "signature": "updateCollateralRisk(address,uint256,uint256)"
       },
       {
         "name": "addCollateralFactor",
         "roles": ["restricted"],
-        "selector": "0x3e4e4f4e"
+        "signature": "addCollateralFactor(address,uint256,uint16)"
       },
       {
         "name": "updateCollateralFactor",
         "roles": ["restricted"],
-        "selector": "0x7e2ba0a0"
+        "signature": "updateCollateralFactor(address,uint256,uint32,uint16)"
       },
       {
         "name": "addMaxLiquidationBonus",
         "roles": ["restricted"],
-        "selector": "0xa47d5fba"
+        "signature": "addMaxLiquidationBonus(address,uint256,uint256)"
       },
       {
         "name": "updateMaxLiquidationBonus",
         "roles": ["restricted"],
-        "selector": "0x3b2b1e4e"
+        "signature": "updateMaxLiquidationBonus(address,uint256,uint32,uint256)"
       },
       {
         "name": "addLiquidationFee",
         "roles": ["restricted"],
-        "selector": "0xa5e9535a"
+        "signature": "addLiquidationFee(address,uint256,uint256)"
       },
       {
         "name": "updateLiquidationFee",
         "roles": ["restricted"],
-        "selector": "0x3e7a47b4"
+        "signature": "updateLiquidationFee(address,uint256,uint32,uint256)"
       },
       {
         "name": "addDynamicReserveConfig",
         "roles": ["restricted"],
-        "selector": "0x96e5b30d"
+        "signature": "addDynamicReserveConfig(address,uint256,(uint16,uint32,uint16))"
       },
       {
         "name": "updateDynamicReserveConfig",
         "roles": ["restricted"],
-        "selector": "0x0d84e587"
+        "signature": "updateDynamicReserveConfig(address,uint256,uint32,(uint16,uint32,uint16))"
       },
       {
         "name": "pauseAllReserves",
         "roles": ["restricted"],
-        "selector": "0xa5834e06"
+        "signature": "pauseAllReserves(address)"
       },
       {
         "name": "freezeAllReserves",
         "roles": ["restricted"],
-        "selector": "0xf58b3c8d"
+        "signature": "freezeAllReserves(address)"
       },
       {
         "name": "pauseReserve",
         "roles": ["restricted"],
-        "selector": "0x49d9ceb2"
+        "signature": "pauseReserve(address,uint256)"
       },
       {
         "name": "freezeReserve",
         "roles": ["restricted"],
-        "selector": "0x7f5e0e03"
+        "signature": "freezeReserve(address,uint256)"
       },
       {
         "name": "updatePositionManager",
         "roles": ["restricted"],
-        "selector": "0x73237e82"
+        "signature": "updatePositionManager(address,address,bool)"
       }
     ]
   },

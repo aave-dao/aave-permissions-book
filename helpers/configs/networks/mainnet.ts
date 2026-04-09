@@ -183,7 +183,6 @@ export const mainnetConfig: NetworkConfig = {
     '0x2bd010Ab5393AB51b601B99C4B33ba148d9466e9': 'Gho direct facilitator plasma',
     '0xE9ac5231fAecb633dA0Fe85Fcb2785b8363427d2': 'Gho direct facilitator mainnet',
     '0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9': 'SECURITY_COUNCIL',
-    '0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A': 'EXECUTOR',
   }),
   pools: {
     [Pools.V3]: v3Pool,
