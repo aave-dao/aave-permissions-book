@@ -280,6 +280,11 @@ export const CCC_EVENT_TYPES = ['SenderUpdated'];
 export const ACCESS_MANAGER_EVENT_TYPES = ['RoleGrantedAM', 'RoleRevokedAM', 'TargetFunctionRoleUpdated'];
 
 /**
+ * Event types for EmissionManager
+ */
+export const EMISSION_ADMIN_EVENT_TYPES = ['EmissionAdminUpdated'];
+
+/**
  * Pool configuration for building contract configs.
  */
 interface PoolConfig {
@@ -294,6 +299,8 @@ interface PoolConfig {
   umbrellaIncentivesBlock?: number;
   crossChainControllerBlock?: number;
   granularGuardianBlock?: number;
+  // Emission Manager
+  emissionManagerBlock?: number;
   // GHO blocks
   ghoBlock?: number;
   gsmBlocks?: Record<string, number>;

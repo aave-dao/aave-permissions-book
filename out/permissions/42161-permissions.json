@@ -362,7 +362,58 @@
             "functions": [
               "setClaimer",
               "setEmissionAdmin",
-              "setRewardsController"
+              "setRewardsController",
+              "renounceOwnership",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyEmissionAdmin",
+            "addresses": [
+              {
+                "address": "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb",
+                "owners": [
+                  "0xf71fc92e2949ccF6A5Fd369a0b402ba80Bc61E02",
+                  "0xF0BA0fF18498F6fab57b8286006F9512D6aE2565",
+                  "0x80F11A20cd3855cAe3640558Ff320401EE970cFa",
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
+                  "0x5bE3E96Cdc3A97628bD7308d3588B9a474F4A54d",
+                  "0x585E06CA576D0565a035301819FD2cfD7104c1E8",
+                  "0xb647055A9915bF9c8021a684E175A353525b9890",
+                  "0x285b7EEa81a5B66B62e7276a24c1e0F83F7409c1",
+                  "0xbd4DCfA978c6D0d342cE36809AfFFa49d4B7f1F7",
+                  "0x4C30E33758216aD0d676419c21CB8D014C68099f"
+                ],
+                "signersThreshold": 6
+              },
+              {
+                "address": "0xC18F11735C6a1941431cCC5BcF13AF0a052A5022",
+                "owners": [
+                  "0x04e7C0350241b818eE5c92cc260008C9898F41cf",
+                  "0xcC692077C65dd464cAA7e7ae614328914f8469b3",
+                  "0xB339918e75664a07BB650513427559920C0A0F6C",
+                  "0x8D0855047b59a5f11262f095ee724b5A59a89710",
+                  "0x59d07dc34B135B17b87840a86BFF7302039E7EDf",
+                  "0x70d80eb5390C7872233D4a9B0b0d74Ea749294c1"
+                ],
+                "signersThreshold": 3
+              },
+              {
+                "address": "0xac140648435d03f784879cd789130F22Ef588Fcd",
+                "owners": [
+                  "0x206b3C563258Dd88dd98e5Ff8e2AF975DE16a416",
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922",
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4"
+                ],
+                "signersThreshold": 1
+              }
+            ],
+            "functions": [
+              "configureAssets",
+              "setTransferStrategy",
+              "setRewardOracle",
+              "setDistributionEnd",
+              "setEmissionPerSecond"
             ]
           }
         ]

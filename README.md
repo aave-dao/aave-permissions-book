@@ -53,6 +53,8 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  POLYGON |  V3 |  [Permissions](./out/POLYGON-V3.md#contracts) | |--------|--------|--------|
 |  POLYGON |  V2 |  [Permissions](./out/POLYGON-V2.md#contracts) | |--------|--------|--------|
 |  SONIC |  V3 |  [Permissions](./out/SONIC-V3.md#contracts) | |--------|--------|--------|
+|  XLAYER |  V3 |  [Permissions](./out/XLAYER-V3.md#contracts) | |--------|--------|--------|
+|  XLAYER |  GHO |  [Permissions](./out/XLAYER-GHO.md#contracts) | |--------|--------|--------|
 |  ZKSYNC |  V3 |  [Permissions](./out/ZKSYNC-V3.md#contracts) | |--------|--------|--------|
 |  METIS |  V3 |  [Permissions](./out/METIS-V3.md#contracts) | |--------|--------|--------|
 |  SONEIUM |  V3 |  [Permissions](./out/SONEIUM-V3.md#contracts) | |--------|--------|--------|

@@ -1,0 +1,110 @@
+{
+  "0xF356ae412dB5df43BD3a10746f7ad4e1C4De4297": {
+    "symbol": "aXlrUSDT0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x04837866D0cb0cd2D8F60fBCa83B4a24b3a7c8ac": {
+    "symbol": "variableDebtXlrUSDT0",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x779Ded0c9e1022225f8E0630b35a9b54bE713736": {
+    "symbol": "USD₮0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x228765a3C18065C923F23a0CCb6c7cEFB3eA2223": {
+    "symbol": "aXlrUSDG",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xE6FC328D4DECB2Ae00E711743C04612ec963be46": {
+    "symbol": "variableDebtXlrUSDG",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8": {
+    "symbol": "USDG",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xF5F9d4e9e2AFe7E0b193d291Befb41d61930464e": {
+    "symbol": "aXlrxBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x5F874396f28dfdBd6bA2be80F52FD013Ce388C75": {
+    "symbol": "variableDebtXlrxBTC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f": {
+    "symbol": "xBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x3ea3A4038FbA5757A9A68de920b44698d7326A59": {
+    "symbol": "aXlrWOKB",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xb20752a1D7D16E54cBaad5137ba6C0a087752803": {
+    "symbol": "variableDebtXlrWOKB",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xe538905cf8410324e03A5A23C1c177a474D59b2b": {
+    "symbol": "WOKB",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xe6639ba6c1d79Be6d4c776E4c17504538d1719cD": {
+    "symbol": "aXlrxETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xB756Fc7065369602f2cCb8356283E8b997fDfe2a": {
+    "symbol": "variableDebtXlrxETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xE7B000003A45145decf8a28FC755aD5eC5EA025A": {
+    "symbol": "xETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x523dCe1b164327818fc5B41278fAe41f6B5753FE": {
+    "symbol": "aXlrxSOL",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x4aF568Cb78Ade0e45E42f9B6d3deC0ff81E788af": {
+    "symbol": "variableDebtXlrxSOL",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x505000008DE8748DBd4422ff4687a4FC9bEba15b": {
+    "symbol": "xSOL",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xe9e78053f1Ef084f8cD01dBE8ccE95c6b0944d32": {
+    "symbol": "aXlrxBETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xe98AB0041B3BC09981D75A46aa78CC5e647a3906": {
+    "symbol": "variableDebtXlrxBETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xAFeab3B85B6A56cF5F02317F0f7A23340eb983D7": {
+    "symbol": "xBETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x38811564090aAb7bB455c5b771e26201a3535a01": {
+    "symbol": "aXlrxOKSOL",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x3bEB61760eC29C2031843811dd5D51Bcbdb73B5e": {
+    "symbol": "variableDebtXlrxOKSOL",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x14a686103854DAB7b8801E31979CAA595835B25d": {
+    "symbol": "xOKSOL",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x77188335A21f4C409d2CfeDe3195A7B5f28651b0": {
+    "symbol": "aXlrGHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x6a82EFFC620ec646429e8A1aE0E5DcC6C6ba30aA": {
+    "symbol": "variableDebtXlrGHO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xDe6539018B095353A40753Dc54C91C68c9487D4E": {
+    "symbol": "GHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

@@ -787,7 +787,72 @@
             "functions": [
               "setClaimer",
               "setEmissionAdmin",
-              "setRewardsController"
+              "setRewardsController",
+              "renounceOwnership",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyEmissionAdmin",
+            "addresses": [
+              {
+                "address": "0xac140648435d03f784879cd789130F22Ef588Fcd",
+                "owners": [
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922",
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4"
+                ],
+                "signersThreshold": 1
+              },
+              {
+                "address": "0x87D93d9B2C672bf9c9642d853a8682546a5012B5",
+                "owners": [
+                  "0x397eE87383787812fe0828Ead2BCAda6AE8FAc6F",
+                  "0x04e7C0350241b818eE5c92cc260008C9898F41cf",
+                  "0x70d80eb5390C7872233D4a9B0b0d74Ea749294c1",
+                  "0x59d07dc34B135B17b87840a86BFF7302039E7EDf",
+                  "0x8ecd93982FfbB2f937ADa6c6e50d1950974081C0",
+                  "0xcC692077C65dd464cAA7e7ae614328914f8469b3",
+                  "0x75D95fF8D48E2Ca5c4235322A8AC8e52A76124cD",
+                  "0xB339918e75664a07BB650513427559920C0A0F6C",
+                  "0x8D0855047b59a5f11262f095ee724b5A59a89710"
+                ],
+                "signersThreshold": 5
+              },
+              {
+                "address": "0x189Cb93839AD52b5e955ddA254Ed7212ae1B1f61",
+                "owners": [
+                  "0x2685C0e39EEAAd383fB71ec3F493991d532A87ae"
+                ],
+                "signersThreshold": 1
+              },
+              {
+                "address": "0xbDa6C9cd7eD043CB739ca2C748dAbd1fCA397132",
+                "owners": [
+                  "0x4fc33739c617015C4224e30a1bd3A6F4D358Ae62",
+                  "0xDf83E84F1eB00F0230eB912E2Ec823C979800B1c",
+                  "0xB8ffAd4020c76F9fE9b49c68B417FD8Cb4C20516",
+                  "0x68258012DA3B933a81617FD08c9382a60B87cA98",
+                  "0xc6160F5bC3C673AC390f11c492E8ED0d0693579A",
+                  "0x601767c4ba4134cc2E906ea7cf25EaB845152A7C"
+                ],
+                "signersThreshold": 2
+              },
+              {
+                "address": "0xdef1FA4CEfe67365ba046a7C630D6B885298E210",
+                "owners": [
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
+                  "0xac140648435d03f784879cd789130F22Ef588Fcd",
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922"
+                ],
+                "signersThreshold": 1
+              }
+            ],
+            "functions": [
+              "configureAssets",
+              "setTransferStrategy",
+              "setRewardOracle",
+              "setDistributionEnd",
+              "setEmissionPerSecond"
             ]
           }
         ]
@@ -4156,7 +4221,38 @@
             "functions": [
               "setClaimer",
               "setEmissionAdmin",
-              "setRewardsController"
+              "setRewardsController",
+              "renounceOwnership",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyEmissionAdmin",
+            "addresses": [
+              {
+                "address": "0xac140648435d03f784879cd789130F22Ef588Fcd",
+                "owners": [
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922",
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4"
+                ],
+                "signersThreshold": 1
+              },
+              {
+                "address": "0xdef1FA4CEfe67365ba046a7C630D6B885298E210",
+                "owners": [
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
+                  "0xac140648435d03f784879cd789130F22Ef588Fcd",
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922"
+                ],
+                "signersThreshold": 1
+              }
+            ],
+            "functions": [
+              "configureAssets",
+              "setTransferStrategy",
+              "setRewardOracle",
+              "setDistributionEnd",
+              "setEmissionPerSecond"
             ]
           }
         ]
@@ -5097,7 +5193,29 @@
             "functions": [
               "setClaimer",
               "setEmissionAdmin",
-              "setRewardsController"
+              "setRewardsController",
+              "renounceOwnership",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyEmissionAdmin",
+            "addresses": [
+              {
+                "address": "0xac140648435d03f784879cd789130F22Ef588Fcd",
+                "owners": [
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922",
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4"
+                ],
+                "signersThreshold": 1
+              }
+            ],
+            "functions": [
+              "configureAssets",
+              "setTransferStrategy",
+              "setRewardOracle",
+              "setDistributionEnd",
+              "setEmissionPerSecond"
             ]
           }
         ]

@@ -1,3 +1,4 @@
+import { Address } from 'viem';
 import { Pools } from './configs.js';
 
 /**
@@ -71,6 +72,8 @@ export type V4AccessManager = {
   roleLabels: Record<string, string>;
 };
 
+export type EmissionAdminsByToken = Record<string, { symbol: string; emissionAdmin: string }>;
+
 export type PoolInfo = {
   roles?: Roles;
   gsmRoles?: Record<string, Roles>;
@@ -116,6 +119,8 @@ export type PoolConfigs = {
 
   accessManagerBlock?: number;
   roleLabels?: Record<string, string>;
+
+  emissionManagerBlock?: number;
 };
 export type Network = {
   name: string;
@@ -139,3 +144,9 @@ export type PermissionsJson = {
   proxyAdmin?: boolean;
   functions: Function[];
 }[];
+
+export type AggregatedReserveData = {
+  aTokenAddress: Address;
+  variableDebtTokenAddress: Address;
+  underlyingAsset: Address;
+};

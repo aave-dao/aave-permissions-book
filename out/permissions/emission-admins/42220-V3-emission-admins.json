@@ -1,0 +1,74 @@
+{
+  "0xFF8309b9e99bfd2D4021bc71a362aBD93dBd4785": {
+    "symbol": "aCelUSDC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xDbe517c0FA6467873B684eCcbED77217E471E862": {
+    "symbol": "variableDebtCelUSDC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xcebA9300f2b948710d2653dD7B07f33A8B32118C": {
+    "symbol": "USDC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xDeE98402A302e4D707fB9bf2bac66fAEEc31e8Df": {
+    "symbol": "aCelUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xE15324a9887999803b931Ac45aa89a94A9750052": {
+    "symbol": "variableDebtCelUSDT",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e": {
+    "symbol": "USD₮",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x34c02571094e08E935B8cf8dC10F1Ad6795f1f81": {
+    "symbol": "aCelcEUR",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x5C2B7EB5886B3cEc5CCE1019E34493da33291aF5": {
+    "symbol": "variableDebtCelcEUR",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xD8763CBa276a3738E6DE85b4b3bF5FDed6D6cA73": {
+    "symbol": "EURm",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xBba98352628B0B0c4b40583F593fFCb630935a45": {
+    "symbol": "aCelcUSD",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x05Ee3d1fBACbDbA1259946033cd7A42FDFcCcF0d": {
+    "symbol": "variableDebtCelcUSD",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x765DE816845861e75A25fCA122bb6898B8B1282a": {
+    "symbol": "USDm",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xC3e77dC389537Db1EEc7C33B95Cf3beECA71A209": {
+    "symbol": "aCelCELO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xaEa37B42955De2Ba2E4AF6581E46349bCD3Ea2d6": {
+    "symbol": "variableDebtCelCELO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x471EcE3750Da237f93B8E339c536989b8978a438": {
+    "symbol": "CELO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xf385280F36e009C157697D25E0B802EfaBfd789c": {
+    "symbol": "aCelWETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x6508cff7c5FbA053Af00a4E894500e6fA00274B7": {
+    "symbol": "variableDebtCelWETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xD221812de1BD094f35587EE8E174B07B6167D9Af": {
+    "symbol": "WETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

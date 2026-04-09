@@ -1,0 +1,146 @@
+{
+  "0x2B35eF056728BaFFaC103e3b81cB029788006EF9": {
+    "symbol": "aInkWlWETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xc1457AcfBaD2332b07B7651A4Da3176E8F3Bc9E4": {
+    "symbol": "variableDebtInkWlWETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x4200000000000000000000000000000000000006": {
+    "symbol": "WETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xC712C3a5624de08EA593FB23270804B47942564e": {
+    "symbol": "aInkWlKBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x47D9b89775958F0b5c7734C5570565Ce575e7e94": {
+    "symbol": "variableDebtInkWlKBTC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x73E0C0d45E048D25Fc26Fa3159b0aA04BfA4Db98": {
+    "symbol": "kBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x99cBF1Ff4527675Ed3301671105C9F7748fb8a04": {
+    "symbol": "aInkWlUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xA5d61eF3D06234371507e54FB709F401E590719a": {
+    "symbol": "variableDebtInkWlUSDT",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x0200C29006150606B650577BBE7B6248F58470c1": {
+    "symbol": "USD₮0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x4cd13ce4edbB5523fd4849252b5f1bF215129D10": {
+    "symbol": "aInkWlUSDG",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x08443163427BaE789774f45198315f6EAefe566C": {
+    "symbol": "variableDebtInkWlUSDG",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xe343167631d89B6Ffc58B88d6b7fB0228795491D": {
+    "symbol": "USDG",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xC629140A8aA21F8f319A21F41b2DC1b0431693C1": {
+    "symbol": "aInkWlGHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x45b30e3F687EEC15702dff29069f24173cB69Af4": {
+    "symbol": "variableDebtInkWlGHO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xfc421aD3C883Bf9E7C4f42dE845C4e4405799e73": {
+    "symbol": "GHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x70A38B0c90441e991346B7A0Cd98C8528dD1c234": {
+    "symbol": "aInkWlUSDC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x305c03f74DBb8C6052b7667AaBEE21dC7c1f0B29": {
+    "symbol": "variableDebtInkWlUSDC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x2D270e6886d130D724215A266106e6832161EAEd": {
+    "symbol": "USDC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x7789888E302Bc3288A78a182efe6DfE91da756ec": {
+    "symbol": "aInkWlweETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xF498bfc4439e91042EeDB9736767F770F48Da474": {
+    "symbol": "variableDebtInkWlweETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xA3D68b74bF0528fdD07263c60d6488749044914b": {
+    "symbol": "weETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x98F6A9b82799813447E6c00E51aF5b325976199A": {
+    "symbol": "aInkWlwrsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x33d3F390F266A21b0467efD559DC5fecD17Db52C": {
+    "symbol": "variableDebtInkWlwrsETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x9f0a74A92287E323Eb95c1cd9eCdBEb0e397cAe4": {
+    "symbol": "wrsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xd596B3C15E28795AaBF0481DaA0Ff4eBAa42c5F2": {
+    "symbol": "aInkWlezETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x522e93245C2df28904B86103af69bC27ae80FA46": {
+    "symbol": "variableDebtInkWlezETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x2416092f143378750bb29b79eD961ab195CcEea5": {
+    "symbol": "ezETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x24C1FaC3447C45137E5f1c2C54Fe9ed3F1EdeA61": {
+    "symbol": "aInkWlsUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xD02245a1CD906AD9336600E037345a4C5242B141": {
+    "symbol": "variableDebtInkWlsUSDe",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2": {
+    "symbol": "sUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x726D965F0D759A0489d178365f00b4c3c3207BB7": {
+    "symbol": "aInkWlUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x52D5096a7df365C3870A7767a5024D59eD44d814": {
+    "symbol": "variableDebtInkWlUSDe",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34": {
+    "symbol": "USDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x0373715A7e8f77354B4Af002C6f9F33C79f4F92a": {
+    "symbol": "aInkWlSolvBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x986d7beE5Cc6eF52607eaD71fDD9B61Aa153271b": {
+    "symbol": "variableDebtInkWlSolvBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xaE4EFbc7736f963982aACb17EFA37fCBAb924cB3": {
+    "symbol": "SolvBTC",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

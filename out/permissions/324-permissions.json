@@ -276,7 +276,31 @@
             "functions": [
               "setClaimer",
               "setEmissionAdmin",
-              "setRewardsController"
+              "setRewardsController",
+              "renounceOwnership",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyEmissionAdmin",
+            "addresses": [
+              {
+                "address": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc",
+                "owners": [
+                  "0xEd039871ec71FBDC3D714517cE97030Dd2E88622",
+                  "0x0B003A002bA306C50292512063e84662E6434738",
+                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
+                  "0x57ab7ee15cE5ECacB1aB84EE42D5A9d0d8112922"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "configureAssets",
+              "setTransferStrategy",
+              "setRewardOracle",
+              "setDistributionEnd",
+              "setEmissionPerSecond"
             ]
           }
         ]

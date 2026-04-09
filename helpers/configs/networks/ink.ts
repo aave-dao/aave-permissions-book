@@ -17,6 +17,7 @@ import { mergeAddressNames } from '../addresses/index.js';
 // ============================================================================
 const v3WhiteLabelPool = createV3Pool({
   aclBlock: 19948732,
+  emissionManagerBlock: 19948732,
   collectorBlock: 19948732,
   addressBook: {
     ...AaveV3InkWhitelabel,

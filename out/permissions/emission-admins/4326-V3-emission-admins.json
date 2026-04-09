@@ -1,0 +1,86 @@
+{
+  "0xa31E6b433382062e8A1dA41485f7b234D97c3f4d": {
+    "symbol": "aMegWETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x09ADCCC7AF2aBD356c18A4CadF2e5cC250f300E9": {
+    "symbol": "variableDebtMegWETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x4200000000000000000000000000000000000006": {
+    "symbol": "WETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x0889d59eA7178ee5B71DA01949a5cB42aaFBe337": {
+    "symbol": "aMegBTCb",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x15B550784928C5b1A93849CA5d6caA18B2545B6d": {
+    "symbol": "variableDebtMegBTCb",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xB0F70C0bD6FD87dbEb7C10dC692a2a6106817072": {
+    "symbol": "BTC.b",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xE2283E01a667b512c340f19B499d86fbc885D5Ef": {
+    "symbol": "aMegUSDT0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xB951225133b5eed3D88645E4Bb1360136FF70D9a": {
+    "symbol": "variableDebtMegUSDT0",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb": {
+    "symbol": "USDT0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x5dF82810CB4B8f3e0Da3c031cCc9208ee9cF9500": {
+    "symbol": "aMegUSDm",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x6B408d6c479C304794abC60a4693A3AD2D3c2D0D": {
+    "symbol": "variableDebtMegUSDm",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xFAfDdbb3FC7688494971a79cc65DCa3EF82079E7": {
+    "symbol": "USDm",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xaD2de503b5c723371d6B38A5224A2E12E103DfB8": {
+    "symbol": "aMegwstETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x259A9Cd7628f6D15ef384887dd90bb7A0283fEf9": {
+    "symbol": "variableDebtMegwstETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x601aC63637933D88285A025C685AC4e9a92a98dA": {
+    "symbol": "wstETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xb8578af311353b44B14bb4480EBB4DE608EC7e1B": {
+    "symbol": "aMegwrsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xd7B71D855bBAcd3f11F623400bc870AB3448AfF7": {
+    "symbol": "variableDebtMegwrsETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x4Fc44BE15e9B6E30C1E774E2C87A21D3E8b5403F": {
+    "symbol": "wrsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x03C99Cce547b1c2E74442b73E6f588A66D19597e": {
+    "symbol": "aMegezETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x1505f48Bd4db0fF8B28817D2C0Fb95Abcb8eEbbc": {
+    "symbol": "variableDebtMegezETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x09601A65e7de7BC8A19813D263dD9E98bFdC3c57": {
+    "symbol": "ezETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

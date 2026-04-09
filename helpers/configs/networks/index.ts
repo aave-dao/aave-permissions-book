@@ -21,6 +21,7 @@ import { plasmaConfig } from './plasma.js';
 import { bobConfig } from './bob.js';
 import { mantleConfig } from './mantle.js';
 import { megaethConfig } from './megaeth.js';
+import { xLayerConfig } from './xlayer.js';
 
 /**
  * @notice object that contains the configuration for each pool and network pairing.
@@ -49,4 +50,5 @@ export const networkConfigs: NetworkConfigs = {
   [ChainId.bob]: bobConfig,
   [ChainId.mantle]: mantleConfig,
   [ChainId.megaeth]: megaethConfig,
+  [ChainId.xLayer]: xLayerConfig,
 };

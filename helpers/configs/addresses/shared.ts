@@ -14,6 +14,12 @@ export const SHARED_ADDRESSES: Record<string, string> = {
 
   // Finance Risk Council - appears on most networks
   '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
+
+  // ACI Safe - emission admin on most networks
+  '0xac140648435d03f784879cd789130F22Ef588Fcd': 'ACI Safe',
+
+  // MASIV Safe - emission admin
+  '0xdef1FA4CEfe67365ba046a7C630D6B885298E210': 'MASIV Safe',
 };
 
 /**

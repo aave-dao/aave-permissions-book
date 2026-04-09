@@ -15,6 +15,7 @@ import { mergeAddressNames } from '../addresses/index.js';
 // ============================================================================
 const v3Pool = createV3Pool({
   aclBlock: 90172810,
+  emissionManagerBlock: 90172810,
   collectorBlock: 90172810,
   crossChainControllerBlock: 75528130,
   granularGuardianBlock: 75528470,

@@ -1,0 +1,38 @@
+{
+  "0x1bD45Cc20CE61BE344A64218E6Ade01E72b08f39": {
+    "symbol": "aSoneWETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xC52375A5A04C0ABe5a6Ca5F3a344be2415EF54dB": {
+    "symbol": "variableDebtSoneWETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x4200000000000000000000000000000000000006": {
+    "symbol": "WETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xb2C9E934A55B58D20496A5019F8722a96d8A44d8": {
+    "symbol": "aSoneUSDCe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xccE2594ea5bC482DB9b4826Ce25d0764fE56BfD8": {
+    "symbol": "variableDebtSoneUSDCe",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xbA9986D2381edf1DA03B0B9c1f8b00dc4AacC369": {
+    "symbol": "USDC.e",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xBAB0366ADdA6d2845c6BB5db4339A824350d24F7": {
+    "symbol": "aSoneUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xb3B6f42Ef71DDd9348136FFBdF02B545c0d2B799": {
+    "symbol": "variableDebtSoneUSDT",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x3A337a6adA9d885b6Ad95ec48F9b75f197b5AE35": {
+    "symbol": "USDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

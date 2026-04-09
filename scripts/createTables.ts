@@ -15,6 +15,7 @@
  */
 import {
   getPermissionsByNetwork,
+  getEmissionAdminsByPool,
   saveJson,
 } from '../helpers/fileSystem.js';
 import { getNetowkName, networkConfigs, Pools } from '../helpers/configs.js';
@@ -48,6 +49,7 @@ import {
   generateContractTable,
   generateRoleTable,
   generateGsmRolesTables,
+  generateEmissionAdminsTable,
   TableContext,
 } from '../helpers/tableGenerator.js';
 import { Contracts } from '../helpers/types.js';
@@ -609,6 +611,13 @@ export const generateTable = (network: string, pool: string): string => {
 
   // GSM Admins tables
   readmeByNetwork += generateGsmRolesTables(poolPermitsByContract.gsmRoles, tableCtx);
+
+  // Emission Admins table (read from dedicated file, not permissions JSON)
+  const emissionAdminsData = getEmissionAdminsByPool(network, pool);
+  readmeByNetwork += generateEmissionAdminsTable(
+    Object.keys(emissionAdminsData).length > 0 ? emissionAdminsData : undefined,
+    tableCtx,
+  );
 
   saveJson(`./out/${networkName}-${pool}.md`, readmeByNetwork);
 

@@ -1509,5 +1509,70 @@
         ]
       }
     ]
+  },
+  {
+    "contract": "EmissionManager",
+    "functions": [
+      {
+        "name": "configureAssets",
+        "roles": [
+          "onlyEmissionAdmin"
+        ]
+      },
+      {
+        "name": "setTransferStrategy",
+        "roles": [
+          "onlyEmissionAdmin"
+        ]
+      },
+      {
+        "name": "setRewardOracle",
+        "roles": [
+          "onlyEmissionAdmin"
+        ]
+      },
+      {
+        "name": "setDistributionEnd",
+        "roles": [
+          "onlyEmissionAdmin"
+        ]
+      },
+      {
+        "name": "setEmissionPerSecond",
+        "roles": [
+          "onlyEmissionAdmin"
+        ]
+      },
+      {
+        "name": "setClaimer",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setEmissionAdmin",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "setRewardsController",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": [
+          "onlyOwner"
+        ]
+      }
+    ]
   }
 ]

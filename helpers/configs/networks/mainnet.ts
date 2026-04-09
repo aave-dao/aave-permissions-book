@@ -28,6 +28,7 @@ import { mergeAddressNames } from '../addresses/index.js';
 // ============================================================================
 const v3Pool = createV3Pool({
   aclBlock: 16291117,
+  emissionManagerBlock: 16291117,
   collectorBlock: 21765718,
   crossChainControllerBlock: 18090380,
   granularGuardianBlock: 20324867,
@@ -50,6 +51,7 @@ const v3Pool = createV3Pool({
 // ============================================================================
 const lidoPool = createV3Pool({
   aclBlock: 20262410,
+  emissionManagerBlock: 20262410,
   collectorBlock: 21765718,
   clinicStewardBlock: 21967120,
   addressBook: {
@@ -64,6 +66,7 @@ const lidoPool = createV3Pool({
 // ============================================================================
 const etherFiPool = createV3Pool({
   aclBlock: 20625515,
+  emissionManagerBlock: 20625515,
   collectorBlock: 21765718,
   addressBook: {
     ...AaveV3EthereumEtherFi,

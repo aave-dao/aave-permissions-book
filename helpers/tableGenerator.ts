@@ -1,6 +1,6 @@
 import { explorerAddressUrlComposer } from './explorer.js';
 import { getLineSeparator, getTableBody, getTableHeader } from './tables.js';
-import { AddressInfo, Contracts, ContractsByAddress, PoolGuardians } from './types.js';
+import { AddressInfo, Contracts, ContractsByAddress, EmissionAdminsByToken, PoolGuardians } from './types.js';
 
 // ============================================================================
 // Types
@@ -233,4 +233,68 @@ export const generateGsmRolesTables = (
   }
 
   return result;
+};
+
+// ============================================================================
+// Emission Admins Table Generator
+// ============================================================================
+
+const EMISSION_ADMIN_TABLE_HEADERS = ['admin', 'tokens count', 'tokens'];
+
+/**
+ * Generates a markdown table for emission admins, grouped by admin address.
+ */
+export const generateEmissionAdminsTable = (
+  emissionAdmins: EmissionAdminsByToken | undefined,
+  ctx: TableContext,
+): string => {
+  if (!emissionAdmins || Object.keys(emissionAdmins).length === 0) {
+    return '';
+  }
+
+  // Group tokens by admin address
+  const adminToTokens: Record<string, Array<{ address: string; symbol: string }>> = {};
+  for (const [tokenAddress, entry] of Object.entries(emissionAdmins)) {
+    const admin = entry.emissionAdmin;
+    if (!admin || admin === '0x0000000000000000000000000000000000000000') {
+      continue;
+    }
+    if (!adminToTokens[admin]) {
+      adminToTokens[admin] = [];
+    }
+    adminToTokens[admin].push({ address: tokenAddress, symbol: entry.symbol });
+  }
+
+  if (Object.keys(adminToTokens).length === 0) {
+    return '';
+  }
+
+  let table = `### Emission Admins\n`;
+  table += getTableHeader(EMISSION_ADMIN_TABLE_HEADERS);
+
+  for (const [admin, tokens] of Object.entries(adminToTokens)) {
+    tokens.sort((a, b) => a.symbol.localeCompare(b.symbol));
+
+    const adminLink = ctx.generateTableAddress(
+      admin,
+      ctx.addressesNames,
+      ctx.contractsByAddress,
+      ctx.poolGuardians,
+      ctx.network,
+      ctx.pool,
+    );
+
+    const tokenLinks = tokens
+      .map((t) => `[${t.symbol}](${explorerAddressUrlComposer(t.address, ctx.network)})`)
+      .join(', ');
+
+    table += getTableBody([
+      adminLink,
+      String(tokens.length),
+      tokenLinks,
+    ]);
+    table += getLineSeparator(EMISSION_ADMIN_TABLE_HEADERS.length);
+  }
+
+  return table + '\n';
 };

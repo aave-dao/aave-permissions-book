@@ -8,6 +8,7 @@ import { ChainId } from '@bgd-labs/toolbox';
 import {
   AddressBook,
   Contracts,
+  EmissionAdminsByToken,
   PermissionsJson,
 } from '../helpers/types.js';
 import { capsPlusRiskStewardABI } from '../abis/capsPlusRiskSteward.js';
@@ -27,6 +28,7 @@ import {
   mapRoleAddresses,
   EDGE_STEWARD_CONFIGS,
 } from '../helpers/contractResolvers.js';
+import { getUniqueEmissionAdmins } from './emissionAdminPermissions.js';
 
 export const resolveV3Modifiers = async (
   addressBook: any,
@@ -35,6 +37,7 @@ export const resolveV3Modifiers = async (
   pool: Pools,
   chainId: typeof ChainId | number,
   adminRoles: Record<string, string[]>,
+  emissionAdmins?: EmissionAdminsByToken,
 ): Promise<Contracts> => {
   const obj: Contracts = {};
   const roles = generateRoles(permissionsObject);
@@ -294,35 +297,44 @@ export const resolveV3Modifiers = async (
   const emissionManagerContract = getContract({ address: getAddress(addressBook.EMISSION_MANAGER), abi: onlyOwnerAbi, client: provider });
   const emissionManagerOwner = await emissionManagerContract.read.owner() as Address;
 
+  const emissionManagerModifiers = [
+    {
+      modifier: 'onlyOwner',
+      addresses: [
+        {
+          address: emissionManagerOwner,
+          owners: await getSafeOwners(provider, emissionManagerOwner),
+          signersThreshold: await getSafeThreshold(
+            provider,
+            emissionManagerOwner,
+          ),
+        },
+      ],
+      functions: roles['EmissionManager']['onlyOwner'],
+    },
+  ];
+
+  // Add onlyEmissionAdmin modifier with all unique emission admin addresses
+  if (emissionAdmins && Object.keys(emissionAdmins).length > 0) {
+    const uniqueAdmins = getUniqueEmissionAdmins(emissionAdmins);
+    const adminAddresses = [];
+    for (const admin of uniqueAdmins) {
+      adminAddresses.push({
+        address: admin,
+        owners: await getSafeOwners(provider, admin),
+        signersThreshold: await getSafeThreshold(provider, admin),
+      });
+    }
+    emissionManagerModifiers.push({
+      modifier: 'onlyEmissionAdmin',
+      addresses: adminAddresses,
+      functions: roles['EmissionManager']['onlyEmissionAdmin'],
+    });
+  }
+
   obj['EmissionManager'] = {
     address: addressBook.EMISSION_MANAGER,
-    modifiers: [
-      {
-        modifier: 'onlyOwner',
-        addresses: [
-          {
-            address: emissionManagerOwner,
-            owners: await getSafeOwners(provider, emissionManagerOwner),
-            signersThreshold: await getSafeThreshold(
-              provider,
-              emissionManagerOwner,
-            ),
-          },
-        ],
-        functions: roles['EmissionManager']['onlyOwner'],
-      },
-      // TODO: as emissionAdmin is for reward, for now we leave it commented, not so sure what to do with this
-      // {
-      //   modifier: 'onlyEmissionAdmin',
-      //   addresses: [
-      //     {
-      //       address: 'Dependent on reward',
-      //       owners: [],
-      //     },
-      //   ],
-      //   functions: roles['EmissionManager']['onlyEmissionAdmin'],
-      // },
-    ],
+    modifiers: emissionManagerModifiers,
   };
 
   const addressesRegistryContract = getContract({ address: getAddress(addressBook.POOL_ADDRESSES_PROVIDER_REGISTRY), abi: onlyOwnerAbi, client: provider });

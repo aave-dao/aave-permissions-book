@@ -1,0 +1,206 @@
+{
+  "0x5D72a9d9A9510Cd8cBdBA12aC62593A58930a948": {
+    "symbol": "aPlaUSDT0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xCBBC427b5658672768E11BFDa00879839DB4785F": {
+    "symbol": "variableDebtPlaUSDT0",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb": {
+    "symbol": "USDT0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x7519403E12111ff6b710877Fcd821D0c12CAF43A": {
+    "symbol": "aPlaUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xEa650893085DAd858150915291645F57164A4257": {
+    "symbol": "variableDebtPlaUSDe",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34": {
+    "symbol": "USDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xC1A318493fF07a68fE438Cee60a7AD0d0DBa300E": {
+    "symbol": "aPlasUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xc7A92af2ca7b75FC608A8F0C08640dE5b339BfC0": {
+    "symbol": "variableDebtPlasUSDe",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x211Cc4DD073734dA055fbF44a2b4667d5E5fE5d2": {
+    "symbol": "sUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x5c43D6C075C7CF95fb188FB2977eeD3E3F2a92c2": {
+    "symbol": "aPlaXAUt0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x20091c402C2933144Bd9a9B1B07dBEBf19c6d5A1": {
+    "symbol": "variableDebtPlaXAUt0",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x1B64B9025EEbb9A6239575dF9Ea4b9Ac46D4d193": {
+    "symbol": "XAUt0",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xAf1a7a488c8348b41d5860C04162af7d3D38A996": {
+    "symbol": "aPlaweETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x34542B95Efdf2dFbD59978C2F620FBd7275E9323": {
+    "symbol": "variableDebtPlaweETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xA3D68b74bF0528fdD07263c60d6488749044914b": {
+    "symbol": "weETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xf1aB7f60128924d69f6d7dE25A20eF70bBd43d07": {
+    "symbol": "aPlaWETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x638d7db63cd5c902bDd9A91cf195870551c3c7B3": {
+    "symbol": "variableDebtPlaWETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x9895D81bB462A195b4922ED7De0e3ACD007c32CB": {
+    "symbol": "WETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xEa601A9FECF80bFC529F08A51bD8Cb0d72fc862A": {
+    "symbol": "aPlaPT_USDe_15JAN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xD73253B18124837465b0c1fCB1A947d0542a991B": {
+    "symbol": "variableDebtPlaPT_USDe_15JAN2026",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x93B544c330F60A2aa05ceD87aEEffB8D38FD8c9a": {
+    "symbol": "PT-USDe-15JAN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x0b9A412c94f07223752031f75a20DDe542D63d5C": {
+    "symbol": "aPlaPT_sUSDE_15JAN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xb2A5AD339d9687B5606b21B37F72f350e5BbC622": {
+    "symbol": "variableDebtPlaPT_sUSDE_15JAN2026",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x02FCC4989B4C9D435b7ceD3fE1Ba4CF77BBb5Dd8": {
+    "symbol": "PT-sUSDE-15JAN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x140Bc58975DFba4D30fE65c4F6262a6c314683cf": {
+    "symbol": "aPlawstETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xE476310751953E3aC32bbe4fc6218748fe02c4d2": {
+    "symbol": "variableDebtPlawstETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xe48D935e6C9e735463ccCf29a7F11e32bC09136E": {
+    "symbol": "wstETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x41c7aCCC0fB97470bFB48014bad52E0d99447E79": {
+    "symbol": "aPlawrsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xe5A29d07F3D532Cd16bD53376053C2aa5B320cB9": {
+    "symbol": "variableDebtPlawrsETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xe561FE05C39075312Aa9Bc6af79DdaE981461359": {
+    "symbol": "wrsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xD4eE376C40EdC83832aAaFc18fC0272660F5e90b": {
+    "symbol": "aPlasyrupUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xDA5D1a9b7F515457638c01db13a18Bd3514fC4A6": {
+    "symbol": "variableDebtPlasyrupUSDT",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xC4374775489CB9C56003BF2C9b12495fC64F0771": {
+    "symbol": "syrupUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x5aA4bc74811D672DA5308019dA4779f673e60B47": {
+    "symbol": "aPlaWXPL",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x7ec35d7008682c33dBC6b214E01D919e8d441e48": {
+    "symbol": "variableDebtPlaWXPL",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x6100E367285b01F48D07953803A2d8dCA5D19873": {
+    "symbol": "WXPL",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x53349cBeD7A3F851f0722Bf3Fa8f1b93fA939BeF": {
+    "symbol": "aPlaPT_sUSDE_9APR2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xA4408E7C8b5D4481a2D8aD7Aa89f3576a6A4a5D6": {
+    "symbol": "variableDebtPlaPT_sUSDE_9APR2026",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xab509448ad489e2E1341e25CC500f2596464Cc82": {
+    "symbol": "PT-sUSDE-9APR2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x9326fA5a71C93D5De313c91C3b80D74d0c3a0F5A": {
+    "symbol": "aPlaPT_USDe_9APR2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xA746feD5635787e2d97da1979c714BfcDf60fa1A": {
+    "symbol": "variableDebtPlaPT_USDe_9APR2026",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x54Dc267be2839303ff1e323584A16e86CeC4Aa44": {
+    "symbol": "PT-USDe-9APR2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xAd571979b4245E163A7E2119EB4dFd94AfDaebC5": {
+    "symbol": "aPlaGHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xB8A2C006202071171582C53B95942d645eD10891": {
+    "symbol": "variableDebtPlaGHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xb77E872A68C62CfC0dFb02C067Ecc3DA23B4bbf3": {
+    "symbol": "GHO",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x23B17d3944742ACe3d0C71586FcB320d1e4a1Ed2": {
+    "symbol": "PT-USDe-18JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xDEdFF537fCBa1169E673F78EE23D109885741016": {
+    "symbol": "aPlaPT_USDe_18JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xf49f425D575f1505430BeEa036e0a318B08EB03c": {
+    "symbol": "variableDebtPlaPT_USDe_18JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x30559E3d35e33AB69399a3fe9F383d32bd3c016E": {
+    "symbol": "PT-sUSDE-18JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x68ab954Dc705c66506d499963dD1fbB8aFa23d7d": {
+    "symbol": "aPlaPT_sUSDE_18JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xD51aDd2Ca67b8b4541EB4c1a5EaFbAEB3d3b2dF7": {
+    "symbol": "variableDebtPlaPT_sUSDE_18JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

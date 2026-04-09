@@ -1,6 +1,6 @@
 {
   "V3_WHITE_LABEL": {
-    "latestBlockNumber": 42164141,
+    "latestBlockNumber": 42199444,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x86E2938daE289763D4e09a7e42c5cCcA62Cf9809",
@@ -15,7 +15,7 @@
     }
   },
   "V3": {
-    "latestBlockNumber": 42164144,
+    "latestBlockNumber": 42199447,
     "indexedContracts": {
       "CROSS_CHAIN_CONTROLLER": {
         "address": "0x990B75fD1a2345D905a385dBC6e17BEe0Cb2f505",
@@ -30,12 +30,22 @@
     }
   },
   "GHO": {
-    "latestBlockNumber": 42164144,
+    "latestBlockNumber": 42199447,
     "indexedContracts": {
       "GHO_TOKEN": {
         "address": "0xfc421aD3C883Bf9E7C4f42dE845C4e4405799e73",
         "deploymentBlock": 21969030,
         "firstIndexedAt": 21969030
+      }
+    }
+  },
+  "V3_WHITE_LABEL_EMISSION": {
+    "latestBlockNumber": 42199444,
+    "indexedContracts": {
+      "EMISSION_MANAGER": {
+        "address": "0x9CbcEf2c44cF28ff2aa36Bff7BaB315398209A79",
+        "deploymentBlock": 19948732,
+        "firstIndexedAt": 42114284
       }
     }
   }

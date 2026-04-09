@@ -11,10 +11,11 @@
  * simply means no prior state exists (first run, new network, etc.).
  */
 import * as fs from 'fs';
-import { FullPermissions, PermissionsJson, Pool } from './types.js';
+import { EmissionAdminsByToken, FullPermissions, PermissionsJson, Pool } from './types.js';
 import { NetworkMetadata, PoolMetadata } from './eventIndexer.js';
 
 const METADATA_DIR = 'out/permissions/metadata';
+const EMISSION_ADMINS_DIR = 'out/permissions/emission-admins';
 
 export const saveJson = (filePath: string, stringifiedJson: string) => {
   fs.writeFileSync(filePath, stringifiedJson);
@@ -126,4 +127,46 @@ export const updatePoolMetadata = (
   const networkMetadata = getMetadataByNetwork(network);
   networkMetadata[poolKey] = poolMetadata;
   saveMetadata(network, networkMetadata);
+};
+
+// ============================================================================
+// Emission Admin Functions
+// ============================================================================
+
+/**
+ * Ensures the emission admins directory exists.
+ */
+const ensureEmissionAdminsDir = (): void => {
+  if (!fs.existsSync(EMISSION_ADMINS_DIR)) {
+    fs.mkdirSync(EMISSION_ADMINS_DIR, { recursive: true });
+  }
+};
+
+/**
+ * Gets the emission admins data for a specific pool.
+ * Returns empty object if not found.
+ */
+export const getEmissionAdminsByPool = (
+  network: string | number,
+  poolKey: string,
+): EmissionAdminsByToken => {
+  try {
+    const file = fs.readFileSync(`${EMISSION_ADMINS_DIR}/${network}-${poolKey}-emission-admins.json`);
+    return JSON.parse(file.toString()) as EmissionAdminsByToken;
+  } catch (error) {
+    return {};
+  }
+};
+
+/**
+ * Saves the emission admins data for a specific pool.
+ */
+export const saveEmissionAdminsByPool = (
+  network: string | number,
+  poolKey: string,
+  data: EmissionAdminsByToken,
+): void => {
+  ensureEmissionAdminsDir();
+  const path = `${EMISSION_ADMINS_DIR}/${network}-${poolKey}-emission-admins.json`;
+  fs.writeFileSync(path, JSON.stringify(data, null, 2));
 };

@@ -126,7 +126,7 @@ export async function executePayloadOnFork(
 ): Promise<void> {
   const client = createTestClient({
     mode: 'anvil',
-    transport: http(anvilRpcUrl),
+    transport: http(anvilRpcUrl, { timeout: 120_000 }),
   })
     .extend(publicActions)
     .extend(walletActions);
@@ -238,6 +238,24 @@ export async function executePayloadOnFork(
   if (state === PayloadState.Queued) {
     console.log(`Payload ${id} is Queued, executing...`);
 
+    // Read payload to determine delay, then warp time past it
+    const queuedPayload = await payloadsController.read.getPayloadById([id]) as {
+      creator: Address;
+      maximumAccessLevelRequired: number;
+      createdAt: number;
+      queuedAt: number;
+      delay: number;
+    };
+
+    const currentBlock = await client.getBlock();
+    const executeableAt = Number(queuedPayload.queuedAt) + Number(queuedPayload.delay);
+    const timeToWarp = executeableAt - Number(currentBlock.timestamp) + 1;
+
+    if (timeToWarp > 0) {
+      console.log(`Warping time forward by ${timeToWarp}s to pass execution delay...`);
+      await client.increaseTime({ seconds: timeToWarp });
+    }
+
     // Mine a block to ensure timestamp is past the delay
     await client.mine({ blocks: 1 });
 
@@ -278,7 +296,7 @@ export async function executeCalldataOnFork(
 ): Promise<void> {
   const client = createTestClient({
     mode: 'anvil',
-    transport: http(anvilRpcUrl),
+    transport: http(anvilRpcUrl, { timeout: 120_000 }),
   })
     .extend(publicActions)
     .extend(walletActions);

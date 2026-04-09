@@ -1,0 +1,122 @@
+{
+  "0xC035a7cf15375cE2706766804551791aD035E0C2": {
+    "symbol": "aEthLidowstETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xE439edd2625772AA635B437C099C607B6eb7d35f": {
+    "symbol": "variableDebtEthLidowstETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0": {
+    "symbol": "wstETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xfA1fDbBD71B0aA16162D76914d69cD8CB3Ef92da": {
+    "symbol": "aEthLidoWETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x91b7d78BF92db564221f6B5AeE744D1727d1Dd1e": {
+    "symbol": "variableDebtEthLidoWETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": {
+    "symbol": "WETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x09AA30b182488f769a9824F15E6Ce58591Da4781": {
+    "symbol": "aEthLidoUSDS",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x2D9fe18b6c35FE439cC15D932cc5C943bf2d901E": {
+    "symbol": "variableDebtEthLidoUSDS",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xdC035D45d973E3EC169d2276DDab16f1e407384F": {
+    "symbol": "USDS",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x2A1FBcb52Ed4d9b23daD17E1E8Aed4BB0E6079b8": {
+    "symbol": "aEthLidoUSDC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xeD90dE2D824Ee766c6Fd22E90b12e598f681dc9F": {
+    "symbol": "variableDebtEthLidoUSDC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": {
+    "symbol": "USDC",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x74e5664394998f13B07aF42446380ACef637969f": {
+    "symbol": "aEthLidoezETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x08e1bba76D27841dD91FAb4b3a636A0D5CF8c3E9": {
+    "symbol": "variableDebtEthLidoezETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xbf5495Efe5DB9ce00f80364C8B423567e58d2110": {
+    "symbol": "ezETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xc2015641564a5914A17CB9A92eC8d8feCfa8f2D0": {
+    "symbol": "aEthLidosUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x2ABbAab3EF4e4A899d39e7EC996b5715E76b399a": {
+    "symbol": "variableDebtEthLidosUSDe",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497": {
+    "symbol": "sUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x18eFE565A5373f430e2F809b97De30335B3ad96A": {
+    "symbol": "aEthLidoGHO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x18577F0f4A0B2Ee6F4048dB51c7acd8699F97DB8": {
+    "symbol": "variableDebtEthLidoGHO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f": {
+    "symbol": "GHO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x56D919E7B25aA42F3F8a4BC77b8982048F2E84B4": {
+    "symbol": "aEthLidorsETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x2c2163f120cf58631368981BC16e90190Bc6C644": {
+    "symbol": "variableDebtEthLidorsETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xA1290d69c65A6Fe4DF752f95823fae25cB99e5A7": {
+    "symbol": "rsETH",
+    "emissionAdmin": "0xdef1FA4CEfe67365ba046a7C630D6B885298E210"
+  },
+  "0xce8c60fd8390eFCc3Fc66A3f0bd64BEb969e750E": {
+    "symbol": "aEthLidotETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xe7ea6125490ae4594aD9B44D05dFF9F2A4343134": {
+    "symbol": "variableDebtEthLidotETH",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8": {
+    "symbol": "tETH",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x619D75E3b790eBC21c289f2805Bb7177A7D732E2": {
+    "symbol": "PT-srUSDe-25JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xA78Eba24D89e70A03ddB7AC195A15E53315aA5b4": {
+    "symbol": "aEthPT_srUSDe_25JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x9Ba896531F878Ed5f0A4F73E82d63bA7b424F910": {
+    "symbol": "variableDebtEthPT_srUSDe_25JUN2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  }
+}

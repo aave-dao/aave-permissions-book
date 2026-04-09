@@ -5,6 +5,9 @@ import { aclManagerAbi } from "../abis/aclManager.js";
 import { accessManagerAbi } from "../abis/accessManagerAbi.js";
 import { getBlockNumber } from "viem/actions";
 import { crossChainControllerAbi } from "../abis/crossChainControllerAbi.js";
+import { EMISSION_MANAGER_ABI } from "../abis/emissionManager.js";
+
+const alchemyKey = env.ALCHEMY_KEY ?? env.ALCHEMY_API_KEY;
 
 const getHttpConfig = () => {
   return {
@@ -37,7 +40,7 @@ export const getForkRpcUrl = (chainId: number): string | undefined => {
   }
 
   return getRPCUrl(chainId as any, {
-    alchemyKey: env.ALCHEMY_KEY,
+    alchemyKey: alchemyKey,
     quicknodeEndpointName: env.QUICKNODE_ENDPOINT_NAME,
     quicknodeToken: env.QUICKNODE_TOKEN,
   });
@@ -71,7 +74,7 @@ export const getRPCClient = (chainId: number): Client => {
       },
     },
     providerConfig: {
-      alchemyKey: env.ALCHEMY_KEY,
+      alchemyKey: alchemyKey,
       quicknodeEndpointName: env.QUICKNODE_ENDPOINT_NAME,
       quicknodeToken: env.QUICKNODE_TOKEN,
     }
@@ -95,6 +98,7 @@ const abiByEventType: Record<string, any> = {
   'RoleGrantedAM': accessManagerAbi,
   'RoleRevokedAM': accessManagerAbi,
   'TargetFunctionRoleUpdated': accessManagerAbi,
+  'EmissionAdminUpdated': EMISSION_MANAGER_ABI,
 };
 
 /**
@@ -144,7 +148,7 @@ export const getEventsMultiContract = async ({
 }): Promise<{ logsByContract: Map<string, Log[]>, currentBlock: number }> => {
   const currentBlock = maxBlock ?? Number(await getBlockNumber(client));
   const eventsAbis = eventTypes.map(getEventTypeAbi);
-  
+
   // Initialize map with empty arrays for each contract
   const logsByContract = new Map<string, Log[]>();
   for (const contract of contracts) {
