@@ -120,7 +120,6 @@ const v2MiscPool = {
 const deduplicatedV4Addresses = deduplicateByAddress(
   AaveV4Ethereum.HUBS as Record<string, string>,
   AaveV4Ethereum.SPOKES as Record<string, string>,
-  AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>,
   AaveV4Ethereum.TOKENIZATION_SPOKES as Record<string, string>,
 );
 
@@ -143,6 +142,7 @@ const aaveV4 = createV4({
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Ethereum.SPOKE_CONFIGURATOR,
     ...v4MainAddressBook,
+    ...(AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>),
   },
 });
 

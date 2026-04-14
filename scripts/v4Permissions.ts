@@ -1,6 +1,7 @@
 import { Address, Client, getAddress, getContract, toFunctionSelector } from 'viem';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
+import { rescuableAbi } from '../abis/rescuableAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
 import {
@@ -400,16 +401,6 @@ export const resolveTokenizationSpokeUpgradeability = async (
 
   return obj;
 };
-
-const rescuableAbi = [
-  {
-    inputs: [],
-    name: 'whoCanRescue',
-    outputs: [{ internalType: 'address', name: '', type: 'address' }],
-    stateMutability: 'view',
-    type: 'function',
-  },
-] as const;
 
 /**
  * Maps address book keys to their contract type name in functionsPermissionsV4.json.

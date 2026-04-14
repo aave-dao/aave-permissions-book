@@ -141,6 +141,7 @@ const generateNetworkPermissions = async (
     let agentHub = {} as AgentHub;
     let tokenizationSpokes = {} as TokenizationSpokes;
     let positionManagers = {} as PositionManagers;
+    let accessManagerData: AccessManager | undefined;
     let emissionAdmins = {} as EmissionAdminsByToken;
 
     // =========================================================================
@@ -356,12 +357,11 @@ const generateNetworkPermissions = async (
           permissionsJson,
         );
 
-        // Store V4 access manager data for later use
-        (fullJson as any).__accessManager = {
+        accessManagerData = {
           roles: v4Roles,
           functionRoles: v4FunctionRoles,
           roleLabels: v4Result.roleLabels,
-        } as AccessManager;
+        };
       }
     } else if (
       poolKey !== Pools.GOV_V2 &&
@@ -643,10 +643,6 @@ const generateNetworkPermissions = async (
       govV3.senders = senders;
     }
 
-    // Extract V4 access manager data if present
-    const accessManager = (fullJson as any).__accessManager as AccessManager | undefined;
-    delete (fullJson as any).__accessManager;
-
     // Merge this pool's results into the network-wide JSON.
     const poolResult = {
       contracts: poolPermissions,
@@ -658,7 +654,7 @@ const generateNetworkPermissions = async (
       umbrella: umbrella,
       ppc: ppc,
       agentHub: agentHub,
-      ...(accessManager ? { accessManager } : {}),
+      ...(accessManagerData ? { accessManager: accessManagerData } : {}),
       ...(tokenizationSpokes.contracts ? { tokenizationSpokes } : {}),
       ...(positionManagers.contracts ? { positionManagers } : {}),
     };
