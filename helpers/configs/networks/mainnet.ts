@@ -20,6 +20,7 @@ import {
   createGhoPool,
   createSafetyPool,
   createV4,
+  deduplicateByAddress,
 } from '../poolBuilder.js';
 import { mergeAddressNames } from '../addresses/index.js';
 
@@ -116,15 +117,32 @@ const v2MiscPool = {
 // ============================================================================
 // Aave V4
 // ============================================================================
+const deduplicatedV4Addresses = deduplicateByAddress(
+  AaveV4Ethereum.HUBS as Record<string, string>,
+  AaveV4Ethereum.SPOKES as Record<string, string>,
+  AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>,
+  AaveV4Ethereum.TOKENIZATION_SPOKES as Record<string, string>,
+);
+
+const tokenizationSpokeKeys = new Set(Object.keys(AaveV4Ethereum.TOKENIZATION_SPOKES));
+const v4TokenizationSpokesAddressBook: Record<string, string> = {};
+const v4MainAddressBook: Record<string, string> = {};
+for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
+  if (tokenizationSpokeKeys.has(key)) {
+    v4TokenizationSpokesAddressBook[key] = address;
+  } else {
+    v4MainAddressBook[key] = address;
+  }
+}
+
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,
+  tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,
   addressBook: {
     ACCESS_MANAGER: AaveV4Ethereum.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Ethereum.SPOKE_CONFIGURATOR,
-    ...AaveV4Ethereum.HUBS,
-    ...AaveV4Ethereum.SPOKES,
-    ...AaveV4Ethereum.POSITION_MANAGERS,
+    ...v4MainAddressBook,
   },
 });
 
@@ -182,7 +200,8 @@ export const mainnetConfig: NetworkConfig = {
     '0x733AB16005c39d07FD3D9d1A350AA6768D10125b': 'USDT Chainlink Oracle Swap Freezer',
     '0x2bd010Ab5393AB51b601B99C4B33ba148d9466e9': 'Gho direct facilitator plasma',
     '0xE9ac5231fAecb633dA0Fe85Fcb2785b8363427d2': 'Gho direct facilitator mainnet',
-    '0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9': 'SECURITY_COUNCIL',
+    '0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9': 'V4 Security Council',
+    '0x14339e2178A954d5FB839D5Ff31644fE0F25F517': 'V4 Security Council Executor',
   }),
   pools: {
     [Pools.V3]: v3Pool,

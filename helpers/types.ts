@@ -66,6 +66,14 @@ export type AgentHub = {
   contracts: Contracts;
 };
 
+export type TokenizationSpokes = {
+  contracts: Contracts;
+};
+
+export type PositionManagers = {
+  contracts: Contracts;
+};
+
 export type AccessManager = {
   roles: Record<string, string[]>;
   functionRoles: Record<string, Record<string, string>>;
@@ -85,6 +93,8 @@ export type PoolInfo = {
   ppc?: Ppc;
   agentHub?: AgentHub;
   accessManager?: AccessManager;
+  tokenizationSpokes?: TokenizationSpokes;
+  positionManagers?: PositionManagers;
 };
 
 export type Pool = Record<string, PoolInfo>;
@@ -119,6 +129,7 @@ export type PoolConfigs = {
 
   accessManagerBlock?: number;
   roleLabels?: Record<string, string>;
+  tokenizationSpokesAddressBook?: Record<string, string>;
 
   emissionManagerBlock?: number;
 };

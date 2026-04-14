@@ -48,13 +48,13 @@ import { getRoleAdmins } from '../helpers/adminRoles.js';
 import { resolveV2Modifiers } from './v2Permissions.js';
 import { resolveV3Modifiers } from './v3Permissions.js';
 import { resolveGovV2Modifiers } from './governancePermissions.js';
-import { AgentHub, ClinicSteward, Collector, Contracts, EmissionAdminsByToken, GovV3, Ppc, Roles, Umbrella } from '../helpers/types.js';
+import { AgentHub, ClinicSteward, Collector, Contracts, EmissionAdminsByToken, GovV3, Ppc, PositionManagers, Roles, TokenizationSpokes, Umbrella } from '../helpers/types.js';
 import { resolveSafetyV2Modifiers } from './safetyPermissions.js';
 import { resolveV2MiscModifiers } from './v2MiscPermissions.js';
 import { getSenders } from '../helpers/crossChainControllerLogs.js';
 import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
-import { resolveV4Modifiers } from './v4Permissions.js';
+import { resolveV4Modifiers, resolveTokenizationSpokeUpgradeability, resolveV4PositionManagerModifiers } from './v4Permissions.js';
 import { getAccessManagerRoles, getFunctionRoleMappings } from '../helpers/accessManagerRoles.js';
 import { AccessManager } from '../helpers/types.js';
 import { resolveCollectorModifiers } from './collectorPermissions.js';
@@ -139,6 +139,8 @@ const generateNetworkPermissions = async (
     let ppc = {} as Ppc;
     govV3.ggRoles = {} as Roles;
     let agentHub = {} as AgentHub;
+    let tokenizationSpokes = {} as TokenizationSpokes;
+    let positionManagers = {} as PositionManagers;
     let emissionAdmins = {} as EmissionAdminsByToken;
 
     // =========================================================================
@@ -336,6 +338,23 @@ const generateNetworkPermissions = async (
           pool.roleLabels || {},
         );
         poolPermissions = v4Result.contracts;
+
+        // Resolve TokenizationSpokes upgradeability
+        if (pool.tokenizationSpokesAddressBook) {
+          logTableGeneration(network, poolKey, 'TokenizationSpokes');
+          tokenizationSpokes.contracts = await resolveTokenizationSpokeUpgradeability(
+            pool.tokenizationSpokesAddressBook,
+            poolProvider,
+          );
+        }
+
+        // Resolve PositionManagers permissions (Ownable2Step + Rescuable, not AccessManager)
+        logTableGeneration(network, poolKey, 'PositionManagers');
+        positionManagers.contracts = await resolveV4PositionManagerModifiers(
+          pool.addressBook,
+          poolProvider,
+          permissionsJson,
+        );
 
         // Store V4 access manager data for later use
         (fullJson as any).__accessManager = {
@@ -640,6 +659,8 @@ const generateNetworkPermissions = async (
       ppc: ppc,
       agentHub: agentHub,
       ...(accessManager ? { accessManager } : {}),
+      ...(tokenizationSpokes.contracts ? { tokenizationSpokes } : {}),
+      ...(positionManagers.contracts ? { positionManagers } : {}),
     };
 
     if (Object.keys(fullJson).length === 0) {

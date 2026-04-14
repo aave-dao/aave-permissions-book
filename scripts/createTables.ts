@@ -453,6 +453,41 @@ export const generateTable = (network: string, pool: string): string => {
   decentralizationTable += decentralizationTableBody;
   readmeByNetwork += decentralizationTable + '\n';
 
+  // TokenizationSpokes upgradeability section (V4 only)
+  if (poolPermitsByContract.tokenizationSpokes?.contracts &&
+      Object.keys(poolPermitsByContract.tokenizationSpokes.contracts).length > 0) {
+    let tsTable = `### TokenizationSpokes upgradeability\n`;
+    tsTable += getTableHeader(decentralizationHeaderTitles);
+    let tsTableBody = '';
+
+    for (const contractName of Object.keys(poolPermitsByContract.tokenizationSpokes.contracts)) {
+      if (contractName.startsWith('_')) continue;
+      const contract = poolPermitsByContract.tokenizationSpokes.contracts[contractName];
+
+      let upgradeLabel = 'not upgradeable';
+      if (contract.proxyAdmin) {
+        const syntheticKey = `_${contractName} ProxyAdmin`;
+        const proxyAdminEntry = poolPermitsByContract.tokenizationSpokes.contracts[syntheticKey];
+        if (proxyAdminEntry?.modifiers?.[0]?.addresses?.[0]) {
+          const ownerAddr = proxyAdminEntry.modifiers[0].addresses[0].address;
+          const knownName = addressesNames[ownerAddr] || addressesNames[getAddress(ownerAddr)];
+          upgradeLabel = knownName || ownerAddr;
+        } else {
+          upgradeLabel = 'upgradeable';
+        }
+      }
+
+      tsTableBody += getTableBody([
+        `[${contractName}](${explorerAddressUrlComposer(contract.address, network)})`,
+        upgradeLabel,
+      ]);
+      tsTableBody += getLineSeparator(decentralizationHeaderTitles.length);
+    }
+
+    tsTable += tsTableBody;
+    readmeByNetwork += tsTable + '\n';
+  }
+
   let actionsTable = `### Actions type\n`;
   const actionsHeaderTitles = ['type', 'can be executed by'];
   const actionsHeader = getTableHeader(actionsHeaderTitles);
@@ -510,6 +545,20 @@ export const generateTable = (network: string, pool: string): string => {
       `[Permissions](./out/${networkName}-${pool}.md#contracts)`,
     ]);
     readmeDirectoryTable += getLineSeparator(3);
+  }
+
+  // PositionManagers Contracts table (V4 only)
+  if (poolPermitsByContract.positionManagers?.contracts) {
+    const pmDisplayContracts = Object.fromEntries(
+      Object.entries(poolPermitsByContract.positionManagers.contracts)
+        .filter(([name]) => !name.startsWith('_')),
+    );
+    if (Object.keys(pmDisplayContracts).length > 0) {
+      readmeByNetwork += generateContractTable(
+        { title: 'PositionManagers Contracts', contracts: pmDisplayContracts },
+        tableCtx,
+      );
+    }
   }
 
   // Governance V3 Contracts table

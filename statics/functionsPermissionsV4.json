@@ -349,5 +349,102 @@
         "roles": ["onlyOwner"]
       }
     ]
+  },
+  {
+    "contract": "GiverPositionManager",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renouncePositionManagerRole",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "TakerPositionManager",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "ConfigPositionManager",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "NativeTokenGateway",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renouncePositionManagerRole",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "SignatureGateway",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renouncePositionManagerRole",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
   }
 ]

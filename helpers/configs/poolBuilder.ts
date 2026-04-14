@@ -11,7 +11,31 @@ export interface V4Config {
   accessManagerBlock: number;
   addressBook: AddressBook;
   roleLabels?: Record<string, string>;
+  tokenizationSpokesAddressBook?: Record<string, string>;
 }
+
+/**
+ * Merges multiple address record objects, keeping only the first occurrence
+ * of each address value. Comparison is case-insensitive.
+ * Prevents duplicate contract entries when spreading overlapping address
+ * books (e.g., SPOKES + POSITION_MANAGERS + TOKENIZATION_SPOKES).
+ */
+export const deduplicateByAddress = (
+  ...sources: Record<string, string>[]
+): Record<string, string> => {
+  const seen = new Set<string>();
+  const result: Record<string, string> = {};
+  for (const source of sources) {
+    for (const [key, address] of Object.entries(source)) {
+      const normalized = address.toLowerCase();
+      if (!seen.has(normalized)) {
+        seen.add(normalized);
+        result[key] = address;
+      }
+    }
+  }
+  return result;
+};
 
 // ============================================================================
 // Pool Config Types

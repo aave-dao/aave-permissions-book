@@ -351,3 +351,187 @@ export const resolveV4Modifiers = async (
 
   return { contracts: obj, roleLabels };
 };
+
+/**
+ * Resolves upgradeability info for TokenizationSpoke contracts.
+ * These contracts only need proxy admin resolution (no AccessManager function permissions).
+ */
+export const resolveTokenizationSpokeUpgradeability = async (
+  tokenizationSpokesAddressBook: Record<string, string>,
+  provider: Client,
+): Promise<Contracts> => {
+  const obj: Contracts = {};
+  const ownerResolver = createOwnerResolver(provider);
+
+  for (const [key, address] of Object.entries(tokenizationSpokesAddressBook)) {
+    const displayName = key
+      .replace(/_TOKENIZATION_SPOKE$/, '')
+      .replace(/_/g, ' ')
+      + ' TokenizationSpoke';
+
+    obj[displayName] = {
+      address,
+      modifiers: [],
+    };
+
+    const proxyResult = await resolveProxyAdminWithOwner(address, provider, ownerResolver);
+    if (proxyResult) {
+      obj[displayName].proxyAdmin = proxyResult.proxyAdmin;
+
+      const proxyAdminName = `_${displayName} ProxyAdmin`;
+      obj[proxyAdminName] = {
+        address: proxyResult.proxyAdmin,
+        modifiers: [
+          {
+            modifier: 'onlyOwner',
+            addresses: [
+              {
+                address: proxyResult.owner,
+                owners: proxyResult.ownerInfo.owners,
+                signersThreshold: proxyResult.ownerInfo.threshold,
+              },
+            ],
+            functions: [],
+          },
+        ],
+      };
+    }
+  }
+
+  return obj;
+};
+
+const rescuableAbi = [
+  {
+    inputs: [],
+    name: 'whoCanRescue',
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+] as const;
+
+/**
+ * Maps address book keys to their contract type name in functionsPermissionsV4.json.
+ */
+const PM_KEY_TO_CONTRACT_TYPE: Record<string, string> = {
+  GIVER_POSITION_MANAGER: 'GiverPositionManager',
+  TAKER_POSITION_MANAGER: 'TakerPositionManager',
+  CONFIG_POSITION_MANAGER: 'ConfigPositionManager',
+  NATIVE_TOKEN_GATEWAY: 'NativeTokenGateway',
+  SIGNATURE_GATEWAY: 'SignatureGateway',
+};
+
+/**
+ * Resolves permissions for PositionManager contracts.
+ *
+ * PositionManagers use Ownable2Step + Rescuable (NOT AccessManager).
+ * For each contract we read owner() and whoCanRescue() on-chain,
+ * then group functions by modifier from the static permissions JSON.
+ */
+export const resolveV4PositionManagerModifiers = async (
+  addressBook: AddressBook,
+  provider: Client,
+  permissionsObject: PermissionsJson,
+): Promise<Contracts> => {
+  const obj: Contracts = {};
+  const ownerResolver = createOwnerResolver(provider);
+
+  const pmKeys = Object.keys(addressBook).filter(
+    (key) => key in PM_KEY_TO_CONTRACT_TYPE && typeof addressBook[key] === 'string',
+  );
+
+  for (const pmKey of pmKeys) {
+    const address = addressBook[pmKey] as string;
+    const contractType = PM_KEY_TO_CONTRACT_TYPE[pmKey];
+    const displayName = pmKey.replace(/_/g, ' ');
+
+    const contractDef = permissionsObject.find((c) => c.contract === contractType);
+    const modifiers = [];
+
+    // Resolve owner (Ownable2Step)
+    try {
+      const ownerContract = getContract({
+        address: getAddress(address),
+        abi: onlyOwnerAbi,
+        client: provider,
+      });
+      const owner = (await ownerContract.read.owner()) as Address;
+      const ownerInfo = await ownerResolver.resolve(owner);
+
+      const ownerFunctions = contractDef?.functions
+        .filter((f) => f.roles.includes('onlyOwner'))
+        .map((f) => f.name) || [];
+
+      if (ownerFunctions.length > 0) {
+        modifiers.push({
+          modifier: 'onlyOwner',
+          addresses: [{
+            address: owner,
+            owners: ownerInfo.owners,
+            signersThreshold: ownerInfo.threshold,
+          }],
+          functions: ownerFunctions,
+        });
+      }
+    } catch {
+      // owner() not available
+    }
+
+    // Resolve rescue guardian (Rescuable)
+    try {
+      const rescuableContract = getContract({
+        address: getAddress(address),
+        abi: rescuableAbi,
+        client: provider,
+      });
+      const rescuer = (await rescuableContract.read.whoCanRescue()) as Address;
+      const rescuerInfo = await ownerResolver.resolve(rescuer);
+
+      const rescueFunctions = contractDef?.functions
+        .filter((f) => f.roles.includes('onlyRescueGuardian'))
+        .map((f) => f.name) || [];
+
+      if (rescueFunctions.length > 0) {
+        modifiers.push({
+          modifier: 'onlyRescueGuardian',
+          addresses: [{
+            address: rescuer,
+            owners: rescuerInfo.owners,
+            signersThreshold: rescuerInfo.threshold,
+          }],
+          functions: rescueFunctions,
+        });
+      }
+    } catch {
+      // whoCanRescue() not available or reverts (guardian not set)
+    }
+
+    obj[displayName] = { address, modifiers };
+
+    const proxyResult = await resolveProxyAdminWithOwner(address, provider, ownerResolver);
+    if (proxyResult) {
+      obj[displayName].proxyAdmin = proxyResult.proxyAdmin;
+
+      const proxyAdminName = `_${displayName} ProxyAdmin`;
+      obj[proxyAdminName] = {
+        address: proxyResult.proxyAdmin,
+        modifiers: [
+          {
+            modifier: 'onlyOwner',
+            addresses: [
+              {
+                address: proxyResult.owner,
+                owners: proxyResult.ownerInfo.owners,
+                signersThreshold: proxyResult.ownerInfo.threshold,
+              },
+            ],
+            functions: [],
+          },
+        ],
+      };
+    }
+  }
+
+  return obj;
+};

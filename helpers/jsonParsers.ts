@@ -61,7 +61,7 @@ export const generateContractsByAddress = (
 export const extractPoolContracts = (poolData: PoolInfo | undefined): Contracts => {
   if (!poolData) return {};
 
-  const sections = ['contracts', 'govV3', 'collector', 'clinicSteward', 'umbrella', 'ppc', 'agentHub'] as const;
+  const sections = ['contracts', 'govV3', 'collector', 'clinicSteward', 'umbrella', 'ppc', 'agentHub', 'tokenizationSpokes', 'positionManagers'] as const;
   const allContracts: Contracts = {};
 
   for (const section of sections) {
