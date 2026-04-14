@@ -82,11 +82,6 @@ export const getRPCClient = (chainId: number): Client => {
 };
 
 /**
- * Maps event type names to the ABI that defines them.
- * RoleGranted/RoleRevoked come from the ACL Manager (used by all role-based contracts).
- * SenderUpdated comes from the CrossChainController.
- */
-/**
  * Maps event type keys to the ABI that defines them.
  * Keys suffixed with 'AM' (e.g. 'RoleGrantedAM') reference the OZ AccessManager ABI
  * while keeping distinct keys to avoid collision with V3's RoleGranted(bytes32,...).

@@ -10250,6 +10250,11 @@
                 "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x14339e2178A954d5FB839D5Ff31644fE0F25F517",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -10973,7 +10978,8 @@
         "102": [],
         "103": [],
         "200": [
-          "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A"
+          "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+          "0x14339e2178A954d5FB839D5Ff31644fE0F25F517"
         ],
         "301": [
           "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a"
