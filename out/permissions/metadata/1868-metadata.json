@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 21455285,
+    "latestBlockNumber": 21498342,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x7635bFF69E52023aB76267ab1EFf63434cdCe458",
@@ -25,12 +25,12 @@
     }
   },
   "V3_EMISSION": {
-    "latestBlockNumber": 21455285,
+    "latestBlockNumber": 21498342,
     "indexedContracts": {
       "EMISSION_MANAGER": {
         "address": "0x2026b787C82331c364EAc13bf761Ca75eDeb0A4B",
         "deploymentBlock": 6402340,
-        "firstIndexedAt": 21411942
+        "firstIndexedAt": 21455285
       }
     }
   }
