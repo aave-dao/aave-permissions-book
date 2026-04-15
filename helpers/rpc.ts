@@ -2,6 +2,7 @@ import { ChainId, getClient, getLogsRecursive, getRPCUrl } from "@bgd-labs/toolb
 import { env } from "process";
 import { Abi, AbiEvent, Client, http, getAbiItem, getAddress, Log, createClient, createPublicClient } from "viem";
 import { aclManagerAbi } from "../abis/aclManager.js";
+import { accessManagerAbi } from "../abis/accessManagerAbi.js";
 import { getBlockNumber } from "viem/actions";
 import { crossChainControllerAbi } from "../abis/crossChainControllerAbi.js";
 import { EMISSION_MANAGER_ABI } from "../abis/emissionManager.js";
@@ -81,25 +82,38 @@ export const getRPCClient = (chainId: number): Client => {
 };
 
 /**
- * Maps event type names to the ABI that defines them.
- * RoleGranted/RoleRevoked come from the ACL Manager (used by all role-based contracts).
- * SenderUpdated comes from the CrossChainController.
+ * Maps event type keys to the ABI that defines them.
+ * Keys suffixed with 'AM' (e.g. 'RoleGrantedAM') reference the OZ AccessManager ABI
+ * while keeping distinct keys to avoid collision with V3's RoleGranted(bytes32,...).
  */
 const abiByEventType: Record<string, any> = {
   'RoleGranted': aclManagerAbi,
   'RoleRevoked': aclManagerAbi,
   'SenderUpdated': crossChainControllerAbi,
+  'RoleGrantedAM': accessManagerAbi,
+  'RoleRevokedAM': accessManagerAbi,
+  'TargetFunctionRoleUpdated': accessManagerAbi,
   'EmissionAdminUpdated': EMISSION_MANAGER_ABI,
 };
 
 /**
- * Extracts the ABI event definition for a given event name.
+ * Maps event type keys to their actual ABI event name.
+ * Needed because AM-suffixed keys (e.g. 'RoleGrantedAM') map to 'RoleGranted' in the ABI.
+ */
+const eventKeyToAbiName: Record<string, string> = {
+  'RoleGrantedAM': 'RoleGranted',
+  'RoleRevokedAM': 'RoleRevoked',
+};
+
+/**
+ * Extracts the ABI event definition for a given event key.
  */
 const getEventTypeAbi = (event: string): AbiEvent => {
   const abi = abiByEventType[event];
+  const abiName = eventKeyToAbiName[event] || event;
   return getAbiItem({
     abi,
-    name: event,
+    name: abiName,
   }) as AbiEvent;
 };
 
@@ -129,7 +143,7 @@ export const getEventsMultiContract = async ({
 }): Promise<{ logsByContract: Map<string, Log[]>, currentBlock: number }> => {
   const currentBlock = maxBlock ?? Number(await getBlockNumber(client));
   const eventsAbis = eventTypes.map(getEventTypeAbi);
-  
+
   // Initialize map with empty arrays for each contract
   const logsByContract = new Map<string, Log[]>();
   for (const contract of contracts) {

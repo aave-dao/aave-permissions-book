@@ -10057,5 +10057,2217 @@
     "umbrella": {},
     "ppc": {},
     "agentHub": {}
+  },
+  "V4": {
+    "contracts": {
+      "CORE Hub": {
+        "address": "0xCca852Bc40e560adC3b1Cc58CA5b55638ce826c9",
+        "modifiers": [
+          {
+            "modifier": "HUB_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x1F0753480bB03EaA00863224602267B7E0525C3d",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
+            ]
+          },
+          {
+            "modifier": "HUB_FEE_MINTER_ROLE",
+            "addresses": [],
+            "functions": [
+              "mintFeeShares"
+            ]
+          },
+          {
+            "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
+            "addresses": [],
+            "functions": [
+              "eliminateDeficit"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x55b71c0aed3c616162ee7c608c089a1055cea3bf"
+      },
+      "_CORE Hub ProxyAdmin": {
+        "address": "0x55b71c0aed3c616162ee7c608c089a1055cea3bf",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "PLUS Hub": {
+        "address": "0x06002e9c4412CB7814a791eA3666D905871E536A",
+        "modifiers": [
+          {
+            "modifier": "HUB_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x1F0753480bB03EaA00863224602267B7E0525C3d",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
+            ]
+          },
+          {
+            "modifier": "HUB_FEE_MINTER_ROLE",
+            "addresses": [],
+            "functions": [
+              "mintFeeShares"
+            ]
+          },
+          {
+            "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
+            "addresses": [],
+            "functions": [
+              "eliminateDeficit"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x078247481bcfa9ab3c566f7a769352b8b4189532"
+      },
+      "_PLUS Hub ProxyAdmin": {
+        "address": "0x078247481bcfa9ab3c566f7a769352b8b4189532",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "PRIME Hub": {
+        "address": "0x943827DCA022D0F354a8a8c332dA1e5Eb9f9F931",
+        "modifiers": [
+          {
+            "modifier": "HUB_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x1F0753480bB03EaA00863224602267B7E0525C3d",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
+            ]
+          },
+          {
+            "modifier": "HUB_FEE_MINTER_ROLE",
+            "addresses": [],
+            "functions": [
+              "mintFeeShares"
+            ]
+          },
+          {
+            "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
+            "addresses": [],
+            "functions": [
+              "eliminateDeficit"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x22249b31797bd067e37f49dc93614c316976b158"
+      },
+      "_PRIME Hub ProxyAdmin": {
+        "address": "0x22249b31797bd067e37f49dc93614c316976b158",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "HubConfigurator": {
+        "address": "0x1F0753480bB03EaA00863224602267B7E0525C3d",
+        "modifiers": [
+          {
+            "modifier": "HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x14339e2178A954d5FB839D5Ff31644fE0F25F517",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "addAsset",
+              "addAssetWithDecimals",
+              "updateLiquidityFee",
+              "updateFeeReceiver",
+              "updateFeeConfig",
+              "updateInterestRateStrategy",
+              "updateReinvestmentController",
+              "resetAssetCaps",
+              "deactivateAsset",
+              "haltAsset",
+              "addSpoke",
+              "addSpokeToAssets",
+              "updateSpokeActive",
+              "updateSpokeHalted",
+              "updateSpokeAddCap",
+              "updateSpokeDrawCap",
+              "updateSpokeRiskPremiumThreshold",
+              "updateSpokeCaps",
+              "deactivateSpoke",
+              "haltSpoke",
+              "resetSpokeCaps",
+              "updateInterestRateData"
+            ]
+          }
+        ]
+      },
+      "BLUECHIP Spoke": {
+        "address": "0x973a023A77420ba610f06b3858aD991Df6d85A08",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xd56ef224603f64b5d9530b49ca690ed76c3d3cf1"
+      },
+      "_BLUECHIP Spoke ProxyAdmin": {
+        "address": "0xd56ef224603f64b5d9530b49ca690ed76c3d3cf1",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "ETHENA_CORRELATED Spoke": {
+        "address": "0x58131E79531caB1d52301228d1f7b842F26B9649",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x2a2deee71645ef881c788c85ed0c8e9f152b6531"
+      },
+      "_ETHENA_CORRELATED Spoke ProxyAdmin": {
+        "address": "0x2a2deee71645ef881c788c85ed0c8e9f152b6531",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "ETHENA_ECOSYSTEM Spoke": {
+        "address": "0xba1B3D55D249692b669A164024A838309B7508AF",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xbceb5ebf77dcbbe1d2081d6bf591f04154bba494"
+      },
+      "_ETHENA_ECOSYSTEM Spoke ProxyAdmin": {
+        "address": "0xbceb5ebf77dcbbe1d2081d6bf591f04154bba494",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "ETHERFI ESpoke": {
+        "address": "0xbF10BDfE177dE0336aFD7fcCF80A904E15386219",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xddc6b7f9e0e1a17a2140ed4d1ba75e68a2d45b43"
+      },
+      "_ETHERFI ESpoke ProxyAdmin": {
+        "address": "0xddc6b7f9e0e1a17a2140ed4d1ba75e68a2d45b43",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "FOREX Spoke": {
+        "address": "0xD8B93635b8C6d0fF98CbE90b5988E3F2d1Cd9da1",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xa0a8d221f6592780f00df65ee9abc2489395c29f"
+      },
+      "_FOREX Spoke ProxyAdmin": {
+        "address": "0xa0a8d221f6592780f00df65ee9abc2489395c29f",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "GOLD Spoke": {
+        "address": "0x65407b940966954b23dfA3caA5C0702bB42984DC",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x1de446c91cf141c76f6eef2331128ed7a4536846"
+      },
+      "_GOLD Spoke ProxyAdmin": {
+        "address": "0x1de446c91cf141c76f6eef2331128ed7a4536846",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "KELP ESpoke": {
+        "address": "0x3131FE68C4722e726fe6B2819ED68e514395B9a4",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x5bea32de95a6107e3b8a9faa5cb1d182c7d60d0d"
+      },
+      "_KELP ESpoke ProxyAdmin": {
+        "address": "0x5bea32de95a6107e3b8a9faa5cb1d182c7d60d0d",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "LIDO ESpoke": {
+        "address": "0xe1900480ac69f0B296841Cd01cC37546d92F35Cd",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x8867d58d75745020669d61677ae29d69330c6cd5"
+      },
+      "_LIDO ESpoke ProxyAdmin": {
+        "address": "0x8867d58d75745020669d61677ae29d69330c6cd5",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "LOMBARD_BTC Spoke": {
+        "address": "0x7EC68b5695e803e98a21a9A05d744F28b0a7753D",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x128e41124dbc7d81434f332f9759b93243758f7b"
+      },
+      "_LOMBARD_BTC Spoke ProxyAdmin": {
+        "address": "0x128e41124dbc7d81434f332f9759b93243758f7b",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "MAIN Spoke": {
+        "address": "0x94e7A5dCbE816e498b89aB752661904E2F56c485",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xffeaccad70f4393701272212dacd791c01957f7f"
+      },
+      "_MAIN Spoke ProxyAdmin": {
+        "address": "0xffeaccad70f4393701272212dacd791c01957f7f",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "SpokeConfigurator": {
+        "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateReservePriceSource",
+              "updateLiquidationTargetHealthFactor",
+              "updateHealthFactorForMaxBonus",
+              "updateLiquidationBonusFactor",
+              "updateLiquidationConfig",
+              "addReserve",
+              "updatePaused",
+              "updateFrozen",
+              "updateBorrowable",
+              "updateReceiveSharesEnabled",
+              "updateCollateralRisk",
+              "addCollateralFactor",
+              "updateCollateralFactor",
+              "addMaxLiquidationBonus",
+              "updateMaxLiquidationBonus",
+              "addLiquidationFee",
+              "updateLiquidationFee",
+              "addDynamicReserveConfig",
+              "updateDynamicReserveConfig",
+              "pauseAllReserves",
+              "freezeAllReserves",
+              "pauseReserve",
+              "freezeReserve",
+              "updatePositionManager"
+            ]
+          }
+        ]
+      },
+      "TreasurySpoke": {
+        "address": "0xB9B0b8616f6Bf6841972a52058132BE08d723155",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": [
+              "supply",
+              "supplySkimmed",
+              "withdraw",
+              "transfer"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x890b79ddcdccd663b4d7fc121a7a70184489b505"
+      },
+      "_TreasurySpoke ProxyAdmin": {
+        "address": "0x890b79ddcdccd663b4d7fc121a7a70184489b505",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      }
+    },
+    "roles": {},
+    "gsmRoles": {},
+    "govV3": {
+      "ggRoles": {}
+    },
+    "collector": {},
+    "clinicSteward": {},
+    "umbrella": {},
+    "ppc": {},
+    "agentHub": {},
+    "accessManager": {
+      "roles": {
+        "0": [
+          "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9"
+        ],
+        "101": [
+          "0x1F0753480bB03EaA00863224602267B7E0525C3d"
+        ],
+        "102": [],
+        "103": [],
+        "200": [
+          "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+          "0x14339e2178A954d5FB839D5Ff31644fE0F25F517"
+        ],
+        "301": [
+          "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a"
+        ],
+        "302": [],
+        "400": []
+      },
+      "functionRoles": {
+        "0x1f0753480bb03eaa00863224602267b7e0525c3d": {
+          "0xa7aeae20": "200",
+          "0x1947e190": "200",
+          "0x0f8916cf": "200",
+          "0xe25867bf": "200",
+          "0x27e732a9": "200",
+          "0xc279178b": "200",
+          "0xdc3848de": "200",
+          "0xa9fe6404": "200",
+          "0x7f0633c5": "200",
+          "0x486b0e0e": "200",
+          "0x7cf1dbc5": "200",
+          "0xbc3a425e": "200",
+          "0x98456711": "200",
+          "0x91c28cf9": "200",
+          "0x493e28ae": "200",
+          "0x7427ca5f": "200",
+          "0x7441ce91": "200",
+          "0xa3254c90": "200",
+          "0x0e50f67a": "200",
+          "0xa2455af2": "200",
+          "0x86803a1f": "200",
+          "0xc987da38": "200"
+        },
+        "0x9bfff48bfb5a7ae70c348d4d4cb97e8defa5389a": {
+          "0x7f1e3675": "400",
+          "0x98e7856f": "400",
+          "0xde3487b8": "400",
+          "0x579b47eb": "400",
+          "0xd15916be": "400",
+          "0x727ae397": "400",
+          "0x5f42a73b": "400",
+          "0x3a84f85a": "400",
+          "0x46bfdc72": "400",
+          "0x722c65ee": "400",
+          "0xf165fdea": "400",
+          "0xdf517545": "400",
+          "0x092622b7": "400",
+          "0x710bc180": "400",
+          "0x3b0beccf": "400",
+          "0x063c7dc0": "400",
+          "0xfd19d8f7": "400",
+          "0xcb51c394": "400",
+          "0x404f0b2c": "400",
+          "0x6a8b9a27": "400",
+          "0x99b44258": "400",
+          "0x36f1dfa0": "400",
+          "0x7492b5ec": "400",
+          "0x152ef832": "400"
+        },
+        "0x943827dca022d0f354a8a8c332da1e5eb9f9f931": {
+          "0x1e83287e": "101",
+          "0x24e4c1af": "101",
+          "0xc25d82fe": "101",
+          "0xa2763d29": "101",
+          "0xa467cc59": "101",
+          "0x033a0695": "102",
+          "0xbe105280": "103"
+        },
+        "0xcca852bc40e560adc3b1cc58ca5b55638ce826c9": {
+          "0x1e83287e": "101",
+          "0x24e4c1af": "101",
+          "0xc25d82fe": "101",
+          "0xa2763d29": "101",
+          "0xa467cc59": "101",
+          "0x033a0695": "102",
+          "0xbe105280": "103"
+        },
+        "0x06002e9c4412cb7814a791ea3666d905871e536a": {
+          "0x1e83287e": "101",
+          "0x24e4c1af": "101",
+          "0xc25d82fe": "101",
+          "0xa2763d29": "101",
+          "0xa467cc59": "101",
+          "0x033a0695": "102",
+          "0xbe105280": "103"
+        },
+        "0x94e7a5dcbe816e498b89ab752661904e2f56c485": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0xe1900480ac69f0b296841cd01cc37546d92f35cd": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0xbf10bdfe177de0336afd7fccf80a904e15386219": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0x3131fe68c4722e726fe6b2819ed68e514395b9a4": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0x7ec68b5695e803e98a21a9a05d744f28b0a7753d": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0x65407b940966954b23dfa3caa5c0702bb42984dc": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0xd8b93635b8c6d0ff98cbe90b5988e3f2d1cd9da1": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0x973a023a77420ba610f06b3858ad991df6d85a08": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0xba1b3d55d249692b669a164024a838309b7508af": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        },
+        "0x58131e79531cab1d52301228d1f7b842f26b9649": {
+          "0x826002e2": "302",
+          "0x91c46d09": "302",
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301"
+        }
+      },
+      "roleLabels": {
+        "0": "ACCESS_MANAGER_DEFAULT_ADMIN",
+        "101": "HUB_CONFIGURATOR_ROLE",
+        "102": "HUB_FEE_MINTER_ROLE",
+        "103": "HUB_DEFICIT_ELIMINATOR_ROLE",
+        "200": "HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE",
+        "301": "SPOKE_CONFIGURATOR_ROLE",
+        "302": "SPOKE_USER_POSITION_UPDATER_ROLE",
+        "400": "SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE"
+      }
+    },
+    "tokenizationSpokes": {
+      "contracts": {
+        "CORE WETH TokenizationSpoke": {
+          "address": "0x7320CF22Ac095bA2a2e0a652F77efB836c2E751b",
+          "modifiers": [],
+          "proxyAdmin": "0x8468bc2549442be5975ae1f24b684411a8bccfcb"
+        },
+        "_CORE WETH TokenizationSpoke ProxyAdmin": {
+          "address": "0x8468bc2549442be5975ae1f24b684411a8bccfcb",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE wstETH TokenizationSpoke": {
+          "address": "0xcb0E7dA9c635628f6d4827355AeCa75aB8d3560f",
+          "modifiers": [],
+          "proxyAdmin": "0xbdb6ab1c6c1e3e5abc01719ef29a16b619990ad2"
+        },
+        "_CORE wstETH TokenizationSpoke ProxyAdmin": {
+          "address": "0xbdb6ab1c6c1e3e5abc01719ef29a16b619990ad2",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE weETH TokenizationSpoke": {
+          "address": "0x559cEc2C840D9DBB18936Afc5E5341D78bfC7Cbe",
+          "modifiers": [],
+          "proxyAdmin": "0xbf6342620a564b9fb1fdf0a289b51af23e5b3dbc"
+        },
+        "_CORE weETH TokenizationSpoke ProxyAdmin": {
+          "address": "0xbf6342620a564b9fb1fdf0a289b51af23e5b3dbc",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE rsETH TokenizationSpoke": {
+          "address": "0x45a04Ca1A5cbEeA4B44356c75EDd29b33eB2527a",
+          "modifiers": [],
+          "proxyAdmin": "0xc39a31a984f60c73d7d0ae4617bd1d4d85fe123d"
+        },
+        "_CORE rsETH TokenizationSpoke ProxyAdmin": {
+          "address": "0xc39a31a984f60c73d7d0ae4617bd1d4d85fe123d",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE USDT TokenizationSpoke": {
+          "address": "0x5eC44a70F309854fe04d495cFE1B5dA63DD1cc73",
+          "modifiers": [],
+          "proxyAdmin": "0x7e6eed75db2185e57398c8f2cbb2ac567427ac4d"
+        },
+        "_CORE USDT TokenizationSpoke ProxyAdmin": {
+          "address": "0x7e6eed75db2185e57398c8f2cbb2ac567427ac4d",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE USDC TokenizationSpoke": {
+          "address": "0x531E90a2376902DE8915789Fcc1075e3B0c153E7",
+          "modifiers": [],
+          "proxyAdmin": "0x4bf82e863ea27b9ccb1fd1bd72671cc99d8d4dba"
+        },
+        "_CORE USDC TokenizationSpoke ProxyAdmin": {
+          "address": "0x4bf82e863ea27b9ccb1fd1bd72671cc99d8d4dba",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE GHO TokenizationSpoke": {
+          "address": "0x58C14a5E061c9bC6926c5b853445290F296C2F7B",
+          "modifiers": [],
+          "proxyAdmin": "0x45ce9777ed5fc9b230b906e18c8a46dfb71a0b25"
+        },
+        "_CORE GHO TokenizationSpoke ProxyAdmin": {
+          "address": "0x45ce9777ed5fc9b230b906e18c8a46dfb71a0b25",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE RLUSD TokenizationSpoke": {
+          "address": "0xC8a125AE4275a78AADc53B46Ca10566Bc9B249E0",
+          "modifiers": [],
+          "proxyAdmin": "0x90e8a9f61f17eecc4dfe7e315cbd3635c882f255"
+        },
+        "_CORE RLUSD TokenizationSpoke ProxyAdmin": {
+          "address": "0x90e8a9f61f17eecc4dfe7e315cbd3635c882f255",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE USDG TokenizationSpoke": {
+          "address": "0xAC2435E3C25e8246870D33ce0a26988A46d5DB68",
+          "modifiers": [],
+          "proxyAdmin": "0xb4eba85f2732645b28c99e92284963ddbe7982cd"
+        },
+        "_CORE USDG TokenizationSpoke ProxyAdmin": {
+          "address": "0xb4eba85f2732645b28c99e92284963ddbe7982cd",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE frxUSD TokenizationSpoke": {
+          "address": "0x2226749630775ee20230Ad65214fB339087eF30D",
+          "modifiers": [],
+          "proxyAdmin": "0x8dc5181ee776eb1a8d4cd310c4695a40cf7cfe56"
+        },
+        "_CORE frxUSD TokenizationSpoke ProxyAdmin": {
+          "address": "0x8dc5181ee776eb1a8d4cd310c4695a40cf7cfe56",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE EURC TokenizationSpoke": {
+          "address": "0x6D9e2Cdd61CaF69af99b275704B6e272C41c6718",
+          "modifiers": [],
+          "proxyAdmin": "0xe6e40d961177c4f87388721f363aa34dd53f4b1d"
+        },
+        "_CORE EURC TokenizationSpoke ProxyAdmin": {
+          "address": "0xe6e40d961177c4f87388721f363aa34dd53f4b1d",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE WBTC TokenizationSpoke": {
+          "address": "0x82A9CC4656784E55Ef2E78F704028B5E1Bfc1732",
+          "modifiers": [],
+          "proxyAdmin": "0xeb2cfeee8e262a284525460173ae6c71350e723c"
+        },
+        "_CORE WBTC TokenizationSpoke ProxyAdmin": {
+          "address": "0xeb2cfeee8e262a284525460173ae6c71350e723c",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE cbBTC TokenizationSpoke": {
+          "address": "0x33B41B74366F55327d959FfF6D6b6fBc2853dbB1",
+          "modifiers": [],
+          "proxyAdmin": "0x1c3cc3ce81a7d474206f076d31820d84a89b5e61"
+        },
+        "_CORE cbBTC TokenizationSpoke ProxyAdmin": {
+          "address": "0x1c3cc3ce81a7d474206f076d31820d84a89b5e61",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE LBTC TokenizationSpoke": {
+          "address": "0x7961F140B570490849DB878AE222570ea838799d",
+          "modifiers": [],
+          "proxyAdmin": "0xe2f0b06f745f491ea9035a82fcfb0983f242d568"
+        },
+        "_CORE LBTC TokenizationSpoke ProxyAdmin": {
+          "address": "0xe2f0b06f745f491ea9035a82fcfb0983f242d568",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE XAUt TokenizationSpoke": {
+          "address": "0x4E712562fcb5337011398B6C630f55b60641cd5e",
+          "modifiers": [],
+          "proxyAdmin": "0x48b30dd799a5206af3a595f23b75b81840455ebe"
+        },
+        "_CORE XAUt TokenizationSpoke ProxyAdmin": {
+          "address": "0x48b30dd799a5206af3a595f23b75b81840455ebe",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE AAVE TokenizationSpoke": {
+          "address": "0x0A65197b16C5969F92672051c9C9C0C75B369135",
+          "modifiers": [],
+          "proxyAdmin": "0xd86b0edeb9c250b5aab2b495b91d23c75e09228e"
+        },
+        "_CORE AAVE TokenizationSpoke ProxyAdmin": {
+          "address": "0xd86b0edeb9c250b5aab2b495b91d23c75e09228e",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "CORE LINK TokenizationSpoke": {
+          "address": "0xE69C2045095C8Ab3E2a7d77de2328faE5baF797c",
+          "modifiers": [],
+          "proxyAdmin": "0x2f4d899dbfd6f903278a4ddddaef9dc4da477791"
+        },
+        "_CORE LINK TokenizationSpoke ProxyAdmin": {
+          "address": "0x2f4d899dbfd6f903278a4ddddaef9dc4da477791",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS PT sUSDE 7MAY2026 TokenizationSpoke": {
+          "address": "0x90774889c22D2F2Adf44da1f04C7c95542590df4",
+          "modifiers": [],
+          "proxyAdmin": "0x01eb4fa735924478ef523c9d3c26df6d4ac73a64"
+        },
+        "_PLUS PT sUSDE 7MAY2026 TokenizationSpoke ProxyAdmin": {
+          "address": "0x01eb4fa735924478ef523c9d3c26df6d4ac73a64",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS PT USDe 7MAY2026 TokenizationSpoke": {
+          "address": "0xdd2Eb78BF9e6aC5068B95aD2d451e8c9Af10ac81",
+          "modifiers": [],
+          "proxyAdmin": "0x3ea36bf9f81811aa14db85469a5ade6827c73a8a"
+        },
+        "_PLUS PT USDe 7MAY2026 TokenizationSpoke ProxyAdmin": {
+          "address": "0x3ea36bf9f81811aa14db85469a5ade6827c73a8a",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS sUSDe TokenizationSpoke": {
+          "address": "0x24f8c062e1E0451736C1D6E023510DA262a41df4",
+          "modifiers": [],
+          "proxyAdmin": "0xb0e013bf3381a140fb0bf6dd7ef1e36f8b359201"
+        },
+        "_PLUS sUSDe TokenizationSpoke ProxyAdmin": {
+          "address": "0xb0e013bf3381a140fb0bf6dd7ef1e36f8b359201",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS USDe TokenizationSpoke": {
+          "address": "0x502Cd81da6a8F1785eb2eEE72713B7388E16A854",
+          "modifiers": [],
+          "proxyAdmin": "0xd087e20710ae7b754000bf0884306787b7f91a67"
+        },
+        "_PLUS USDe TokenizationSpoke ProxyAdmin": {
+          "address": "0xd087e20710ae7b754000bf0884306787b7f91a67",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS USDC TokenizationSpoke": {
+          "address": "0xc94bdd83D2c7655C280655D60954e79E88D4F949",
+          "modifiers": [],
+          "proxyAdmin": "0x62e222fef5afd3c1be05450421ea524ea98b6353"
+        },
+        "_PLUS USDC TokenizationSpoke ProxyAdmin": {
+          "address": "0x62e222fef5afd3c1be05450421ea524ea98b6353",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS GHO TokenizationSpoke": {
+          "address": "0xA54382db40EC602c0a173A08f9E86Ed40F9D4D10",
+          "modifiers": [],
+          "proxyAdmin": "0xc2b2f9edb3b4e5b2ff273a0bc4de37c6eeb549e3"
+        },
+        "_PLUS GHO TokenizationSpoke ProxyAdmin": {
+          "address": "0xc2b2f9edb3b4e5b2ff273a0bc4de37c6eeb549e3",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PLUS USDT TokenizationSpoke": {
+          "address": "0x80835EB50694EE0e519743f67e5401e6FD300006",
+          "modifiers": [],
+          "proxyAdmin": "0x0bec215b8b7d4155e9b92266450b5277b13fe4b3"
+        },
+        "_PLUS USDT TokenizationSpoke ProxyAdmin": {
+          "address": "0x0bec215b8b7d4155e9b92266450b5277b13fe4b3",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME WETH TokenizationSpoke": {
+          "address": "0x2087513383330B961A3753B47627Bbf149F31c70",
+          "modifiers": [],
+          "proxyAdmin": "0xa064963f9300ed04ea4fd05d7ed8bf46e787ee17"
+        },
+        "_PRIME WETH TokenizationSpoke ProxyAdmin": {
+          "address": "0xa064963f9300ed04ea4fd05d7ed8bf46e787ee17",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME WBTC TokenizationSpoke": {
+          "address": "0x5AE3d87De89CA6Ce501e8317887F71EABED69E18",
+          "modifiers": [],
+          "proxyAdmin": "0xa628c98f75d7ab58b5fa6a4748794afec85b7092"
+        },
+        "_PRIME WBTC TokenizationSpoke ProxyAdmin": {
+          "address": "0xa628c98f75d7ab58b5fa6a4748794afec85b7092",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME cbBTC TokenizationSpoke": {
+          "address": "0xD38098faf52D8E915EdED84fBF30F81C17906938",
+          "modifiers": [],
+          "proxyAdmin": "0xc2c9d787d02f3c4b5f4633ee88522b437f0739c7"
+        },
+        "_PRIME cbBTC TokenizationSpoke ProxyAdmin": {
+          "address": "0xc2c9d787d02f3c4b5f4633ee88522b437f0739c7",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME wstETH TokenizationSpoke": {
+          "address": "0xFCD3D3C69cd032DE0cc78fE529B7447D2fe7F666",
+          "modifiers": [],
+          "proxyAdmin": "0x455362f8f8519ca58017d929f36a846453812755"
+        },
+        "_PRIME wstETH TokenizationSpoke ProxyAdmin": {
+          "address": "0x455362f8f8519ca58017d929f36a846453812755",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME USDC TokenizationSpoke": {
+          "address": "0x486415fb1F8b062c89ED548f871cf64304AACb31",
+          "modifiers": [],
+          "proxyAdmin": "0xf59aa3ddd8c7a7f0e160d29368cdf2aff2107843"
+        },
+        "_PRIME USDC TokenizationSpoke ProxyAdmin": {
+          "address": "0xf59aa3ddd8c7a7f0e160d29368cdf2aff2107843",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME USDT TokenizationSpoke": {
+          "address": "0x46c588DD8453aC259c1f6a54b4C9A93C2aC3762D",
+          "modifiers": [],
+          "proxyAdmin": "0x3058dfa6fb3fc0c1417508cc00741b8a26a89ceb"
+        },
+        "_PRIME USDT TokenizationSpoke ProxyAdmin": {
+          "address": "0x3058dfa6fb3fc0c1417508cc00741b8a26a89ceb",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PRIME GHO TokenizationSpoke": {
+          "address": "0x900fD46d565d1ac8995928c0179052ec02a6D0E1",
+          "modifiers": [],
+          "proxyAdmin": "0xec7d14cf05d6d3ae664f661b88e1a076b3f5bf28"
+        },
+        "_PRIME GHO TokenizationSpoke ProxyAdmin": {
+          "address": "0xec7d14cf05d6d3ae664f661b88e1a076b3f5bf28",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        }
+      }
+    },
+    "positionManagers": {
+      "contracts": {
+        "GIVER POSITION MANAGER": {
+          "address": "0x17A54b8d6D9C68e7fa1C7112AC998EA1BA51d11e",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": [
+                "registerSpoke",
+                "renouncePositionManagerRole"
+              ]
+            }
+          ]
+        },
+        "TAKER POSITION MANAGER": {
+          "address": "0x6c044c0D3801499bCAbfAd458B70880bc518e9F7",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": [
+                "registerSpoke"
+              ]
+            }
+          ]
+        },
+        "CONFIG POSITION MANAGER": {
+          "address": "0x51305839CE822a7b4b12AA7D86eA7005052d575c",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": [
+                "registerSpoke"
+              ]
+            }
+          ]
+        },
+        "NATIVE TOKEN GATEWAY": {
+          "address": "0xe68ab4F90Fe026B9873F5F276eD2d7efBbbE42Be",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": [
+                "registerSpoke",
+                "renouncePositionManagerRole"
+              ]
+            }
+          ]
+        },
+        "SIGNATURE GATEWAY": {
+          "address": "0xfbC184337Dc6595D8bf62968Bda46e7De7AF9c3d",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": [
+                "registerSpoke",
+                "renouncePositionManagerRole"
+              ]
+            }
+          ]
+        }
+      }
+    }
   }
 }

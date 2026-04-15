@@ -1,0 +1,450 @@
+[
+  {
+    "contract": "Hub",
+    "functions": [
+      {
+        "name": "addAsset",
+        "roles": ["restricted"],
+        "signature": "addAsset(address,uint8,address,address,bytes)"
+      },
+      {
+        "name": "updateAssetConfig",
+        "roles": ["restricted"],
+        "signature": "updateAssetConfig(uint256,(address,uint16,address,address),bytes)"
+      },
+      {
+        "name": "addSpoke",
+        "roles": ["restricted"],
+        "signature": "addSpoke(uint256,address,(uint40,uint40,uint24,bool,bool))"
+      },
+      {
+        "name": "updateSpokeConfig",
+        "roles": ["restricted"],
+        "signature": "updateSpokeConfig(uint256,address,(uint40,uint40,uint24,bool,bool))"
+      },
+      {
+        "name": "setInterestRateData",
+        "roles": ["restricted"],
+        "signature": "setInterestRateData(uint256,bytes)"
+      },
+      {
+        "name": "mintFeeShares",
+        "roles": ["restricted"],
+        "signature": "mintFeeShares(uint256)"
+      },
+      {
+        "name": "eliminateDeficit",
+        "roles": ["restricted"],
+        "signature": "eliminateDeficit(uint256,uint256,address)"
+      }
+    ]
+  },
+  {
+    "contract": "HubConfigurator",
+    "functions": [
+      {
+        "name": "addAsset",
+        "roles": ["restricted"],
+        "signature": "addAsset(address,address,address,uint256,address,bytes)"
+      },
+      {
+        "name": "addAssetWithDecimals",
+        "roles": ["restricted"],
+        "signature": "addAssetWithDecimals(address,address,uint8,address,uint256,address,bytes)"
+      },
+      {
+        "name": "updateLiquidityFee",
+        "roles": ["restricted"],
+        "signature": "updateLiquidityFee(address,uint256,uint256)"
+      },
+      {
+        "name": "updateFeeReceiver",
+        "roles": ["restricted"],
+        "signature": "updateFeeReceiver(address,uint256,address)"
+      },
+      {
+        "name": "updateFeeConfig",
+        "roles": ["restricted"],
+        "signature": "updateFeeConfig(address,uint256,uint256,address)"
+      },
+      {
+        "name": "updateInterestRateStrategy",
+        "roles": ["restricted"],
+        "signature": "updateInterestRateStrategy(address,uint256,address,bytes)"
+      },
+      {
+        "name": "updateReinvestmentController",
+        "roles": ["restricted"],
+        "signature": "updateReinvestmentController(address,uint256,address)"
+      },
+      {
+        "name": "resetAssetCaps",
+        "roles": ["restricted"],
+        "signature": "resetAssetCaps(address,uint256)"
+      },
+      {
+        "name": "deactivateAsset",
+        "roles": ["restricted"],
+        "signature": "deactivateAsset(address,uint256)"
+      },
+      {
+        "name": "haltAsset",
+        "roles": ["restricted"],
+        "signature": "haltAsset(address,uint256)"
+      },
+      {
+        "name": "addSpoke",
+        "roles": ["restricted"],
+        "signature": "addSpoke(address,address,uint256,(uint40,uint40,uint24,bool,bool))"
+      },
+      {
+        "name": "addSpokeToAssets",
+        "roles": ["restricted"],
+        "signature": "addSpokeToAssets(address,address,uint256[],(uint40,uint40,uint24,bool,bool)[])"
+      },
+      {
+        "name": "updateSpokeActive",
+        "roles": ["restricted"],
+        "signature": "updateSpokeActive(address,uint256,address,bool)"
+      },
+      {
+        "name": "updateSpokeHalted",
+        "roles": ["restricted"],
+        "signature": "updateSpokeHalted(address,uint256,address,bool)"
+      },
+      {
+        "name": "updateSpokeAddCap",
+        "roles": ["restricted"],
+        "signature": "updateSpokeAddCap(address,uint256,address,uint256)"
+      },
+      {
+        "name": "updateSpokeDrawCap",
+        "roles": ["restricted"],
+        "signature": "updateSpokeDrawCap(address,uint256,address,uint256)"
+      },
+      {
+        "name": "updateSpokeRiskPremiumThreshold",
+        "roles": ["restricted"],
+        "signature": "updateSpokeRiskPremiumThreshold(address,uint256,address,uint256)"
+      },
+      {
+        "name": "updateSpokeCaps",
+        "roles": ["restricted"],
+        "signature": "updateSpokeCaps(address,uint256,address,uint256,uint256)"
+      },
+      {
+        "name": "deactivateSpoke",
+        "roles": ["restricted"],
+        "signature": "deactivateSpoke(address,address)"
+      },
+      {
+        "name": "haltSpoke",
+        "roles": ["restricted"],
+        "signature": "haltSpoke(address,address)"
+      },
+      {
+        "name": "resetSpokeCaps",
+        "roles": ["restricted"],
+        "signature": "resetSpokeCaps(address,address)"
+      },
+      {
+        "name": "updateInterestRateData",
+        "roles": ["restricted"],
+        "signature": "updateInterestRateData(address,uint256,bytes)"
+      }
+    ]
+  },
+  {
+    "contract": "Spoke",
+    "functions": [
+      {
+        "name": "updateLiquidationConfig",
+        "roles": ["restricted"],
+        "signature": "updateLiquidationConfig((uint128,uint64,uint16))"
+      },
+      {
+        "name": "addReserve",
+        "roles": ["restricted"],
+        "signature": "addReserve(address,uint256,address,(uint24,bool,bool,bool,bool),(uint16,uint32,uint16))"
+      },
+      {
+        "name": "updateReserveConfig",
+        "roles": ["restricted"],
+        "signature": "updateReserveConfig(uint256,(uint24,bool,bool,bool,bool))"
+      },
+      {
+        "name": "updateReservePriceSource",
+        "roles": ["restricted"],
+        "signature": "updateReservePriceSource(uint256,address)"
+      },
+      {
+        "name": "addDynamicReserveConfig",
+        "roles": ["restricted"],
+        "signature": "addDynamicReserveConfig(uint256,(uint16,uint32,uint16))"
+      },
+      {
+        "name": "updateDynamicReserveConfig",
+        "roles": ["restricted"],
+        "signature": "updateDynamicReserveConfig(uint256,uint32,(uint16,uint32,uint16))"
+      },
+      {
+        "name": "updatePositionManager",
+        "roles": ["restricted"],
+        "signature": "updatePositionManager(address,bool)"
+      },
+      {
+        "name": "updateUserDynamicConfig",
+        "roles": ["restricted"],
+        "signature": "updateUserDynamicConfig(address)"
+      },
+      {
+        "name": "updateUserRiskPremium",
+        "roles": ["restricted"],
+        "signature": "updateUserRiskPremium(address)"
+      }
+    ]
+  },
+  {
+    "contract": "SpokeConfigurator",
+    "functions": [
+      {
+        "name": "updateReservePriceSource",
+        "roles": ["restricted"],
+        "signature": "updateReservePriceSource(address,uint256,address)"
+      },
+      {
+        "name": "updateLiquidationTargetHealthFactor",
+        "roles": ["restricted"],
+        "signature": "updateLiquidationTargetHealthFactor(address,uint256)"
+      },
+      {
+        "name": "updateHealthFactorForMaxBonus",
+        "roles": ["restricted"],
+        "signature": "updateHealthFactorForMaxBonus(address,uint256)"
+      },
+      {
+        "name": "updateLiquidationBonusFactor",
+        "roles": ["restricted"],
+        "signature": "updateLiquidationBonusFactor(address,uint256)"
+      },
+      {
+        "name": "updateLiquidationConfig",
+        "roles": ["restricted"],
+        "signature": "updateLiquidationConfig(address,(uint128,uint64,uint16))"
+      },
+      {
+        "name": "addReserve",
+        "roles": ["restricted"],
+        "signature": "addReserve(address,address,uint256,address,(uint24,bool,bool,bool,bool),(uint16,uint32,uint16))"
+      },
+      {
+        "name": "updatePaused",
+        "roles": ["restricted"],
+        "signature": "updatePaused(address,uint256,bool)"
+      },
+      {
+        "name": "updateFrozen",
+        "roles": ["restricted"],
+        "signature": "updateFrozen(address,uint256,bool)"
+      },
+      {
+        "name": "updateBorrowable",
+        "roles": ["restricted"],
+        "signature": "updateBorrowable(address,uint256,bool)"
+      },
+      {
+        "name": "updateReceiveSharesEnabled",
+        "roles": ["restricted"],
+        "signature": "updateReceiveSharesEnabled(address,uint256,bool)"
+      },
+      {
+        "name": "updateCollateralRisk",
+        "roles": ["restricted"],
+        "signature": "updateCollateralRisk(address,uint256,uint256)"
+      },
+      {
+        "name": "addCollateralFactor",
+        "roles": ["restricted"],
+        "signature": "addCollateralFactor(address,uint256,uint16)"
+      },
+      {
+        "name": "updateCollateralFactor",
+        "roles": ["restricted"],
+        "signature": "updateCollateralFactor(address,uint256,uint32,uint16)"
+      },
+      {
+        "name": "addMaxLiquidationBonus",
+        "roles": ["restricted"],
+        "signature": "addMaxLiquidationBonus(address,uint256,uint256)"
+      },
+      {
+        "name": "updateMaxLiquidationBonus",
+        "roles": ["restricted"],
+        "signature": "updateMaxLiquidationBonus(address,uint256,uint32,uint256)"
+      },
+      {
+        "name": "addLiquidationFee",
+        "roles": ["restricted"],
+        "signature": "addLiquidationFee(address,uint256,uint256)"
+      },
+      {
+        "name": "updateLiquidationFee",
+        "roles": ["restricted"],
+        "signature": "updateLiquidationFee(address,uint256,uint32,uint256)"
+      },
+      {
+        "name": "addDynamicReserveConfig",
+        "roles": ["restricted"],
+        "signature": "addDynamicReserveConfig(address,uint256,(uint16,uint32,uint16))"
+      },
+      {
+        "name": "updateDynamicReserveConfig",
+        "roles": ["restricted"],
+        "signature": "updateDynamicReserveConfig(address,uint256,uint32,(uint16,uint32,uint16))"
+      },
+      {
+        "name": "pauseAllReserves",
+        "roles": ["restricted"],
+        "signature": "pauseAllReserves(address)"
+      },
+      {
+        "name": "freezeAllReserves",
+        "roles": ["restricted"],
+        "signature": "freezeAllReserves(address)"
+      },
+      {
+        "name": "pauseReserve",
+        "roles": ["restricted"],
+        "signature": "pauseReserve(address,uint256)"
+      },
+      {
+        "name": "freezeReserve",
+        "roles": ["restricted"],
+        "signature": "freezeReserve(address,uint256)"
+      },
+      {
+        "name": "updatePositionManager",
+        "roles": ["restricted"],
+        "signature": "updatePositionManager(address,address,bool)"
+      }
+    ]
+  },
+  {
+    "contract": "TreasurySpoke",
+    "functions": [
+      {
+        "name": "supply",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "supplySkimmed",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "withdraw",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transfer",
+        "roles": ["onlyOwner"]
+      }
+    ]
+  },
+  {
+    "contract": "GiverPositionManager",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renouncePositionManagerRole",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "TakerPositionManager",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "ConfigPositionManager",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "NativeTokenGateway",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renouncePositionManagerRole",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  },
+  {
+    "contract": "SignatureGateway",
+    "functions": [
+      {
+        "name": "registerSpoke",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renouncePositionManagerRole",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "rescueNative",
+        "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "rescueToken",
+        "roles": ["onlyRescueGuardian"]
+      }
+    ]
+  }
+]

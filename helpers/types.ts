@@ -66,6 +66,20 @@ export type AgentHub = {
   contracts: Contracts;
 };
 
+export type TokenizationSpokes = {
+  contracts: Contracts;
+};
+
+export type PositionManagers = {
+  contracts: Contracts;
+};
+
+export type AccessManager = {
+  roles: Record<string, string[]>;
+  functionRoles: Record<string, Record<string, string>>;
+  roleLabels: Record<string, string>;
+};
+
 export type EmissionAdminsByToken = Record<string, { symbol: string; emissionAdmin: string }>;
 
 export type PoolInfo = {
@@ -78,6 +92,9 @@ export type PoolInfo = {
   umbrella?: Umbrella;
   ppc?: Ppc;
   agentHub?: AgentHub;
+  accessManager?: AccessManager;
+  tokenizationSpokes?: TokenizationSpokes;
+  positionManagers?: PositionManagers;
 };
 
 export type Pool = Record<string, PoolInfo>;
@@ -110,6 +127,10 @@ export type PoolConfigs = {
 
   functionsPermissionsAgentHubJson?: string;
 
+  accessManagerBlock?: number;
+  roleLabels?: Record<string, string>;
+  tokenizationSpokesAddressBook?: Record<string, string>;
+
   emissionManagerBlock?: number;
 };
 export type Network = {
@@ -126,6 +147,8 @@ export type NetworkConfigs = Record<string, Network>;
 export type Function = {
   name: string;
   roles: string[];
+  selector?: string;
+  signature?: string;
 };
 
 export type PermissionsJson = {

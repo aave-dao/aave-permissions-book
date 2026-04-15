@@ -48,12 +48,15 @@ import { getRoleAdmins } from '../helpers/adminRoles.js';
 import { resolveV2Modifiers } from './v2Permissions.js';
 import { resolveV3Modifiers } from './v3Permissions.js';
 import { resolveGovV2Modifiers } from './governancePermissions.js';
-import { AgentHub, ClinicSteward, Collector, Contracts, EmissionAdminsByToken, GovV3, Ppc, Roles, Umbrella } from '../helpers/types.js';
+import { AgentHub, ClinicSteward, Collector, Contracts, EmissionAdminsByToken, GovV3, Ppc, PositionManagers, Roles, TokenizationSpokes, Umbrella } from '../helpers/types.js';
 import { resolveSafetyV2Modifiers } from './safetyPermissions.js';
 import { resolveV2MiscModifiers } from './v2MiscPermissions.js';
 import { getSenders } from '../helpers/crossChainControllerLogs.js';
 import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
+import { resolveV4Modifiers, resolveTokenizationSpokeUpgradeability, resolveV4PositionManagerModifiers } from './v4Permissions.js';
+import { getAccessManagerRoles, getFunctionRoleMappings } from '../helpers/accessManagerRoles.js';
+import { AccessManager } from '../helpers/types.js';
 import { resolveCollectorModifiers } from './collectorPermissions.js';
 import { resolveClinicStewardModifiers } from './clinicStewardPermissions.js';
 import { resolveUmbrellaModifiers } from './umbrellaPermissions.js';
@@ -136,6 +139,9 @@ const generateNetworkPermissions = async (
     let ppc = {} as Ppc;
     govV3.ggRoles = {} as Roles;
     let agentHub = {} as AgentHub;
+    let tokenizationSpokes = {} as TokenizationSpokes;
+    let positionManagers = {} as PositionManagers;
+    let accessManagerData: AccessManager | undefined;
     let emissionAdmins = {} as EmissionAdminsByToken;
 
     // =========================================================================
@@ -151,7 +157,8 @@ const generateNetworkPermissions = async (
       pool.clinicStewardBlock ||
       pool.umbrellaBlock ||
       pool.crossChainControllerBlock ||
-      pool.granularGuardianBlock;
+      pool.granularGuardianBlock ||
+      pool.accessManagerBlock;
 
     // Store indexed events for later processing
     let indexedEvents: Record<string, import('viem').Log[]> = {};
@@ -172,6 +179,7 @@ const generateNetworkPermissions = async (
         granularGuardianBlock: pool.granularGuardianBlock,
         ghoBlock: pool.ghoBlock,
         gsmBlocks: pool.gsmBlocks,
+        accessManagerBlock: pool.accessManagerBlock,
       });
 
       if (contractConfigs.length > 0) {
@@ -307,7 +315,55 @@ const generateNetworkPermissions = async (
       saveEmissionAdminsByPool(network, poolKey, emissionAdmins);
     }
 
-    if (
+    if (poolKey === Pools.V4) {
+      logTableGeneration(network, poolKey, undefined, indexedLatestBlock || pool.accessManagerBlock);
+
+      if (Object.keys(pool.addressBook).length > 0 && pool.accessManagerBlock) {
+        // Process ACCESS_MANAGER events
+        const amEvents = indexedEvents['ACCESS_MANAGER'] || [];
+        const v4Roles = getAccessManagerRoles({
+          oldRoles: (fullJson[poolKey]?.accessManager?.roles) || {},
+          eventLogs: amEvents,
+        });
+        const v4FunctionRoles = getFunctionRoleMappings({
+          oldMappings: (fullJson[poolKey]?.accessManager?.functionRoles) || {},
+          eventLogs: amEvents,
+        });
+
+        const v4Result = await resolveV4Modifiers(
+          pool.addressBook,
+          poolProvider,
+          permissionsJson,
+          v4Roles,
+          v4FunctionRoles,
+          pool.roleLabels || {},
+        );
+        poolPermissions = v4Result.contracts;
+
+        // Resolve TokenizationSpokes upgradeability
+        if (pool.tokenizationSpokesAddressBook) {
+          logTableGeneration(network, poolKey, 'TokenizationSpokes');
+          tokenizationSpokes.contracts = await resolveTokenizationSpokeUpgradeability(
+            pool.tokenizationSpokesAddressBook,
+            poolProvider,
+          );
+        }
+
+        // Resolve PositionManagers permissions (Ownable2Step + Rescuable, not AccessManager)
+        logTableGeneration(network, poolKey, 'PositionManagers');
+        positionManagers.contracts = await resolveV4PositionManagerModifiers(
+          pool.addressBook,
+          poolProvider,
+          permissionsJson,
+        );
+
+        accessManagerData = {
+          roles: v4Roles,
+          functionRoles: v4FunctionRoles,
+          roleLabels: v4Result.roleLabels,
+        };
+      }
+    } else if (
       poolKey !== Pools.GOV_V2 &&
       poolKey !== Pools.SAFETY_MODULE &&
       poolKey !== Pools.V2_MISC &&
@@ -588,32 +644,27 @@ const generateNetworkPermissions = async (
     }
 
     // Merge this pool's results into the network-wide JSON.
+    const poolResult = {
+      contracts: poolPermissions,
+      roles: admins,
+      gsmRoles: gsmAdmins,
+      govV3: govV3,
+      collector: collector,
+      clinicSteward: clinicSteward,
+      umbrella: umbrella,
+      ppc: ppc,
+      agentHub: agentHub,
+      ...(accessManagerData ? { accessManager: accessManagerData } : {}),
+      ...(tokenizationSpokes.contracts ? { tokenizationSpokes } : {}),
+      ...(positionManagers.contracts ? { positionManagers } : {}),
+    };
+
     if (Object.keys(fullJson).length === 0) {
       fullJson = {
-        [poolKey]: {
-          contracts: poolPermissions,
-          roles: admins,
-          gsmRoles: gsmAdmins,
-          govV3: govV3,
-          collector: collector,
-          clinicSteward: clinicSteward,
-          umbrella: umbrella,
-          ppc: ppc,
-          agentHub: agentHub,
-        },
+        [poolKey]: poolResult,
       };
     } else {
-      fullJson[poolKey] = {
-        contracts: poolPermissions,
-        roles: admins,
-        gsmRoles: gsmAdmins,
-        govV3: govV3,
-        collector: collector,
-        clinicSteward: clinicSteward,
-        umbrella: umbrella,
-        ppc: ppc,
-        agentHub: agentHub,
-      };
+      fullJson[poolKey] = poolResult;
     }
     logger.poolFinished(String(network), poolKey);
   }

@@ -61,7 +61,7 @@ export const generateContractsByAddress = (
 export const extractPoolContracts = (poolData: PoolInfo | undefined): Contracts => {
   if (!poolData) return {};
 
-  const sections = ['contracts', 'govV3', 'collector', 'clinicSteward', 'umbrella', 'ppc', 'agentHub'] as const;
+  const sections = ['contracts', 'govV3', 'collector', 'clinicSteward', 'umbrella', 'ppc', 'agentHub', 'tokenizationSpokes', 'positionManagers'] as const;
   const allContracts: Contracts = {};
 
   for (const section of sections) {
@@ -110,7 +110,8 @@ export const findContractNameByAddress = (
     const contracts = extractPoolContracts(poolData);
     for (const [contractName, contractInfo] of Object.entries(contracts)) {
       if (contractInfo.address?.toLowerCase() === normalizedAddress) {
-        return contractName;
+        // Strip _ prefix used by synthetic entries (e.g. V4 proxy admins)
+        return contractName.startsWith('_') ? contractName.slice(1) : contractName;
       }
     }
     return undefined;
@@ -126,7 +127,13 @@ export const findContractNameByAddress = (
     if (found) return found;
   }
 
-  // 3. Search GHO contracts (only for mainnet)
+  // 3. Search V4 contracts (if current pool is not V4)
+  if (pool !== 'V4' && networkPermits['V4']) {
+    found = findInPool(networkPermits['V4']);
+    if (found) return found;
+  }
+
+  // 4. Search GHO contracts (only for mainnet)
   if (network === '1') {
     found = findInPool(networkPermits['GHO']);
     if (found) return found;

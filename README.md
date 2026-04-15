@@ -37,6 +37,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 ### Permissions Directory
 | Network |System type |Tables |
 |----------|----------|----------|
+|  ETHEREUM |  V4 |  [Permissions](./out/ETHEREUM-V4.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  V3 |  [Permissions](./out/ETHEREUM-V3.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  LIDO |  [Permissions](./out/ETHEREUM-LIDO.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  ETHERFI |  [Permissions](./out/ETHEREUM-ETHERFI.md#contracts) | |--------|--------|--------|
