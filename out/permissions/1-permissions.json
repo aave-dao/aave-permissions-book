@@ -10261,6 +10261,20 @@
                 "address": "0x14339e2178A954d5FB839D5Ff31644fE0F25F517",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
               }
             ],
             "functions": [
@@ -10875,7 +10889,22 @@
         "modifiers": [
           {
             "modifier": "SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE",
-            "addresses": [],
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0x373cAc6a44321a2145f98765764Cd9b21cAc52EC",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x3cAc2Ee643dA3f0137Aad810C4d70AbCAC1bF19C",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                ],
+                "signersThreshold": 5
+              }
+            ],
             "functions": [
               "updateReservePriceSource",
               "updateLiquidationTargetHealthFactor",
@@ -10985,13 +11014,16 @@
         "103": [],
         "200": [
           "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
-          "0x14339e2178A954d5FB839D5Ff31644fE0F25F517"
+          "0x14339e2178A954d5FB839D5Ff31644fE0F25F517",
+          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9"
         ],
         "301": [
           "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a"
         ],
         "302": [],
-        "400": []
+        "400": [
+          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9"
+        ]
       },
       "functionRoles": {
         "0x1f0753480bb03eaa00863224602267b7e0525c3d": {
