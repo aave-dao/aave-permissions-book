@@ -58,5 +58,17 @@
   "0x9Ba896531F878Ed5f0A4F73E82d63bA7b424F910": {
     "symbol": "variableDebtEthPT_srUSDe_25JUN2026",
     "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x9db38D74a0D29380899aD354121DfB521aDb0548": {
+    "symbol": "PT-USDG-28MAY2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0xA9ecb0503075124cc0B786096849A331FBe9EE6D": {
+    "symbol": "aEthPT_USDG_28MAY2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x1a83eCA2d3b0cea2595Fb11Ec60cb2D428217C2e": {
+    "symbol": "variableDebtEthPT_USDG_28MAY2026",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
   }
 }
