@@ -142,5 +142,17 @@
   "0xaE4EFbc7736f963982aACb17EFA37fCBAb924cB3": {
     "symbol": "SolvBTC",
     "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x8A76fe7fA6da27f85a626c5C53730B38D13603d7": {
+    "symbol": "syrupUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x9d97196e7e6652e82C2F0FE93a9B3876E3d8528e": {
+    "symbol": "aInkWlsyrupUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x58514b6c52a3515cCBBF459BFdb4fC2Aba8462b2": {
+    "symbol": "variableDebtInkWlsyrupUSDT",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
   }
 }
