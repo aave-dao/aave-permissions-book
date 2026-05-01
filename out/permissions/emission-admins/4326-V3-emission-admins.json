@@ -82,5 +82,17 @@
   "0x09601A65e7de7BC8A19813D263dD9E98bFdC3c57": {
     "symbol": "ezETH",
     "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34": {
+    "symbol": "USDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x78f2cB75D664d6f71433174056c25A5958B4016F": {
+    "symbol": "aMegUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+  },
+  "0x7dD785D88A64dd7db6b46DaD4d2e0728CC65e009": {
+    "symbol": "variableDebtMegUSDe",
+    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
   }
 }
