@@ -35,7 +35,7 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [Gho Risk Council](https://plasmascan.to//address/0x8513e6F37dBc52De87b166980Fa3F50639694B60) |  3/4 |  0x8513e6F37dBc52De87b166980Fa3F50639694B60 |  [0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4](https://plasmascan.to//address/0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4), [0xb647055A9915bF9c8021a684E175A353525b9890](https://plasmascan.to//address/0xb647055A9915bF9c8021a684E175A353525b9890), [0xbA037E4746ff58c55dc8F27a328C428F258DDACb](https://plasmascan.to//address/0xbA037E4746ff58c55dc8F27a328C428F258DDACb), [0x5d49dBcdd300aECc2C311cFB56593E71c445d60d](https://plasmascan.to//address/0x5d49dBcdd300aECc2C311cFB56593E71c445d60d) | |--------|--------|--------|--------|
+|  [Gho Risk Council](https://plasmascan.to//address/0x8513e6F37dBc52De87b166980Fa3F50639694B60) |  3/4 |  0x8513e6F37dBc52De87b166980Fa3F50639694B60 |  [0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4](https://plasmascan.to//address/0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4), [0xb647055A9915bF9c8021a684E175A353525b9890](https://plasmascan.to//address/0xb647055A9915bF9c8021a684E175A353525b9890), [0xCAC616Fffb687cBDDD250b2aE6F672449462985C](https://plasmascan.to//address/0xCAC616Fffb687cBDDD250b2aE6F672449462985C), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://plasmascan.to//address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
 
 ### Admins
 | Role |Contract |
