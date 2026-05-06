@@ -6,14 +6,14 @@ export const SHARED_ADDRESSES: Record<string, string> = {
   // Deployer - appears on all networks
   '0xEAF6183bAb3eFD3bF856Ac5C058431C8592394d6': 'Deployer',
 
-  // CleanUp Admin - appears on most networks
-  '0xdeadD8aB03075b7FBA81864202a2f59EE25B312b': 'CleanUp Admin',
+  // Merit - cleanup admin on most networks
+  '0xdeadD8aB03075b7FBA81864202a2f59EE25B312b': 'Merit',
 
   // ACI Automation - appears on most networks
   '0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193': 'ACI Automation',
 
-  // Finance Risk Council - appears on most networks
-  '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'Finance Risk Council',
+  // AFC - finance risk council on most networks
+  '0x22740deBa78d5a0c24C58C740e3715ec29de1bFa': 'AFC',
 
   // ACI Safe - emission admin on most networks
   '0xac140648435d03f784879cd789130F22Ef588Fcd': 'ACI Safe',
