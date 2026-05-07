@@ -2266,6 +2266,17 @@
                   "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
                   "owners": [],
                   "signersThreshold": 0
+                },
+                {
+                  "address": "0x53cb4BB8F61fa45405dC75F476FaDAd801e653D9",
+                  "owners": [
+                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff",
+                    "0x4f96743057482a2E10253AFDacDA3fd9CF2C1DC9",
+                    "0x3CD9a21c32Ea7CAeF54fDeF3eA690A9981A83703",
+                    "0x2Fe367d6F8a755Ca22EfAE7F29004f9b5fA868e8",
+                    "0x985F3290d7971a840152E46d00b5ceb60A56f235"
+                  ],
+                  "signersThreshold": 3
                 }
               ],
               "functions": [
@@ -2463,7 +2474,8 @@
       "umbrellaRoles": {
         "role": {
           "DEFAULT_ADMIN": [
-            "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A"
+            "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+            "0x53cb4BB8F61fa45405dC75F476FaDAd801e653D9"
           ],
           "COVERAGE_MANAGER_ROLE": [
             "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",

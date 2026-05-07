@@ -121,16 +121,6 @@
                 "address": "0x6e637e1E48025E51315d50ab96d5b3be1971A715",
                 "owners": [],
                 "signersThreshold": 0
-              },
-              {
-                "address": "0x8d3C192BC8D0913Ecc4eAACf0Fe99B6F6226B486",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
-                "address": "0xcCeb5996cF9976168fdbE6fF88B1d89e1180A0EA",
-                "owners": [],
-                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -167,16 +157,6 @@
               },
               {
                 "address": "0x6e637e1E48025E51315d50ab96d5b3be1971A715",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
-                "address": "0x8d3C192BC8D0913Ecc4eAACf0Fe99B6F6226B486",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
-                "address": "0xcCeb5996cF9976168fdbE6fF88B1d89e1180A0EA",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -614,9 +594,7 @@
         ],
         "RISK_ADMIN": [
           "0x1AA25FdD7d55FA8a401D6EFba8e48874Ef730E55",
-          "0x6e637e1E48025E51315d50ab96d5b3be1971A715",
-          "0x8d3C192BC8D0913Ecc4eAACf0Fe99B6F6226B486",
-          "0xcCeb5996cF9976168fdbE6fF88B1d89e1180A0EA"
+          "0x6e637e1E48025E51315d50ab96d5b3be1971A715"
         ]
       }
     },
@@ -1081,42 +1059,6 @@
     "ppc": {},
     "agentHub": {
       "contracts": {
-        "SupplyCapAgent": {
-          "address": "0x8d3C192BC8D0913Ecc4eAACf0Fe99B6F6226B486",
-          "modifiers": [
-            {
-              "modifier": "onlyAgentHub",
-              "addresses": [
-                {
-                  "address": "0x7520bb9c237c864957e9a9881821bF882491bc5C",
-                  "owners": [],
-                  "signersThreshold": 0
-                }
-              ],
-              "functions": [
-                "inject"
-              ]
-            }
-          ]
-        },
-        "BorrowCapAgent": {
-          "address": "0xcCeb5996cF9976168fdbE6fF88B1d89e1180A0EA",
-          "modifiers": [
-            {
-              "modifier": "onlyAgentHub",
-              "addresses": [
-                {
-                  "address": "0x7520bb9c237c864957e9a9881821bF882491bc5C",
-                  "owners": [],
-                  "signersThreshold": 0
-                }
-              ],
-              "functions": [
-                "inject"
-              ]
-            }
-          ]
-        },
         "AgentHub": {
           "address": "0x7520bb9c237c864957e9a9881821bF882491bc5C",
           "proxyAdmin": "0xf033c35340552e9b1824d69a217bef91273c156d",
@@ -1183,25 +1125,6 @@
                 "changeProxyAdmin",
                 "upgrade",
                 "upgradeAndCall"
-              ]
-            }
-          ]
-        },
-        "RangeValidationModule": {
-          "address": "0x9240a6669CC4782FC98620212862DF5CB2e0Df10",
-          "modifiers": [
-            {
-              "modifier": "onlyHubOwnerOrAgentAdmin",
-              "addresses": [
-                {
-                  "address": "0x1dF462e2712496373A347f8ad10802a5E95f053D",
-                  "owners": [],
-                  "signersThreshold": 0
-                }
-              ],
-              "functions": [
-                "setDefaultRangeConfig",
-                "setRangeConfigByMarket"
               ]
             }
           ]
