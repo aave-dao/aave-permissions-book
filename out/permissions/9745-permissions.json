@@ -118,16 +118,6 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
-                "address": "0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
                 "address": "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
                 "owners": [],
                 "signersThreshold": 0
@@ -162,16 +152,6 @@
               },
               {
                 "address": "0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
-                "address": "0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177",
-                "owners": [],
-                "signersThreshold": 0
-              },
-              {
-                "address": "0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -584,8 +564,6 @@
         ],
         "RISK_ADMIN": [
           "0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba",
-          "0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177",
-          "0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9",
           "0xA5Ba213867E175A182a5dd6A9193C6158738105A"
         ]
       }
@@ -1030,42 +1008,6 @@
     "ppc": {},
     "agentHub": {
       "contracts": {
-        "EModeCategoryAgent": {
-          "address": "0x3999d49Bbad3A7375B0376BDF2bA4f2e3c9F5177",
-          "modifiers": [
-            {
-              "modifier": "onlyAgentHub",
-              "addresses": [
-                {
-                  "address": "0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D",
-                  "owners": [],
-                  "signersThreshold": 0
-                }
-              ],
-              "functions": [
-                "inject"
-              ]
-            }
-          ]
-        },
-        "PendleDiscountRateAgent": {
-          "address": "0x4e8984D11A47Ff89CD67c7651eCaB6C00a74B4A9",
-          "modifiers": [
-            {
-              "modifier": "onlyAgentHub",
-              "addresses": [
-                {
-                  "address": "0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D",
-                  "owners": [],
-                  "signersThreshold": 0
-                }
-              ],
-              "functions": [
-                "inject"
-              ]
-            }
-          ]
-        },
         "AgentHub": {
           "address": "0x5F29ACbFB6de4282bB4DD2017930cDA730eD864D",
           "proxyAdmin": "0xc3ba7a3b8357b32df987ddefb6baf9dcc0bd8791",
@@ -1132,25 +1074,6 @@
                 "changeProxyAdmin",
                 "upgrade",
                 "upgradeAndCall"
-              ]
-            }
-          ]
-        },
-        "RangeValidationModule": {
-          "address": "0x9240a6669CC4782FC98620212862DF5CB2e0Df10",
-          "modifiers": [
-            {
-              "modifier": "onlyHubOwnerOrAgentAdmin",
-              "addresses": [
-                {
-                  "address": "0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A",
-                  "owners": [],
-                  "signersThreshold": 0
-                }
-              ],
-              "functions": [
-                "setDefaultRangeConfig",
-                "setRangeConfigByMarket"
               ]
             }
           ]
