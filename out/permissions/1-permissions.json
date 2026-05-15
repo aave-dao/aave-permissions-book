@@ -786,6 +786,8 @@
               {
                 "address": "0xbDa6C9cd7eD043CB739ca2C748dAbd1fCA397132",
                 "owners": [
+                  "0x719E2CDEba9C8754eE2E1c09510610bc4824426E",
+                  "0xE907915E674A347EB60dc0df2bb5A2B650B2cC9d",
                   "0x4fc33739c617015C4224e30a1bd3A6F4D358Ae62",
                   "0xDf83E84F1eB00F0230eB912E2Ec823C979800B1c",
                   "0xB8ffAd4020c76F9fE9b49c68B417FD8Cb4C20516",
