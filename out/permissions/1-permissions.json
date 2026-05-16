@@ -10623,6 +10623,11 @@
                   "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
                 ],
                 "signersThreshold": 5
+              },
+              {
+                "address": "0x14339e2178A954d5FB839D5Ff31644fE0F25F517",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -10742,7 +10747,8 @@
         ],
         "302": [],
         "400": [
-          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9"
+          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+          "0x14339e2178A954d5FB839D5Ff31644fE0F25F517"
         ]
       },
       "functionRoles": {
