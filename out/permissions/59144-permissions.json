@@ -546,7 +546,9 @@
           "0x0BF186764D8333a938f35e5dD124a7b9b9dccDF9"
         ],
         "ASSET_LISTING_ADMIN": [],
-        "FLASH_BORROWER": [],
+        "FLASH_BORROWER": [
+          "0xdeCC46a4b09162F5369c5C80383AAa9159bCf192"
+        ],
         "RISK_ADMIN": [
           "0xBDF2e1A49894A306Eb76b89504928b3f509A3a16"
         ]

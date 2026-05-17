@@ -122,7 +122,7 @@
 |  POOL_ADMIN |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88) | |--------|--------|
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Linea](https://lineascan.build//address/0x0BF186764D8333a938f35e5dD124a7b9b9dccDF9) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
-|  FLASH_BORROWER |   | |--------|--------|
+|  FLASH_BORROWER |  [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://lineascan.build//address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
 |  RISK_ADMIN |  [Manual AGRS](https://lineascan.build//address/0xBDF2e1A49894A306Eb76b89504928b3f509A3a16) | |--------|--------|
 
 ### Granular Guardian Admins

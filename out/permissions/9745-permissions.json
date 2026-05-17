@@ -560,7 +560,8 @@
         ],
         "ASSET_LISTING_ADMIN": [],
         "FLASH_BORROWER": [
-          "0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7"
+          "0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7",
+          "0xdeCC46a4b09162F5369c5C80383AAa9159bCf192"
         ],
         "RISK_ADMIN": [
           "0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba",

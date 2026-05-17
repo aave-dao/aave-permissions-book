@@ -128,7 +128,7 @@
 |  POOL_ADMIN |  [Executor_lvl1](https://plasmascan.to//address/0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A) | |--------|--------|
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Plasma](https://plasmascan.to//address/0xEf323B194caD8e02D9E5D8F07B34f625f1c088f1) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
-|  FLASH_BORROWER |  [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://plasmascan.to//address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7) | |--------|--------|
+|  FLASH_BORROWER |  [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://plasmascan.to//address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7), [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://plasmascan.to//address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
 |  RISK_ADMIN |  [Manual AGRS](https://plasmascan.to//address/0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba), [0xA5Ba213867E175A182a5dd6A9193C6158738105A](https://plasmascan.to//address/0xA5Ba213867E175A182a5dd6A9193C6158738105A) | |--------|--------|
 
 ### Granular Guardian Admins

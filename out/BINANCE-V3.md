@@ -130,7 +130,7 @@
 |  POOL_ADMIN |  [Executor_lvl1](https://bscscan.com/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) | |--------|--------|
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Binance](https://bscscan.com/address/0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
-|  FLASH_BORROWER |  [0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3](https://bscscan.com/address/0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3) | |--------|--------|
+|  FLASH_BORROWER |  [0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3](https://bscscan.com/address/0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3), [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://bscscan.com/address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
 |  RISK_ADMIN |  [Manual AGRS](https://bscscan.com/address/0x87F4aDD5425f566F156af5074BaD2dFFCd20C594) | |--------|--------|
 
 ### Granular Guardian Admins
