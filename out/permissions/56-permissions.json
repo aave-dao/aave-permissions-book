@@ -113,7 +113,7 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0x87F4aDD5425f566F156af5074BaD2dFFCd20C594",
+                "address": "0x42ca9E62C9B61d01Bb222d6E69f095eE98e61cE8",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -146,7 +146,7 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0x87F4aDD5425f566F156af5074BaD2dFFCd20C594",
+                "address": "0x42ca9E62C9B61d01Bb222d6E69f095eE98e61cE8",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -584,7 +584,7 @@
           "0xdeCC46a4b09162F5369c5C80383AAa9159bCf192"
         ],
         "RISK_ADMIN": [
-          "0x87F4aDD5425f566F156af5074BaD2dFFCd20C594"
+          "0x42ca9E62C9B61d01Bb222d6E69f095eE98e61cE8"
         ]
       }
     },

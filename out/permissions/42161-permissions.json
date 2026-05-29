@@ -123,7 +123,7 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0x365d47ceD3D7Eb6a9bdB3814aA23cc06B2D33Ef8",
+                "address": "0xC5762E5A5c12886D4F6768549A9C605823d029E9",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -161,7 +161,7 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0x365d47ceD3D7Eb6a9bdB3814aA23cc06B2D33Ef8",
+                "address": "0xC5762E5A5c12886D4F6768549A9C605823d029E9",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -636,7 +636,7 @@
         ],
         "RISK_ADMIN": [
           "0xd2D586f849620ef042FE3aF52eAa10e9b78bf7De",
-          "0x365d47ceD3D7Eb6a9bdB3814aA23cc06B2D33Ef8"
+          "0xC5762E5A5c12886D4F6768549A9C605823d029E9"
         ],
         "FLASH_BORROWER": [
           "0x219ac6dA971dE6d943cffD1BD62abde71525d382",

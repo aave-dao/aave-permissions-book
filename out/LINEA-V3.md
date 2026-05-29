@@ -31,14 +31,14 @@
 |----------|----------|
 |  updateReserveBorrowSettings |  Governance | |--------|--------|
 |  configureProtocolFees |  Governance | |--------|--------|
-|  updateReserveCaps |  Governance,Steward | |--------|--------|
+|  updateReserveCaps |  Governance,External Contract | |--------|--------|
 |  updateReserveSettings |  Governance | |--------|--------|
 |  configureCollateral |  Governance | |--------|--------|
 |  upgradeAaveTokens (a/v/s) |  Governance | |--------|--------|
 |  upgradeAaveOracles |  Governance | |--------|--------|
 |  reserveUpgradeability |  Governance | |--------|--------|
 |  pausePool |  Governance,Multi-sig | |--------|--------|
-|  pauseAndFreezeReserve |  Governance,Steward,Multi-sig | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,External Contract,Multi-sig | |--------|--------|
 |  reserveListing |  Governance | |--------|--------|
 |  adminsConfiguration |  Governance | |--------|--------|
 |  protocolUpgradeablity |  Governance | |--------|--------|
@@ -54,8 +54,8 @@
 |  [Pool](https://lineascan.build//address/0xc47b8C00b0f69a36fa203Ffeac0334874574a8Ac) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyPoolAdmin |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88) |  rescueTokens | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyPoolAdmin |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88) |  initReserves | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88), [Manual AGRS](https://lineascan.build//address/0xBDF2e1A49894A306Eb76b89504928b3f509A3a16) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88), [Manual AGRS](https://lineascan.build//address/0xBDF2e1A49894A306Eb76b89504928b3f509A3a16), [Aave Protocol Guardian Linea](https://lineascan.build//address/0x0BF186764D8333a938f35e5dD124a7b9b9dccDF9) |  setReserveFreeze | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88), [0xE77aF99210AC55939e1ba0bFC6A9a20E1Da73b25](https://lineascan.build//address/0xE77aF99210AC55939e1ba0bFC6A9a20E1Da73b25) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88), [0xE77aF99210AC55939e1ba0bFC6A9a20E1Da73b25](https://lineascan.build//address/0xE77aF99210AC55939e1ba0bFC6A9a20E1Da73b25), [Aave Protocol Guardian Linea](https://lineascan.build//address/0x0BF186764D8333a938f35e5dD124a7b9b9dccDF9) |  setReserveFreeze | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://lineascan.build//address/0x812E7c19421D9f41A6DDCF047d5cc2dE2Ca5Bfa2) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88), [Aave Protocol Guardian Linea](https://lineascan.build//address/0x0BF186764D8333a938f35e5dD124a7b9b9dccDF9) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
 |  [AaveOracle](https://lineascan.build//address/0xCFDAdA7DCd2e785cF706BaDBC2B8Af5084d595e9) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://lineascan.build//address/0x8c2d95FE7aeB57b86961F3abB296A54f0ADb7F88) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
 |  [RewardsController](https://lineascan.build//address/0xc67bb8F2314fA0df50cBa314c6509A7bdAD500C0) |  [PoolAddressesProvider](https://lineascan.build//address/0x89502c3731F69DDC95B65753708A07F8Cd0373F4) |  onlyEmissionManager |  [EmissionManager](https://lineascan.build//address/0x0165C65FB21bDC9Cdc09C627d62AB3a983337158) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
@@ -123,7 +123,7 @@
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Linea](https://lineascan.build//address/0x0BF186764D8333a938f35e5dD124a7b9b9dccDF9) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
 |  FLASH_BORROWER |  [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://lineascan.build//address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
-|  RISK_ADMIN |  [Manual AGRS](https://lineascan.build//address/0xBDF2e1A49894A306Eb76b89504928b3f509A3a16) | |--------|--------|
+|  RISK_ADMIN |  [0xE77aF99210AC55939e1ba0bFC6A9a20E1Da73b25](https://lineascan.build//address/0xE77aF99210AC55939e1ba0bFC6A9a20E1Da73b25) | |--------|--------|
 
 ### Granular Guardian Admins
 | Role |Contract |

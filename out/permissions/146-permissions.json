@@ -113,7 +113,7 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0xdb93e2712a8B36835078f8D28c70fCC95FD6d37c",
+                "address": "0xb9898C9F4711cBCaD882863302EF8300bFc9d6Dc",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -146,7 +146,7 @@
                 "signersThreshold": 0
               },
               {
-                "address": "0xdb93e2712a8B36835078f8D28c70fCC95FD6d37c",
+                "address": "0xb9898C9F4711cBCaD882863302EF8300bFc9d6Dc",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -475,7 +475,7 @@
         "ASSET_LISTING_ADMIN": [],
         "FLASH_BORROWER": [],
         "RISK_ADMIN": [
-          "0xdb93e2712a8B36835078f8D28c70fCC95FD6d37c"
+          "0xb9898C9F4711cBCaD882863302EF8300bFc9d6Dc"
         ]
       }
     },

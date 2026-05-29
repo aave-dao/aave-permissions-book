@@ -29,14 +29,14 @@
 |----------|----------|
 |  updateReserveBorrowSettings |  Governance | |--------|--------|
 |  configureProtocolFees |  Governance | |--------|--------|
-|  updateReserveCaps |  Governance,Steward | |--------|--------|
+|  updateReserveCaps |  Governance,External Contract | |--------|--------|
 |  updateReserveSettings |  Governance | |--------|--------|
 |  configureCollateral |  Governance | |--------|--------|
 |  upgradeAaveTokens (a/v/s) |  Governance | |--------|--------|
 |  upgradeAaveOracles |  Governance | |--------|--------|
 |  reserveUpgradeability |  Governance | |--------|--------|
 |  pausePool |  Governance,Multi-sig | |--------|--------|
-|  pauseAndFreezeReserve |  Governance,Steward,Multi-sig | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,External Contract,Multi-sig | |--------|--------|
 |  reserveListing |  Governance | |--------|--------|
 |  adminsConfiguration |  Governance | |--------|--------|
 |  protocolUpgradeablity |  Governance | |--------|--------|
@@ -52,8 +52,8 @@
 |  [Pool](https://celoscan.io//address/0x3E59A31363E2ad014dcbc521c4a0d5757d9f3402) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyPoolAdmin |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  rescueTokens | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyPoolAdmin |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  initReserves | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D), [Manual AGRS](https://celoscan.io//address/0xdb93e2712a8B36835078f8D28c70fCC95FD6d37c) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
-|  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D), [Manual AGRS](https://celoscan.io//address/0xdb93e2712a8B36835078f8D28c70fCC95FD6d37c), [Aave Protocol Guardian Celo](https://celoscan.io//address/0x88E7aB6ee481Cf92e548c0e1169F824F99142c85) |  setReserveFreeze | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D), [0xF73F2634b43344d86921DA3391d4EF0d5675Dd63](https://celoscan.io//address/0xF73F2634b43344d86921DA3391d4EF0d5675Dd63) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D), [0xF73F2634b43344d86921DA3391d4EF0d5675Dd63](https://celoscan.io//address/0xF73F2634b43344d86921DA3391d4EF0d5675Dd63), [Aave Protocol Guardian Celo](https://celoscan.io//address/0x88E7aB6ee481Cf92e548c0e1169F824F99142c85) |  setReserveFreeze | |--------|--------|--------|--------|--------|
 |  [PoolConfigurator](https://celoscan.io//address/0x7567E3434CC1BEf724AB595e6072367Ef4914691) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D), [Aave Protocol Guardian Celo](https://celoscan.io//address/0x88E7aB6ee481Cf92e548c0e1169F824F99142c85) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
 |  [AaveOracle](https://celoscan.io//address/0x1e693D088ceFD1E95ba4c4a5F7EeA41a1Ec37e8b) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://celoscan.io//address/0x1dF462e2712496373A347f8ad10802a5E95f053D) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
 |  [RewardsController](https://celoscan.io//address/0x4725A0FdbEB14A77964bC1C221eE3a7982263103) |  [PoolAddressesProvider](https://celoscan.io//address/0x9F7Cf9417D5251C59fE94fB9147feEe1aAd9Cea5) |  onlyEmissionManager |  [EmissionManager](https://celoscan.io//address/0x9e04Cb339163b06068397d9b6af2dA78440954e0) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
@@ -106,7 +106,7 @@
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Celo](https://celoscan.io//address/0x88E7aB6ee481Cf92e548c0e1169F824F99142c85) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
 |  FLASH_BORROWER |   | |--------|--------|
-|  RISK_ADMIN |  [Manual AGRS](https://celoscan.io//address/0xdb93e2712a8B36835078f8D28c70fCC95FD6d37c) | |--------|--------|
+|  RISK_ADMIN |  [0xF73F2634b43344d86921DA3391d4EF0d5675Dd63](https://celoscan.io//address/0xF73F2634b43344d86921DA3391d4EF0d5675Dd63) | |--------|--------|
 
 ### Granular Guardian Admins
 | Role |Contract |
