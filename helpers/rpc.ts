@@ -9,6 +9,35 @@ import { EMISSION_MANAGER_ABI } from "../abis/emissionManager.js";
 
 const alchemyKey = env.ALCHEMY_KEY ?? env.ALCHEMY_API_KEY;
 
+/**
+ * Maps a chain id to its RPC_<NETWORK> env var. When the var is set, it takes
+ * precedence over the toolbox's default provider resolution, which routes some
+ * chains to rate-limited public RPCs. megaeth is intentionally excluded as it
+ * keeps its own dedicated handling below.
+ */
+const RPC_ENV_BY_CHAIN: Record<number, string> = {
+  [ChainId.mainnet]: 'RPC_MAINNET',
+  [ChainId.polygon]: 'RPC_POLYGON',
+  [ChainId.bnb]: 'RPC_BINANCE',
+  [ChainId.avalanche]: 'RPC_AVALANCHE',
+  [ChainId.optimism]: 'RPC_OPTIMISM',
+  [ChainId.arbitrum]: 'RPC_ARBITRUM',
+  [ChainId.metis]: 'RPC_METIS',
+  [ChainId.base]: 'RPC_BASE',
+  [ChainId.gnosis]: 'RPC_GNOSIS',
+  [ChainId.scroll]: 'RPC_SCROLL',
+  [ChainId.zksync]: 'RPC_ZKSYNC',
+  [ChainId.linea]: 'RPC_LINEA',
+  [ChainId.celo]: 'RPC_CELO',
+  [ChainId.sonic]: 'RPC_SONIC',
+  [ChainId.soneium]: 'RPC_SONEIUM',
+  [ChainId.ink]: 'RPC_INK',
+  [ChainId.plasma]: 'RPC_PLASMA',
+  [ChainId.bob]: 'RPC_BOB',
+  [ChainId.mantle]: 'RPC_MANTLE',
+  [ChainId.xLayer]: 'RPC_XLAYER',
+};
+
 const getHttpConfig = () => {
   return {
     timeout: 30_000,
@@ -55,6 +84,14 @@ export const getForkRpcUrl = (chainId: number): string | undefined => {
  * Avalanche RPC configuration requires the C-Chain specific path.
  */
 export const getRPCClient = (chainId: number): Client => {
+  const customRpcUrl = env[RPC_ENV_BY_CHAIN[chainId]];
+  if (customRpcUrl) {
+    return createClient({
+      transport: http(customRpcUrl, getHttpConfig()),
+      batch: { multicall: true },
+    });
+  }
+
   if (chainId === ChainId.avalanche) {
     if (env.QUICKNODE_ENDPOINT_NAME && env.QUICKNODE_TOKEN) {
       return getRpcClientFromUrl(`https://${env.QUICKNODE_ENDPOINT_NAME}.avalanche-mainnet.quiknode.pro/${env.QUICKNODE_TOKEN}/ext/bc/C/rpc`);
