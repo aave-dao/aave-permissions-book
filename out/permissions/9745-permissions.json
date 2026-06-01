@@ -520,7 +520,7 @@
         ]
       },
       "Manual AGRS": {
-        "address": "0x98F756B77D6Fde14E08bb064b248ec7512F9f8ba",
+        "address": "0xdDE20B20E21a6F3b7080e740b684CDf5b764B80D",
         "modifiers": [
           {
             "modifier": "onlyOwner",
