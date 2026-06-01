@@ -64,7 +64,7 @@
 |  [Manual AGRS](https://andromeda-explorer.metis.io/address/0x97CB9e81d480A2AB03299760654C1DDC0C16bE07) |  - |  onlyRiskCouncil |  [Risk Council](https://andromeda-explorer.metis.io/address/0x0f547846920C34E70FBE4F3d87E46452a3FeAFfa) |  updateCaps, updateRates, updateCollateralSide, updateLstPriceCaps, updateStablePriceCaps | |--------|--------|--------|--------|--------|
 |  [Collector](https://andromeda-explorer.metis.io/address/0xB5b64c7E00374e766272f8B442Cd261412D4b118) |  [ProxyAdmin](https://andromeda-explorer.metis.io/address/0x1CabD986cBAbDf12E00128DFf03C80ee62C4fd97) |  onlyFundsAdmin |  [Executor_lvl1](https://andromeda-explorer.metis.io/address/0x6fD45D32375d5aDB8D76275A3932c740F03a8718), [ClinicSteward](https://andromeda-explorer.metis.io/address/0x53d3c1B2d42578F56ef4c0142F19CDB54CE55040) |  approve, transfer, setFundsAdmin, createStream | |--------|--------|--------|--------|--------|
 |  [Collector](https://andromeda-explorer.metis.io/address/0xB5b64c7E00374e766272f8B442Cd261412D4b118) |  [ProxyAdmin](https://andromeda-explorer.metis.io/address/0x1CabD986cBAbDf12E00128DFf03C80ee62C4fd97) |  onlyAdminOrRecipient |  [ProxyAdmin](https://andromeda-explorer.metis.io/address/0x1CabD986cBAbDf12E00128DFf03C80ee62C4fd97), [Executor_lvl1](https://andromeda-explorer.metis.io/address/0x6fD45D32375d5aDB8D76275A3932c740F03a8718), [ClinicSteward](https://andromeda-explorer.metis.io/address/0x53d3c1B2d42578F56ef4c0142F19CDB54CE55040) |  withdrawFromStream, cancelStream | |--------|--------|--------|--------|--------|
-|  [ClinicSteward](https://andromeda-explorer.metis.io/address/0x53d3c1B2d42578F56ef4c0142F19CDB54CE55040) |  - |  onlyCleanUpRole |  [CleanUp Admin](https://andromeda-explorer.metis.io/address/0xdeadD8aB03075b7FBA81864202a2f59EE25B312b), [ACI Automation](https://andromeda-explorer.metis.io/address/0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193) |  renewAllowance, batchRepayBadDebt, batchLiquidate, batchRepayBadDebt | |--------|--------|--------|--------|--------|
+|  [ClinicSteward](https://andromeda-explorer.metis.io/address/0x53d3c1B2d42578F56ef4c0142F19CDB54CE55040) |  - |  onlyCleanUpRole |  [Merit](https://andromeda-explorer.metis.io/address/0xdeadD8aB03075b7FBA81864202a2f59EE25B312b), [ACI Automation](https://andromeda-explorer.metis.io/address/0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193) |  renewAllowance, batchRepayBadDebt, batchLiquidate, batchRepayBadDebt | |--------|--------|--------|--------|--------|
 |  [ClinicSteward](https://andromeda-explorer.metis.io/address/0x53d3c1B2d42578F56ef4c0142F19CDB54CE55040) |  - |  onlyAdmin |  [Executor_lvl1](https://andromeda-explorer.metis.io/address/0x6fD45D32375d5aDB8D76275A3932c740F03a8718) |  setAvailableBudget | |--------|--------|--------|--------|--------|
 
 ### Governance V3 Contracts
@@ -121,7 +121,7 @@
 | Role |Contract |
 |----------|----------|
 |  DEFAULT_ADMIN |  [Executor_lvl1](https://andromeda-explorer.metis.io/address/0x6fD45D32375d5aDB8D76275A3932c740F03a8718) | |--------|--------|
-|  CLEANUP_ROLE |  [CleanUp Admin](https://andromeda-explorer.metis.io/address/0xdeadD8aB03075b7FBA81864202a2f59EE25B312b), [ACI Automation](https://andromeda-explorer.metis.io/address/0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193) | |--------|--------|
+|  CLEANUP_ROLE |  [Merit](https://andromeda-explorer.metis.io/address/0xdeadD8aB03075b7FBA81864202a2f59EE25B312b), [ACI Automation](https://andromeda-explorer.metis.io/address/0x3Cbded22F878aFC8d39dCD744d3Fe62086B76193) | |--------|--------|
 
 ### Emission Admins
 | admin |tokens count |tokens |
