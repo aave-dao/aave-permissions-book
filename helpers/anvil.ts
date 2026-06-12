@@ -9,7 +9,7 @@ import {
   encodePacked,
   type Address,
 } from 'viem';
-import { getSolidityStorageSlotUint } from '@bgd-labs/toolbox';
+import { getSolidityStorageSlotUint } from '@aave-dao/toolbox';
 import { PayloadsController_ABI } from '../abis/payloadsController.js';
 
 // ============================================================================
@@ -202,7 +202,7 @@ export async function executePayloadOnFork(
   // The PayloadsController's receiveCrossChainMessage has auth checks that are
   // difficult to satisfy on a fork. Instead, directly set the payload's storage
   // slot to Queued state with timestamps that make it immediately executable.
-  // This mirrors @bgd-labs/toolbox's makePayloadExecutableOnTestClient approach.
+  // This mirrors @aave-dao/toolbox's makePayloadExecutableOnTestClient approach.
   if (state === PayloadState.Created) {
     console.log(`Payload ${id} is Created, setting to Queued via storage override...`);
 

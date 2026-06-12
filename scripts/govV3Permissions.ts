@@ -1,5 +1,5 @@
 import { AddressBook, Contracts, PermissionsJson } from '../helpers/types.js';
-import { ChainId } from '@bgd-labs/toolbox';
+import { ChainId } from '@aave-dao/toolbox';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { generateRoles } from '../helpers/jsonParsers.js';
 import { IWithGuardian_ABI } from '@aave-dao/aave-address-book/abis';

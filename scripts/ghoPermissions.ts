@@ -20,7 +20,7 @@ import {
   resolveOwnableContract,
   resolveRiskCouncilContract,
 } from '../helpers/contractResolvers.js';
-import { ChainId } from '@bgd-labs/toolbox';
+import { ChainId } from '@aave-dao/toolbox';
 
 export const resolveGHOModifiers = async (
   addressBook: AddressBook,

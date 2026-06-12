@@ -1,0 +1,17 @@
+{
+  "V3": {
+    "latestBlockNumber": 80840662,
+    "indexedContracts": {
+      "CROSS_CHAIN_CONTROLLER": {
+        "address": "0x8dd5b84b26ae3916A5Fb34C8968F93d206216b63",
+        "deploymentBlock": 80572118,
+        "firstIndexedAt": 80572118
+      },
+      "GRANULAR_GUARDIAN": {
+        "address": "0xD3DD0bE957fcE2dCd359e09374Cbc99f60337D42",
+        "deploymentBlock": 80783599,
+        "firstIndexedAt": 80783599
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { isAddress } from 'viem';
 import { networkConfigs } from './configs.js';
-import { ChainId } from '@bgd-labs/toolbox';
+import { ChainId } from '@aave-dao/toolbox';
 
 export const explorerAddressUrlComposer = (
   address: string,

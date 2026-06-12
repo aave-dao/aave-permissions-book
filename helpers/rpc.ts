@@ -1,4 +1,4 @@
-import { ChainId, getClient, getLogsRecursive, getRPCUrl } from "@bgd-labs/toolbox";
+import { ChainId, getClient, getLogsRecursive, getRPCUrl } from "@aave-dao/toolbox";
 import { env } from "process";
 import { Abi, AbiEvent, Client, http, getAbiItem, getAddress, Log, createClient, createPublicClient } from "viem";
 import { aclManagerAbi } from "../abis/aclManager.js";
@@ -36,6 +36,7 @@ const RPC_ENV_BY_CHAIN: Record<number, string> = {
   [ChainId.bob]: 'RPC_BOB',
   [ChainId.mantle]: 'RPC_MANTLE',
   [ChainId.xLayer]: 'RPC_XLAYER',
+  [ChainId.monad]: 'RPC_MONAD',
 };
 
 const getHttpConfig = () => {
@@ -77,7 +78,7 @@ export const getForkRpcUrl = (chainId: number): string | undefined => {
 
 /**
  * Creates the default RPC client for a given chain.
- * Uses @bgd-labs/toolbox's getClient which resolves the RPC URL from env vars
+ * Uses @aave-dao/toolbox's getClient which resolves the RPC URL from env vars
  * (ALCHEMY_KEY, QUICKNODE_ENDPOINT_NAME, QUICKNODE_TOKEN).
  *
  * Avalanche uses a direct QuickNode URL because the toolbox's default
