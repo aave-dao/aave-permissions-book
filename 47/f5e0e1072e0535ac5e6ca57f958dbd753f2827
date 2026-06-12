@@ -1,0 +1,57 @@
+package.json
+  s_6af9f4170e7052::t_a775d6056df5b6 23
+scripts/ghoPermissions.ts
+  h_739c25e72c37fb 23
+scripts/govV3Permissions.ts
+  h_739c25e72c37fb 2
+.env.example
+  s_6af9f4170e7052::t_e5b01d8ca3ce1f 16
+scripts/v3Permissions.ts
+  h_739c25e72c37fb 7
+helpers/anvil.ts
+  h_739c25e72c37fb 12,205
+USAGE.md
+  h_739c25e72c37fb 33,183
+scripts/v2Permissions.ts
+  h_739c25e72c37fb 9
+helpers/explorer.ts
+  h_739c25e72c37fb 3
+helpers/configs/networks/index.ts
+  h_739c25e72c37fb 1,55
+  s_6af9f4170e7052::t_ed21190adf4abd 25
+helpers/configs/networks/monad.ts
+  s_6af9f4170e7052::t_7870b38898a170 1-48
+out/permissions/143-permissions.json
+  s_6af9f4170e7052::t_1779df97f32e67 1-370
+helpers/rpc.ts
+  h_739c25e72c37fb 1,39,81
+out/permissions/metadata/143-metadata.json
+  s_6af9f4170e7052::t_1779df97f32e67 1-2,4-17
+scripts/createTables.ts
+  h_739c25e72c37fb 30
+scripts/ppcPermissions.ts
+  h_739c25e72c37fb 6
+out/MONAD-V3.md
+  s_6af9f4170e7052::t_9e74dbfc7f6c49 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "47f5e0e1072e0535ac5e6ca57f958dbd753f2827",
+  "prompts": {},
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  },
+  "sessions": {
+    "s_6af9f4170e7052": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a815fdf9-d667-478d-b1ce-6b6b2da8230f",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
