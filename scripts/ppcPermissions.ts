@@ -3,7 +3,7 @@ import {
   Contracts,
   PermissionsJson,
 } from '../helpers/types.js';
-import { ChainId } from '@bgd-labs/toolbox';
+import { ChainId } from '@aave-dao/toolbox';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { generateRoles } from '../helpers/jsonParsers.js';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';

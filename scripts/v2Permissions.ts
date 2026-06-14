@@ -6,7 +6,7 @@ import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { arcTimelockAbi } from '../abis/arcTimelockAbi.js';
 import { AaveV2EthereumArc } from '@aave-dao/aave-address-book';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
-import { ChainId } from '@bgd-labs/toolbox';
+import { ChainId } from '@aave-dao/toolbox';
 import { AddressBook, Contracts, PermissionsJson } from '../helpers/types.js';
 import { Address, Client, getAddress, getContract, zeroAddress } from 'viem';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
