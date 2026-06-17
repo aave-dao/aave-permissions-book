@@ -30,7 +30,7 @@ npm install
 cp .env.example .env
 ```
 
-Configure your `.env` with RPC provider credentials. The tool uses `@bgd-labs/toolbox` for RPC resolution, which supports:
+Configure your `.env` with RPC provider credentials. The tool uses `@aave-dao/toolbox` for RPC resolution, which supports:
 
 - **Alchemy**: Set `ALCHEMY_KEY`
 - **QuickNode**: Set `QUICKNODE_ENDPOINT_NAME` and `QUICKNODE_TOKEN`
@@ -180,7 +180,7 @@ export const networkConfigs: NetworkConfigs = {
 };
 ```
 
-The chain ID must be available in `@bgd-labs/toolbox`'s `ChainId` enum.
+The chain ID must be available in `@aave-dao/toolbox`'s `ChainId` enum.
 
 ### 3. Add the RPC URL
 

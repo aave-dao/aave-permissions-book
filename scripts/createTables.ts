@@ -27,7 +27,7 @@ import {
   CliArgs,
 } from '../helpers/cli.js';
 import { explorerAddressUrlComposer } from '../helpers/explorer.js';
-import { ChainId } from '@bgd-labs/toolbox';
+import { ChainId } from '@aave-dao/toolbox';
 import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts } from '../helpers/jsonParsers.js';
 import {
   getLineSeparator,
