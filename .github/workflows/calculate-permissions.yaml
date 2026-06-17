@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Setup env
-        uses: bgd-labs/action-rpc-env@main
+        uses: aave-dao/action-rpc-env@main
         with:
           ALCHEMY_API_KEY: ${{secrets.ALCHEMY_API_KEY}}
           QUICKNODE_TOKEN: ${{secrets.QUICKNODE_TOKEN}}
