@@ -1,0 +1,14 @@
+.github/workflows/calculate-permissions.yaml
+  h_739c25e72c37fb 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.8",
+  "base_commit_sha": "fb1d2d53bac332a897878bd5acada51e6a39c3f6",
+  "prompts": {},
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
