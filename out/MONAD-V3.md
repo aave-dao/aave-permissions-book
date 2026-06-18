@@ -3,6 +3,17 @@
 ### Contracts upgradeability
 | contract |upgradeable by |
 |----------|----------|
+|  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  not upgradeable | |--------|--------|
+|  [Pool](https://monadscan.com/address/0x69a5F9AD4f96ebf0a0C792dD42a01cC5C0102fef) |  Governance | |--------|--------|
+|  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  Governance | |--------|--------|
+|  [AaveOracle](https://monadscan.com/address/0x0c02b2c2038066C10Eab8fe1D5Cdb73d5a78A1Bf) |  not upgradeable | |--------|--------|
+|  [RewardsController](https://monadscan.com/address/0x6f275486dC3EF07691B846E500556774B2D98F59) |  Governance | |--------|--------|
+|  [WrappedTokenGatewayV3](https://monadscan.com/address/0x5bB847f1E529df8819038BA6d34a95c9C2FB6813) |  not upgradeable | |--------|--------|
+|  [EmissionManager](https://monadscan.com/address/0x2da993D6c83408039b6842Aa56A9dE8044Dc7311) |  not upgradeable | |--------|--------|
+|  [PoolAddressesProviderRegistry](https://monadscan.com/address/0xa7790F5EDE1f1A57e7122e869eF6095c07C7E01d) |  not upgradeable | |--------|--------|
+|  [ACLManager](https://monadscan.com/address/0xa9fEe192a76B8f5e5f3d310AB6C526cB11F3d95B) |  not upgradeable | |--------|--------|
+|  [Collector](https://monadscan.com/address/0x22A14267f9F8bA21D11898F0772e652B09e6A8A1) |  Governance | |--------|--------|
+|  [CollectorProxyAdmin](https://monadscan.com/address/0x8d32611073cf16c757abd06b0ceb52087554e837) |  not upgradeable | |--------|--------|
 |  Aave a/v/s tokens |  Governance | |--------|--------|
 |  [GranularGuardian](https://monadscan.com/address/0xD3DD0bE957fcE2dCd359e09374Cbc99f60337D42) |  not upgradeable | |--------|--------|
 |  [PayloadsController](https://monadscan.com/address/0x442CA936e5E6Db875357d0A16481145c96dd9a82) |  Governance | |--------|--------|
@@ -17,8 +28,42 @@
 ### Actions type
 | type |can be executed by |
 |----------|----------|
+|  updateReserveBorrowSettings |  Governance | |--------|--------|
+|  configureProtocolFees |  Governance | |--------|--------|
+|  updateReserveCaps |  Governance,Multi-sig | |--------|--------|
+|  updateReserveSettings |  Governance | |--------|--------|
+|  configureCollateral |  Governance | |--------|--------|
+|  upgradeAaveTokens (a/v/s) |  Governance,Multi-sig | |--------|--------|
+|  upgradeAaveOracles |  Governance,Multi-sig | |--------|--------|
+|  reserveUpgradeability |  Governance | |--------|--------|
+|  pausePool |  Governance,Multi-sig | |--------|--------|
+|  pauseAndFreezeReserve |  Governance,Multi-sig | |--------|--------|
+|  reserveListing |  Governance,Multi-sig | |--------|--------|
+|  adminsConfiguration |  Governance | |--------|--------|
+|  protocolUpgradeablity |  Governance | |--------|--------|
 |  adiConfigurations |  Governance | |--------|--------|
 |  retryAndInvalidateMessages |  Multi-sig,Governance | |--------|--------|
+
+### Contracts
+| contract |proxyAdmin |modifier |permission owner |functions |
+|----------|----------|----------|----------|----------|
+|  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  - |  onlyOwner |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  setMarketId, setAddress, setAddressAsProxy, setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, setPoolDataProvider | |--------|--------|--------|--------|--------|
+|  [Pool](https://monadscan.com/address/0x69a5F9AD4f96ebf0a0C792dD42a01cC5C0102fef) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyPoolConfigurator |  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  initReserve, dropReserve, setReserveInterestRateStrategyAddress, setConfiguration, updateBridgeProtocolFee, updateFlashloanPremiums, configureEModeCategory, resetIsolationModeTotalDebt | |--------|--------|--------|--------|--------|
+|  [Pool](https://monadscan.com/address/0x69a5F9AD4f96ebf0a0C792dD42a01cC5C0102fef) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyPoolAdmin |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  rescueTokens | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyPoolAdmin |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  dropReserve, dropReserve, updateAToken, updateStableDebtToken, updateVariableDebtToken, setReserveActive, updateBridgeProtocolFee, updateFlashloanPremiumTotal, updateFlashloanPremiumToProtocol | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  initReserves | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyRiskOrPoolAdmins |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  setReserveBorrowing, setReserveBorrowing, configureReserveAsCollateral, setReserveStableRateBorrowing, setBorrowableInIsolation, setReserveFactor, setDebtCeiling, setSiloedBorrowing, setBorrowCap, setSupplyCap, setLiquidationProtocolFee, setEModeCategory, setAssetEModeCategory, setUnbackedMintCap, setReserveInterestRateStrategyAddress, setReserveFlashLoaning | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyRiskOrPoolOrEmergencyAdmins |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  setReserveFreeze | |--------|--------|--------|--------|--------|
+|  [PoolConfigurator](https://monadscan.com/address/0xC7A386Da9cB528aa86feD862a7bf33d10AA8455B) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
+|  [AaveOracle](https://monadscan.com/address/0x0c02b2c2038066C10Eab8fe1D5Cdb73d5a78A1Bf) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
+|  [RewardsController](https://monadscan.com/address/0x6f275486dC3EF07691B846E500556774B2D98F59) |  [PoolAddressesProvider](https://monadscan.com/address/0x34793Fb9935F7bB5E5aE920fb963F39063E7A615) |  onlyEmissionManager |  [EmissionManager](https://monadscan.com/address/0x2da993D6c83408039b6842Aa56A9dE8044Dc7311) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
+|  [WrappedTokenGatewayV3](https://monadscan.com/address/0x5bB847f1E529df8819038BA6d34a95c9C2FB6813) |  - |  onlyOwner |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  emergencyTokenTransfer, emergencyEtherTransfer | |--------|--------|--------|--------|--------|
+|  [EmissionManager](https://monadscan.com/address/0x2da993D6c83408039b6842Aa56A9dE8044Dc7311) |  - |  onlyOwner |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  setClaimer, setEmissionAdmin, setRewardsController, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
+|  [PoolAddressesProviderRegistry](https://monadscan.com/address/0xa7790F5EDE1f1A57e7122e869eF6095c07C7E01d) |  - |  onlyOwner |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  registerAddressesProvider, unregisterAddressesProvider | |--------|--------|--------|--------|--------|
+|  [ACLManager](https://monadscan.com/address/0xa9fEe192a76B8f5e5f3d310AB6C526cB11F3d95B) |  - |  onlyRole |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  setRoleAdmin | |--------|--------|--------|--------|--------|
+|  [Collector](https://monadscan.com/address/0x22A14267f9F8bA21D11898F0772e652B09e6A8A1) |  [CollectorProxyAdmin](https://monadscan.com/address/0x8d32611073CF16c757ABd06b0cEB52087554e837) |  onlyFundsAdmin |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  approve, transfer, setFundsAdmin, createStream | |--------|--------|--------|--------|--------|
+|  [Collector](https://monadscan.com/address/0x22A14267f9F8bA21D11898F0772e652B09e6A8A1) |  [CollectorProxyAdmin](https://monadscan.com/address/0x8d32611073CF16c757ABd06b0cEB52087554e837) |  onlyAdminOrRecipient |  [CollectorProxyAdmin](https://monadscan.com/address/0x8d32611073CF16c757ABd06b0cEB52087554e837), [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  withdrawFromStream, cancelStream | |--------|--------|--------|--------|--------|
+|  [CollectorProxyAdmin](https://monadscan.com/address/0x8d32611073cf16c757abd06b0ceb52087554e837) |  - |  onlyOwner |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
 
 ### Governance V3 Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -45,8 +90,19 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
+|  [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) |  4/7 |  0xc887455536CBD4e615B745e70CaCde15B3117e74 |  [0x3fa960f8355D00874D9C7E3350147f5E94859bc2](https://monadscan.com/address/0x3fa960f8355D00874D9C7E3350147f5E94859bc2), [0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58](https://monadscan.com/address/0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://monadscan.com/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef), [0xe6838d834674eC35EDd53D485770Baa10bdd6AAe](https://monadscan.com/address/0xe6838d834674eC35EDd53D485770Baa10bdd6AAe), [0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13](https://monadscan.com/address/0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13), [0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b](https://monadscan.com/address/0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b), [0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E](https://monadscan.com/address/0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E) | |--------|--------|--------|--------|
 |  [Aave Labs Guardian Monad](https://monadscan.com/address/0x2B99790c35a401be873FA7Eb514D9220736BB1cA) |  1/2 |  0x2B99790c35a401be873FA7Eb514D9220736BB1cA |  [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://monadscan.com/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://monadscan.com/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a) | |--------|--------|--------|--------|
 |  [Aave Governance Guardian Monad](https://monadscan.com/address/0x056E4C4E80D1D14a637ccbD0412CDAAEc5B51F4E) |  5/9 |  0x056E4C4E80D1D14a637ccbD0412CDAAEc5B51F4E |  [0xDA5Ae43e179987a66B9831F92223567e1F38BE7D](https://monadscan.com/address/0xDA5Ae43e179987a66B9831F92223567e1F38BE7D), [0x1e3804357eD445251FfECbb6e40107bf03888885](https://monadscan.com/address/0x1e3804357eD445251FfECbb6e40107bf03888885), [0x4f96743057482a2E10253AFDacDA3fd9CF2C1DC9](https://monadscan.com/address/0x4f96743057482a2E10253AFDacDA3fd9CF2C1DC9), [0xebED04E9137AfeBFF6a1B97aC0adf61a544eFE29](https://monadscan.com/address/0xebED04E9137AfeBFF6a1B97aC0adf61a544eFE29), [0xbd4DCfA978c6D0d342cE36809AfFFa49d4B7f1F7](https://monadscan.com/address/0xbd4DCfA978c6D0d342cE36809AfFFa49d4B7f1F7), [0xA3103D0ED00d24795Faa2d641ACf6A320EeD7396](https://monadscan.com/address/0xA3103D0ED00d24795Faa2d641ACf6A320EeD7396), [0x936CD9654271083cCF93A975919Da0aB3Bc99EF3](https://monadscan.com/address/0x936CD9654271083cCF93A975919Da0aB3Bc99EF3), [0x0D2394C027602Dc4c3832Ffd849b5df45DBac0E9](https://monadscan.com/address/0x0D2394C027602Dc4c3832Ffd849b5df45DBac0E9), [0x4C30E33758216aD0d676419c21CB8D014C68099f](https://monadscan.com/address/0x4C30E33758216aD0d676419c21CB8D014C68099f) | |--------|--------|--------|--------|
+
+### Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) | |--------|--------|
+|  POOL_ADMIN |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2), [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) | |--------|--------|
+|  EMERGENCY_ADMIN |  [Aave Protocol Guardian Monad](https://monadscan.com/address/0xc887455536CBD4e615B745e70CaCde15B3117e74) | |--------|--------|
+|  ASSET_LISTING_ADMIN |   | |--------|--------|
+|  FLASH_BORROWER |   | |--------|--------|
+|  RISK_ADMIN |   | |--------|--------|
 
 ### Granular Guardian Admins
 | Role |Contract |
@@ -54,4 +110,10 @@
 |  DEFAULT_ADMIN |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) | |--------|--------|
 |  SOLVE_EMERGENCY_ROLE |  [Aave Governance Guardian Monad](https://monadscan.com/address/0x056E4C4E80D1D14a637ccbD0412CDAAEc5B51F4E) | |--------|--------|
 |  RETRY_ROLE |  [Aave Labs Guardian Monad](https://monadscan.com/address/0x2B99790c35a401be873FA7Eb514D9220736BB1cA) | |--------|--------|
+
+### Collector Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) | |--------|--------|
+|  FUNDS_ADMIN_ROLE |  [Executor_lvl1](https://monadscan.com/address/0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2) | |--------|--------|
 
