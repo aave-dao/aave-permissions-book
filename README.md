@@ -52,6 +52,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  GNOSIS |  GHO |  [Permissions](./out/GNOSIS-GHO.md#contracts) | |--------|--------|--------|
 |  POLYGON |  V3 |  [Permissions](./out/POLYGON-V3.md#contracts) | |--------|--------|--------|
 |  POLYGON |  V2 |  [Permissions](./out/POLYGON-V2.md#contracts) | |--------|--------|--------|
+|  MONAD |  V3 |  [Permissions](./out/MONAD-V3.md#contracts) | |--------|--------|--------|
 |  SONIC |  V3 |  [Permissions](./out/SONIC-V3.md#contracts) | |--------|--------|--------|
 |  XLAYER |  V3 |  [Permissions](./out/XLAYER-V3.md#contracts) | |--------|--------|--------|
 |  XLAYER |  GHO |  [Permissions](./out/XLAYER-GHO.md#contracts) | |--------|--------|--------|
