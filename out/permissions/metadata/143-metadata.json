@@ -11,6 +11,26 @@
         "address": "0xD3DD0bE957fcE2dCd359e09374Cbc99f60337D42",
         "deploymentBlock": 80783599,
         "firstIndexedAt": 80783599
+      },
+      "ACL_MANAGER": {
+        "address": "0xa9fEe192a76B8f5e5f3d310AB6C526cB11F3d95B",
+        "deploymentBlock": 81909758,
+        "firstIndexedAt": 81909758
+      },
+      "COLLECTOR": {
+        "address": "0x22A14267f9F8bA21D11898F0772e652B09e6A8A1",
+        "deploymentBlock": 81909749,
+        "firstIndexedAt": 81909749
+      }
+    }
+  },
+  "V3_EMISSION": {
+    "latestBlockNumber": 82058870,
+    "indexedContracts": {
+      "EMISSION_MANAGER": {
+        "address": "0x2da993D6c83408039b6842Aa56A9dE8044Dc7311",
+        "deploymentBlock": 81909749,
+        "firstIndexedAt": 82058870
       }
     }
   }
