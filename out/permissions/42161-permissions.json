@@ -1021,9 +1021,9 @@
                 {
                   "address": "0xdeadD8aB03075b7FBA81864202a2f59EE25B312b",
                   "owners": [
-                    "0x818C277dBE886b934e60aa047250A73529E26A99",
-                    "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
-                    "0xb647055A9915bF9c8021a684E175A353525b9890"
+                    "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                    "0x4b752551fC6345A7de82F76fd7a5015CA16d1a74",
+                    "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58"
                   ],
                   "signersThreshold": 2
                 },
