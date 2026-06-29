@@ -163,6 +163,11 @@
                   "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
                 ],
                 "signersThreshold": 4
+              },
+              {
+                "address": "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -204,6 +209,11 @@
                   "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
                 ],
                 "signersThreshold": 4
+              },
+              {
+                "address": "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -386,7 +396,9 @@
         ],
         "ASSET_LISTING_ADMIN": [],
         "FLASH_BORROWER": [],
-        "RISK_ADMIN": []
+        "RISK_ADMIN": [
+          "0xA5Ba213867E175A182a5dd6A9193C6158738105A"
+        ]
       }
     },
     "gsmRoles": {},
