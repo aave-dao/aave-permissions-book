@@ -168,6 +168,11 @@
                 "address": "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -212,6 +217,11 @@
               },
               {
                 "address": "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -341,6 +351,17 @@
               "renounceOwnership",
               "transferOwnership"
             ]
+          },
+          {
+            "modifier": "onlyEmissionAdmin",
+            "addresses": [],
+            "functions": [
+              "configureAssets",
+              "setTransferStrategy",
+              "setRewardOracle",
+              "setDistributionEnd",
+              "setEmissionPerSecond"
+            ]
           }
         ]
       },
@@ -397,7 +418,8 @@
         "ASSET_LISTING_ADMIN": [],
         "FLASH_BORROWER": [],
         "RISK_ADMIN": [
-          "0xA5Ba213867E175A182a5dd6A9193C6158738105A"
+          "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
+          "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34"
         ]
       }
     },
