@@ -68,5 +68,15 @@
         "firstIndexedAt": 89592169
       }
     }
+  },
+  "V4": {
+    "latestBlockNumber": 89744525,
+    "indexedContracts": {
+      "ACCESS_MANAGER": {
+        "address": "0xe069096bDAfF9bAD15b2f1079EaF0f1685a24522",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      }
+    }
   }
 }
