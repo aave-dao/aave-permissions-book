@@ -1,0 +1,18 @@
+package.json
+  h_739c25e72c37fb 23
+helpers/configs/networks/avalanche.ts
+  h_739c25e72c37fb 4,12-14,38-70,105-107,112
+out/permissions/metadata/43114-metadata.json
+  h_739c25e72c37fb 71-80
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "360c9e9a9e781872df53ff73e920f2a3248d9015",
+  "prompts": {},
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
