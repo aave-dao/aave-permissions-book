@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 86100223,
+    "latestBlockNumber": 86299602,
     "indexedContracts": {
       "CROSS_CHAIN_CONTROLLER": {
         "address": "0x8dd5b84b26ae3916A5Fb34C8968F93d206216b63",
@@ -25,12 +25,12 @@
     }
   },
   "V3_EMISSION": {
-    "latestBlockNumber": 86100223,
+    "latestBlockNumber": 86299602,
     "indexedContracts": {
       "EMISSION_MANAGER": {
         "address": "0x2da993D6c83408039b6842Aa56A9dE8044Dc7311",
         "deploymentBlock": 81909749,
-        "firstIndexedAt": 85886165
+        "firstIndexedAt": 86100223
       }
     }
   }

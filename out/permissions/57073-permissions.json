@@ -396,10 +396,9 @@
               {
                 "address": "0xEcD37F855bB9814D75A83F0021815dc5cd6fd889",
                 "owners": [
-                  "0xEE63c668A5774110243A0708e7920A64DAFC6278",
                   "0x2F52F9D56E19650806E469665d4DcA055B4AcE42"
                 ],
-                "signersThreshold": 2
+                "signersThreshold": 1
               }
             ],
             "functions": [
