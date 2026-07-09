@@ -70,6 +70,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  CELO |  V3 |  [Permissions](./out/CELO-V3.md#contracts) | |--------|--------|--------|
 |  AVALANCHE |  V3 |  [Permissions](./out/AVALANCHE-V3.md#contracts) | |--------|--------|--------|
 |  AVALANCHE |  V2 |  [Permissions](./out/AVALANCHE-V2.md#contracts) | |--------|--------|--------|
+|  AVALANCHE |  V4 |  [Permissions](./out/AVALANCHE-V4.md#contracts) | |--------|--------|--------|
 |  INK |  V3_WHITE_LABEL |  [Permissions](./out/INK-V3_WHITE_LABEL.md#contracts) | |--------|--------|--------|
 |  INK |  GHO |  [Permissions](./out/INK-GHO.md#contracts) | |--------|--------|--------|
 |  LINEA |  V3 |  [Permissions](./out/LINEA-V3.md#contracts) | |--------|--------|--------|

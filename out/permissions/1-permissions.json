@@ -9806,7 +9806,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -9868,7 +9868,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -9930,9 +9930,62 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "PAXOS Hub": {
+        "address": "0x62d63197660c080236193CA60b70E49A08E90368",
+        "modifiers": [
+          {
+            "modifier": "HUB_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x1F0753480bB03EaA00863224602267B7E0525C3d",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "addAsset",
+              "updateAssetConfig",
+              "addSpoke",
+              "updateSpokeConfig",
+              "setInterestRateData"
+            ]
+          },
+          {
+            "modifier": "HUB_FEE_MINTER_ROLE",
+            "addresses": [],
+            "functions": [
+              "mintFeeShares"
+            ]
+          },
+          {
+            "modifier": "HUB_DEFICIT_ELIMINATOR_ROLE",
+            "addresses": [],
+            "functions": [
+              "eliminateDeficit"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x67b9be45aae6359826a638063537b90cc80f5d2f"
+      },
+      "_PAXOS Hub ProxyAdmin": {
+        "address": "0x67b9be45aae6359826a638063537b90cc80f5d2f",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": []
@@ -9965,7 +10018,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10046,7 +10099,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10104,7 +10157,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10162,7 +10215,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10220,7 +10273,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10278,7 +10331,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10336,7 +10389,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10394,9 +10447,58 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
+      "USDG_PENDLE Spoke": {
+        "address": "0x956d8e0A89cfa3744428C4641b5a53B56167a7f9",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x47493605f134c3462bbc05cd792e45c7f1a61d71"
+      },
+      "_USDG_PENDLE Spoke ProxyAdmin": {
+        "address": "0x47493605f134c3462bbc05cd792e45c7f1a61d71",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": []
@@ -10452,7 +10554,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10510,7 +10612,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10568,7 +10670,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10593,7 +10695,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               },
@@ -10653,7 +10755,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10684,7 +10786,7 @@
                   "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                   "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                   "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                 ],
                 "signersThreshold": 5
               }
@@ -10973,7 +11075,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11003,7 +11105,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11033,7 +11135,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11063,7 +11165,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11093,7 +11195,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11123,7 +11225,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11153,7 +11255,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11183,7 +11285,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11213,7 +11315,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11243,7 +11345,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11273,7 +11375,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11303,7 +11405,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11333,7 +11435,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11363,7 +11465,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11393,7 +11495,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11423,7 +11525,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11453,7 +11555,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11483,7 +11585,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11513,7 +11615,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11543,7 +11645,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11573,7 +11675,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11603,7 +11705,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11633,7 +11735,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11663,7 +11765,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11693,7 +11795,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11723,7 +11825,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11753,7 +11855,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11783,7 +11885,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11813,7 +11915,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11843,7 +11945,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11873,9 +11975,72 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PAXOS PT USDG 24SEP2026 TokenizationSpoke": {
+          "address": "0x27eF1140364948A0E30E248297FfDFE5a4091ec4",
+          "modifiers": [],
+          "proxyAdmin": "0x0e73059e03154d13f2594c869633007aa7c9b118"
+        },
+        "_PAXOS PT USDG 24SEP2026 TokenizationSpoke ProxyAdmin": {
+          "address": "0x0e73059e03154d13f2594c869633007aa7c9b118",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PAXOS USDC TokenizationSpoke": {
+          "address": "0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8",
+          "modifiers": [],
+          "proxyAdmin": "0x560ac477203cd800292c755f48c6442ea59e3615"
+        },
+        "_PAXOS USDC TokenizationSpoke ProxyAdmin": {
+          "address": "0x560ac477203cd800292c755f48c6442ea59e3615",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PAXOS USDT TokenizationSpoke": {
+          "address": "0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA",
+          "modifiers": [],
+          "proxyAdmin": "0xb0e6bcf33dca44211bb6ec7990f4a8a56314d313"
+        },
+        "_PAXOS USDT TokenizationSpoke ProxyAdmin": {
+          "address": "0xb0e6bcf33dca44211bb6ec7990f4a8a56314d313",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
+                  "owners": [],
+                  "signersThreshold": 0
                 }
               ],
               "functions": []
@@ -11902,7 +12067,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11930,7 +12095,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11957,7 +12122,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -11984,7 +12149,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
@@ -12012,7 +12177,7 @@
                     "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
                     "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
                     "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x5063b3D23C3640d51c9E2aef41063B1d482C70ff"
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
                   ],
                   "signersThreshold": 5
                 }
