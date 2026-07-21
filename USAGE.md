@@ -58,6 +58,9 @@ npm run modifiers:generate -- -n 1 -p V3 --fork --payload 0xYourPayloadAddress
 
 # Fork mode with raw calldata (see "Using Fork Mode" section)
 npm run modifiers:generate -- -n 1 -p V3 --fork --calldata 0xCalldata --caller 0xCallerAddress --target 0xTargetAddress
+
+# Fork mode with a Safe transaction builder json (see "Using Fork Mode" section)
+npm run modifiers:generate -- -n 1 -p V3 --fork --safe-json ./path/to/batch.json
 ```
 
 ### Generate Markdown Tables
@@ -76,11 +79,12 @@ npm run tables:create -- -n 1 -p V3
 |------|-------|-------------|
 | `--network <chainId>` | `-n` | Filter by network chain ID (repeatable) |
 | `--pool <poolKey>` | `-p` | Filter by pool key (repeatable, requires `--network`) |
-| `--fork` | `-f` | Enable fork mode (requires `--network`, `--pool`, and either `--payload` or `--calldata`) |
-| `--payload <address>` | | Payload address to execute on the fork (mutually exclusive with `--calldata`) |
-| `--calldata <hex>` | | Raw calldata to execute on the fork (mutually exclusive with `--payload`) |
+| `--fork` | `-f` | Enable fork mode (requires `--network`, `--pool`, and either `--payload`, `--calldata` or `--safe-json`) |
+| `--payload <address>` | | Payload address to execute on the fork (mutually exclusive with `--calldata`/`--safe-json`) |
+| `--calldata <hex>` | | Raw calldata to execute on the fork (mutually exclusive with `--payload`/`--safe-json`) |
 | `--caller <address>` | | Address to impersonate as the transaction sender (requires `--calldata`) |
 | `--target <address>` | | Target contract address for the calldata (requires `--calldata`) |
+| `--safe-json <file>` | | Safe transaction builder json batch to execute on the fork (mutually exclusive with `--payload`/`--calldata`) |
 
 ## How It Works
 
@@ -260,9 +264,10 @@ This is a more involved process. See the **[Adding Pool Types Guide](./ADDING_PO
 
 Fork mode uses [Anvil](https://book.getfoundry.sh/reference/anvil/) (from Foundry) to create a local fork of the blockchain, execute an action on it, and then index the resulting permission changes. This lets you see what permissions would change if the action were executed.
 
-There are two fork execution modes:
+There are three fork execution modes:
 - **Payload mode** (`--payload`): Executes an Aave governance payload through the PayloadsController.
 - **Calldata mode** (`--calldata`): Executes raw calldata by impersonating a caller address. Useful for simulating multisig transactions, direct contract calls, or any action that doesn't go through the Aave governance payload flow.
+- **Safe json mode** (`--safe-json`): Executes a json batch exported from the [Safe transaction builder](https://help.safe.global/en/articles/40841-transaction-builder) app. Each transaction of the batch is executed in order, impersonating the Safe (`meta.createdFromSafeAddress`).
 
 ### Prerequisites
 
@@ -283,6 +288,7 @@ curl -L https://foundry.paradigm.xyz | bash && foundryup
      - **Executed**: Throws an error (fork is not needed).
      - **Cancelled / Expired**: Throws an error (payload cannot be executed).
    - **Calldata mode** (`--calldata`): The caller address is impersonated using Anvil's `impersonateAccount`, funded with native token for gas, and the calldata is sent to the target contract. This works with any address, including multisigs (e.g., Gnosis Safe).
+   - **Safe json mode** (`--safe-json`): The Safe is impersonated and funded for gas, then every transaction of the batch is encoded (from `contractMethod`/`contractInputsValues`, or raw `data`) and sent in order. Since the targets only see the Safe as `msg.sender`, this produces the same state changes as executing the batch through `Safe.execTransaction` with owner signatures.
 3. **Permission indexing**: Events are indexed from mainnet first (up to the fork block), then from the fork (post-execution). The fork events are layered on top.
 4. **State queries**: All contract state reads (owner, guardian, roles, etc.) are made against the fork, reflecting the post-execution state.
 
@@ -337,6 +343,24 @@ npm run tables:create -- -n 1 -p V3
 git diff
 ```
 
+#### With a Safe transaction builder json
+
+```bash
+# 1. Create a branch for the review
+git checkout -b review/safe-batch-name
+
+# 2. Ensure the base permissions are up to date
+npm run modifiers:generate -- -n 1 -p V3
+npm run tables:create -- -n 1 -p V3
+
+# 3. Run fork mode with the json batch exported from the Safe transaction builder
+npm run modifiers:generate -- -n 1 -p V3 --fork --safe-json ./path/to/batch.json
+npm run tables:create -- -n 1 -p V3
+
+# 4. Review the diff
+git diff
+```
+
 ## Project Structure
 
 ```
@@ -362,7 +386,8 @@ git diff
 │   ├── tableGenerator.ts        # Markdown table rendering
 │   ├── decentralization.ts      # Ownership chain classification
 │   ├── poolHelpers.ts           # Provider resolution for fork/regular mode
-│   ├── anvil.ts                  # Anvil fork management, payload and calldata execution
+│   ├── anvil.ts                  # Anvil fork management, payload/calldata/safe batch execution
+│   ├── safeTxBuilder.ts          # Safe transaction builder json parsing and encoding
 │   ├── cli.ts                   # CLI argument parsing
 │   └── logger.ts                # Structured logging
 ├── statics/                     # Static permissions JSON files
