@@ -134,6 +134,14 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
   }
 }
 
+// Paxos replacement TokenizationSpokes, not yet in the address book
+v4TokenizationSpokesAddressBook['PAXOS_USDC_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xFaB44fbD00C5056956BC1c4d681A80563E10d2fD';
+v4TokenizationSpokesAddressBook['PAXOS_USDT_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xF38C21AE3b87981e954c4eF6b5C1Cbd4BfB00E27';
+v4TokenizationSpokesAddressBook['PAXOS_PT_USDG_24SEP2026_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xB4086ae520EA1314b3EE7f899887acfD5ccdE406';
+
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,
   tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,
