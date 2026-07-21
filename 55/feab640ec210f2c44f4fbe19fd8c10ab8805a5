@@ -1,0 +1,46 @@
+helpers/anvil.ts
+  s_ac26fab67ea025::t_31109f68d2f84b 342-401
+  s_ac26fab67ea025::t_9a5137615d5d17 14-17
+  s_ac26fab67ea025::t_2d1d630de2717f 341
+helpers/safeTxBuilder.ts
+  s_ac26fab67ea025::t_8c4ff34f3c4953 1-154
+scripts/modifiersCalculator.ts
+  s_ac26fab67ea025::t_42d035069379a4 128-135
+  s_ac26fab67ea025::t_96888c8755df8d 77,79
+  s_ac26fab67ea025::t_349e0681d657b8 100,103
+  s_ac26fab67ea025::t_60c29243213089 210
+helpers/cli.ts
+  s_ac26fab67ea025::t_3cf1578216ec35 25
+  s_ac26fab67ea025::t_7912a73d9cefa1 61,63-64,67-68
+  s_ac26fab67ea025::t_4a16328f6a4e64 55-57
+  s_ac26fab67ea025::t_88541ef823db60 11
+  s_ac26fab67ea025::t_c15aa7f75b5134 162-164
+helpers/eventIndexer.ts
+  s_ac26fab67ea025::t_5d21b8276795b8 215-217,231-232
+  s_ac26fab67ea025::t_24d0e16f38fb57 4-9
+  s_ac26fab67ea025::t_2aa8db08767b19 80-87
+  s_ac26fab67ea025::t_d7576a79884b6c 154,164
+USAGE.md
+  s_ac26fab67ea025::t_978652422ea969 61-63
+  s_ac26fab67ea025::t_2e6ed62fae0be5 82-84,87
+  s_ac26fab67ea025::t_fd1a185079dd99 346-363
+  s_ac26fab67ea025::t_91df0959127782 291
+  s_ac26fab67ea025::t_f5e74b47981c7c 267,270
+  s_ac26fab67ea025::t_b2ccee322330f3 389-390
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "55feab640ec210f2c44f4fbe19fd8c10ab8805a5",
+  "prompts": {},
+  "sessions": {
+    "s_ac26fab67ea025": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d062ecab-8b17-4d0e-9d3f-e6ccfc8d9fbd",
+        "model": "claude-fable-5"
+      },
+      "human_author": "Alexandru Niculae <43644109+avniculae@users.noreply.github.com>"
+    }
+  }
+}
