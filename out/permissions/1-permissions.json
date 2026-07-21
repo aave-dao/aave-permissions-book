@@ -12050,6 +12050,96 @@
               "functions": []
             }
           ]
+        },
+        "PAXOS USDC REPLACEMENT TokenizationSpoke": {
+          "address": "0xFaB44fbD00C5056956BC1c4d681A80563E10d2fD",
+          "modifiers": [],
+          "proxyAdmin": "0xe1b8fff9330ca9d0058a5afdad69d0fbc85a425f"
+        },
+        "_PAXOS USDC REPLACEMENT TokenizationSpoke ProxyAdmin": {
+          "address": "0xe1b8fff9330ca9d0058a5afdad69d0fbc85a425f",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PAXOS USDT REPLACEMENT TokenizationSpoke": {
+          "address": "0xF38C21AE3b87981e954c4eF6b5C1Cbd4BfB00E27",
+          "modifiers": [],
+          "proxyAdmin": "0x09e816c2852da92d773de556552244ee128cfb2b"
+        },
+        "_PAXOS USDT REPLACEMENT TokenizationSpoke ProxyAdmin": {
+          "address": "0x09e816c2852da92d773de556552244ee128cfb2b",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "PAXOS PT USDG 24SEP2026 REPLACEMENT TokenizationSpoke": {
+          "address": "0xB4086ae520EA1314b3EE7f899887acfD5ccdE406",
+          "modifiers": [],
+          "proxyAdmin": "0x5a005989e689c7d8b0229e4900372cbe2ac1ec6d"
+        },
+        "_PAXOS PT USDG 24SEP2026 REPLACEMENT TokenizationSpoke ProxyAdmin": {
+          "address": "0x5a005989e689c7d8b0229e4900372cbe2ac1ec6d",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
         }
       }
     },

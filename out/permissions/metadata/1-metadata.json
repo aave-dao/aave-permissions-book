@@ -150,7 +150,7 @@
     }
   },
   "V4": {
-    "latestBlockNumber": 25577492,
+    "latestBlockNumber": 25582206,
     "indexedContracts": {
       "ACCESS_MANAGER": {
         "address": "0x08aE3BE30958cDd1847ec58fFfd4C451a87fDF01",
