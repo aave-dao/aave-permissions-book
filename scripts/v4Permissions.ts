@@ -54,9 +54,10 @@ const buildV4ContractInstances = (addressBook: AddressBook): V4ContractInstance[
   for (const key of Object.keys(addressBook)) {
     if ((key.endsWith('_SPOKE') || key.endsWith('_ESPOKE')) && !key.startsWith('SPOKE_') && !key.startsWith('TREASURY_') && typeof addressBook[key] === 'string') {
       const isESpoke = key.endsWith('_E_SPOKE') || key.endsWith('_ESPOKE');
-      const prefix = isESpoke
+      const prefix = (isESpoke
         ? key.replace(/_E_SPOKE$|_ESPOKE$/, '')
-        : key.replace(/_SPOKE$/, '');
+        : key.replace(/_SPOKE$/, '')
+      ).replace(/_/g, ' ');
       instances.push({
         displayName: `${prefix} ${isESpoke ? 'ESpoke' : 'Spoke'}`,
         addressKey: key,

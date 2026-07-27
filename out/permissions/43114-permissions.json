@@ -3497,7 +3497,7 @@
           }
         ]
       },
-      "AVAX_CORRELATED Spoke": {
+      "AVAX CORRELATED Spoke": {
         "address": "0x3b517594277c67307CF2d7CBE6FE1D4399B68c41",
         "modifiers": [
           {
@@ -3530,7 +3530,7 @@
         ],
         "proxyAdmin": "0x34f5392e2cfedf971223f070d3c51bd5165196f4"
       },
-      "_AVAX_CORRELATED Spoke ProxyAdmin": {
+      "_AVAX CORRELATED Spoke ProxyAdmin": {
         "address": "0x34f5392e2cfedf971223f070d3c51bd5165196f4",
         "modifiers": [
           {
