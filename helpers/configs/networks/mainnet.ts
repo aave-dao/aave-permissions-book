@@ -134,6 +134,14 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
   }
 }
 
+// Global Dollar replacement TokenizationSpokes, not yet in the address book
+v4TokenizationSpokesAddressBook['GLOBAL_DOLLAR_USDC_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xaed7c529bD2878170B61C758DfAa215AC7a4FD07';
+v4TokenizationSpokesAddressBook['GLOBAL_DOLLAR_USDT_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf';
+v4TokenizationSpokesAddressBook['GLOBAL_DOLLAR_PT_USDG_24SEP2026_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663';
+
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,
   tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,

@@ -12050,6 +12050,96 @@
               "functions": []
             }
           ]
+        },
+        "GLOBAL DOLLAR USDC REPLACEMENT TokenizationSpoke": {
+          "address": "0xaed7c529bD2878170B61C758DfAa215AC7a4FD07",
+          "modifiers": [],
+          "proxyAdmin": "0xd5022ba3cedee544a97962d7c55e2c70e4e3dd0d"
+        },
+        "_GLOBAL DOLLAR USDC REPLACEMENT TokenizationSpoke ProxyAdmin": {
+          "address": "0xd5022ba3cedee544a97962d7c55e2c70e4e3dd0d",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "GLOBAL DOLLAR USDT REPLACEMENT TokenizationSpoke": {
+          "address": "0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf",
+          "modifiers": [],
+          "proxyAdmin": "0xeed53f90f1470d41c72cabc6ea996b11a47bc8ef"
+        },
+        "_GLOBAL DOLLAR USDT REPLACEMENT TokenizationSpoke ProxyAdmin": {
+          "address": "0xeed53f90f1470d41c72cabc6ea996b11a47bc8ef",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "GLOBAL DOLLAR PT USDG 24SEP2026 REPLACEMENT TokenizationSpoke": {
+          "address": "0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663",
+          "modifiers": [],
+          "proxyAdmin": "0xd1650a62aeb378affd8e60b2582ffe8df27cc364"
+        },
+        "_GLOBAL DOLLAR PT USDG 24SEP2026 REPLACEMENT TokenizationSpoke ProxyAdmin": {
+          "address": "0xd1650a62aeb378affd8e60b2582ffe8df27cc364",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
         }
       }
     },
