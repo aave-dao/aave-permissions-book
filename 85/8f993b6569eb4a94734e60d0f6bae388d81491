@@ -1,0 +1,25 @@
+helpers/configs/networks/mainnet.ts
+  s_4a7481846e155d::t_d102a050c50eff 137-143
+out/ETHEREUM-V4.md
+  s_4a7481846e155d::t_c3bd91836e8031 62-64
+out/permissions/1-permissions.json
+  s_4a7481846e155d::t_3888b88948afdf 12054-12055,12057,12059-12060,12084-12085,12087,12089-12090,12114-12115,12117,12119-12120
+out/permissions/metadata/1-metadata.json
+  s_4a7481846e155d::t_2f25d52bc703e6 153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "858f993b6569eb4a94734e60d0f6bae388d81491",
+  "prompts": {},
+  "sessions": {
+    "s_4a7481846e155d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ec9089b4-1ab8-4297-a582-2d48da2e8b44",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Alexandru Niculae <43644109+avniculae@users.noreply.github.com>"
+    }
+  }
+}
