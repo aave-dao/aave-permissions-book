@@ -134,13 +134,13 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
   }
 }
 
-// Paxos replacement TokenizationSpokes, not yet in the address book
-v4TokenizationSpokesAddressBook['PAXOS_USDC_REPLACEMENT_TOKENIZATION_SPOKE'] =
-  '0xFaB44fbD00C5056956BC1c4d681A80563E10d2fD';
-v4TokenizationSpokesAddressBook['PAXOS_USDT_REPLACEMENT_TOKENIZATION_SPOKE'] =
-  '0xF38C21AE3b87981e954c4eF6b5C1Cbd4BfB00E27';
-v4TokenizationSpokesAddressBook['PAXOS_PT_USDG_24SEP2026_REPLACEMENT_TOKENIZATION_SPOKE'] =
-  '0xB4086ae520EA1314b3EE7f899887acfD5ccdE406';
+// Global Dollar replacement TokenizationSpokes, not yet in the address book
+v4TokenizationSpokesAddressBook['GLOBAL_DOLLAR_USDC_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xaed7c529bD2878170B61C758DfAa215AC7a4FD07';
+v4TokenizationSpokesAddressBook['GLOBAL_DOLLAR_USDT_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf';
+v4TokenizationSpokesAddressBook['GLOBAL_DOLLAR_PT_USDG_24SEP2026_REPLACEMENT_TOKENIZATION_SPOKE'] =
+  '0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663';
 
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,

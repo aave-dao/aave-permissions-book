@@ -59,9 +59,9 @@
 |  [PAXOS PT USDG 24SEP2026 TokenizationSpoke](https://etherscan.io/address/0x27eF1140364948A0E30E248297FfDFE5a4091ec4) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
 |  [PAXOS USDC TokenizationSpoke](https://etherscan.io/address/0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
 |  [PAXOS USDT TokenizationSpoke](https://etherscan.io/address/0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
-|  [PAXOS USDC REPLACEMENT TokenizationSpoke](https://etherscan.io/address/0xFaB44fbD00C5056956BC1c4d681A80563E10d2fD) |  V4 Security Council | |--------|--------|
-|  [PAXOS USDT REPLACEMENT TokenizationSpoke](https://etherscan.io/address/0xF38C21AE3b87981e954c4eF6b5C1Cbd4BfB00E27) |  V4 Security Council | |--------|--------|
-|  [PAXOS PT USDG 24SEP2026 REPLACEMENT TokenizationSpoke](https://etherscan.io/address/0xB4086ae520EA1314b3EE7f899887acfD5ccdE406) |  V4 Security Council | |--------|--------|
+|  [GLOBAL DOLLAR USDC REPLACEMENT TokenizationSpoke](https://etherscan.io/address/0xaed7c529bD2878170B61C758DfAa215AC7a4FD07) |  V4 Security Council | |--------|--------|
+|  [GLOBAL DOLLAR USDT REPLACEMENT TokenizationSpoke](https://etherscan.io/address/0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf) |  V4 Security Council | |--------|--------|
+|  [GLOBAL DOLLAR PT USDG 24SEP2026 REPLACEMENT TokenizationSpoke](https://etherscan.io/address/0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663) |  V4 Security Council | |--------|--------|
 
 ### Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
