@@ -197,9 +197,10 @@ export const indexPoolEvents = async ({
     latestBlockNumber = Math.max(latestBlockNumber, currentBlock);
   }
 
-  // Step 2: If fork mode, execute payload or calldata and fetch fork events
-  if (forkRpcUrl && (forkPayload || forkCalldata)) {
-    // Execute the payload or calldata on the Anvil fork
+  // Step 2: If fork mode, execute payload or calldata and fetch fork events.
+  // Passes that run after the action was already executed omit forkPayload and
+  // forkCalldata, and only read the fork events it produced.
+  if (forkRpcUrl) {
     if (forkPayload) {
       await executePayloadOnFork(
         forkRpcUrl,
@@ -278,6 +279,11 @@ export const CCC_EVENT_TYPES = ['SenderUpdated'];
  * Event types for OZ AccessManager (V4)
  */
 export const ACCESS_MANAGER_EVENT_TYPES = ['RoleGrantedAM', 'RoleRevokedAM', 'TargetFunctionRoleUpdated'];
+
+/**
+ * Event types for V4 Spokes
+ */
+export const SPOKE_EVENT_TYPES = ['UpdatePositionManager'];
 
 /**
  * Pool configuration for building contract configs.

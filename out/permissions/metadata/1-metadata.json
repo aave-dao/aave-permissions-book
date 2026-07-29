@@ -150,10 +150,245 @@
     }
   },
   "V4": {
-    "latestBlockNumber": 25634877,
+    "latestBlockNumber": 25639157,
     "indexedContracts": {
       "ACCESS_MANAGER": {
         "address": "0x08aE3BE30958cDd1847ec58fFfd4C451a87fDF01",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      }
+    }
+  },
+  "V4_SPOKE_PM": {
+    "latestBlockNumber": 25639157,
+    "indexedContracts": {
+      "0x7320cf22ac095ba2a2e0a652f77efb836c2e751b": {
+        "address": "0x7320cf22ac095ba2a2e0a652f77efb836c2e751b",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xcb0e7da9c635628f6d4827355aeca75ab8d3560f": {
+        "address": "0xcb0e7da9c635628f6d4827355aeca75ab8d3560f",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x559cec2c840d9dbb18936afc5e5341d78bfc7cbe": {
+        "address": "0x559cec2c840d9dbb18936afc5e5341d78bfc7cbe",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x45a04ca1a5cbeea4b44356c75edd29b33eb2527a": {
+        "address": "0x45a04ca1a5cbeea4b44356c75edd29b33eb2527a",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x5ec44a70f309854fe04d495cfe1b5da63dd1cc73": {
+        "address": "0x5ec44a70f309854fe04d495cfe1b5da63dd1cc73",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x531e90a2376902de8915789fcc1075e3b0c153e7": {
+        "address": "0x531e90a2376902de8915789fcc1075e3b0c153e7",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x58c14a5e061c9bc6926c5b853445290f296c2f7b": {
+        "address": "0x58c14a5e061c9bc6926c5b853445290f296c2f7b",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xc8a125ae4275a78aadc53b46ca10566bc9b249e0": {
+        "address": "0xc8a125ae4275a78aadc53b46ca10566bc9b249e0",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xac2435e3c25e8246870d33ce0a26988a46d5db68": {
+        "address": "0xac2435e3c25e8246870d33ce0a26988a46d5db68",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x2226749630775ee20230ad65214fb339087ef30d": {
+        "address": "0x2226749630775ee20230ad65214fb339087ef30d",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x6d9e2cdd61caf69af99b275704b6e272c41c6718": {
+        "address": "0x6d9e2cdd61caf69af99b275704b6e272c41c6718",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x82a9cc4656784e55ef2e78f704028b5e1bfc1732": {
+        "address": "0x82a9cc4656784e55ef2e78f704028b5e1bfc1732",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x33b41b74366f55327d959fff6d6b6fbc2853dbb1": {
+        "address": "0x33b41b74366f55327d959fff6d6b6fbc2853dbb1",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x7961f140b570490849db878ae222570ea838799d": {
+        "address": "0x7961f140b570490849db878ae222570ea838799d",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x4e712562fcb5337011398b6c630f55b60641cd5e": {
+        "address": "0x4e712562fcb5337011398b6c630f55b60641cd5e",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x0a65197b16c5969f92672051c9c9c0c75b369135": {
+        "address": "0x0a65197b16c5969f92672051c9c9c0c75b369135",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xe69c2045095c8ab3e2a7d77de2328fae5baf797c": {
+        "address": "0xe69c2045095c8ab3e2a7d77de2328fae5baf797c",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x90774889c22d2f2adf44da1f04c7c95542590df4": {
+        "address": "0x90774889c22d2f2adf44da1f04c7c95542590df4",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xdd2eb78bf9e6ac5068b95ad2d451e8c9af10ac81": {
+        "address": "0xdd2eb78bf9e6ac5068b95ad2d451e8c9af10ac81",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x24f8c062e1e0451736c1d6e023510da262a41df4": {
+        "address": "0x24f8c062e1e0451736c1d6e023510da262a41df4",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x502cd81da6a8f1785eb2eee72713b7388e16a854": {
+        "address": "0x502cd81da6a8f1785eb2eee72713b7388e16a854",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xc94bdd83d2c7655c280655d60954e79e88d4f949": {
+        "address": "0xc94bdd83d2c7655c280655d60954e79e88d4f949",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xa54382db40ec602c0a173a08f9e86ed40f9d4d10": {
+        "address": "0xa54382db40ec602c0a173a08f9e86ed40f9d4d10",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x80835eb50694ee0e519743f67e5401e6fd300006": {
+        "address": "0x80835eb50694ee0e519743f67e5401e6fd300006",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x2087513383330b961a3753b47627bbf149f31c70": {
+        "address": "0x2087513383330b961a3753b47627bbf149f31c70",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x5ae3d87de89ca6ce501e8317887f71eabed69e18": {
+        "address": "0x5ae3d87de89ca6ce501e8317887f71eabed69e18",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xd38098faf52d8e915eded84fbf30f81c17906938": {
+        "address": "0xd38098faf52d8e915eded84fbf30f81c17906938",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xfcd3d3c69cd032de0cc78fe529b7447d2fe7f666": {
+        "address": "0xfcd3d3c69cd032de0cc78fe529b7447d2fe7f666",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x486415fb1f8b062c89ed548f871cf64304aacb31": {
+        "address": "0x486415fb1f8b062c89ed548f871cf64304aacb31",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x46c588dd8453ac259c1f6a54b4c9a93c2ac3762d": {
+        "address": "0x46c588dd8453ac259c1f6a54b4c9a93c2ac3762d",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x900fd46d565d1ac8995928c0179052ec02a6d0e1": {
+        "address": "0x900fd46d565d1ac8995928c0179052ec02a6d0e1",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x27ef1140364948a0e30e248297ffdfe5a4091ec4": {
+        "address": "0x27ef1140364948a0e30e248297ffdfe5a4091ec4",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x4131e0b2e7afeceaf3d3b4225aa61a3b2b7535b8": {
+        "address": "0x4131e0b2e7afeceaf3d3b4225aa61a3b2b7535b8",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x8dabe53e8cb991c57f0307f6f419e6d469b0deaa": {
+        "address": "0x8dabe53e8cb991c57f0307f6f419e6d469b0deaa",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x973a023a77420ba610f06b3858ad991df6d85a08": {
+        "address": "0x973a023a77420ba610f06b3858ad991df6d85a08",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x58131e79531cab1d52301228d1f7b842f26b9649": {
+        "address": "0x58131e79531cab1d52301228d1f7b842f26b9649",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xba1b3d55d249692b669a164024a838309b7508af": {
+        "address": "0xba1b3d55d249692b669a164024a838309b7508af",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xd8b93635b8c6d0ff98cbe90b5988e3f2d1cd9da1": {
+        "address": "0xd8b93635b8c6d0ff98cbe90b5988e3f2d1cd9da1",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x65407b940966954b23dfa3caa5c0702bb42984dc": {
+        "address": "0x65407b940966954b23dfa3caa5c0702bb42984dc",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x7ec68b5695e803e98a21a9a05d744f28b0a7753d": {
+        "address": "0x7ec68b5695e803e98a21a9a05d744f28b0a7753d",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x94e7a5dcbe816e498b89ab752661904e2f56c485": {
+        "address": "0x94e7a5dcbe816e498b89ab752661904e2f56c485",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x956d8e0a89cfa3744428c4641b5a53b56167a7f9": {
+        "address": "0x956d8e0a89cfa3744428c4641b5a53b56167a7f9",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xbf10bdfe177de0336afd7fccf80a904e15386219": {
+        "address": "0xbf10bdfe177de0336afd7fccf80a904e15386219",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x3131fe68c4722e726fe6b2819ed68e514395b9a4": {
+        "address": "0x3131fe68c4722e726fe6b2819ed68e514395b9a4",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xe1900480ac69f0b296841cd01cc37546d92f35cd": {
+        "address": "0xe1900480ac69f0b296841cd01cc37546d92f35cd",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0xb9b0b8616f6bf6841972a52058132be08d723155": {
+        "address": "0xb9b0b8616f6bf6841972a52058132be08d723155",
         "deploymentBlock": 24720870,
         "firstIndexedAt": 24720870
       }

@@ -4145,6 +4145,29 @@
             }
           ]
         }
+      },
+      "activeBySpoke": {
+        "0x435272ceff93a1e657e8abfdf0a13e95900a3a56": [
+          "0x50c4c40ab6bae46b372a251beace388439aa96b4",
+          "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
+          "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
+          "0xe4c7183a5f22c365140f41d733d8a8bad5a1a6ba",
+          "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ],
+        "0x6a37776b5e026dbdf043b4f933c323c84dd1b514": [
+          "0x50c4c40ab6bae46b372a251beace388439aa96b4",
+          "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
+          "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
+          "0xe4c7183a5f22c365140f41d733d8a8bad5a1a6ba",
+          "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ],
+        "0x3b517594277c67307cf2d7cbe6fe1d4399b68c41": [
+          "0x50c4c40ab6bae46b372a251beace388439aa96b4",
+          "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
+          "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
+          "0xe4c7183a5f22c365140f41d733d8a8bad5a1a6ba",
+          "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ]
       }
     }
   }

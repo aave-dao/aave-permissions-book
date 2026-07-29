@@ -1,5 +1,6 @@
 import { Address } from 'viem';
 import { Pools } from './configs.js';
+import { UntrackedV4Contracts } from './v4Discovery.js';
 
 /**
  * Generic AddressBook type for pool/governance address books.
@@ -72,6 +73,7 @@ export type TokenizationSpokes = {
 
 export type PositionManagers = {
   contracts: Contracts;
+  activeBySpoke?: Record<string, string[]>;
 };
 
 export type AccessManager = {
@@ -95,6 +97,7 @@ export type PoolInfo = {
   accessManager?: AccessManager;
   tokenizationSpokes?: TokenizationSpokes;
   positionManagers?: PositionManagers;
+  untracked?: UntrackedV4Contracts;
 };
 
 export type Pool = Record<string, PoolInfo>;
