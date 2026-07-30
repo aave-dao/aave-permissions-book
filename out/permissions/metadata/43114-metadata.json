@@ -78,5 +78,65 @@
         "firstIndexedAt": 89721317
       }
     }
+  },
+  "V4_SPOKE_PM": {
+    "latestBlockNumber": 91524983,
+    "indexedContracts": {
+      "0x1604d602f8a05cba2d8ff5d14de4c3498f15b6b4": {
+        "address": "0x1604d602f8a05cba2d8ff5d14de4c3498f15b6b4",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x7cd3ccc737f442050a861ec6b00768ae96b2f58e": {
+        "address": "0x7cd3ccc737f442050a861ec6b00768ae96b2f58e",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x01d7f7b7ce2123192fecc20bd1caf3e4d9e4c10d": {
+        "address": "0x01d7f7b7ce2123192fecc20bd1caf3e4d9e4c10d",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x2e4ba06ff97e10d09fa4f5a270e97301eae729a9": {
+        "address": "0x2e4ba06ff97e10d09fa4f5a270e97301eae729a9",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0xf5c849468318c8d5670020fdb96ae135fed37070": {
+        "address": "0xf5c849468318c8d5670020fdb96ae135fed37070",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x7b538a1840eaf2ed92eeb67ee744ae627335e201": {
+        "address": "0x7b538a1840eaf2ed92eeb67ee744ae627335e201",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x6c27a7435040b7cc512319d5690beef234dfe76e": {
+        "address": "0x6c27a7435040b7cc512319d5690beef234dfe76e",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x435272ceff93a1e657e8abfdf0a13e95900a3a56": {
+        "address": "0x435272ceff93a1e657e8abfdf0a13e95900a3a56",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x6a37776b5e026dbdf043b4f933c323c84dd1b514": {
+        "address": "0x6a37776b5e026dbdf043b4f933c323c84dd1b514",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x3b517594277c67307cf2d7cbe6fe1d4399b68c41": {
+        "address": "0x3b517594277c67307cf2d7cbe6fe1d4399b68c41",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      },
+      "0x2c4aea1a5f000889c6dffe8f52377afc2cb113a6": {
+        "address": "0x2c4aea1a5f000889c6dffe8f52377afc2cb113a6",
+        "deploymentBlock": 89721317,
+        "firstIndexedAt": 89721317
+      }
+    }
   }
 }

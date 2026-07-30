@@ -15,10 +15,13 @@ import {
  * deployed instances (one per Hub/Spoke). Each entry maps:
  *   - contractType: the key in the static permissions JSON
  *   - addressPrefix: prefix used in the address book (e.g., 'CORE_HUB', 'PLUS_HUB')
+ *
+ * Instances discovered on-chain have no address book key and carry `address`.
  */
-interface V4ContractInstance {
+export interface V4ContractInstance {
   displayName: string;
-  addressKey: string;
+  addressKey?: string;
+  address?: string;
   contractType: string;
 }
 
@@ -88,6 +91,93 @@ const buildV4ContractInstances = (addressBook: AddressBook): V4ContractInstance[
   }
 
   return instances;
+};
+
+const instanceAddress = (
+  instance: V4ContractInstance,
+  addressBook: AddressBook,
+): string | undefined =>
+  instance.address ??
+  (instance.addressKey ? (addressBook[instance.addressKey] as string | undefined) : undefined);
+
+/**
+ * Address book hubs and spokes, used as the entry points for on-chain discovery.
+ */
+export const getV4InstancesByType = (
+  addressBook: AddressBook,
+  tokenizationSpokesAddressBook?: Record<string, string>,
+): { hubs: string[]; spokes: string[] } => {
+  const hubs: string[] = [];
+  const spokes: string[] = Object.values(tokenizationSpokesAddressBook ?? {}).map((address) =>
+    address.toLowerCase(),
+  );
+
+  for (const instance of buildV4ContractInstances(addressBook)) {
+    const address = instanceAddress(instance, addressBook);
+    if (!address) continue;
+
+    if (instance.contractType === 'Hub') {
+      hubs.push(address.toLowerCase());
+    } else if (instance.contractType === 'Spoke' || instance.contractType === 'TreasurySpoke') {
+      spokes.push(address.toLowerCase());
+    }
+  }
+
+  return { hubs: [...new Set(hubs)], spokes: [...new Set(spokes)] };
+};
+
+/**
+ * Hub display names by address, so contracts discovered on-chain can reference
+ * hubs the same way the rest of the tables do.
+ */
+export const getV4HubDisplayNames = (addressBook: AddressBook): Record<string, string> => {
+  const names: Record<string, string> = {};
+
+  for (const instance of buildV4ContractInstances(addressBook)) {
+    if (instance.contractType !== 'Hub') continue;
+    const address = instanceAddress(instance, addressBook);
+    if (address) {
+      names[address.toLowerCase()] = instance.displayName;
+    }
+  }
+
+  return names;
+};
+
+/**
+ * Address book PositionManagers, used as known candidates when resolving which
+ * position managers are active on each spoke.
+ */
+export const getV4PositionManagerAddresses = (addressBook: AddressBook): string[] =>
+  Object.keys(PM_KEY_TO_CONTRACT_TYPE)
+    .filter((key) => typeof addressBook[key] === 'string')
+    .map((key) => (addressBook[key] as string).toLowerCase());
+
+/**
+ * Addresses the V4 tables already render, used as the baseline for deciding
+ * which on-chain contracts are untracked.
+ */
+export const getTrackedV4Addresses = (
+  addressBook: AddressBook,
+  tokenizationSpokesAddressBook?: Record<string, string>,
+): string[] => {
+  const addresses = buildV4ContractInstances(addressBook)
+    .map((instance) => instanceAddress(instance, addressBook))
+    .filter((address): address is string => Boolean(address));
+
+  for (const key of Object.keys(PM_KEY_TO_CONTRACT_TYPE)) {
+    if (typeof addressBook[key] === 'string') {
+      addresses.push(addressBook[key] as string);
+    }
+  }
+
+  if (typeof addressBook.ACCESS_MANAGER === 'string') {
+    addresses.push(addressBook.ACCESS_MANAGER);
+  }
+
+  addresses.push(...Object.values(tokenizationSpokesAddressBook ?? {}));
+
+  return [...new Set(addresses.map((address) => address.toLowerCase()))];
 };
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
@@ -208,16 +298,17 @@ export const resolveV4Modifiers = async (
   roleAddresses: Record<string, string[]>,
   functionRoles: Record<string, Record<string, string>>,
   configRoleLabels: Record<string, string>,
+  extraInstances: V4ContractInstance[] = [],
 ): Promise<{ contracts: Contracts; roleLabels: Record<string, string> }> => {
   const obj: Contracts = {};
   const ownerResolver = createOwnerResolver(provider);
   const allRoleIds = new Set<string>();
 
-  const instances = buildV4ContractInstances(addressBook);
+  const instances = [...buildV4ContractInstances(addressBook), ...extraInstances];
 
   // Collect all roleIds from on-chain function mappings AND role membership
   for (const instance of instances) {
-    const address = addressBook[instance.addressKey] as string | undefined;
+    const address = instanceAddress(instance, addressBook);
     if (!address || instance.contractType === 'TreasurySpoke') continue;
     const targetFnRoles = functionRoles[address.toLowerCase()] || {};
     for (const roleId of Object.values(targetFnRoles)) {
@@ -239,7 +330,7 @@ export const resolveV4Modifiers = async (
 
   // Resolve permissions per contract
   for (const instance of instances) {
-    const address = addressBook[instance.addressKey] as string | undefined;
+    const address = instanceAddress(instance, addressBook);
     if (!address) continue;
 
     if (instance.contractType === 'TreasurySpoke') {
@@ -360,16 +451,21 @@ export const resolveV4Modifiers = async (
 export const resolveTokenizationSpokeUpgradeability = async (
   tokenizationSpokesAddressBook: Record<string, string>,
   provider: Client,
+  extraSpokes: Record<string, string> = {},
 ): Promise<Contracts> => {
   const obj: Contracts = {};
   const ownerResolver = createOwnerResolver(provider);
 
+  const spokesByDisplayName: Record<string, string> = { ...extraSpokes };
   for (const [key, address] of Object.entries(tokenizationSpokesAddressBook)) {
     const displayName = key
       .replace(/_TOKENIZATION_SPOKE$/, '')
       .replace(/_/g, ' ')
       + ' TokenizationSpoke';
+    spokesByDisplayName[displayName] = address;
+  }
 
+  for (const [displayName, address] of Object.entries(spokesByDisplayName)) {
     obj[displayName] = {
       address,
       modifiers: [],
@@ -424,6 +520,7 @@ export const resolveV4PositionManagerModifiers = async (
   addressBook: AddressBook,
   provider: Client,
   permissionsObject: PermissionsJson,
+  extraPositionManagers: Record<string, string> = {},
 ): Promise<Contracts> => {
   const obj: Contracts = {};
   const ownerResolver = createOwnerResolver(provider);
@@ -432,12 +529,21 @@ export const resolveV4PositionManagerModifiers = async (
     (key) => key in PM_KEY_TO_CONTRACT_TYPE && typeof addressBook[key] === 'string',
   );
 
-  for (const pmKey of pmKeys) {
-    const address = addressBook[pmKey] as string;
-    const contractType = PM_KEY_TO_CONTRACT_TYPE[pmKey];
-    const displayName = pmKey.replace(/_/g, ' ');
+  const positionManagers: Array<{ displayName: string; address: string; contractType?: string }> =
+    pmKeys.map((pmKey) => ({
+      displayName: pmKey.replace(/_/g, ' '),
+      address: addressBook[pmKey] as string,
+      contractType: PM_KEY_TO_CONTRACT_TYPE[pmKey],
+    }));
 
-    const contractDef = permissionsObject.find((c) => c.contract === contractType);
+  for (const [displayName, address] of Object.entries(extraPositionManagers)) {
+    positionManagers.push({ displayName, address });
+  }
+
+  for (const { displayName, address, contractType } of positionManagers) {
+    const contractDef = contractType
+      ? permissionsObject.find((c) => c.contract === contractType)
+      : undefined;
     const modifiers = [];
 
     // Resolve owner (Ownable2Step)
@@ -454,7 +560,7 @@ export const resolveV4PositionManagerModifiers = async (
         .filter((f) => f.roles.includes('onlyOwner'))
         .map((f) => f.name) || [];
 
-      if (ownerFunctions.length > 0) {
+      if (ownerFunctions.length > 0 || !contractDef) {
         modifiers.push({
           modifier: 'onlyOwner',
           addresses: [{
@@ -483,7 +589,7 @@ export const resolveV4PositionManagerModifiers = async (
         .filter((f) => f.roles.includes('onlyRescueGuardian'))
         .map((f) => f.name) || [];
 
-      if (rescueFunctions.length > 0) {
+      if (rescueFunctions.length > 0 || !contractDef) {
         modifiers.push({
           modifier: 'onlyRescueGuardian',
           addresses: [{

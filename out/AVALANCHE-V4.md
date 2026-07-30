@@ -47,6 +47,13 @@
 |  [NATIVE TOKEN GATEWAY](https://snowscan.xyz/address/0xE4C7183A5f22c365140F41d733d8A8baD5A1a6bA) |  - |  onlyOwner |  [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
 |  [SIGNATURE GATEWAY](https://snowscan.xyz/address/0x6E3B91A951DA9b515a5E98F0c7D210a697382e7F) |  - |  onlyOwner |  [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
 
+### Spoke PositionManagers
+| spoke |active position managers |
+|----------|----------|
+|  [MAIN Spoke](https://snowscan.xyz/address/0x435272CefF93a1E657E8ABfdf0A13e95900A3a56) |  [GIVER POSITION MANAGER](https://snowscan.xyz/address/0x50c4C40aB6BaE46B372a251BEacE388439aa96b4), [TAKER POSITION MANAGER](https://snowscan.xyz/address/0x5A5A711560eb9293Ef6F4bc33CD8589b4A603D10), [CONFIG POSITION MANAGER](https://snowscan.xyz/address/0x50BE00C5EbF6CC230B8970f4205Cd0B5A70EaEB1), [NATIVE TOKEN GATEWAY](https://snowscan.xyz/address/0xE4C7183A5f22c365140F41d733d8A8baD5A1a6bA), [SIGNATURE GATEWAY](https://snowscan.xyz/address/0x6E3B91A951DA9b515a5E98F0c7D210a697382e7F) | |--------|--------|
+|  [FOREX Spoke](https://snowscan.xyz/address/0x6a37776B5E026dBdF043b4F933c323C84DD1B514) |  [GIVER POSITION MANAGER](https://snowscan.xyz/address/0x50c4C40aB6BaE46B372a251BEacE388439aa96b4), [TAKER POSITION MANAGER](https://snowscan.xyz/address/0x5A5A711560eb9293Ef6F4bc33CD8589b4A603D10), [CONFIG POSITION MANAGER](https://snowscan.xyz/address/0x50BE00C5EbF6CC230B8970f4205Cd0B5A70EaEB1), [NATIVE TOKEN GATEWAY](https://snowscan.xyz/address/0xE4C7183A5f22c365140F41d733d8A8baD5A1a6bA), [SIGNATURE GATEWAY](https://snowscan.xyz/address/0x6E3B91A951DA9b515a5E98F0c7D210a697382e7F) | |--------|--------|
+|  [AVAX_CORRELATED Spoke](https://snowscan.xyz/address/0x3b517594277c67307CF2d7CBE6FE1D4399B68c41) |  [GIVER POSITION MANAGER](https://snowscan.xyz/address/0x50c4C40aB6BaE46B372a251BEacE388439aa96b4), [TAKER POSITION MANAGER](https://snowscan.xyz/address/0x5A5A711560eb9293Ef6F4bc33CD8589b4A603D10), [CONFIG POSITION MANAGER](https://snowscan.xyz/address/0x50BE00C5EbF6CC230B8970f4205Cd0B5A70EaEB1), [NATIVE TOKEN GATEWAY](https://snowscan.xyz/address/0xE4C7183A5f22c365140F41d733d8A8baD5A1a6bA), [SIGNATURE GATEWAY](https://snowscan.xyz/address/0x6E3B91A951DA9b515a5E98F0c7D210a697382e7F) | |--------|--------|
+
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
