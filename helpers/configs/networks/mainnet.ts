@@ -134,6 +134,9 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
   }
 }
 
+// MAPLE Spoke, not yet in the address book
+v4MainAddressBook['MAPLE_SPOKE'] = '0x774b9655413c34809c1f1b16b654465A89EBE989';
+
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,
   tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,

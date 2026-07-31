@@ -74,6 +74,7 @@ export type TokenizationSpokes = {
 export type PositionManagers = {
   contracts: Contracts;
   activeBySpoke?: Record<string, string[]>;
+  spokesByPositionManager?: Record<string, string[]>;
 };
 
 export type AccessManager = {

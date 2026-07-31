@@ -150,7 +150,7 @@
     }
   },
   "V4": {
-    "latestBlockNumber": 25649243,
+    "latestBlockNumber": 25651704,
     "indexedContracts": {
       "ACCESS_MANAGER": {
         "address": "0x08aE3BE30958cDd1847ec58fFfd4C451a87fDF01",
@@ -160,7 +160,7 @@
     }
   },
   "V4_SPOKE_PM": {
-    "latestBlockNumber": 25649243,
+    "latestBlockNumber": 25651705,
     "indexedContracts": {
       "0x7320cf22ac095ba2a2e0a652f77efb836c2e751b": {
         "address": "0x7320cf22ac095ba2a2e0a652f77efb836c2e751b",
@@ -389,6 +389,11 @@
       },
       "0xb9b0b8616f6bf6841972a52058132be08d723155": {
         "address": "0xb9b0b8616f6bf6841972a52058132be08d723155",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x774b9655413c34809c1f1b16b654465a89ebe989": {
+        "address": "0x774b9655413c34809c1f1b16b654465a89ebe989",
         "deploymentBlock": 24720870,
         "firstIndexedAt": 24720870
       }

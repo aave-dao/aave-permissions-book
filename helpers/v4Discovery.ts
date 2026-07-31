@@ -1,6 +1,7 @@
 import { Address, Client, getAddress } from 'viem';
 import { multicall, readContract } from 'viem/actions';
 import { v4HubAbi } from '../abis/v4HubAbi.js';
+import { v4PositionManagerAbi } from '../abis/v4PositionManagerAbi.js';
 import { v4SpokeAbi } from '../abis/v4SpokeAbi.js';
 
 const MULTICALL3_ADDRESS = '0xcA11bde05977b3631167028862bE2a173976CA11';
@@ -207,6 +208,44 @@ export const resolveActivePositionManagers = async (
   });
 
   return activeBySpoke;
+};
+
+/**
+ * The mirror of `resolveActivePositionManagers`: a position manager only accepts
+ * spokes it has registered itself, so both directions have to hold for it to act
+ * on a spoke. Position managers expose no enumeration getter either, so every
+ * known spoke is probed against every position manager.
+ */
+export const resolveRegisteredSpokes = async (
+  provider: Client,
+  positionManagers: string[],
+  spokes: string[],
+): Promise<Record<string, string[]>> => {
+  const spokesByPositionManager: Record<string, string[]> = {};
+  if (positionManagers.length === 0 || spokes.length === 0) return spokesByPositionManager;
+
+  const calls: BatchCall[] = [];
+  const keys: Array<{ positionManager: string; spoke: string }> = [];
+  for (const positionManager of positionManagers) {
+    for (const spoke of spokes) {
+      calls.push({
+        address: getAddress(positionManager),
+        abi: v4PositionManagerAbi,
+        functionName: 'isSpokeRegistered',
+        args: [getAddress(spoke)],
+      });
+      keys.push({ positionManager: toKey(positionManager), spoke: toKey(spoke) });
+    }
+  }
+
+  const results = await batchRead(provider, calls);
+  results.forEach((isRegistered, index) => {
+    if (isRegistered !== true) return;
+    const { positionManager, spoke } = keys[index];
+    addTo(spokesByPositionManager, positionManager, spoke);
+  });
+
+  return spokesByPositionManager;
 };
 
 interface ClassifiedContract {

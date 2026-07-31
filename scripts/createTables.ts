@@ -587,6 +587,32 @@ export const generateTable = (network: string, pool: string): string => {
     }
   }
 
+  // Spokes registered on each PositionManager (V4 only)
+  const spokesByPositionManager = poolPermitsByContract.positionManagers?.spokesByPositionManager;
+  if (spokesByPositionManager && Object.keys(spokesByPositionManager).length > 0) {
+    let pmSpokeTable = `### PositionManager Spokes\n`;
+    const pmSpokeHeaderTitles = ['position manager', 'registered spokes'];
+    pmSpokeTable += getTableHeader(pmSpokeHeaderTitles);
+    let pmSpokeTableBody = '';
+
+    for (const [positionManager, spokes] of Object.entries(spokesByPositionManager)) {
+      if (spokes.length === 0) continue;
+      pmSpokeTableBody += getTableBody([
+        generateTableAddress(positionManager, addressesNames, contractsByAddress, poolGuardians, network, pool),
+        spokes
+          .map((spoke) =>
+            generateTableAddress(spoke, addressesNames, contractsByAddress, poolGuardians, network, pool),
+          )
+          .join(', '),
+      ]);
+      pmSpokeTableBody += getLineSeparator(pmSpokeHeaderTitles.length);
+    }
+
+    if (pmSpokeTableBody !== '') {
+      readmeByNetwork += pmSpokeTable + pmSpokeTableBody + '\n';
+    }
+  }
+
   // Governance V3 Contracts table
   readmeByNetwork += generateContractTable(
     { title: 'Governance V3 Contracts', contracts: poolPermitsByContract.govV3?.contracts },

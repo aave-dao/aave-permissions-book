@@ -72,6 +72,7 @@ import {
   classifyV4Contracts,
   discoverV4Topology,
   resolveActivePositionManagers,
+  resolveRegisteredSpokes,
   UntrackedSource,
   UntrackedV4Contracts,
   V4ContractType,
@@ -411,6 +412,11 @@ const generateNetworkPermissions = async (
           [...positionManagerCandidates],
         );
         const activePositionManagers = new Set(Object.values(activeBySpoke).flat());
+        const spokesByPositionManager = await resolveRegisteredSpokes(
+          poolProvider,
+          [...positionManagerCandidates],
+          allSpokes,
+        );
 
         // Anything seen on-chain that the address book does not name yet
         const trackedAddresses = new Set(
@@ -496,6 +502,7 @@ const generateNetworkPermissions = async (
           untrackedPositionManagers,
         );
         positionManagers.activeBySpoke = activeBySpoke;
+        positionManagers.spokesByPositionManager = spokesByPositionManager;
 
         accessManagerData = {
           roles: v4Roles,
