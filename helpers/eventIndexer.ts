@@ -1,7 +1,12 @@
 import { Client, Log } from 'viem';
 import { getEventsMultiContract, getRpcClientFromUrl } from './rpc.js';
 import { getLimit } from './limits.js';
-import { executePayloadOnFork, executeCalldataOnFork } from './anvil.js';
+import {
+  executePayloadOnFork,
+  executeCalldataOnFork,
+  executeSafeBatchOnFork,
+} from './anvil.js';
+import { SafeTxBuilderBatch } from './safeTxBuilder.js';
 
 // ============================================================================
 // Types
@@ -72,6 +77,14 @@ export interface ForkCalldataConfig {
   calldata: string;
 }
 
+/**
+ * Fork safe batch configuration for executing a Safe transaction builder
+ * batch on the Anvil fork.
+ */
+export interface ForkSafeBatchConfig {
+  batch: SafeTxBuilderBatch;
+}
+
 // ============================================================================
 // Core Indexing Functions
 // ============================================================================
@@ -138,6 +151,7 @@ export const indexPoolEvents = async ({
   forkRpcUrl,
   forkPayload,
   forkCalldata,
+  forkSafeBatch,
 }: {
   client: Client;
   chainId: string | number;
@@ -147,6 +161,7 @@ export const indexPoolEvents = async ({
   forkRpcUrl?: string;
   forkPayload?: ForkPayloadConfig;
   forkCalldata?: ForkCalldataConfig;
+  forkSafeBatch?: ForkSafeBatchConfig;
 }): Promise<IndexingResult> => {
   const limit = getLimit(String(chainId));
 
@@ -197,9 +212,9 @@ export const indexPoolEvents = async ({
     latestBlockNumber = Math.max(latestBlockNumber, currentBlock);
   }
 
-  // Step 2: If fork mode, execute payload or calldata and fetch fork events.
-  // Passes that run after the action was already executed omit forkPayload and
-  // forkCalldata, and only read the fork events it produced.
+  // Step 2: If fork mode, execute payload, calldata or safe batch and fetch fork events.
+  // Passes that run after the action was already executed omit forkPayload,
+  // forkCalldata and forkSafeBatch, and only read the fork events it produced.
   if (forkRpcUrl) {
     if (forkPayload) {
       await executePayloadOnFork(
@@ -214,6 +229,8 @@ export const indexPoolEvents = async ({
         forkCalldata.target,
         forkCalldata.calldata,
       );
+    } else if (forkSafeBatch) {
+      await executeSafeBatchOnFork(forkRpcUrl, forkSafeBatch.batch);
     }
 
     // Fetch events from the fork starting from latestBlockNumber

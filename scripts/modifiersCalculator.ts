@@ -93,8 +93,10 @@ import {
   buildPoolContractConfigs,
   ForkPayloadConfig,
   ForkCalldataConfig,
+  ForkSafeBatchConfig,
   SPOKE_EVENT_TYPES,
 } from '../helpers/eventIndexer.js';
+import { parseSafeTxBuilderFile } from '../helpers/safeTxBuilder.js';
 import { logger } from '../helpers/logger.js';
 import { checkAnvilInstalled, startAnvilFork, AnvilFork } from '../helpers/anvil.js';
 import {
@@ -115,9 +117,10 @@ const generateNetworkPermissions = async (
 
   const pools = networkConfigs[network].pools;
 
-  // Build fork payload or calldata config if in fork mode
+  // Build fork payload, calldata or safe batch config if in fork mode
   let forkPayload: ForkPayloadConfig | undefined;
   let forkCalldata: ForkCalldataConfig | undefined;
+  let forkSafeBatch: ForkSafeBatchConfig | undefined;
   if (args.fork && args.payload) {
     // Find the PayloadsController address from the governance address book.
     // First check the requested pools, then fall back to all pools on the network
@@ -142,6 +145,14 @@ const generateNetworkPermissions = async (
       target: args.target,
       calldata: args.calldata,
     };
+  } else if (args.fork && args.safeJson) {
+    const batch = parseSafeTxBuilderFile(args.safeJson);
+    if (Number(batch.chainId) !== network) {
+      throw new Error(
+        `Safe json chainId (${batch.chainId}) does not match --network (${network})`,
+      );
+    }
+    forkSafeBatch = { batch };
   }
 
   for (let i = 0; i < poolsToProcess.length; i++) {
@@ -217,6 +228,7 @@ const generateNetworkPermissions = async (
           forkRpcUrl,
           forkPayload,
           forkCalldata,
+          forkSafeBatch,
         });
 
         indexedEvents = indexResult.eventsByContract;
