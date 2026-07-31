@@ -561,6 +561,58 @@ export const generateTable = (network: string, pool: string): string => {
     }
   }
 
+  // PositionManagers active on each Spoke (V4 only)
+  const activeBySpoke = poolPermitsByContract.positionManagers?.activeBySpoke;
+  if (activeBySpoke && Object.keys(activeBySpoke).length > 0) {
+    let spokePmTable = `### Spoke PositionManagers\n`;
+    const spokePmHeaderTitles = ['spoke', 'active position managers'];
+    spokePmTable += getTableHeader(spokePmHeaderTitles);
+    let spokePmTableBody = '';
+
+    for (const [spoke, positionManagers] of Object.entries(activeBySpoke)) {
+      if (positionManagers.length === 0) continue;
+      spokePmTableBody += getTableBody([
+        generateTableAddress(spoke, addressesNames, contractsByAddress, poolGuardians, network, pool),
+        positionManagers
+          .map((positionManager) =>
+            generateTableAddress(positionManager, addressesNames, contractsByAddress, poolGuardians, network, pool),
+          )
+          .join(', '),
+      ]);
+      spokePmTableBody += getLineSeparator(spokePmHeaderTitles.length);
+    }
+
+    if (spokePmTableBody !== '') {
+      readmeByNetwork += spokePmTable + spokePmTableBody + '\n';
+    }
+  }
+
+  // Spokes registered on each PositionManager (V4 only)
+  const spokesByPositionManager = poolPermitsByContract.positionManagers?.spokesByPositionManager;
+  if (spokesByPositionManager && Object.keys(spokesByPositionManager).length > 0) {
+    let pmSpokeTable = `### PositionManager Spokes\n`;
+    const pmSpokeHeaderTitles = ['position manager', 'registered spokes'];
+    pmSpokeTable += getTableHeader(pmSpokeHeaderTitles);
+    let pmSpokeTableBody = '';
+
+    for (const [positionManager, spokes] of Object.entries(spokesByPositionManager)) {
+      if (spokes.length === 0) continue;
+      pmSpokeTableBody += getTableBody([
+        generateTableAddress(positionManager, addressesNames, contractsByAddress, poolGuardians, network, pool),
+        spokes
+          .map((spoke) =>
+            generateTableAddress(spoke, addressesNames, contractsByAddress, poolGuardians, network, pool),
+          )
+          .join(', '),
+      ]);
+      pmSpokeTableBody += getLineSeparator(pmSpokeHeaderTitles.length);
+    }
+
+    if (pmSpokeTableBody !== '') {
+      readmeByNetwork += pmSpokeTable + pmSpokeTableBody + '\n';
+    }
+  }
+
   // Governance V3 Contracts table
   readmeByNetwork += generateContractTable(
     { title: 'Governance V3 Contracts', contracts: poolPermitsByContract.govV3?.contracts },
@@ -667,6 +719,31 @@ export const generateTable = (network: string, pool: string): string => {
     Object.keys(emissionAdminsData).length > 0 ? emissionAdminsData : undefined,
     tableCtx,
   );
+
+  // Contracts found on-chain that the address book does not name yet (V4).
+  // Entries disappear once the address book catches up with them.
+  const untracked = poolPermitsByContract.untracked;
+  if (untracked && Object.keys(untracked).length > 0) {
+    let untrackedTable = `### New/untracked hubs and spokes\n`;
+    const untrackedHeaderTitles = ['contract', 'type', 'hubs', 'discovered via'];
+    untrackedTable += getTableHeader(untrackedHeaderTitles);
+
+    for (const [address, entry] of Object.entries(untracked)) {
+      untrackedTable += getTableBody([
+        `[${entry.name}](${explorerAddressUrlComposer(address, network)})`,
+        entry.type,
+        entry.hubs
+          .map((hub) =>
+            generateTableAddress(hub, addressesNames, contractsByAddress, poolGuardians, network, pool),
+          )
+          .join(', '),
+        entry.sources.join(', '),
+      ]);
+      untrackedTable += getLineSeparator(untrackedHeaderTitles.length);
+    }
+
+    readmeByNetwork += untrackedTable + '\n';
+  }
 
   saveJson(`./out/${networkName}-${pool}.md`, readmeByNetwork);
 
