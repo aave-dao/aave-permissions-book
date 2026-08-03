@@ -10112,7 +10112,7 @@
           }
         ]
       },
-      "ETHENA CORRELATED Spoke": {
+      "ETHENA_CORRELATED Spoke": {
         "address": "0x58131E79531caB1d52301228d1f7b842F26B9649",
         "modifiers": [
           {
@@ -10145,7 +10145,7 @@
         ],
         "proxyAdmin": "0x2a2deee71645ef881c788c85ed0c8e9f152b6531"
       },
-      "_ETHENA CORRELATED Spoke ProxyAdmin": {
+      "_ETHENA_CORRELATED Spoke ProxyAdmin": {
         "address": "0x2a2deee71645ef881c788c85ed0c8e9f152b6531",
         "modifiers": [
           {
@@ -10170,7 +10170,7 @@
           }
         ]
       },
-      "ETHENA ECOSYSTEM Spoke": {
+      "ETHENA_ECOSYSTEM Spoke": {
         "address": "0xba1B3D55D249692b669A164024A838309B7508AF",
         "modifiers": [
           {
@@ -10203,7 +10203,7 @@
         ],
         "proxyAdmin": "0xbceb5ebf77dcbbe1d2081d6bf591f04154bba494"
       },
-      "_ETHENA ECOSYSTEM Spoke ProxyAdmin": {
+      "_ETHENA_ECOSYSTEM Spoke ProxyAdmin": {
         "address": "0xbceb5ebf77dcbbe1d2081d6bf591f04154bba494",
         "modifiers": [
           {
@@ -10344,7 +10344,7 @@
           }
         ]
       },
-      "LOMBARD BTC Spoke": {
+      "LOMBARD_BTC Spoke": {
         "address": "0x7EC68b5695e803e98a21a9A05d744F28b0a7753D",
         "modifiers": [
           {
@@ -10377,7 +10377,7 @@
         ],
         "proxyAdmin": "0x128e41124dbc7d81434f332f9759b93243758f7b"
       },
-      "_LOMBARD BTC Spoke ProxyAdmin": {
+      "_LOMBARD_BTC Spoke ProxyAdmin": {
         "address": "0x128e41124dbc7d81434f332f9759b93243758f7b",
         "modifiers": [
           {
@@ -10460,7 +10460,7 @@
           }
         ]
       },
-      "USDG PENDLE Spoke": {
+      "USDG_PENDLE Spoke": {
         "address": "0x956d8e0A89cfa3744428C4641b5a53B56167a7f9",
         "modifiers": [
           {
@@ -10493,7 +10493,7 @@
         ],
         "proxyAdmin": "0x47493605f134c3462bbc05cd792e45c7f1a61d71"
       },
-      "_USDG PENDLE Spoke ProxyAdmin": {
+      "_USDG_PENDLE Spoke ProxyAdmin": {
         "address": "0x47493605f134c3462bbc05cd792e45c7f1a61d71",
         "modifiers": [
           {
@@ -10683,7 +10683,7 @@
           }
         ]
       },
-      "USDG MAPLE ESpoke": {
+      "USDG_MAPLE ESpoke": {
         "address": "0x774b9655413c34809c1f1b16b654465A89EBE989",
         "modifiers": [
           {
@@ -10716,7 +10716,7 @@
         ],
         "proxyAdmin": "0xc2c9f8158c6d6ca7c22c72520f2d024b7501aaa6"
       },
-      "_USDG MAPLE ESpoke ProxyAdmin": {
+      "_USDG_MAPLE ESpoke ProxyAdmin": {
         "address": "0xc2c9f8158c6d6ca7c22c72520f2d024b7501aaa6",
         "modifiers": [
           {

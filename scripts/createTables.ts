@@ -28,7 +28,7 @@ import {
 } from '../helpers/cli.js';
 import { explorerAddressUrlComposer } from '../helpers/explorer.js';
 import { ChainId } from '@aave-dao/toolbox';
-import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts } from '../helpers/jsonParsers.js';
+import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts, formatSpokeDisplayName } from '../helpers/jsonParsers.js';
 import {
   getLineSeparator,
   getTableBody,
@@ -320,11 +320,13 @@ export const generateTable = (network: string, pool: string): string => {
   // Merge collector and clinicSteward contracts into the main contracts object
   // so they appear in the primary permissions table. Other components (umbrella,
   // ppc, agentHub) are rendered as separate dedicated tables below.
-  poolPermitsByContract.contracts = {
-    ...networkPermits[pool].contracts,
-    ...getPermissionsByNetwork(network)[pool].collector?.contracts,
-    ...getPermissionsByNetwork(network)[pool].clinicSteward?.contracts,
-  }
+  poolPermitsByContract.contracts = Object.fromEntries(
+    Object.entries({
+      ...networkPermits[pool].contracts,
+      ...getPermissionsByNetwork(network)[pool].collector?.contracts,
+      ...getPermissionsByNetwork(network)[pool].clinicSteward?.contracts,
+    }).map(([name, contract]) => [formatSpokeDisplayName(name), contract]),
+  )
 
   if (!poolPermitsByContract?.contracts) {
     return readmeDirectoryTable;
