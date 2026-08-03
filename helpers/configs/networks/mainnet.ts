@@ -117,18 +117,9 @@ const v2MiscPool = {
 // ============================================================================
 // Aave V4
 // ============================================================================
-// USDG Maple ESpoke: deployed but not yet in the address book package. Its proxy,
-// implementation and oracle bytecode, proxy admin owner and AccessManager all
-// match the other deployed Spokes.
-const manualV4Spokes = {
-  USDG_MAPLE_ESPOKE: '0x774b9655413c34809c1f1b16b654465A89EBE989',
-  USDG_MAPLE_ESPOKE_ORACLE: '0x47a7cC7Fd47aCed15087a8b6e0ACFddCD63C811A',
-};
-
 const deduplicatedV4Addresses = deduplicateByAddress(
   AaveV4Ethereum.HUBS as Record<string, string>,
   AaveV4Ethereum.SPOKES as Record<string, string>,
-  manualV4Spokes,
   AaveV4Ethereum.TOKENIZATION_SPOKES as Record<string, string>,
 );
 

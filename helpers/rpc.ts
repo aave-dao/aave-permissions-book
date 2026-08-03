@@ -6,6 +6,7 @@ import { accessManagerAbi } from "../abis/accessManagerAbi.js";
 import { getBlockNumber } from "viem/actions";
 import { crossChainControllerAbi } from "../abis/crossChainControllerAbi.js";
 import { EMISSION_MANAGER_ABI } from "../abis/emissionManager.js";
+import { v4SpokeAbi } from "../abis/v4SpokeAbi.js";
 
 const alchemyKey = env.ALCHEMY_KEY ?? env.ALCHEMY_API_KEY;
 
@@ -132,6 +133,7 @@ const abiByEventType: Record<string, any> = {
   'RoleRevokedAM': accessManagerAbi,
   'TargetFunctionRoleUpdated': accessManagerAbi,
   'EmissionAdminUpdated': EMISSION_MANAGER_ABI,
+  'UpdatePositionManager': v4SpokeAbi,
 };
 
 /**
