@@ -133,6 +133,7 @@ export type PoolConfigs = {
   accessManagerBlock?: number;
   roleLabels?: Record<string, string>;
   tokenizationSpokesAddressBook?: Record<string, string>;
+  retiredAddresses?: string[];
 
   emissionManagerBlock?: number;
 };

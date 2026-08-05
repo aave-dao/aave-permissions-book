@@ -359,7 +359,12 @@ const generateNetworkPermissions = async (
           pool.tokenizationSpokesAddressBook,
         );
         const topology = await discoverV4Topology(poolProvider, knownHubs, knownSpokes);
-        const allSpokes = [...new Set([...knownSpokes, ...Object.keys(topology.hubsBySpoke)])];
+        const retiredAddresses = new Set(
+          (pool.retiredAddresses ?? []).map((address) => address.toLowerCase()),
+        );
+        const allSpokes = [
+          ...new Set([...knownSpokes, ...Object.keys(topology.hubsBySpoke)]),
+        ].filter((spoke) => !retiredAddresses.has(spoke.toLowerCase()));
 
         // Spoke position manager activations, indexed separately since the spoke
         // set grows as new spokes are discovered
@@ -413,7 +418,7 @@ const generateNetworkPermissions = async (
             ...Object.keys(v4FunctionRoles),
             ...activePositionManagers,
           ]),
-        ].filter((address) => !trackedAddresses.has(address));
+        ].filter((address) => !trackedAddresses.has(address) && !retiredAddresses.has(address));
 
         const classified = await classifyV4Contracts(poolProvider, untrackedAddresses);
 
