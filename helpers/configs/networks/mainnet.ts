@@ -135,10 +135,10 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
 }
 
 // Superseded by the GLOBAL_DOLLAR TokenizationSpokes and dropped from the address
-// book in 4.62.4, but still listed on the hub with zero caps and no supply. On-chain
+// book in 4.62.4, but still active on the hub with zero caps and no supply. On-chain
 // they are indistinguishable from a freshly deployed spoke, so they have to be named
-// here to stay out of the untracked tables.
-const retiredV4Spokes = [
+// here to get tagged as deprecated rather than read as newly discovered.
+const deprecatedV4Spokes = [
   '0x27eF1140364948A0E30E248297FfDFE5a4091ec4', // waPaxosPT_USDG_24SEP2026
   '0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8', // waPaxosUSDC
   '0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA', // waPaxosUSDT
@@ -147,7 +147,7 @@ const retiredV4Spokes = [
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,
   tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,
-  retiredAddresses: retiredV4Spokes,
+  deprecatedAddresses: deprecatedV4Spokes,
   addressBook: {
     ACCESS_MANAGER: AaveV4Ethereum.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,

@@ -26,6 +26,9 @@
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
 |----------|----------|
+|  [waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…) [Deprecated]](https://etherscan.io/address/0x27eF1140364948A0E30E248297FfDFE5a4091ec4) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
+|  [waPaxosUSDC TokenizationSpoke (0x4131e0…) [Deprecated]](https://etherscan.io/address/0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
+|  [waPaxosUSDT TokenizationSpoke (0x8dabe5…) [Deprecated]](https://etherscan.io/address/0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
 |  [CORE WETH TokenizationSpoke](https://etherscan.io/address/0x7320CF22Ac095bA2a2e0a652F77efB836c2E751b) |  V4 Security Council | |--------|--------|
 |  [CORE wstETH TokenizationSpoke](https://etherscan.io/address/0xcb0E7dA9c635628f6d4827355AeCa75aB8d3560f) |  V4 Security Council | |--------|--------|
 |  [CORE weETH TokenizationSpoke](https://etherscan.io/address/0x559cEc2C840D9DBB18936Afc5E5341D78bfC7Cbe) |  V4 Security Council | |--------|--------|
@@ -146,4 +149,11 @@
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517), [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) | |--------|--------|
+
+### New/untracked hubs and spokes
+| contract |type |hubs |discovered via |
+|----------|----------|----------|----------|
+|  [waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…) [Deprecated]](https://etherscan.io/address/0x27ef1140364948a0e30e248297ffdfe5a4091ec4) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
+|  [waPaxosUSDC TokenizationSpoke (0x4131e0…) [Deprecated]](https://etherscan.io/address/0x4131e0b2e7afeceaf3d3b4225aa61a3b2b7535b8) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
+|  [waPaxosUSDT TokenizationSpoke (0x8dabe5…) [Deprecated]](https://etherscan.io/address/0x8dabe53e8cb991c57f0307f6f419e6d469b0deaa) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
 

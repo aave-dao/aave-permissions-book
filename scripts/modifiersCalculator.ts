@@ -359,12 +359,7 @@ const generateNetworkPermissions = async (
           pool.tokenizationSpokesAddressBook,
         );
         const topology = await discoverV4Topology(poolProvider, knownHubs, knownSpokes);
-        const retiredAddresses = new Set(
-          (pool.retiredAddresses ?? []).map((address) => address.toLowerCase()),
-        );
-        const allSpokes = [
-          ...new Set([...knownSpokes, ...Object.keys(topology.hubsBySpoke)]),
-        ].filter((spoke) => !retiredAddresses.has(spoke.toLowerCase()));
+        const allSpokes = [...new Set([...knownSpokes, ...Object.keys(topology.hubsBySpoke)])];
 
         // Spoke position manager activations, indexed separately since the spoke
         // set grows as new spokes are discovered
@@ -410,6 +405,9 @@ const generateNetworkPermissions = async (
           getTrackedV4Addresses(pool.addressBook, pool.tokenizationSpokesAddressBook),
         );
         const hubNamesByAddress = getV4HubDisplayNames(pool.addressBook);
+        const deprecatedAddresses = new Set(
+          (pool.deprecatedAddresses ?? []).map((address) => address.toLowerCase()),
+        );
 
         const untrackedAddresses = [
           ...new Set([
@@ -418,7 +416,7 @@ const generateNetworkPermissions = async (
             ...Object.keys(v4FunctionRoles),
             ...activePositionManagers,
           ]),
-        ].filter((address) => !trackedAddresses.has(address) && !retiredAddresses.has(address));
+        ].filter((address) => !trackedAddresses.has(address));
 
         const classified = await classifyV4Contracts(poolProvider, untrackedAddresses);
 
@@ -437,12 +435,15 @@ const generateNetworkPermissions = async (
             ? 'PositionManager'
             : classified[address]?.type ?? 'Unknown';
           const hubs = topology.hubsBySpoke[address] ?? [];
-          const name = buildUntrackedName(
+          const discoveredName = buildUntrackedName(
             address,
             type,
             hubs.map((hub) => hubNamesByAddress[hub] ?? hub),
             classified[address]?.symbol,
           );
+          const name = deprecatedAddresses.has(address)
+            ? `${discoveredName} [Deprecated]`
+            : discoveredName;
 
           untracked[address] = { name, type, hubs, sources };
 
