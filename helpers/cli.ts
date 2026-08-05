@@ -8,6 +8,7 @@ export interface CliArgs {
   calldata?: string;
   caller?: string;
   target?: string;
+  safeJson?: string;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface CliArgs {
  *   --calldata <hex>                       (requires --fork, mutually exclusive with --payload)
  *   --caller <address>                     (requires --calldata)
  *   --target <address>                     (requires --calldata)
+ *   --safe-json <file>                     (requires --fork, mutually exclusive with --payload/--calldata)
  */
 export const parseCliArgs = (): CliArgs => {
   const args = process.argv.slice(2);
@@ -50,17 +52,20 @@ export const parseCliArgs = (): CliArgs => {
     } else if (arg === '--target' && nextArg && !nextArg.startsWith('-')) {
       result.target = nextArg;
       i++;
+    } else if (arg === '--safe-json' && nextArg && !nextArg.startsWith('-')) {
+      result.safeJson = nextArg;
+      i++;
     }
   }
 
-  // Validate fork mode requires (payload) or (calldata+caller+target), plus network+pool
+  // Validate fork mode requires (payload), (calldata+caller+target) or (safe-json), plus network+pool
   if (result.fork) {
-    if (result.payload && result.calldata) {
-      console.error('--payload and --calldata are mutually exclusive');
+    if ([result.payload, result.calldata, result.safeJson].filter(Boolean).length > 1) {
+      console.error('--payload, --calldata and --safe-json are mutually exclusive');
       process.exit(1);
     }
-    if (!result.payload && !result.calldata) {
-      console.error('--fork requires either --payload <address> or --calldata <hex> --caller <address> --target <address>');
+    if (!result.payload && !result.calldata && !result.safeJson) {
+      console.error('--fork requires either --payload <address>, --calldata <hex> --caller <address> --target <address>, or --safe-json <file>');
       process.exit(1);
     }
     if (result.calldata) {
@@ -154,7 +159,9 @@ export const logExecutionConfig = (args: CliArgs): void => {
     ? `\n  Payload: ${args.payload}`
     : args.calldata
       ? `\n  Calldata: ${args.calldata}\n  Caller: ${args.caller}\n  Target: ${args.target}`
-      : '';
+      : args.safeJson
+        ? `\n  Safe json: ${args.safeJson}`
+        : '';
 
   console.log(`
 ========================================

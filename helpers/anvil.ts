@@ -11,6 +11,10 @@ import {
 } from 'viem';
 import { getSolidityStorageSlotUint } from '@aave-dao/toolbox';
 import { PayloadsController_ABI } from '../abis/payloadsController.js';
+import {
+  encodeSafeTxBuilderTransaction,
+  SafeTxBuilderBatch,
+} from './safeTxBuilder.js';
 
 // ============================================================================
 // Types
@@ -331,6 +335,67 @@ export async function executeCalldataOnFork(
     console.log(`Calldata executed successfully (tx: ${hash})`);
   } finally {
     await client.stopImpersonatingAccount({ address: callerAddress });
+  }
+}
+
+/**
+ * Executes a Safe transaction builder batch on a running Anvil fork by
+ * impersonating the Safe and sending each transaction of the batch in order.
+ *
+ * Impersonating the Safe (instead of executing the batch through
+ * Safe.execTransaction with owner signatures) produces the same state changes,
+ * since the targets only see the Safe as msg.sender.
+ */
+export async function executeSafeBatchOnFork(
+  anvilRpcUrl: string,
+  batch: SafeTxBuilderBatch,
+): Promise<void> {
+  const client = createTestClient({
+    mode: 'anvil',
+    transport: http(anvilRpcUrl, { timeout: 120_000 }),
+  })
+    .extend(publicActions)
+    .extend(walletActions);
+
+  const safeAddress = batch.meta.createdFromSafeAddress as Address;
+
+  // Impersonate the Safe and fund it for gas
+  await client.impersonateAccount({ address: safeAddress });
+  await client.setBalance({
+    address: safeAddress,
+    value: 1000000000000000000n, // 1 native token
+  });
+
+  console.log(
+    `Executing safe batch "${batch.meta.name}" (${batch.transactions.length} transactions) as ${safeAddress}`,
+  );
+
+  try {
+    for (let i = 0; i < batch.transactions.length; i++) {
+      const tx = batch.transactions[i];
+      const calldata = encodeSafeTxBuilderTransaction(tx);
+
+      const hash = await client.sendTransaction({
+        chain: null,
+        account: safeAddress,
+        to: tx.to as Address,
+        data: calldata,
+        value: BigInt(tx.value || 0),
+      });
+
+      const receipt = await client.waitForTransactionReceipt({ hash });
+      if (receipt.status === 'reverted') {
+        throw new Error(
+          `Safe batch transaction ${i + 1}/${batch.transactions.length} to ${tx.to} reverted (tx: ${hash})`,
+        );
+      }
+
+      console.log(
+        `Safe batch transaction ${i + 1}/${batch.transactions.length} executed (tx: ${hash})`,
+      );
+    }
+  } finally {
+    await client.stopImpersonatingAccount({ address: safeAddress });
   }
 }
 
