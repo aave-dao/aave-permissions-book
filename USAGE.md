@@ -101,10 +101,28 @@ For each network and pool, the indexer:
    - **V2 pools**: Legacy admin roles from V2 contracts.
    - **GHO pools**: GHO token roles and GSM (GHO Stability Module) roles.
    - **Safety Module**: Staking contract roles.
+   - **V4 pools**: AccessManager role and target-function-role events, plus `UpdatePositionManager` events on every Spoke (indexed under the `<poolKey>_SPOKE_PM` metadata entry, since the spoke set grows as new spokes are discovered).
 
-4. **Resolves contract metadata**: For each contract, determines its proxy admin, modifier owners, and modifier-to-function mappings using the static permissions JSON and the on-chain role assignments.
+4. **Discovers the V4 topology** (V4 pools only). See [V4 Hub/Spoke Discovery](#v4-hubspoke-discovery).
 
-5. **Saves the updated JSON** to `out/permissions/<chainId>-permissions.json`.
+5. **Resolves contract metadata**: For each contract, determines its proxy admin, modifier owners, and modifier-to-function mappings using the static permissions JSON and the on-chain role assignments.
+
+6. **Saves the updated JSON** to `out/permissions/<chainId>-permissions.json`.
+
+### V4 Hub/Spoke Discovery
+
+V4 contracts are looked up by key in `@aave-dao/aave-address-book`, which is a pinned dependency. Anything deployed after the installed version — a new spoke on an existing hub, a new hub, a new tokenization spoke, a new position manager — would be silently missing from the tables, including in fork runs of a payload that adds one.
+
+To close that gap, V4 pools are also resolved from on-chain state, in both regular and fork mode:
+
+- **Spokes of a hub**: `getAssetCount()`, then `getSpokeCount(assetId)` and `getSpokeAddress(assetId, index)` per asset. Hub spoke lists include tokenization and treasury spokes.
+- **Hubs of a spoke**: `getReserveCount()`, then the `hub` field of each `getReserve(reserveId)`.
+- **Position managers of a spoke**: spokes expose no enumeration getter, so `UpdatePositionManager` logs supply the candidates and `isPositionManagerActive(pm)` decides which are currently active.
+- **AccessManager targets**: any target with a function-role mapping that no rendered contract claims.
+
+Reads are batched through Multicall3, falling back to individual calls where it is not deployed.
+
+Addresses found this way that the address book does not name are classified from their read surface (Spoke, Hub, TokenizationSpoke, TreasurySpoke, PositionManager), resolved like any other contract, and rendered under an on-chain derived name such as `Untracked Spoke @ PAXOS Hub (0x1234ab…)` or `waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)`. They also get their own `New/untracked hubs and spokes` table listing the type, hubs and the signal that surfaced them. Once the address book names a contract, it moves to its address book name and drops out of that table.
 
 ### Phase 2: Table Generation (`createTables.ts`)
 
@@ -118,7 +136,7 @@ For each network and pool:
 
 2. **Resolves ownership chains** recursively: For each modifier owner, walks through proxy admins, multisigs, and governance contracts to determine whether the ultimate control lies with Aave Governance, a multisig, a steward, or an EOA.
 
-3. **Generates Markdown tables**: Contracts, upgradeability, action types (with decentralization classification), roles, and guardians.
+3. **Generates Markdown tables**: Contracts, upgradeability, action types (with decentralization classification), roles, and guardians. V4 pools additionally get the active position managers per spoke and, when applicable, the new/untracked hubs and spokes.
 
 4. **Writes tables** to `out/<networkName>/<poolKey>.md`.
 
@@ -378,6 +396,7 @@ git diff
 │   ├── types.ts                 # TypeScript type definitions
 │   ├── rpc.ts                   # RPC client setup, event fetching
 │   ├── eventIndexer.ts          # Generic event indexing logic
+│   ├── v4Discovery.ts           # V4 hub/spoke/position manager on-chain discovery
 │   ├── adminRoles.ts            # Role hash resolution
 │   ├── contractResolvers.ts     # Contract metadata resolution
 │   ├── ownerResolver.ts         # Proxy admin and owner resolution

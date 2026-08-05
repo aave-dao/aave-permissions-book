@@ -54,9 +54,28 @@ import { resolveV2MiscModifiers } from './v2MiscPermissions.js';
 import { getSenders } from '../helpers/crossChainControllerLogs.js';
 import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
-import { resolveV4Modifiers, resolveTokenizationSpokeUpgradeability, resolveV4PositionManagerModifiers } from './v4Permissions.js';
+import {
+  resolveV4Modifiers,
+  resolveTokenizationSpokeUpgradeability,
+  resolveV4PositionManagerModifiers,
+  getTrackedV4Addresses,
+  getV4HubDisplayNames,
+  getV4InstancesByType,
+  getV4PositionManagerAddresses,
+  V4ContractInstance,
+} from './v4Permissions.js';
+import { getAddress } from 'viem';
 import { getAccessManagerRoles, getFunctionRoleMappings } from '../helpers/accessManagerRoles.js';
 import { AccessManager } from '../helpers/types.js';
+import {
+  buildUntrackedName,
+  classifyV4Contracts,
+  discoverV4Topology,
+  resolveActivePositionManagers,
+  UntrackedSource,
+  UntrackedV4Contracts,
+  V4ContractType,
+} from '../helpers/v4Discovery.js';
 import { resolveCollectorModifiers } from './collectorPermissions.js';
 import { resolveClinicStewardModifiers } from './clinicStewardPermissions.js';
 import { resolveUmbrellaModifiers } from './umbrellaPermissions.js';
@@ -75,6 +94,7 @@ import {
   ForkPayloadConfig,
   ForkCalldataConfig,
   ForkSafeBatchConfig,
+  SPOKE_EVENT_TYPES,
 } from '../helpers/eventIndexer.js';
 import { parseSafeTxBuilderFile } from '../helpers/safeTxBuilder.js';
 import { logger } from '../helpers/logger.js';
@@ -152,6 +172,7 @@ const generateNetworkPermissions = async (
     let agentHub = {} as AgentHub;
     let tokenizationSpokes = {} as TokenizationSpokes;
     let positionManagers = {} as PositionManagers;
+    let untracked: UntrackedV4Contracts = {};
     let accessManagerData: AccessManager | undefined;
     let emissionAdmins = {} as EmissionAdminsByToken;
 
@@ -342,6 +363,115 @@ const generateNetworkPermissions = async (
           eventLogs: amEvents,
         });
 
+        // Walk the on-chain hub/spoke graph so contracts deployed before the
+        // address book catches up are still resolved
+        logTableGeneration(network, poolKey, 'Hub/Spoke discovery');
+        const { hubs: knownHubs, spokes: knownSpokes } = getV4InstancesByType(
+          pool.addressBook,
+          pool.tokenizationSpokesAddressBook,
+        );
+        const topology = await discoverV4Topology(poolProvider, knownHubs, knownSpokes);
+        const allSpokes = [...new Set([...knownSpokes, ...Object.keys(topology.hubsBySpoke)])];
+
+        // Spoke position manager activations, indexed separately since the spoke
+        // set grows as new spokes are discovered
+        logTableGeneration(network, poolKey, 'Spoke PositionManagers');
+        const spokePmPoolKey = `${poolKey}_SPOKE_PM`;
+        const spokePmResult = await indexPoolEvents({
+          client: provider,
+          chainId: network,
+          poolKey: spokePmPoolKey,
+          contracts: allSpokes.map((spoke) => ({
+            id: spoke,
+            address: spoke,
+            deploymentBlock: pool.accessManagerBlock as number,
+            eventTypes: SPOKE_EVENT_TYPES,
+          })),
+          poolMetadata: getPoolMetadata(network, spokePmPoolKey),
+          forkRpcUrl,
+        });
+        updatePoolMetadata(network, spokePmPoolKey, spokePmResult.poolMetadata);
+
+        const positionManagerCandidates = new Set<string>([
+          ...getV4PositionManagerAddresses(pool.addressBook),
+          ...Object.values(fullJson[poolKey]?.positionManagers?.activeBySpoke ?? {}).flat(),
+        ]);
+        for (const logs of Object.values(spokePmResult.eventsByContract)) {
+          for (const log of logs) {
+            const positionManager = (log as any).args?.positionManager as string | undefined;
+            if (positionManager) {
+              positionManagerCandidates.add(positionManager.toLowerCase());
+            }
+          }
+        }
+
+        const activeBySpoke = await resolveActivePositionManagers(
+          poolProvider,
+          allSpokes,
+          [...positionManagerCandidates],
+        );
+        const activePositionManagers = new Set(Object.values(activeBySpoke).flat());
+
+        // Anything seen on-chain that the address book does not name yet
+        const trackedAddresses = new Set(
+          getTrackedV4Addresses(pool.addressBook, pool.tokenizationSpokesAddressBook),
+        );
+        const hubNamesByAddress = getV4HubDisplayNames(pool.addressBook);
+        const deprecatedAddresses = new Set(
+          (pool.deprecatedAddresses ?? []).map((address) => address.toLowerCase()),
+        );
+
+        const untrackedAddresses = [
+          ...new Set([
+            ...Object.keys(topology.hubsBySpoke),
+            ...Object.keys(topology.spokesByHub),
+            ...Object.keys(v4FunctionRoles),
+            ...activePositionManagers,
+          ]),
+        ].filter((address) => !trackedAddresses.has(address));
+
+        const classified = await classifyV4Contracts(poolProvider, untrackedAddresses);
+
+        const untrackedInstances: V4ContractInstance[] = [];
+        const untrackedTokenizationSpokes: Record<string, string> = {};
+        const untrackedPositionManagers: Record<string, string> = {};
+
+        for (const address of untrackedAddresses) {
+          const sources: UntrackedSource[] = [];
+          if (topology.hubsBySpoke[address]) sources.push('hubSpokeList');
+          if (topology.spokesByHub[address]) sources.push('spokeReserve');
+          if (v4FunctionRoles[address]) sources.push('accessManagerTarget');
+          if (activePositionManagers.has(address)) sources.push('spokePositionManager');
+
+          const type: V4ContractType = activePositionManagers.has(address)
+            ? 'PositionManager'
+            : classified[address]?.type ?? 'Unknown';
+          const hubs = topology.hubsBySpoke[address] ?? [];
+          const discoveredName = buildUntrackedName(
+            address,
+            type,
+            hubs.map((hub) => hubNamesByAddress[hub] ?? hub),
+            classified[address]?.symbol,
+          );
+          const name = deprecatedAddresses.has(address)
+            ? `${discoveredName} [Deprecated]`
+            : discoveredName;
+
+          untracked[address] = { name, type, hubs, sources };
+
+          if (type === 'TokenizationSpoke') {
+            untrackedTokenizationSpokes[name] = getAddress(address);
+          } else if (type === 'PositionManager') {
+            untrackedPositionManagers[name] = getAddress(address);
+          } else {
+            untrackedInstances.push({
+              displayName: name,
+              address: getAddress(address),
+              contractType: type,
+            });
+          }
+        }
+
         const v4Result = await resolveV4Modifiers(
           pool.addressBook,
           poolProvider,
@@ -349,15 +479,17 @@ const generateNetworkPermissions = async (
           v4Roles,
           v4FunctionRoles,
           pool.roleLabels || {},
+          untrackedInstances,
         );
         poolPermissions = v4Result.contracts;
 
         // Resolve TokenizationSpokes upgradeability
-        if (pool.tokenizationSpokesAddressBook) {
+        if (pool.tokenizationSpokesAddressBook || Object.keys(untrackedTokenizationSpokes).length > 0) {
           logTableGeneration(network, poolKey, 'TokenizationSpokes');
           tokenizationSpokes.contracts = await resolveTokenizationSpokeUpgradeability(
-            pool.tokenizationSpokesAddressBook,
+            pool.tokenizationSpokesAddressBook ?? {},
             poolProvider,
+            untrackedTokenizationSpokes,
           );
         }
 
@@ -367,7 +499,9 @@ const generateNetworkPermissions = async (
           pool.addressBook,
           poolProvider,
           permissionsJson,
+          untrackedPositionManagers,
         );
+        positionManagers.activeBySpoke = activeBySpoke;
 
         accessManagerData = {
           roles: v4Roles,
@@ -669,6 +803,7 @@ const generateNetworkPermissions = async (
       ...(accessManagerData ? { accessManager: accessManagerData } : {}),
       ...(tokenizationSpokes.contracts ? { tokenizationSpokes } : {}),
       ...(positionManagers.contracts ? { positionManagers } : {}),
+      ...(Object.keys(untracked).length > 0 ? { untracked } : {}),
     };
 
     if (Object.keys(fullJson).length === 0) {

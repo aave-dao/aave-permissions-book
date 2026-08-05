@@ -28,7 +28,7 @@ import {
 } from '../helpers/cli.js';
 import { explorerAddressUrlComposer } from '../helpers/explorer.js';
 import { ChainId } from '@aave-dao/toolbox';
-import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts } from '../helpers/jsonParsers.js';
+import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts, formatV4DisplayName } from '../helpers/jsonParsers.js';
 import {
   getLineSeparator,
   getTableBody,
@@ -320,11 +320,13 @@ export const generateTable = (network: string, pool: string): string => {
   // Merge collector and clinicSteward contracts into the main contracts object
   // so they appear in the primary permissions table. Other components (umbrella,
   // ppc, agentHub) are rendered as separate dedicated tables below.
-  poolPermitsByContract.contracts = {
-    ...networkPermits[pool].contracts,
-    ...getPermissionsByNetwork(network)[pool].collector?.contracts,
-    ...getPermissionsByNetwork(network)[pool].clinicSteward?.contracts,
-  }
+  poolPermitsByContract.contracts = Object.fromEntries(
+    Object.entries({
+      ...networkPermits[pool].contracts,
+      ...getPermissionsByNetwork(network)[pool].collector?.contracts,
+      ...getPermissionsByNetwork(network)[pool].clinicSteward?.contracts,
+    }).map(([name, contract]) => [formatV4DisplayName(name), contract]),
+  )
 
   if (!poolPermitsByContract?.contracts) {
     return readmeDirectoryTable;
@@ -561,6 +563,32 @@ export const generateTable = (network: string, pool: string): string => {
     }
   }
 
+  // PositionManagers active on each Spoke (V4 only)
+  const activeBySpoke = poolPermitsByContract.positionManagers?.activeBySpoke;
+  if (activeBySpoke && Object.keys(activeBySpoke).length > 0) {
+    let spokePmTable = `### Spoke PositionManagers\n`;
+    const spokePmHeaderTitles = ['spoke', 'active position managers'];
+    spokePmTable += getTableHeader(spokePmHeaderTitles);
+    let spokePmTableBody = '';
+
+    for (const [spoke, positionManagers] of Object.entries(activeBySpoke)) {
+      if (positionManagers.length === 0) continue;
+      spokePmTableBody += getTableBody([
+        generateTableAddress(spoke, addressesNames, contractsByAddress, poolGuardians, network, pool),
+        positionManagers
+          .map((positionManager) =>
+            generateTableAddress(positionManager, addressesNames, contractsByAddress, poolGuardians, network, pool),
+          )
+          .join(', '),
+      ]);
+      spokePmTableBody += getLineSeparator(spokePmHeaderTitles.length);
+    }
+
+    if (spokePmTableBody !== '') {
+      readmeByNetwork += spokePmTable + spokePmTableBody + '\n';
+    }
+  }
+
   // Governance V3 Contracts table
   readmeByNetwork += generateContractTable(
     { title: 'Governance V3 Contracts', contracts: poolPermitsByContract.govV3?.contracts },
@@ -667,6 +695,31 @@ export const generateTable = (network: string, pool: string): string => {
     Object.keys(emissionAdminsData).length > 0 ? emissionAdminsData : undefined,
     tableCtx,
   );
+
+  // Contracts found on-chain that the address book does not name yet (V4).
+  // Entries disappear once the address book catches up with them.
+  const untracked = poolPermitsByContract.untracked;
+  if (untracked && Object.keys(untracked).length > 0) {
+    let untrackedTable = `### New/untracked hubs and spokes\n`;
+    const untrackedHeaderTitles = ['contract', 'type', 'hubs', 'discovered via'];
+    untrackedTable += getTableHeader(untrackedHeaderTitles);
+
+    for (const [address, entry] of Object.entries(untracked)) {
+      untrackedTable += getTableBody([
+        `[${entry.name}](${explorerAddressUrlComposer(address, network)})`,
+        entry.type,
+        entry.hubs
+          .map((hub) =>
+            generateTableAddress(hub, addressesNames, contractsByAddress, poolGuardians, network, pool),
+          )
+          .join(', '),
+        entry.sources.join(', '),
+      ]);
+      untrackedTable += getLineSeparator(untrackedHeaderTitles.length);
+    }
+
+    readmeByNetwork += untrackedTable + '\n';
+  }
 
   saveJson(`./out/${networkName}-${pool}.md`, readmeByNetwork);
 

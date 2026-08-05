@@ -595,13 +595,11 @@
               {
                 "address": "0x22740deBa78d5a0c24C58C740e3715ec29de1bFa",
                 "owners": [
-                  "0x45d11217458aEE68A4D976A8f17e2E24Fc5898A1",
-                  "0xCAC616Fffb687cBDDD250b2aE6F672449462985C",
-                  "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
-                  "0xb647055A9915bF9c8021a684E175A353525b9890",
+                  "0x4b752551fC6345A7de82F76fd7a5015CA16d1a74",
+                  "0x9DE1d45e2786b03498289959203F25b29B4D1193",
                   "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
                 ],
-                "signersThreshold": 3
+                "signersThreshold": 2
               },
               {
                 "address": "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
@@ -4145,6 +4143,29 @@
             }
           ]
         }
+      },
+      "activeBySpoke": {
+        "0x435272ceff93a1e657e8abfdf0a13e95900a3a56": [
+          "0x50c4c40ab6bae46b372a251beace388439aa96b4",
+          "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
+          "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
+          "0xe4c7183a5f22c365140f41d733d8a8bad5a1a6ba",
+          "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ],
+        "0x6a37776b5e026dbdf043b4f933c323c84dd1b514": [
+          "0x50c4c40ab6bae46b372a251beace388439aa96b4",
+          "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
+          "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
+          "0xe4c7183a5f22c365140f41d733d8a8bad5a1a6ba",
+          "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ],
+        "0x3b517594277c67307cf2d7cbe6fe1d4399b68c41": [
+          "0x50c4c40ab6bae46b372a251beace388439aa96b4",
+          "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
+          "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
+          "0xe4c7183a5f22c365140f41d733d8a8bad5a1a6ba",
+          "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ]
       }
     }
   }
