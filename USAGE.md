@@ -118,7 +118,7 @@ To close that gap, V4 pools are also resolved from on-chain state, in both regul
 
 Reads are batched through Multicall3, falling back to individual calls where it is not deployed.
 
-Addresses found this way that the address book does not name are classified from their read surface (Spoke, Hub, TokenizationSpoke, TreasurySpoke, PositionManager), resolved like any other contract, and rendered under an on-chain derived name such as `Untracked Spoke @ PAXOS Hub (0x774b96…)` or `waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)`. They also get their own `New/untracked hubs and spokes` table listing the type, hubs and the signal that surfaced them. Once the address book names a contract, it moves to its address book name and drops out of that table.
+Addresses found this way that the address book does not name are classified from their read surface (Spoke, Hub, TokenizationSpoke, TreasurySpoke, PositionManager), resolved like any other contract, and rendered under an on-chain derived name such as `Untracked Spoke @ PAXOS Hub (0x1234ab…)` or `waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)`. They also get their own `New/untracked hubs and spokes` table listing the type, hubs and the signal that surfaced them. Once the address book names a contract, it moves to its address book name and drops out of that table.
 
 ### Phase 2: Table Generation (`createTables.ts`)
 

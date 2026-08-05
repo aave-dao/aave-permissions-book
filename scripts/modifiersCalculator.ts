@@ -405,6 +405,9 @@ const generateNetworkPermissions = async (
           getTrackedV4Addresses(pool.addressBook, pool.tokenizationSpokesAddressBook),
         );
         const hubNamesByAddress = getV4HubDisplayNames(pool.addressBook);
+        const deprecatedAddresses = new Set(
+          (pool.deprecatedAddresses ?? []).map((address) => address.toLowerCase()),
+        );
 
         const untrackedAddresses = [
           ...new Set([
@@ -432,12 +435,15 @@ const generateNetworkPermissions = async (
             ? 'PositionManager'
             : classified[address]?.type ?? 'Unknown';
           const hubs = topology.hubsBySpoke[address] ?? [];
-          const name = buildUntrackedName(
+          const discoveredName = buildUntrackedName(
             address,
             type,
             hubs.map((hub) => hubNamesByAddress[hub] ?? hub),
             classified[address]?.symbol,
           );
+          const name = deprecatedAddresses.has(address)
+            ? `${discoveredName} [Deprecated]`
+            : discoveredName;
 
           untracked[address] = { name, type, hubs, sources };
 

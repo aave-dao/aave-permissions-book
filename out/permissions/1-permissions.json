@@ -9943,7 +9943,7 @@
           }
         ]
       },
-      "PAXOS Hub": {
+      "GLOBAL_DOLLAR Hub": {
         "address": "0x62d63197660c080236193CA60b70E49A08E90368",
         "modifiers": [
           {
@@ -9980,7 +9980,7 @@
         ],
         "proxyAdmin": "0x67b9be45aae6359826a638063537b90cc80f5d2f"
       },
-      "_PAXOS Hub ProxyAdmin": {
+      "_GLOBAL_DOLLAR Hub ProxyAdmin": {
         "address": "0x67b9be45aae6359826a638063537b90cc80f5d2f",
         "modifiers": [
           {
@@ -10683,6 +10683,64 @@
           }
         ]
       },
+      "USDG_MAPLE ESpoke": {
+        "address": "0x774b9655413c34809c1f1b16b654465A89EBE989",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xc2c9f8158c6d6ca7c22c72520f2d024b7501aaa6"
+      },
+      "_USDG_MAPLE ESpoke ProxyAdmin": {
+        "address": "0xc2c9f8158c6d6ca7c22c72520f2d024b7501aaa6",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
       "SpokeConfigurator": {
         "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
         "modifiers": [
@@ -10776,64 +10834,6 @@
       },
       "_TreasurySpoke ProxyAdmin": {
         "address": "0x890b79ddcdccd663b4d7fc121a7a70184489b505",
-        "modifiers": [
-          {
-            "modifier": "onlyOwner",
-            "addresses": [
-              {
-                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
-                "owners": [
-                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
-                  "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
-                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
-                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
-                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
-                  "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
-                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
-                ],
-                "signersThreshold": 5
-              }
-            ],
-            "functions": []
-          }
-        ]
-      },
-      "Untracked Spoke @ PAXOS Hub (0x774b96…)": {
-        "address": "0x774b9655413c34809c1f1b16b654465A89EBE989",
-        "modifiers": [
-          {
-            "modifier": "SPOKE_CONFIGURATOR_ROLE",
-            "addresses": [
-              {
-                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
-                "owners": [],
-                "signersThreshold": 0
-              }
-            ],
-            "functions": [
-              "updateLiquidationConfig",
-              "addReserve",
-              "updateReserveConfig",
-              "updateDynamicReserveConfig",
-              "addDynamicReserveConfig",
-              "updatePositionManager",
-              "updateReservePriceSource"
-            ]
-          },
-          {
-            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
-            "addresses": [],
-            "functions": [
-              "updateUserDynamicConfig",
-              "updateUserRiskPremium"
-            ]
-          }
-        ],
-        "proxyAdmin": "0xc2c9f8158c6d6ca7c22c72520f2d024b7501aaa6"
-      },
-      "_Untracked Spoke @ PAXOS Hub (0x774b96…) ProxyAdmin": {
-        "address": "0xc2c9f8158c6d6ca7c22c72520f2d024b7501aaa6",
         "modifiers": [
           {
             "modifier": "onlyOwner",
@@ -11127,120 +11127,63 @@
     },
     "tokenizationSpokes": {
       "contracts": {
-        "waGlobalDollarPT_USDG_24SEP2026 TokenizationSpoke (0x7df10b…)": {
-          "address": "0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663",
+        "waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…) [Deprecated]": {
+          "address": "0x27eF1140364948A0E30E248297FfDFE5a4091ec4",
           "modifiers": [],
-          "proxyAdmin": "0xd1650a62aeb378affd8e60b2582ffe8df27cc364"
+          "proxyAdmin": "0x0e73059e03154d13f2594c869633007aa7c9b118"
         },
-        "_waGlobalDollarPT_USDG_24SEP2026 TokenizationSpoke (0x7df10b…) ProxyAdmin": {
-          "address": "0xd1650a62aeb378affd8e60b2582ffe8df27cc364",
+        "_waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…) [Deprecated] ProxyAdmin": {
+          "address": "0x0e73059e03154d13f2594c869633007aa7c9b118",
           "modifiers": [
             {
               "modifier": "onlyOwner",
               "addresses": [
                 {
-                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
-                  "owners": [
-                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
-                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
-                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
-                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
-                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
-                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
-                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
-                  ],
-                  "signersThreshold": 5
+                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
+                  "owners": [],
+                  "signersThreshold": 0
                 }
               ],
               "functions": []
             }
           ]
         },
-        "waGlobalDollarUSDC TokenizationSpoke (0xaed7c5…)": {
-          "address": "0xaed7c529bD2878170B61C758DfAa215AC7a4FD07",
+        "waPaxosUSDC TokenizationSpoke (0x4131e0…) [Deprecated]": {
+          "address": "0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8",
           "modifiers": [],
-          "proxyAdmin": "0xd5022ba3cedee544a97962d7c55e2c70e4e3dd0d"
+          "proxyAdmin": "0x560ac477203cd800292c755f48c6442ea59e3615"
         },
-        "_waGlobalDollarUSDC TokenizationSpoke (0xaed7c5…) ProxyAdmin": {
-          "address": "0xd5022ba3cedee544a97962d7c55e2c70e4e3dd0d",
+        "_waPaxosUSDC TokenizationSpoke (0x4131e0…) [Deprecated] ProxyAdmin": {
+          "address": "0x560ac477203cd800292c755f48c6442ea59e3615",
           "modifiers": [
             {
               "modifier": "onlyOwner",
               "addresses": [
                 {
-                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
-                  "owners": [
-                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
-                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
-                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
-                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
-                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
-                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
-                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
-                  ],
-                  "signersThreshold": 5
+                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
+                  "owners": [],
+                  "signersThreshold": 0
                 }
               ],
               "functions": []
             }
           ]
         },
-        "waGlobalDollarUSDT TokenizationSpoke (0xa0e97e…)": {
-          "address": "0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf",
+        "waPaxosUSDT TokenizationSpoke (0x8dabe5…) [Deprecated]": {
+          "address": "0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA",
           "modifiers": [],
-          "proxyAdmin": "0xeed53f90f1470d41c72cabc6ea996b11a47bc8ef"
+          "proxyAdmin": "0xb0e6bcf33dca44211bb6ec7990f4a8a56314d313"
         },
-        "_waGlobalDollarUSDT TokenizationSpoke (0xa0e97e…) ProxyAdmin": {
-          "address": "0xeed53f90f1470d41c72cabc6ea996b11a47bc8ef",
+        "_waPaxosUSDT TokenizationSpoke (0x8dabe5…) [Deprecated] ProxyAdmin": {
+          "address": "0xb0e6bcf33dca44211bb6ec7990f4a8a56314d313",
           "modifiers": [
             {
               "modifier": "onlyOwner",
               "addresses": [
                 {
-                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
-                  "owners": [
-                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
-                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
-                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
-                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
-                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
-                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
-                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
-                  ],
-                  "signersThreshold": 5
-                }
-              ],
-              "functions": []
-            }
-          ]
-        },
-        "waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)": {
-          "address": "0x378B4a7c394E22bd562F66eB612165893533c124",
-          "modifiers": [],
-          "proxyAdmin": "0x85425367168228a224949d02a3b2eec18005dbeb"
-        },
-        "_waGlobalDollarUSDG TokenizationSpoke (0x378b4a…) ProxyAdmin": {
-          "address": "0x85425367168228a224949d02a3b2eec18005dbeb",
-          "modifiers": [
-            {
-              "modifier": "onlyOwner",
-              "addresses": [
-                {
-                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
-                  "owners": [
-                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
-                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
-                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
-                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
-                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
-                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
-                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
-                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
-                  ],
-                  "signersThreshold": 5
+                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
+                  "owners": [],
+                  "signersThreshold": 0
                 }
               ],
               "functions": []
@@ -12177,63 +12120,120 @@
             }
           ]
         },
-        "PAXOS PT USDG 24SEP2026 TokenizationSpoke": {
-          "address": "0x27eF1140364948A0E30E248297FfDFE5a4091ec4",
+        "GLOBAL DOLLAR PT USDG 24SEP2026 TokenizationSpoke": {
+          "address": "0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663",
           "modifiers": [],
-          "proxyAdmin": "0x0e73059e03154d13f2594c869633007aa7c9b118"
+          "proxyAdmin": "0xd1650a62aeb378affd8e60b2582ffe8df27cc364"
         },
-        "_PAXOS PT USDG 24SEP2026 TokenizationSpoke ProxyAdmin": {
-          "address": "0x0e73059e03154d13f2594c869633007aa7c9b118",
+        "_GLOBAL DOLLAR PT USDG 24SEP2026 TokenizationSpoke ProxyAdmin": {
+          "address": "0xd1650a62aeb378affd8e60b2582ffe8df27cc364",
           "modifiers": [
             {
               "modifier": "onlyOwner",
               "addresses": [
                 {
-                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
-                  "owners": [],
-                  "signersThreshold": 0
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
                 }
               ],
               "functions": []
             }
           ]
         },
-        "PAXOS USDC TokenizationSpoke": {
-          "address": "0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8",
+        "GLOBAL DOLLAR USDC TokenizationSpoke": {
+          "address": "0xaed7c529bD2878170B61C758DfAa215AC7a4FD07",
           "modifiers": [],
-          "proxyAdmin": "0x560ac477203cd800292c755f48c6442ea59e3615"
+          "proxyAdmin": "0xd5022ba3cedee544a97962d7c55e2c70e4e3dd0d"
         },
-        "_PAXOS USDC TokenizationSpoke ProxyAdmin": {
-          "address": "0x560ac477203cd800292c755f48c6442ea59e3615",
+        "_GLOBAL DOLLAR USDC TokenizationSpoke ProxyAdmin": {
+          "address": "0xd5022ba3cedee544a97962d7c55e2c70e4e3dd0d",
           "modifiers": [
             {
               "modifier": "onlyOwner",
               "addresses": [
                 {
-                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
-                  "owners": [],
-                  "signersThreshold": 0
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
                 }
               ],
               "functions": []
             }
           ]
         },
-        "PAXOS USDT TokenizationSpoke": {
-          "address": "0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA",
+        "GLOBAL DOLLAR USDT TokenizationSpoke": {
+          "address": "0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf",
           "modifiers": [],
-          "proxyAdmin": "0xb0e6bcf33dca44211bb6ec7990f4a8a56314d313"
+          "proxyAdmin": "0xeed53f90f1470d41c72cabc6ea996b11a47bc8ef"
         },
-        "_PAXOS USDT TokenizationSpoke ProxyAdmin": {
-          "address": "0xb0e6bcf33dca44211bb6ec7990f4a8a56314d313",
+        "_GLOBAL DOLLAR USDT TokenizationSpoke ProxyAdmin": {
+          "address": "0xeed53f90f1470d41c72cabc6ea996b11a47bc8ef",
           "modifiers": [
             {
               "modifier": "onlyOwner",
               "addresses": [
                 {
-                  "address": "0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5",
-                  "owners": [],
-                  "signersThreshold": 0
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
+        "GLOBAL DOLLAR USDG TokenizationSpoke": {
+          "address": "0x378B4a7c394E22bd562F66eB612165893533c124",
+          "modifiers": [],
+          "proxyAdmin": "0x85425367168228a224949d02a3b2eec18005dbeb"
+        },
+        "_GLOBAL DOLLAR USDG TokenizationSpoke ProxyAdmin": {
+          "address": "0x85425367168228a224949d02a3b2eec18005dbeb",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
                 }
               ],
               "functions": []
@@ -12469,8 +12469,8 @@
       }
     },
     "untracked": {
-      "0x7df10b4a01350d2a1d95cfbe7c9207d7210a2663": {
-        "name": "waGlobalDollarPT_USDG_24SEP2026 TokenizationSpoke (0x7df10b…)",
+      "0x27ef1140364948a0e30e248297ffdfe5a4091ec4": {
+        "name": "waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…) [Deprecated]",
         "type": "TokenizationSpoke",
         "hubs": [
           "0x62d63197660c080236193ca60b70e49a08e90368"
@@ -12479,8 +12479,8 @@
           "hubSpokeList"
         ]
       },
-      "0xaed7c529bd2878170b61c758dfaa215ac7a4fd07": {
-        "name": "waGlobalDollarUSDC TokenizationSpoke (0xaed7c5…)",
+      "0x4131e0b2e7afeceaf3d3b4225aa61a3b2b7535b8": {
+        "name": "waPaxosUSDC TokenizationSpoke (0x4131e0…) [Deprecated]",
         "type": "TokenizationSpoke",
         "hubs": [
           "0x62d63197660c080236193ca60b70e49a08e90368"
@@ -12489,35 +12489,14 @@
           "hubSpokeList"
         ]
       },
-      "0xa0e97e45c2f89003730e467bd484fa3eece5b4cf": {
-        "name": "waGlobalDollarUSDT TokenizationSpoke (0xa0e97e…)",
+      "0x8dabe53e8cb991c57f0307f6f419e6d469b0deaa": {
+        "name": "waPaxosUSDT TokenizationSpoke (0x8dabe5…) [Deprecated]",
         "type": "TokenizationSpoke",
         "hubs": [
           "0x62d63197660c080236193ca60b70e49a08e90368"
         ],
         "sources": [
           "hubSpokeList"
-        ]
-      },
-      "0x378b4a7c394e22bd562f66eb612165893533c124": {
-        "name": "waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)",
-        "type": "TokenizationSpoke",
-        "hubs": [
-          "0x62d63197660c080236193ca60b70e49a08e90368"
-        ],
-        "sources": [
-          "hubSpokeList"
-        ]
-      },
-      "0x774b9655413c34809c1f1b16b654465a89ebe989": {
-        "name": "Untracked Spoke @ PAXOS Hub (0x774b96…)",
-        "type": "Spoke",
-        "hubs": [
-          "0x62d63197660c080236193ca60b70e49a08e90368"
-        ],
-        "sources": [
-          "hubSpokeList",
-          "accessManagerTarget"
         ]
       }
     }

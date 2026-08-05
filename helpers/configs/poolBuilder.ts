@@ -12,6 +12,8 @@ export interface V4Config {
   addressBook: AddressBook;
   roleLabels?: Record<string, string>;
   tokenizationSpokesAddressBook?: Record<string, string>;
+  /** Contracts still listed on-chain but superseded, tagged `[Deprecated]` in the tables. */
+  deprecatedAddresses?: string[];
 }
 
 /**
