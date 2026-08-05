@@ -40,14 +40,15 @@ export const generateRoles = (
 };
 
 /**
- * V4 Spoke names are derived from address book keys, so the permissions JSON keeps
- * them underscored (`AVAX_CORRELATED Spoke`). Tables read better with spaces, so the
- * underscores are swapped out at render time only. Leaves every other name untouched,
- * including the `_` marking synthetic entries and on-chain derived spoke names.
+ * V4 Hub and Spoke names are derived from address book keys, so the permissions JSON
+ * keeps them underscored (`AVAX_CORRELATED Spoke`, `GLOBAL_DOLLAR Hub`). Tables read
+ * better with spaces, so the underscores are swapped out at render time only. Leaves
+ * every other name untouched, including the `_` marking synthetic entries and on-chain
+ * derived names.
  */
-export const formatSpokeDisplayName = (name: string): string =>
+export const formatV4DisplayName = (name: string): string =>
   name.replace(
-    /^(_?)(\S+) (E?Spoke)\b/,
+    /^(_?)(\S+) (E?Spoke|Hub)\b/,
     (_match, marker, prefix, kind) => `${marker}${prefix.replace(/_/g, ' ')} ${kind}`,
   );
 
@@ -123,7 +124,7 @@ export const findContractNameByAddress = (
     for (const [contractName, contractInfo] of Object.entries(contracts)) {
       if (contractInfo.address?.toLowerCase() === normalizedAddress) {
         // Strip _ prefix used by synthetic entries (e.g. V4 proxy admins)
-        return formatSpokeDisplayName(
+        return formatV4DisplayName(
           contractName.startsWith('_') ? contractName.slice(1) : contractName,
         );
       }

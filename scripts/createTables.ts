@@ -28,7 +28,7 @@ import {
 } from '../helpers/cli.js';
 import { explorerAddressUrlComposer } from '../helpers/explorer.js';
 import { ChainId } from '@aave-dao/toolbox';
-import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts, formatSpokeDisplayName } from '../helpers/jsonParsers.js';
+import { generateContractsByAddress, findContractNameByAddress, extractPoolContracts, formatV4DisplayName } from '../helpers/jsonParsers.js';
 import {
   getLineSeparator,
   getTableBody,
@@ -325,7 +325,7 @@ export const generateTable = (network: string, pool: string): string => {
       ...networkPermits[pool].contracts,
       ...getPermissionsByNetwork(network)[pool].collector?.contracts,
       ...getPermissionsByNetwork(network)[pool].clinicSteward?.contracts,
-    }).map(([name, contract]) => [formatSpokeDisplayName(name), contract]),
+    }).map(([name, contract]) => [formatV4DisplayName(name), contract]),
   )
 
   if (!poolPermitsByContract?.contracts) {

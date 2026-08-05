@@ -6,7 +6,7 @@
 |  [CORE Hub](https://etherscan.io/address/0xCca852Bc40e560adC3b1Cc58CA5b55638ce826c9) |  V4 Security Council | |--------|--------|
 |  [PLUS Hub](https://etherscan.io/address/0x06002e9c4412CB7814a791eA3666D905871E536A) |  V4 Security Council | |--------|--------|
 |  [PRIME Hub](https://etherscan.io/address/0x943827DCA022D0F354a8a8c332dA1e5Eb9f9F931) |  V4 Security Council | |--------|--------|
-|  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  Governance | |--------|--------|
+|  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  Governance | |--------|--------|
 |  [HubConfigurator](https://etherscan.io/address/0x1F0753480bB03EaA00863224602267B7E0525C3d) |  not upgradeable | |--------|--------|
 |  [BLUECHIP Spoke](https://etherscan.io/address/0x973a023A77420ba610f06b3858aD991Df6d85A08) |  V4 Security Council | |--------|--------|
 |  [ETHENA CORRELATED Spoke](https://etherscan.io/address/0x58131E79531caB1d52301228d1f7b842F26B9649) |  V4 Security Council | |--------|--------|
@@ -26,10 +26,9 @@
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
 |----------|----------|
-|  [waGlobalDollarPT_USDG_24SEP2026 TokenizationSpoke (0x7df10b…)](https://etherscan.io/address/0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663) |  V4 Security Council | |--------|--------|
-|  [waGlobalDollarUSDC TokenizationSpoke (0xaed7c5…)](https://etherscan.io/address/0xaed7c529bD2878170B61C758DfAa215AC7a4FD07) |  V4 Security Council | |--------|--------|
-|  [waGlobalDollarUSDT TokenizationSpoke (0xa0e97e…)](https://etherscan.io/address/0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf) |  V4 Security Council | |--------|--------|
-|  [waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)](https://etherscan.io/address/0x378B4a7c394E22bd562F66eB612165893533c124) |  V4 Security Council | |--------|--------|
+|  [waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…)](https://etherscan.io/address/0x27eF1140364948A0E30E248297FfDFE5a4091ec4) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
+|  [waPaxosUSDC TokenizationSpoke (0x4131e0…)](https://etherscan.io/address/0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
+|  [waPaxosUSDT TokenizationSpoke (0x8dabe5…)](https://etherscan.io/address/0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
 |  [CORE WETH TokenizationSpoke](https://etherscan.io/address/0x7320CF22Ac095bA2a2e0a652F77efB836c2E751b) |  V4 Security Council | |--------|--------|
 |  [CORE wstETH TokenizationSpoke](https://etherscan.io/address/0xcb0E7dA9c635628f6d4827355AeCa75aB8d3560f) |  V4 Security Council | |--------|--------|
 |  [CORE weETH TokenizationSpoke](https://etherscan.io/address/0x559cEc2C840D9DBB18936Afc5E5341D78bfC7Cbe) |  V4 Security Council | |--------|--------|
@@ -61,9 +60,10 @@
 |  [PRIME USDC TokenizationSpoke](https://etherscan.io/address/0x486415fb1F8b062c89ED548f871cf64304AACb31) |  V4 Security Council | |--------|--------|
 |  [PRIME USDT TokenizationSpoke](https://etherscan.io/address/0x46c588DD8453aC259c1f6a54b4C9A93C2aC3762D) |  V4 Security Council | |--------|--------|
 |  [PRIME GHO TokenizationSpoke](https://etherscan.io/address/0x900fD46d565d1ac8995928c0179052ec02a6D0E1) |  V4 Security Council | |--------|--------|
-|  [PAXOS PT USDG 24SEP2026 TokenizationSpoke](https://etherscan.io/address/0x27eF1140364948A0E30E248297FfDFE5a4091ec4) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
-|  [PAXOS USDC TokenizationSpoke](https://etherscan.io/address/0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
-|  [PAXOS USDT TokenizationSpoke](https://etherscan.io/address/0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA) |  0xdAbad81aF85554E9ae636395611C58F7eC1aAEc5 | |--------|--------|
+|  [GLOBAL DOLLAR PT USDG 24SEP2026 TokenizationSpoke](https://etherscan.io/address/0x7Df10B4A01350D2A1d95cFbE7c9207d7210A2663) |  V4 Security Council | |--------|--------|
+|  [GLOBAL DOLLAR USDC TokenizationSpoke](https://etherscan.io/address/0xaed7c529bD2878170B61C758DfAa215AC7a4FD07) |  V4 Security Council | |--------|--------|
+|  [GLOBAL DOLLAR USDT TokenizationSpoke](https://etherscan.io/address/0xa0e97e45C2f89003730E467Bd484fA3eEcE5B4Cf) |  V4 Security Council | |--------|--------|
+|  [GLOBAL DOLLAR USDG TokenizationSpoke](https://etherscan.io/address/0x378B4a7c394E22bd562F66eB612165893533c124) |  V4 Security Council | |--------|--------|
 
 ### Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -77,9 +77,9 @@
 |  [PRIME Hub](https://etherscan.io/address/0x943827DCA022D0F354a8a8c332dA1e5Eb9f9F931) |  [PRIME Hub ProxyAdmin](https://etherscan.io/address/0x22249b31797bD067E37F49dC93614C316976B158) |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://etherscan.io/address/0x1F0753480bB03EaA00863224602267B7E0525C3d) |  addAsset, updateAssetConfig, addSpoke, updateSpokeConfig, setInterestRateData | |--------|--------|--------|--------|--------|
 |  [PRIME Hub](https://etherscan.io/address/0x943827DCA022D0F354a8a8c332dA1e5Eb9f9F931) |  [PRIME Hub ProxyAdmin](https://etherscan.io/address/0x22249b31797bD067E37F49dC93614C316976B158) |  HUB_FEE_MINTER_ROLE |   |  mintFeeShares | |--------|--------|--------|--------|--------|
 |  [PRIME Hub](https://etherscan.io/address/0x943827DCA022D0F354a8a8c332dA1e5Eb9f9F931) |  [PRIME Hub ProxyAdmin](https://etherscan.io/address/0x22249b31797bD067E37F49dC93614C316976B158) |  HUB_DEFICIT_ELIMINATOR_ROLE |   |  eliminateDeficit | |--------|--------|--------|--------|--------|
-|  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  [PAXOS Hub ProxyAdmin](https://etherscan.io/address/0x67b9BE45aaE6359826A638063537B90Cc80f5D2F) |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://etherscan.io/address/0x1F0753480bB03EaA00863224602267B7E0525C3d) |  addAsset, updateAssetConfig, addSpoke, updateSpokeConfig, setInterestRateData | |--------|--------|--------|--------|--------|
-|  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  [PAXOS Hub ProxyAdmin](https://etherscan.io/address/0x67b9BE45aaE6359826A638063537B90Cc80f5D2F) |  HUB_FEE_MINTER_ROLE |   |  mintFeeShares | |--------|--------|--------|--------|--------|
-|  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  [PAXOS Hub ProxyAdmin](https://etherscan.io/address/0x67b9BE45aaE6359826A638063537B90Cc80f5D2F) |  HUB_DEFICIT_ELIMINATOR_ROLE |   |  eliminateDeficit | |--------|--------|--------|--------|--------|
+|  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  [GLOBAL DOLLAR Hub ProxyAdmin](https://etherscan.io/address/0x67b9BE45aaE6359826A638063537B90Cc80f5D2F) |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://etherscan.io/address/0x1F0753480bB03EaA00863224602267B7E0525C3d) |  addAsset, updateAssetConfig, addSpoke, updateSpokeConfig, setInterestRateData | |--------|--------|--------|--------|--------|
+|  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  [GLOBAL DOLLAR Hub ProxyAdmin](https://etherscan.io/address/0x67b9BE45aaE6359826A638063537B90Cc80f5D2F) |  HUB_FEE_MINTER_ROLE |   |  mintFeeShares | |--------|--------|--------|--------|--------|
+|  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  [GLOBAL DOLLAR Hub ProxyAdmin](https://etherscan.io/address/0x67b9BE45aaE6359826A638063537B90Cc80f5D2F) |  HUB_DEFICIT_ELIMINATOR_ROLE |   |  eliminateDeficit | |--------|--------|--------|--------|--------|
 |  [HubConfigurator](https://etherscan.io/address/0x1F0753480bB03EaA00863224602267B7E0525C3d) |  - |  HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517), [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  addAsset, addAssetWithDecimals, updateLiquidityFee, updateFeeReceiver, updateFeeConfig, updateInterestRateStrategy, updateReinvestmentController, resetAssetCaps, deactivateAsset, haltAsset, addSpoke, addSpokeToAssets, updateSpokeActive, updateSpokeHalted, updateSpokeAddCap, updateSpokeDrawCap, updateSpokeRiskPremiumThreshold, updateSpokeCaps, deactivateSpoke, haltSpoke, resetSpokeCaps, updateInterestRateData | |--------|--------|--------|--------|--------|
 |  [BLUECHIP Spoke](https://etherscan.io/address/0x973a023A77420ba610f06b3858aD991Df6d85A08) |  [BLUECHIP Spoke ProxyAdmin](https://etherscan.io/address/0xD56EF224603F64b5d9530b49cA690ED76C3d3cF1) |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) |  updateLiquidationConfig, addReserve, updateReserveConfig, updateDynamicReserveConfig, addDynamicReserveConfig, updatePositionManager, updateReservePriceSource | |--------|--------|--------|--------|--------|
 |  [BLUECHIP Spoke](https://etherscan.io/address/0x973a023A77420ba610f06b3858aD991Df6d85A08) |  [BLUECHIP Spoke ProxyAdmin](https://etherscan.io/address/0xD56EF224603F64b5d9530b49cA690ED76C3d3cF1) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
@@ -153,8 +153,7 @@
 ### New/untracked hubs and spokes
 | contract |type |hubs |discovered via |
 |----------|----------|----------|----------|
-|  [waGlobalDollarPT_USDG_24SEP2026 TokenizationSpoke (0x7df10b…)](https://etherscan.io/address/0x7df10b4a01350d2a1d95cfbe7c9207d7210a2663) |  TokenizationSpoke |  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
-|  [waGlobalDollarUSDC TokenizationSpoke (0xaed7c5…)](https://etherscan.io/address/0xaed7c529bd2878170b61c758dfaa215ac7a4fd07) |  TokenizationSpoke |  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
-|  [waGlobalDollarUSDT TokenizationSpoke (0xa0e97e…)](https://etherscan.io/address/0xa0e97e45c2f89003730e467bd484fa3eece5b4cf) |  TokenizationSpoke |  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
-|  [waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)](https://etherscan.io/address/0x378b4a7c394e22bd562f66eb612165893533c124) |  TokenizationSpoke |  [PAXOS Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
+|  [waPaxosPT_USDG_24SEP2026 TokenizationSpoke (0x27ef11…)](https://etherscan.io/address/0x27ef1140364948a0e30e248297ffdfe5a4091ec4) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
+|  [waPaxosUSDC TokenizationSpoke (0x4131e0…)](https://etherscan.io/address/0x4131e0b2e7afeceaf3d3b4225aa61a3b2b7535b8) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
+|  [waPaxosUSDT TokenizationSpoke (0x8dabe5…)](https://etherscan.io/address/0x8dabe53e8cb991c57f0307f6f419e6d469b0deaa) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
 
