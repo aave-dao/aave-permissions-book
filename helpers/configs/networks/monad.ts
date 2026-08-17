@@ -36,6 +36,7 @@ export const monadConfig: NetworkConfig = {
     '0x056E4C4E80D1D14a637ccbD0412CDAAEc5B51F4E': 'Aave Governance Guardian Monad',
     '0xD3DD0bE957fcE2dCd359e09374Cbc99f60337D42': 'Aave Granular Guardian Monad',
     '0x2B99790c35a401be873FA7Eb514D9220736BB1cA': 'Aave Labs Guardian Monad',
+    [AaveV3Monad.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V3]: v3Pool,

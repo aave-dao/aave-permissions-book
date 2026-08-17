@@ -39,7 +39,7 @@ export const soneiumConfig: NetworkConfig = {
     '0xdc62E0e65b2251Dc66404ca717FD32dcC365Be3A': 'BGD',
     '0xD8E6956718784B914740267b7A50B952fb516656': 'Aave Granular Guardian Soneium',
     '0x19CE4363FEA478Aa04B9EA2937cc5A2cbcD44be6': 'Aave Governance Guardian Soneium',
-    '0x45cCB319C57A6Ae0d53C4dB1a151dF75015103b1': 'Risk Council',
+    [AaveV3Soneium.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V3]: v3Pool,

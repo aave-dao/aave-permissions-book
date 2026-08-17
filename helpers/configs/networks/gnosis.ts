@@ -50,7 +50,7 @@ export const gnosisConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     '0xF163b8698821cefbD33Cf449764d69Ea445cE23D': 'Aave Guardian Gnosis',
     '0xcb8a3E864D12190eD2b03cbA0833b15f2c314Ed8': 'BGD',
-    '0xF221B08dD10e0C68D74F035764931Baa3b030481': 'Risk Council',
+    [AaveV3Gnosis.RISK_COUNCIL]: 'Risk Council',
     '0x1A0581dd5C7C3DA4Ba1CDa7e0BcA7286afc4973b': 'Aave Governance Guardian Gnosis',
     '0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6': 'Aave Protocol Guardian Gnosis',
     '0x6e637e1E48025E51315d50ab96d5b3be1971A715': 'Gnosis Gho Aave Steward',

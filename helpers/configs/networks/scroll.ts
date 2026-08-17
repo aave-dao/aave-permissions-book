@@ -35,7 +35,7 @@ export const scrollConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     '0x63B20270b695E44Ac94Ad7592D5f81E3575b93e7': 'Aave Guardian Scroll',
     '0x4aAa03F0A61cf93eA252e987b585453578108358': 'BGD',
-    '0x611439a74546888c3535B4dd119A5Cbb9f5332EA': 'Risk Council',
+    [AaveV3Scroll.RISK_COUNCIL]: 'Risk Council',
     '0x1A0581dd5C7C3DA4Ba1CDa7e0BcA7286afc4973b': 'Aave Governance Guardian Scroll',
     '0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6': 'Aave Protocol Guardian Scroll',
   }),

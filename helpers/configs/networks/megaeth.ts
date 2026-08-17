@@ -39,7 +39,7 @@ export const megaethConfig: NetworkConfig = {
     '0x58528Cd7B8E84520df4D3395249D24543f431c21': 'BGD',
     '0x8Fa22D09b13486A40cd6b04398b948AA8bD5853A': 'Aave Granular Guardian MegaETH',
     '0x5a578ee1dA2c798Be60036AdDD223Ac164d948Af': 'Aave Governance Guardian MegaETH',
-    '0x36CF7a4377aAf1988E01a4b38224FC8D583E50A9': 'Risk Council',
+    [AaveV3MegaEth.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V3]: v3Pool,

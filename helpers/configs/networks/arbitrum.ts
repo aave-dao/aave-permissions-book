@@ -36,7 +36,7 @@ export const arbitrumConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     '0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb': 'Aave Guardian Arbitrum',
     '0x1Fcd437D8a9a6ea68da858b78b6cf10E8E0bF959': 'BGD',
-    '0x3Be327F22eB4BD8042e6944073b8826dCf357Aa2': 'Risk Council',
+    [AaveV3Arbitrum.RISK_COUNCIL]: 'Risk Council',
     '0x1A0581dd5C7C3DA4Ba1CDa7e0BcA7286afc4973b': 'Aave Governance Guardian Arbitrum',
     '0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6': 'Aave Protocol Guardian Arbitrum',
     '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',

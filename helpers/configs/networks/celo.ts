@@ -44,7 +44,7 @@ export const celoConfig: NetworkConfig = {
     '0xfD3a6E65e470a7D7D730FFD5D36a9354E8F9F4Ea': 'BGD',
     '0xbE815420A63A413BB8D508d8022C0FF150Ea7C39': 'Aave Granular Guardian Celo',
     '0x056E4C4E80D1D14a637ccbD0412CDAAEc5B51F4E': 'Aave Governance Guardian Celo',
-    '0xd85786B5FC61E2A0c0a3144a33A0fC70646a99f6': 'Risk Council',
+    [AaveV3Celo.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V3]: v3Pool,

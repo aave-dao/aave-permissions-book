@@ -47,7 +47,7 @@ export const xLayerConfig: NetworkConfig = {
   explorer: 'https://www.oklink.com/x-layer',
   addressesNames: mergeAddressNames({
     '0x734c3fF8DE95c3745770df69053A31FDC92F2526': 'BGD',
-    '0xa43F8eDf0a0aE07e951bca11162625e77e7609A1': 'Risk Council',
+    [AaveV3XLayer.RISK_COUNCIL]: 'Risk Council',
     '0xeB55A63bf9993d80c86D47f819B5eC958c7C127B': 'Aave Governance Guardian XLayer',
     '0xD0D1CcB0391aADF1EaD96814ce7ab4008Ebdb336': 'Aave Protocol Guardian XLayer',
     '0xA5Ba213867E175A182a5dd6A9193C6158738105A': 'Gho Direct Minter',

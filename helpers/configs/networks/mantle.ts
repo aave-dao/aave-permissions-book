@@ -54,7 +54,7 @@ export const mantleConfig: NetworkConfig = {
     '0x0686f59Cc2aEc1ccf891472Dc6C89bB747F6a4A7': 'BGD',
     '0xb26670d2800DBB9cfCe2f2660FfDcA48C799c86d': 'Aave Granular Guardian Mantle',
     '0x14816fC7f443A9C834d30eeA64daD20C4f56fBCD': 'Aave Governance Guardian Mantle',
-    '0xfF0ACe5060bd25f6900eb4bD91a868213C5346B5': 'Risk Council',
+    [AaveV3Mantle.RISK_COUNCIL]: 'Risk Council',
     '0xDe6539018B095353A40753Dc54C91C68c9487D4E': 'Gho Direct Minter',
     '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',
     '0x2Ce400703dAcc37b7edFA99D228b8E70a4d3831B': 'Gho Bucket Steward',

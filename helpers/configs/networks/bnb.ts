@@ -36,7 +36,7 @@ export const bnbConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     '0xE8C5ab722d0b1B7316Cc4034f2BE91A5B1d29964': 'BGD',
     '0x25170e9Ed4077ABA7D3DD03cf4A9F45Dc6D0fcCD': 'Aave Guardian Binance',
-    '0x126dc589cc75f17385dD95516F3F1788d862E7bc': 'Risk Council',
+    [AaveV3BNB.RISK_COUNCIL]: 'Risk Council',
     '0x1A0581dd5C7C3DA4Ba1CDa7e0BcA7286afc4973b': 'Aave Governance Guardian Binance',
     '0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6': 'Aave Protocol Guardian Binance',
     '0xB5ABc2BcB050bE70EF53338E547d87d06F7c877d': 'BGD Steward Injector Guardian',

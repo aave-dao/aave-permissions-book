@@ -47,7 +47,7 @@ export const polygonConfig: NetworkConfig = {
     '0x46DF4eb6f7A3B0AdF526f6955b15d3fE02c618b7': 'ParaSwap',
     '0x2bB25175d9B0F8965780209EB558Cc3b56cA6d32': 'Polygon v2 incentives admin',
     '0xbCEB4f363f2666E2E8E430806F37e97C405c130b': 'BGD',
-    '0x2C40FB1ACe63084fc0bB95F83C31B5854C6C4cB5': 'Risk Council',
+    [AaveV3Polygon.RISK_COUNCIL]: 'Risk Council',
     '0x1A0581dd5C7C3DA4Ba1CDa7e0BcA7286afc4973b': 'Aave Governance Guardian Polygon',
     '0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6': 'Aave Protocol Guardian Polygon',
     '0xc8a2ADC4261c6b669CdFf69E717E77C9cFeB420d': 'Old VotingMachine',

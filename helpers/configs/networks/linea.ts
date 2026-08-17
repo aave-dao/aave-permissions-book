@@ -41,7 +41,7 @@ export const lineaConfig: NetworkConfig = {
     '0xfD3a6E65e470a7D7D730FFD5D36a9354E8F9F4Ea': 'BGD',
     '0xc1cd6faF6e9138b4e6C21d438f9ebF2bd6F6cA16': 'Aave Granular Guardian Linea',
     '0x056E4C4E80D1D14a637ccbD0412CDAAEc5B51F4E': 'Aave Governance Guardian Linea',
-    '0xF092A5aC5E284E7c433dAFE5b8B138bFcA53a4Ee': 'Risk Council',
+    [AaveV3Linea.RISK_COUNCIL]: 'Risk Council',
     '0x0c28C535CE08345851F150dFC9c737978d726aEc': 'BGD Injector Guardian',
   }),
   pools: {

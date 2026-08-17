@@ -88,7 +88,7 @@ npm run tables:create -- -n 1 -p V3
 
 For each network and pool, the indexer:
 
-1. **Loads the pool configuration** from `helpers/configs/networks/<network>.ts`, which defines contract addresses (from `@bgd-labs/aave-address-book`), deployment block numbers, and static permission definitions.
+1. **Loads the pool configuration** from `helpers/configs/networks/<network>.ts`, which defines contract addresses (from `@aave-dao/aave-address-book`), deployment block numbers, and static permission definitions.
 
 2. **Reads previously saved state** from `out/permissions/<chainId>-permissions.json`. On the first run, this is empty. On subsequent runs, it resumes from the last indexed block, avoiding re-scanning the entire history.
 
@@ -111,14 +111,14 @@ V4 contracts are looked up by key in `@aave-dao/aave-address-book`, which is a p
 
 To close that gap, V4 pools are also resolved from on-chain state, in both regular and fork mode:
 
-- **Spokes of a hub**: `getAssetCount()`, then `getSpokeCount(assetId)` and `getSpokeAddress(assetId, index)` per asset. Hub spoke lists include tokenization and treasury spokes.
+- **Spokes of a hub**: `getAssetCount()`, then `getSpokeCount(assetId)` and `getSpokeAddress(assetId, index)` per asset. Hub spoke lists include tokenization and treasury spokes, and keep deactivated spokes, so `getSpokeConfig(assetId, spoke).active` decides which ones are live.
 - **Hubs of a spoke**: `getReserveCount()`, then the `hub` field of each `getReserve(reserveId)`.
 - **Position managers of a spoke**: spokes expose no enumeration getter, so `UpdatePositionManager` logs supply the candidates and `isPositionManagerActive(pm)` decides which are currently active.
 - **AccessManager targets**: any target with a function-role mapping that no rendered contract claims.
 
 Reads are batched through Multicall3, falling back to individual calls where it is not deployed.
 
-Addresses found this way that the address book does not name are classified from their read surface (Spoke, Hub, TokenizationSpoke, TreasurySpoke, PositionManager), resolved like any other contract, and rendered under an on-chain derived name such as `Untracked Spoke @ PAXOS Hub (0x1234ab…)` or `waGlobalDollarUSDG TokenizationSpoke (0x378b4a…)`. They also get their own `New/untracked hubs and spokes` table listing the type, hubs and the signal that surfaced them. Once the address book names a contract, it moves to its address book name and drops out of that table.
+Addresses found this way that the address book does not name are classified from their read surface (Spoke, Hub, TokenizationSpoke, TreasurySpoke, PositionManager), resolved like any other contract, and rendered under an on-chain derived name such as `Untracked Spoke @ CORE Hub (0x1234ab…)` or `waCoreUSDC TokenizationSpoke (0xabcd12…)`. They also get their own `New/untracked hubs and spokes` table listing the type, hubs and the signal that surfaced them. Once the address book names a contract, it moves to its address book name and drops out of that table.
 
 ### Phase 2: Table Generation (`createTables.ts`)
 
@@ -134,7 +134,7 @@ For each network and pool:
 
 3. **Generates Markdown tables**: Contracts, upgradeability, action types (with decentralization classification), roles, and guardians. V4 pools additionally get the active position managers per spoke and, when applicable, the new/untracked hubs and spokes.
 
-4. **Writes tables** to `out/<networkName>/<poolKey>.md`.
+4. **Writes tables** to `out/<networkName>-<poolKey>.md`.
 
 ## Adding a New Network
 
@@ -147,7 +147,7 @@ import {
   AaveV3NewNetwork,
   GovernanceV3NewNetwork,
   MiscNewNetwork,
-} from '@bgd-labs/aave-address-book';
+} from '@aave-dao/aave-address-book';
 import { Pools } from '../constants.js';
 import { NetworkConfig } from '../../types.js';
 import { createV3Pool } from '../poolBuilder.js';
@@ -162,7 +162,7 @@ const v3Pool = createV3Pool({
   crossChainControllerBlock: 123470,
   // Block number where GranularGuardian was deployed (if applicable)
   granularGuardianBlock: 123480,
-  // Address book from @bgd-labs/aave-address-book
+  // Address book from @aave-dao/aave-address-book
   addressBook: { ...AaveV3NewNetwork, ...MiscNewNetwork },
   governanceAddressBook: GovernanceV3NewNetwork,
   // Custom addresses not in the address book (e.g., bridge adapters)

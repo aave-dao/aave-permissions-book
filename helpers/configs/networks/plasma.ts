@@ -54,7 +54,7 @@ export const plasmaConfig: NetworkConfig = {
     '0xdc62E0e65b2251Dc66404ca717FD32dcC365Be3A': 'BGD',
     '0x60665b4F4FF7073C5fed2656852dCa271DfE2684': 'Aave Granular Guardian Plasma',
     '0x19CE4363FEA478Aa04B9EA2937cc5A2cbcD44be6': 'Aave Governance Guardian Plasma',
-    '0xE71C189C7D8862EfDa0D9E031157199D2F3B4893': 'Risk Council',
+    [AaveV3Plasma.RISK_COUNCIL]: 'Risk Council',
     '0x1cF16B4e76D4919bD939e12C650b8F6eb9e02916': 'BGD Injector Guardian',
     '0x360d8aa8F6b09B7BC57aF34db2Eb84dD87bf4d12': 'Gho Direct Minter',
     '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',
