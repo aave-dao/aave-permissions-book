@@ -44,7 +44,7 @@ export const sonicConfig: NetworkConfig = {
     '0x7837d7a167732aE41627A3B829871d9e32e2e7f2': 'BGD',
     '0x10078c1D8E46dd1ed5D8df2C42d5ABb969b11566': 'Aave Granular Guardian Sonic',
     '0x63C4422D6cc849549daeb600B7EcE52bD18fAd7f': 'Aave Governance Guardian Sonic',
-    '0x1dE39A17a9Fa8c76899fff37488482EEb7835d04': 'Risk Council',
+    [AaveV3Sonic.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V3]: v3Pool,

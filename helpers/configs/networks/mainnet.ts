@@ -134,20 +134,9 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
   }
 }
 
-// Superseded by the GLOBAL_DOLLAR TokenizationSpokes and dropped from the address
-// book in 4.62.4, but still active on the hub with zero caps and no supply. On-chain
-// they are indistinguishable from a freshly deployed spoke, so they have to be named
-// here to get tagged as deprecated rather than read as newly discovered.
-const deprecatedV4Spokes = [
-  '0x27eF1140364948A0E30E248297FfDFE5a4091ec4', // waPaxosPT_USDG_24SEP2026
-  '0x4131E0B2E7AFeCEAf3d3b4225aA61a3B2B7535b8', // waPaxosUSDC
-  '0x8Dabe53E8cB991c57f0307F6f419E6D469b0deAA', // waPaxosUSDT
-];
-
 const aaveV4 = createV4({
   accessManagerBlock: 24720870,
   tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,
-  deprecatedAddresses: deprecatedV4Spokes,
   addressBook: {
     ACCESS_MANAGER: AaveV4Ethereum.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,
@@ -177,7 +166,7 @@ export const mainnetConfig: NetworkConfig = {
     '0x36fEDC70feC3B77CAaf50E6C524FD7e5DFBD629A': 'ParaSwap',
     '0x00907f9921424583e7ffBfEdf84F92B7B2Be4977': 'GHO aToken',
     '0xb812d0944f8F581DfAA3a93Dda0d22EcEf51A9CF': 'BGD',
-    '0x47c71dFEB55Ebaa431Ae3fbF99Ea50e0D3d30fA8': 'Risk Council',
+    [AaveV3Ethereum.RISK_COUNCIL]: 'Risk Council',
     '0xF60BDDE9077Be3226Db8109432d78afD92a8A003': 'Mediator',
     '0xef6beCa8D9543eC007bceA835aF768B58F730C1f': 'GSM_USDC_ORACLE_SWAP_FREEZER',
     '0x71381e6718b37C12155CB961Ca3D374A8BfFa0e5': 'GSM_USDT_ORACLE_SWAP_FREEZER',

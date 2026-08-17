@@ -56,6 +56,57 @@ export const v4HubAbi = [
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "assetId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "spoke",
+                "type": "address"
+            }
+        ],
+        "name": "getSpokeConfig",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint40",
+                        "name": "addCap",
+                        "type": "uint40"
+                    },
+                    {
+                        "internalType": "uint40",
+                        "name": "drawCap",
+                        "type": "uint40"
+                    },
+                    {
+                        "internalType": "uint24",
+                        "name": "riskPremiumThreshold",
+                        "type": "uint24"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "active",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "halted",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct IHub.SpokeConfig",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "HUB_REVISION",
         "outputs": [

@@ -112,7 +112,7 @@ export const discoverV4Topology = async (
   const spokeCounts = await batchRead(provider, spokeCountCalls);
 
   const spokeAddressCalls: BatchCall[] = [];
-  const spokeAddressKeys: string[] = [];
+  const spokeAddressKeys: Array<{ hub: string; assetId: bigint }> = [];
   spokeCountKeys.forEach(({ hub, assetId }, index) => {
     const spokeCount = spokeCounts[index];
     if (spokeCount === null) return;
@@ -123,14 +123,33 @@ export const discoverV4Topology = async (
         functionName: 'getSpokeAddress',
         args: [assetId, i],
       });
-      spokeAddressKeys.push(hub);
+      spokeAddressKeys.push({ hub, assetId });
     }
   });
 
   const spokeAddresses = await batchRead(provider, spokeAddressCalls);
+
+  // Deactivating a spoke leaves it in the hub's spoke list, so the active flag is
+  // what separates a live spoke from a superseded one.
+  const spokeConfigCalls: BatchCall[] = [];
+  const spokeConfigKeys: Array<{ hub: string; spoke: string }> = [];
   spokeAddresses.forEach((spoke, index) => {
     if (!spoke) return;
-    const hub = spokeAddressKeys[index];
+    const { hub, assetId } = spokeAddressKeys[index];
+    spokeConfigCalls.push({
+      address: getAddress(hub),
+      abi: v4HubAbi,
+      functionName: 'getSpokeConfig',
+      args: [assetId, getAddress(spoke)],
+    });
+    spokeConfigKeys.push({ hub, spoke });
+  });
+
+  const spokeConfigs = await batchRead(provider, spokeConfigCalls);
+  spokeConfigKeys.forEach(({ hub, spoke }, index) => {
+    // Only an explicit false drops the spoke, so a failed read cannot silently
+    // remove it from the tables.
+    if (spokeConfigs[index]?.active === false) return;
     addTo(spokesByHub, hub, toKey(spoke));
     addTo(hubsBySpoke, toKey(spoke), hub);
   });

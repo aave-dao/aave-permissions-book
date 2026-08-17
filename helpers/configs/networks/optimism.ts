@@ -35,7 +35,7 @@ export const optimismConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     '0xE50c8C619d05ff98b22Adf991F17602C774F785c': 'Aave Guardian Optimism',
     '0x3A800fbDeAC82a4d9c68A9FA0a315e095129CDBF': 'BGD',
-    '0xCb86256A994f0c505c5e15c75BF85fdFEa0F2a56': 'Risk Council',
+    [AaveV3Optimism.RISK_COUNCIL]: 'Risk Council',
     '0x360c0a69Ed2912351227a0b745f890CB2eBDbcFe': 'Aave Governance Guardian Optimism',
     '0x56C1a4b54921DEA9A344967a8693C7E661D72968': 'Aave Protocol Guardian Optimism',
     '0x9867Ce43D2a574a152fE6b134F64c9578ce3cE03': 'BGD Steward Injector Guardian',

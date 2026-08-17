@@ -37,7 +37,7 @@ export const zksyncConfig: NetworkConfig = {
     '0x2451337aD5fE8b563bEB3b9c4A2B8789294879Ec': 'BGD',
     '0x4257bf0746D783f0D962913d7d8AFA408B62547E': 'Aave Governance Guardian ZkSync',
     '0x77CC0A0582475bfD74CD838610e817d05c181E11': 'CleanUp Admin',
-    '0x5BF14aeaFe54A9dE94D0C4CeA73A9B4C46F94F2D': 'Risk Council',
+    [AaveV3ZkSync.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V3]: v3Pool,

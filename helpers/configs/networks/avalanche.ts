@@ -90,7 +90,7 @@ export const avalancheConfig: NetworkConfig = {
     '0x5CfCd7E6D055Ba4f7B998914336254aDE3F69f26':
       'Avalanche v2 incentives admin',
     '0x3DBA1c4094BC0eE4772A05180B7E0c2F1cFD9c36': 'BGD',
-    '0xCa66149425E7DC8f81276F6D80C4b486B9503D1a': 'Risk Council',
+    [AaveV3Avalanche.RISK_COUNCIL]: 'Risk Council',
     '0x360c0a69Ed2912351227a0b745f890CB2eBDbcFe':
       'Aave Governance Guardian Avalanche',
     '0xB94e515615c244Ab25f7A6e592e3Cb7EE31E99F4':

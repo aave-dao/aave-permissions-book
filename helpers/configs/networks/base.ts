@@ -48,7 +48,7 @@ export const baseConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     '0x9e10C0A1Eb8FF6a0AaA53a62C7a338f35D7D9a2A': 'Aave Guardian Base',
     '0x7FDA7C3528ad8f05e62148a700D456898b55f8d2': 'BGD',
-    '0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1': 'Risk Council',
+    [AaveV3Base.RISK_COUNCIL]: 'Risk Council',
     '0x360c0a69Ed2912351227a0b745f890CB2eBDbcFe': 'Aave Governance Guardian Base',
     '0x56C1a4b54921DEA9A344967a8693C7E661D72968': 'Aave Protocol Guardian Base',
     '0x8513e6F37dBc52De87b166980Fa3F50639694B60': 'Gho Risk Council',
