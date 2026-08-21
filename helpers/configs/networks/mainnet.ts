@@ -36,14 +36,32 @@ const v3Pool = createV3Pool({
   umbrellaBlock: 22346140,
   umbrellaIncentivesBlock: 22346130,
   clinicStewardBlock: 21967120,
-  addressBook: { ...AaveV3Ethereum, ...MiscEthereum, ...GhoEthereum },
+  addressBook: {
+    ...AaveV3Ethereum,
+    ...MiscEthereum,
+    ...GhoEthereum,
+    // Inlined until the address book package release carries them. Names match
+    // aave-dao/aave-address-book#1527, so these lines go once the package is bumped and the
+    // MiscEthereum spread above supplies them.
+    LLAMARISK_RISK_ORACLE_ADMIN_SAFE: '0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471',
+    LLAMARISK_RISK_ORACLE: '0x683d1A91599F971252Ef171eF1F987172be8369A',
+    LLAMARISK_PT_PARAMETER_REGISTRY: '0x37370932045d20C01A62b3e7c21134A1C6365D38',
+    LLAMARISK_RISK_ORACLE_ROUTER: '0x1D85000D54ea1185C43E4f2b32833524d3cF3507',
+    LLAMARISK_PT_DISCOUNT_RATE_AGENT: '0x529e2374afB38AC465D71979E7540ad93C05F6c5',
+    LLAMARISK_PT_EMODE_AGENT: '0xbe2840440d4f77CD98CEC2de09913e6851907744',
+  },
   governanceAddressBook: GovernanceV3Ethereum,
   umbrellaAddressBook: UmbrellaEthereum,
   ppcPermissionsJson: './statics/functionsPermissionsPpcV1.json',
   ppcAddressBook: { ...UmbrellaEthereum, ...MiscEthereum },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   addresses: {
     '0x2a323be63e08E08536Fc3b5d8C6f24825e68895e': 'LayerZeroAdapter',
     '0x6Abb61beb5848B476d026C4934E8a6415e2E75a8': 'HyperLaneAdapter',
+    '0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471': 'LlamaRiskRiskOracleAdminSafe',
+    '0x683d1A91599F971252Ef171eF1F987172be8369A': 'RiskOracle',
+    '0x37370932045d20C01A62b3e7c21134A1C6365D38': 'PTParameterRegistry',
+    '0x1D85000D54ea1185C43E4f2b32833524d3cF3507': 'LlamaguardRiskOracleRouter',
   },
 });
 
