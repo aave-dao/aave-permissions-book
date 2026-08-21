@@ -41,6 +41,7 @@ const v3Pool = createV3Pool({
   umbrellaAddressBook: UmbrellaEthereum,
   ppcPermissionsJson: './statics/functionsPermissionsPpcV1.json',
   ppcAddressBook: { ...UmbrellaEthereum, ...MiscEthereum },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   addresses: {
     '0x2a323be63e08E08536Fc3b5d8C6f24825e68895e': 'LayerZeroAdapter',
     '0x6Abb61beb5848B476d026C4934E8a6415e2E75a8': 'HyperLaneAdapter',
