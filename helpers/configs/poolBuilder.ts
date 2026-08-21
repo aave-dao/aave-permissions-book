@@ -58,6 +58,7 @@ export interface V3PoolConfig {
   ppcPermissionsJson?: string;
   ppcAddressBook?: AddressBook;
   functionsPermissionsAgentHubJson?: string;
+  functionsPermissionsLlamaRiskJson?: string;
   addresses?: Record<string, string>;
   emissionManagerBlock?: number;
 }
@@ -92,6 +93,7 @@ export const createV3Pool = (config: V3PoolConfig): PoolConfigs => ({
   permissionsJson: './statics/functionsPermissionsV3.json',
   crossChainPermissionsJson: './statics/functionsPermissionsGovV3.json',
   functionsPermissionsAgentHubJson: config.functionsPermissionsAgentHubJson ?? './statics/functionsPermissionsAgentHub.json',
+  functionsPermissionsLlamaRiskJson: config.functionsPermissionsLlamaRiskJson,
   ...config,
 });
 

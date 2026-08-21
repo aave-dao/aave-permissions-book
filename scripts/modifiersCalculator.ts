@@ -83,6 +83,7 @@ import { getRPCClient, getForkRpcUrl, getEventsMultiContract } from '../helpers/
 import { getLimit } from '../helpers/limits.js';
 import { resolvePpcModifiers } from './ppcPermissions.js';
 import { resolveAgentHubModifiers } from './agentHubPermissions.js';
+import { resolveLlamaRiskModifiers } from './llamaRiskPermissions.js';
 import {
   getProviderForPool,
   getV3ProviderForPool,
@@ -722,6 +723,17 @@ const generateNetworkPermissions = async (
         poolKey,
       );
       agentHub.contracts = agentHubPermissions;
+    }
+
+    if (pool.functionsPermissionsLlamaRiskJson) {
+      logTableGeneration(network, poolKey, 'LlamaRisk PT Oracle');
+
+      const { llamaRiskPermissions } = await resolveLlamaRiskModifiers(
+        pool.addressBook,
+        poolProvider,
+        getStaticPermissionsJson(pool.functionsPermissionsLlamaRiskJson),
+      );
+      poolPermissions = { ...poolPermissions, ...llamaRiskPermissions };
     }
 
     // =========================================================================

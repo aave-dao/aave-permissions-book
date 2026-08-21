@@ -129,6 +129,7 @@ export type PoolConfigs = {
   ppcAddressBook?: AddressBook;
 
   functionsPermissionsAgentHubJson?: string;
+  functionsPermissionsLlamaRiskJson?: string;
 
   accessManagerBlock?: number;
   roleLabels?: Record<string, string>;
