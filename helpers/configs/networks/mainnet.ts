@@ -45,10 +45,6 @@ const v3Pool = createV3Pool({
   addresses: {
     '0x2a323be63e08E08536Fc3b5d8C6f24825e68895e': 'LayerZeroAdapter',
     '0x6Abb61beb5848B476d026C4934E8a6415e2E75a8': 'HyperLaneAdapter',
-    [MiscEthereum.LLAMARISK_RISK_ORACLE_ADMIN_SAFE]: 'LlamaRiskRiskOracleAdminSafe',
-    [MiscEthereum.LLAMARISK_RISK_ORACLE]: 'RiskOracle',
-    [MiscEthereum.LLAMARISK_PT_PARAMETER_REGISTRY]: 'PTParameterRegistry',
-    [MiscEthereum.LLAMARISK_RISK_ORACLE_ROUTER]: 'LlamaguardRiskOracleRouter',
   },
 });
 
