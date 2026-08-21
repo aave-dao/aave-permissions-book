@@ -1357,6 +1357,176 @@
             ]
           }
         ]
+      },
+      "LlamaRiskRiskOracle": {
+        "address": "0x683d1A91599F971252Ef171eF1F987172be8369A",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0x41948edF16a150E2DA875b132d3e16d3D8e35f13",
+                  "0xCAC616Fffb687cBDDD250b2aE6F672449462985C",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "addAuthorizedSender",
+              "removeAuthorizedSender",
+              "addUpdateType",
+              "transferOwnership",
+              "renounceOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyAuthorized",
+            "addresses": [
+              {
+                "address": "0x1D85000D54ea1185C43E4f2b32833524d3cF3507",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "publishRiskParameterUpdate",
+              "publishBulkRiskParameterUpdates"
+            ]
+          }
+        ]
+      },
+      "LlamaRiskPTParameterRegistry": {
+        "address": "0x37370932045d20C01A62b3e7c21134A1C6365D38",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setUpdater",
+              "transferOwnership",
+              "renounceOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyUpdater",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0x41948edF16a150E2DA875b132d3e16d3D8e35f13",
+                  "0xCAC616Fffb687cBDDD250b2aE6F672449462985C",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "setPtMarketParams",
+              "setEnabled",
+              "setModelVersion",
+              "setEmaSpan",
+              "setEmaFreshnessSeconds",
+              "setDeviationThresholdBps",
+              "setKReferenceEndpoint",
+              "setEmodeCategoryIds",
+              "deleteMarket"
+            ]
+          }
+        ]
+      },
+      "LlamaguardRiskOracleRouter": {
+        "address": "0x1D85000D54ea1185C43E4f2b32833524d3cF3507",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0x41948edF16a150E2DA875b132d3e16d3D8e35f13",
+                  "0xCAC616Fffb687cBDDD250b2aE6F672449462985C",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "addRoute",
+              "removeRoute",
+              "setRiskOracle",
+              "setAgentHub",
+              "setUpdater",
+              "setGuardian",
+              "unpause",
+              "transferOwnership",
+              "renounceOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyUpdater",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0x41948edF16a150E2DA875b132d3e16d3D8e35f13",
+                  "0xCAC616Fffb687cBDDD250b2aE6F672449462985C",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "setRouteEnabled",
+              "setAgentIds",
+              "setRouteThrottle",
+              "setRouteMaxReportAge"
+            ]
+          },
+          {
+            "modifier": "onlyOwnerOrGuardian",
+            "addresses": [
+              {
+                "address": "0x2CFe3ec4d5a6811f4B8067F0DE7e47DfA938Aa30",
+                "owners": [
+                  "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                  "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                  "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                  "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                  "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                  "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                ],
+                "signersThreshold": 4
+              },
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0x41948edF16a150E2DA875b132d3e16d3D8e35f13",
+                  "0xCAC616Fffb687cBDDD250b2aE6F672449462985C",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "pause"
+            ]
+          }
+        ]
       }
     },
     "roles": {
