@@ -1,0 +1,152 @@
+[
+  {
+    "contract": "LlamaRiskRiskOracle",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "addAuthorizedSender",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "removeAuthorizedSender",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "addUpdateType",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "publishRiskParameterUpdate",
+        "roles": ["onlyAuthorized"]
+      },
+      {
+        "name": "publishBulkRiskParameterUpdates",
+        "roles": ["onlyAuthorized"]
+      }
+    ]
+  },
+  {
+    "contract": "LlamaRiskPTParameterRegistry",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setUpdater",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setPtMarketParams",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setEnabled",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setModelVersion",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setEmaSpan",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setEmaFreshnessSeconds",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setDeviationThresholdBps",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setKReferenceEndpoint",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setEmodeCategoryIds",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "deleteMarket",
+        "roles": ["onlyUpdater"]
+      }
+    ]
+  },
+  {
+    "contract": "LlamaguardRiskOracleRouter",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "addRoute",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "removeRoute",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setRiskOracle",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setAgentHub",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setUpdater",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setGuardian",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "unpause",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setRouteEnabled",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setAgentIds",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setRouteThrottle",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setRouteMaxReportAge",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "pause",
+        "roles": ["onlyOwnerOrGuardian"]
+      }
+    ]
+  }
+]
