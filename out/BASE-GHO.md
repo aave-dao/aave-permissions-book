@@ -26,7 +26,7 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [Gho Risk Council](https://basescan.org/address/0x8513e6F37dBc52De87b166980Fa3F50639694B60) |  3/4 |  0x8513e6F37dBc52De87b166980Fa3F50639694B60 |  [0xCAC616Fffb687cBDDD250b2aE6F672449462985C](https://basescan.org/address/0xCAC616Fffb687cBDDD250b2aE6F672449462985C), [0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4](https://basescan.org/address/0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4), [0xb647055A9915bF9c8021a684E175A353525b9890](https://basescan.org/address/0xb647055A9915bF9c8021a684E175A353525b9890), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://basescan.org/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+|  [Gho Risk Council](https://basescan.org/address/0x8513e6F37dBc52De87b166980Fa3F50639694B60) |  2/3 |  0x8513e6F37dBc52De87b166980Fa3F50639694B60 |  [0x4b752551fC6345A7de82F76fd7a5015CA16d1a74](https://basescan.org/address/0x4b752551fC6345A7de82F76fd7a5015CA16d1a74), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://basescan.org/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef), [0x9DE1d45e2786b03498289959203F25b29B4D1193](https://basescan.org/address/0x9DE1d45e2786b03498289959203F25b29B4D1193) | |--------|--------|--------|--------|
 
 ### Admins
 | Role |Contract |
