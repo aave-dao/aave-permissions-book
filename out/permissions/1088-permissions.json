@@ -410,7 +410,8 @@
             "0x360c0a69Ed2912351227a0b745f890CB2eBDbcFe"
           ],
           "RETRY_ROLE": [
-            "0x9853589F951D724D9f7c6724E0fD63F9d888C429"
+            "0x9853589F951D724D9f7c6724E0fD63F9d888C429",
+            "0x2B99790c35a401be873FA7Eb514D9220736BB1cA"
           ]
         }
       },
@@ -429,6 +430,14 @@
                     "0x0650302887619fa7727D8BD480Cda11A638B219B"
                   ],
                   "signersThreshold": 2
+                },
+                {
+                  "address": "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "owners": [
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a"
+                  ],
+                  "signersThreshold": 1
                 }
               ],
               "functions": [
@@ -620,13 +629,9 @@
               "modifier": "onlyOwnerOrGuardian",
               "addresses": [
                 {
-                  "address": "0x9853589F951D724D9f7c6724E0fD63F9d888C429",
-                  "owners": [
-                    "0xf71fc92e2949ccF6A5Fd369a0b402ba80Bc61E02",
-                    "0x5811d9FF80ff4B73A8F9bA42A6082FaB82E89Ea7",
-                    "0x0650302887619fa7727D8BD480Cda11A638B219B"
-                  ],
-                  "signersThreshold": 2
+                  "address": "0x61BE97d3a0550549f67CA7421725fA73Fa2036B5",
+                  "owners": [],
+                  "signersThreshold": 0
                 },
                 {
                   "address": "0x6fD45D32375d5aDB8D76275A3932c740F03a8718",

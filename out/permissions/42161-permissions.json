@@ -666,7 +666,8 @@
             "0x1A0581dd5C7C3DA4Ba1CDa7e0BcA7286afc4973b"
           ],
           "RETRY_ROLE": [
-            "0x1Fcd437D8a9a6ea68da858b78b6cf10E8E0bF959"
+            "0x1Fcd437D8a9a6ea68da858b78b6cf10E8E0bF959",
+            "0x2B99790c35a401be873FA7Eb514D9220736BB1cA"
           ]
         }
       },
@@ -685,6 +686,14 @@
                     "0x0650302887619fa7727D8BD480Cda11A638B219B"
                   ],
                   "signersThreshold": 2
+                },
+                {
+                  "address": "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "owners": [
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a"
+                  ],
+                  "signersThreshold": 1
                 }
               ],
               "functions": [

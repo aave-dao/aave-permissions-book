@@ -1574,7 +1574,8 @@
             "0xCe52ab41C40575B072A18C9700091Ccbe4A06710"
           ],
           "RETRY_ROLE": [
-            "0xb812d0944f8F581DfAA3a93Dda0d22EcEf51A9CF"
+            "0xb812d0944f8F581DfAA3a93Dda0d22EcEf51A9CF",
+            "0x2B99790c35a401be873FA7Eb514D9220736BB1cA"
           ]
         }
       },
@@ -1593,6 +1594,14 @@
                     "0x5811d9FF80ff4B73A8F9bA42A6082FaB82E89Ea7"
                   ],
                   "signersThreshold": 2
+                },
+                {
+                  "address": "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "owners": [
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a"
+                  ],
+                  "signersThreshold": 1
                 }
               ],
               "functions": [
@@ -2428,6 +2437,19 @@
                   "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
                   "owners": [],
                   "signersThreshold": 0
+                },
+                {
+                  "address": "0x2CFe3ec4d5a6811f4B8067F0DE7e47DfA938Aa30",
+                  "owners": [
+                    "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                    "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                    "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                    "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                    "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                    "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                    "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                  ],
+                  "signersThreshold": 4
                 }
               ],
               "functions": [
@@ -2600,7 +2622,8 @@
             "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A"
           ],
           "PAUSE_GUARDIAN_ROLE": [
-            "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A"
+            "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+            "0x2CFe3ec4d5a6811f4B8067F0DE7e47DfA938Aa30"
           ]
         }
       },
