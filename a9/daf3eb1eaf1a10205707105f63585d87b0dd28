@@ -1,0 +1,25 @@
+helpers/configs/networks/mainnet.ts
+  s_cec81b7cbe2326::t_5384dfdbedf266 121-125,129
+out/ETHEREUM-V4.md
+  s_cec81b7cbe2326::t_2e8a6ced6ed5a8 23,106
+out/permissions/1-permissions.json
+  s_cec81b7cbe2326::t_dbe7721e8a44fa 10929-10958
+out/permissions/metadata/1-metadata.json
+  s_cec81b7cbe2326::t_85cb5bb21e9694 153,163,419-423
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "a9daf3eb1eaf1a10205707105f63585d87b0dd28",
+  "prompts": {},
+  "sessions": {
+    "s_cec81b7cbe2326": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0346d-9c2e-72a0-b9d0-971362724afc",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "AlbertoCentonze <11707683+AlbertoCentonze@users.noreply.github.com>"
+    }
+  }
+}
