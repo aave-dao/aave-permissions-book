@@ -118,9 +118,15 @@ const v2MiscPool = {
 // ============================================================================
 // Aave V4
 // ============================================================================
+// PAXG Gold Spoke: deployed but not yet available in the address book package.
+const manualV4Spokes = {
+  PAXG_GOLD_SPOKE: '0xAD75cE6354f87F3135cE10621d385d8D1e2562C2',
+};
+
 const deduplicatedV4Addresses = deduplicateByAddress(
   AaveV4Ethereum.HUBS as Record<string, string>,
   AaveV4Ethereum.SPOKES as Record<string, string>,
+  manualV4Spokes,
   AaveV4Ethereum.TOKENIZATION_SPOKES as Record<string, string>,
 );
 
