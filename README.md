@@ -62,6 +62,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  MEGAETH |  V3 |  [Permissions](./out/MEGAETH-V3.md#contracts) | |--------|--------|--------|
 |  MANTLE |  V3 |  [Permissions](./out/MANTLE-V3.md#contracts) | |--------|--------|--------|
 |  MANTLE |  GHO |  [Permissions](./out/MANTLE-GHO.md#contracts) | |--------|--------|--------|
+|  ARC |  V4 |  [Permissions](./out/ARC-V4.md#contracts) | |--------|--------|--------|
 |  BASE |  V3 |  [Permissions](./out/BASE-V3.md#contracts) | |--------|--------|--------|
 |  BASE |  GHO |  [Permissions](./out/BASE-GHO.md#contracts) | |--------|--------|--------|
 |  PLASMA |  V3 |  [Permissions](./out/PLASMA-V3.md#contracts) | |--------|--------|--------|

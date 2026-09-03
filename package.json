@@ -29,7 +29,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@aave-dao/toolbox": "^0.5.0",
+    "@aave-dao/toolbox": "^0.6.0",
     "viem": "^2.33.1"
   }
 }
