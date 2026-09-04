@@ -1,0 +1,52 @@
+{
+  "V4": {
+    "latestBlockNumber": 18946895,
+    "indexedContracts": {
+      "ACCESS_MANAGER": {
+        "address": "0x24761DB265998ba1D38E8a29031cF72C2CeF3A7D",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      }
+    }
+  },
+  "V4_SPOKE_PM": {
+    "latestBlockNumber": 18946895,
+    "indexedContracts": {
+      "0x42eab64310e1d1c66b4d8af7c9c4ce253885eb83": {
+        "address": "0x42eab64310e1d1c66b4d8af7c9c4ce253885eb83",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      },
+      "0x5a10b1533c0f1f181dc8a428bf5eb58b08fc8d2c": {
+        "address": "0x5a10b1533c0f1f181dc8a428bf5eb58b08fc8d2c",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      },
+      "0x83d364dbaf4e7018e0b87db3fab3d1d8535a6f13": {
+        "address": "0x83d364dbaf4e7018e0b87db3fab3d1d8535a6f13",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      },
+      "0xe8b890fea6e1e3915a337ed3136487f2f4f7e59d": {
+        "address": "0xe8b890fea6e1e3915a337ed3136487f2f4f7e59d",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      },
+      "0xb843bdc3a87a05e77e07df9fe48928b3a34b134d": {
+        "address": "0xb843bdc3a87a05e77e07df9fe48928b3a34b134d",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      },
+      "0x4164ebcaf74670aa74c8d4f59de6157c0780f1bb": {
+        "address": "0x4164ebcaf74670aa74c8d4f59de6157c0780f1bb",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      },
+      "0xcbd466cb8709d9f6dd8312668b4dbef394ce0e15": {
+        "address": "0xcbd466cb8709d9f6dd8312668b4dbef394ce0e15",
+        "deploymentBlock": 18791458,
+        "firstIndexedAt": 18791458
+      }
+    }
+  }
+}

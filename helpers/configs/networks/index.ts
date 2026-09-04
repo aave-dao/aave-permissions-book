@@ -23,6 +23,7 @@ import { mantleConfig } from './mantle.js';
 import { megaethConfig } from './megaeth.js';
 import { xLayerConfig } from './xlayer.js';
 import { monadConfig } from './monad.js';
+import { arcConfig } from './arc.js';
 
 /**
  * @notice object that contains the configuration for each pool and network pairing.
@@ -53,4 +54,5 @@ export const networkConfigs: NetworkConfigs = {
   [ChainId.megaeth]: megaethConfig,
   [ChainId.xLayer]: xLayerConfig,
   [ChainId.monad]: monadConfig,
+  [ChainId.arc]: arcConfig,
 };
