@@ -35,10 +35,10 @@
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
 |----------|----------|----------|----------|----------|
-|  [GIVER POSITION MANAGER](https://explorer.arc.io/address/0x01Da80Eef3004ebbF90b7637B1De7fF30fBc7cf1) |  - |  onlyOwner |  [0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD](https://explorer.arc.io/address/0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
-|  [TAKER POSITION MANAGER](https://explorer.arc.io/address/0xe9fae1C386c6f45B1fb3C3Ef01aDE424DAd4bCcF) |  - |  onlyOwner |  [0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD](https://explorer.arc.io/address/0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD) |  registerSpoke | |--------|--------|--------|--------|--------|
-|  [CONFIG POSITION MANAGER](https://explorer.arc.io/address/0xa5Aa65Ae1c830d2ae10853CeEa42AE653adB3312) |  - |  onlyOwner |  [0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD](https://explorer.arc.io/address/0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD) |  registerSpoke | |--------|--------|--------|--------|--------|
-|  [SIGNATURE GATEWAY](https://explorer.arc.io/address/0x0d36A4a21119BBBDe559d59002254171D976289f) |  - |  onlyOwner |  [0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD](https://explorer.arc.io/address/0x623f1C807fE1088439e129ebF3B9c92a63a0F5cD) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
+|  [GIVER POSITION MANAGER](https://explorer.arc.io/address/0x01Da80Eef3004ebbF90b7637B1De7fF30fBc7cf1) |  - |  onlyOwner |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
+|  [TAKER POSITION MANAGER](https://explorer.arc.io/address/0xe9fae1C386c6f45B1fb3C3Ef01aDE424DAd4bCcF) |  - |  onlyOwner |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke | |--------|--------|--------|--------|--------|
+|  [CONFIG POSITION MANAGER](https://explorer.arc.io/address/0xa5Aa65Ae1c830d2ae10853CeEa42AE653adB3312) |  - |  onlyOwner |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke | |--------|--------|--------|--------|--------|
+|  [SIGNATURE GATEWAY](https://explorer.arc.io/address/0x0d36A4a21119BBBDe559d59002254171D976289f) |  - |  onlyOwner |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
 
 ### Spoke PositionManagers
 | spoke |active position managers |
@@ -49,7 +49,7 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  1/1 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://explorer.arc.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+|  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  1/2 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://explorer.arc.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://explorer.arc.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |
