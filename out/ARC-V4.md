@@ -49,7 +49,7 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  1/2 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://explorer.arc.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://explorer.arc.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+|  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://explorer.arc.io/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://explorer.arc.io/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://explorer.arc.io/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://explorer.arc.io/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://explorer.arc.io/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://explorer.arc.io/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://explorer.arc.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://explorer.arc.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |
