@@ -1,0 +1,61 @@
+out/permissions/metadata/1-metadata.json
+  s_cec81b7cbe2326::t_12d0da56513dfa 3,43,53,63,83,98,123,128,133,138,143,148,153,163
+out/permissions/metadata/10-metadata.json
+  s_cec81b7cbe2326::t_8fe42ba37aca27 3,53,58
+out/permissions/metadata/100-metadata.json
+  s_cec81b7cbe2326::t_6f0b1f65db9a1c 3,33,43,48
+out/permissions/metadata/1088-metadata.json
+  s_cec81b7cbe2326::t_b142b497c6478b 3,33,38
+out/permissions/metadata/137-metadata.json
+  s_cec81b7cbe2326::t_e1958270eff4a2 3,33,63,68
+out/permissions/metadata/143-metadata.json
+  s_cec81b7cbe2326::t_15edf05f7614f8 3,28,33
+out/permissions/metadata/146-metadata.json
+  s_cec81b7cbe2326::t_6234488c31f872 3,28,33
+out/permissions/metadata/1868-metadata.json
+  s_cec81b7cbe2326::t_ce16dd64fa0866 3,28,33
+out/permissions/metadata/196-metadata.json
+  s_cec81b7cbe2326::t_18c0cc8da6bb62 3,28,33,38
+out/permissions/metadata/324-metadata.json
+  s_cec81b7cbe2326::t_28508e8aaf0ae1 3,33,38
+out/permissions/metadata/42161-metadata.json
+  s_cec81b7cbe2326::t_824041c2450ca3 3,53,58
+out/permissions/metadata/42220-metadata.json
+  s_cec81b7cbe2326::t_1f5d31ccd1ed99 3,28,33
+out/permissions/metadata/43114-metadata.json
+  s_cec81b7cbe2326::t_c05e09e30a4920 3,33,63,68,73,83
+out/permissions/metadata/4326-metadata.json
+  s_cec81b7cbe2326::t_1cf4c4cf083757 3,28,33
+out/permissions/metadata/5000-metadata.json
+  s_cec81b7cbe2326::t_222feac1680104 3,28,38,43
+out/permissions/metadata/534352-metadata.json
+  s_cec81b7cbe2326::t_49782ba128c15e 3,33,38
+out/permissions/metadata/56-metadata.json
+  s_cec81b7cbe2326::t_fa5869b8b18b7d 3,58,63
+out/permissions/metadata/57073-metadata.json
+  s_cec81b7cbe2326::t_b0fed8766ed811 3,18,33,43,48
+out/permissions/metadata/59144-metadata.json
+  s_cec81b7cbe2326::t_86d0e1cbe70d8d 3,63,68
+out/permissions/metadata/60808-metadata.json
+  s_cec81b7cbe2326::t_dca02773df79cf 3
+out/permissions/metadata/8453-metadata.json
+  s_cec81b7cbe2326::t_3d09f51ee9ff58 3,53,63,68
+out/permissions/metadata/9745-metadata.json
+  s_cec81b7cbe2326::t_e68403194b270d 3,28,43,48
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "5ae5af98e07677e16a52b8c3326842e5aef21197",
+  "prompts": {},
+  "sessions": {
+    "s_cec81b7cbe2326": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0346d-9c2e-72a0-b9d0-971362724afc",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "AlbertoCentonze <11707683+AlbertoCentonze@users.noreply.github.com>"
+    }
+  }
+}
