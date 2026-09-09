@@ -56,6 +56,7 @@ import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
 import {
   resolveV4Modifiers,
+  resolveV4AclModifiers,
   resolveTokenizationSpokeUpgradeability,
   resolveV4PositionManagerModifiers,
   getTrackedV4Addresses,
@@ -490,6 +491,53 @@ const generateNetworkPermissions = async (
           roles: v4Roles,
           functionRoles: v4FunctionRoles,
           roleLabels: v4Result.roleLabels,
+        };
+      }
+
+      // A V4 market can also have a V3-style ACLManager + PoolAddressesProvider
+      // backing its periphery. Those sit outside the AccessManager graph, so
+      // their roles come from ACL RoleGranted/RoleRevoked events.
+      //
+      // Arc has no V3 market and deploys its own pair, indexed here. Where the
+      // network does have a V3 market, the V4 pool points at that market's ACL
+      // manager, so the roles the V3 pool already indexed are reused instead of
+      // replaying the same contract's full history a second time.
+      if (pool.addressBook.ACL_MANAGER) {
+        const v3AclManager = pools[Pools.V3]?.addressBook?.ACL_MANAGER as string | undefined;
+        const sharedWithV3 =
+          !!v3AclManager &&
+          getAddress(v3AclManager) === getAddress(pool.addressBook.ACL_MANAGER as string);
+
+        let aclRoles: Record<string, string[]>;
+        if (sharedWithV3) {
+          logTableGeneration(network, poolKey, 'ACL Manager (shared with V3)');
+          aclRoles = fullJson[Pools.V3]?.roles?.role || {};
+        } else {
+          if (!pool.aclBlock) {
+            throw new Error(
+              `${poolKey} on network ${network} has an ACL_MANAGER that no V3 pool shares, but no aclBlock to index it from`,
+            );
+          }
+          logTableGeneration(network, poolKey, 'ACL Manager', indexedLatestBlock || pool.aclBlock);
+          aclRoles = getRoleAdmins({
+            oldRoles: (fullJson[poolKey]?.roles?.role) || {},
+            roleNames: protocolRoleNames,
+            eventLogs: indexedEvents['ACL_MANAGER'] || [],
+          });
+        }
+
+        admins = {
+          role: aclRoles,
+        };
+
+        poolPermissions = {
+          ...poolPermissions,
+          ...(await resolveV4AclModifiers(
+            pool.addressBook,
+            poolProvider,
+            permissionsJson,
+            admins.role,
+          )),
         };
       }
     } else if (

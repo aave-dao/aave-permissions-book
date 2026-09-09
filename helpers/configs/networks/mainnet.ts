@@ -142,6 +142,9 @@ const aaveV4 = createV4({
     ACCESS_MANAGER: AaveV4Ethereum.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Ethereum.SPOKE_CONFIGURATOR,
+    // Shared with the V3 market, so no aclBlock: the V3 pool indexes it
+    POOL_ADDRESSES_PROVIDER: AaveV3Ethereum.POOL_ADDRESSES_PROVIDER,
+    ACL_MANAGER: AaveV3Ethereum.ACL_MANAGER,
     ...v4MainAddressBook,
     ...(AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>),
   },

@@ -1,16 +1,21 @@
 {
   "V4": {
-    "latestBlockNumber": 19967402,
+    "latestBlockNumber": 19969999,
     "indexedContracts": {
       "ACCESS_MANAGER": {
         "address": "0x24761DB265998ba1D38E8a29031cF72C2CeF3A7D",
         "deploymentBlock": 18791458,
         "firstIndexedAt": 18791458
+      },
+      "ACL_MANAGER": {
+        "address": "0x4d4B307857eFff79E786923F2A277ea298E88aEA",
+        "deploymentBlock": 17408596,
+        "firstIndexedAt": 17408596
       }
     }
   },
   "V4_SPOKE_PM": {
-    "latestBlockNumber": 19967402,
+    "latestBlockNumber": 19969999,
     "indexedContracts": {
       "0x42eab64310e1d1c66b4d8af7c9c4ce253885eb83": {
         "address": "0x42eab64310e1d1c66b4d8af7c9c4ce253885eb83",

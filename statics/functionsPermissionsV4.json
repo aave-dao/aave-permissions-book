@@ -446,5 +446,60 @@
         "roles": ["onlyRescueGuardian"]
       }
     ]
+  },
+  {
+    "contract": "PoolAddressesProvider",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setMarketId",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setAddress",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setAddressAsProxy",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setPoolImpl",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setPoolConfiguratorImpl",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setPriceOracle",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setACLManager",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setACLAdmin",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setPriceOracleSentinel",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setPoolDataProvider",
+        "roles": ["onlyOwner"]
+      }
+    ]
+  },
+  {
+    "contract": "ACLManager",
+    "functions": [
+      {
+        "name": "setRoleAdmin",
+        "roles": ["onlyRole"]
+      }
+    ]
   }
 ]

@@ -26,11 +26,14 @@ for (const [key, address] of Object.entries(deduplicatedV4Addresses)) {
 
 const aaveV4 = createV4({
   accessManagerBlock: 18791458,
+  aclBlock: 17408596,
   tokenizationSpokesAddressBook: v4TokenizationSpokesAddressBook,
   addressBook: {
     ACCESS_MANAGER: AaveV4Arc.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Arc.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Arc.SPOKE_CONFIGURATOR,
+    POOL_ADDRESSES_PROVIDER: MiscArc.POOL_ADDRESSES_PROVIDER,
+    ACL_MANAGER: MiscArc.ACL_MANAGER,
     ...v4MainAddressBook,
     ...(AaveV4Arc.POSITION_MANAGERS as Record<string, string>),
   },

@@ -153,8 +153,20 @@ const buildActionPoolInfo = (
   const isV4 = pool === Pools.V4;
 
   if (isV4) {
+    // A shared ACLManager/PoolAddressesProvider is administered by a governance
+    // executor, which lives in V3's governance section rather than in the V4
+    // pool, so the classifier needs it to resolve the action to Governance.
+    // Only the executors are merged: the other governance contracts would add
+    // V3 governance actions (adi, proposals) the V4 market does not have.
+    const v3GovExecutors = Object.fromEntries(
+      Object.entries(networkPermits['V3']?.govV3?.contracts ?? {}).filter(
+        ([contractName]) => contractName.startsWith('Executor'),
+      ),
+    );
+
     return {
       ...currentPoolContracts,
+      ...v3GovExecutors,
       ...networkPermits[Pools.V4]?.govV3?.contracts,
     } as Contracts;
   }

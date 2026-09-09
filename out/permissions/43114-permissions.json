@@ -3658,9 +3658,77 @@
             "functions": []
           }
         ]
+      },
+      "PoolAddressesProvider": {
+        "address": "0xa97684ead0e402dC232d5A977953DF7ECBaB3CDb",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setMarketId",
+              "setAddress",
+              "setAddressAsProxy",
+              "setPoolImpl",
+              "setPoolConfiguratorImpl",
+              "setPriceOracle",
+              "setACLManager",
+              "setACLAdmin",
+              "setPriceOracleSentinel",
+              "setPoolDataProvider"
+            ]
+          }
+        ]
+      },
+      "ACLManager": {
+        "address": "0xa72636CbcAa8F5FF95B2cc47F3CDEe83F3294a0B",
+        "modifiers": [
+          {
+            "modifier": "onlyRole",
+            "addresses": [
+              {
+                "address": "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setRoleAdmin"
+            ]
+          }
+        ]
       }
     },
-    "roles": {},
+    "roles": {
+      "role": {
+        "DEFAULT_ADMIN": [
+          "0x3C06dce358add17aAf230f2234bCCC4afd50d090"
+        ],
+        "POOL_ADMIN": [
+          "0x3C06dce358add17aAf230f2234bCCC4afd50d090"
+        ],
+        "EMERGENCY_ADMIN": [
+          "0x56C1a4b54921DEA9A344967a8693C7E661D72968"
+        ],
+        "ASSET_LISTING_ADMIN": [],
+        "RISK_ADMIN": [
+          "0xB94e515615c244Ab25f7A6e592e3Cb7EE31E99F4",
+          "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
+          "0x43632469e02CDAaEB4dE3DcBfCAaBEf310975729"
+        ],
+        "FLASH_BORROWER": [
+          "0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3",
+          "0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7",
+          "0xdeCC46a4b09162F5369c5C80383AAa9159bCf192"
+        ]
+      }
+    },
     "gsmRoles": {},
     "govV3": {
       "ggRoles": {}
