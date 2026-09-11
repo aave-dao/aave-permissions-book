@@ -22,10 +22,12 @@
 |  [USDG MAPLE ESpoke](https://etherscan.io/address/0x774b9655413c34809c1f1b16b654465A89EBE989) |  V4 Security Council | |--------|--------|
 |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://etherscan.io/address/0xB9B0b8616f6Bf6841972a52058132BE08d723155) |  V4 Security Council | |--------|--------|
+|  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…)](https://etherscan.io/address/0xAD75cE6354f87F3135cE10621d385d8D1e2562C2) |  V4 Security Council | |--------|--------|
 
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
 |----------|----------|
+|  [waGlobalDollarPAXG TokenizationSpoke (0x6493a2…)](https://etherscan.io/address/0x6493a23874b506D5Bb6038ea44aE9CC74cD00849) |  V4 Security Council | |--------|--------|
 |  [CORE WETH TokenizationSpoke](https://etherscan.io/address/0x7320CF22Ac095bA2a2e0a652F77efB836c2E751b) |  V4 Security Council | |--------|--------|
 |  [CORE wstETH TokenizationSpoke](https://etherscan.io/address/0xcb0E7dA9c635628f6d4827355AeCa75aB8d3560f) |  V4 Security Council | |--------|--------|
 |  [CORE weETH TokenizationSpoke](https://etherscan.io/address/0x559cEc2C840D9DBB18936Afc5E5341D78bfC7Cbe) |  V4 Security Council | |--------|--------|
@@ -104,6 +106,8 @@
 |  [USDG MAPLE ESpoke](https://etherscan.io/address/0x774b9655413c34809c1f1b16b654465A89EBE989) |  [USDG MAPLE ESpoke ProxyAdmin](https://etherscan.io/address/0xc2C9F8158C6d6Ca7C22c72520F2d024b7501aaA6) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517), [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addLiquidationFee, updateLiquidationFee, addDynamicReserveConfig, updateDynamicReserveConfig, pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve, updatePositionManager | |--------|--------|--------|--------|--------|
 |  [TreasurySpoke](https://etherscan.io/address/0xB9B0b8616f6Bf6841972a52058132BE08d723155) |  [TreasurySpoke ProxyAdmin](https://etherscan.io/address/0x890B79dDcdCCd663B4D7fC121A7A70184489b505) |  onlyOwner |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
+|  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…)](https://etherscan.io/address/0xAD75cE6354f87F3135cE10621d385d8D1e2562C2) |  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…) ProxyAdmin](https://etherscan.io/address/0xf5a49B10c86F36C49aC5Df6605A14c37D37F83e3) |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) |  updateLiquidationConfig, addReserve, updateReserveConfig, updateDynamicReserveConfig, addDynamicReserveConfig, updatePositionManager, updateReservePriceSource | |--------|--------|--------|--------|--------|
+|  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…)](https://etherscan.io/address/0xAD75cE6354f87F3135cE10621d385d8D1e2562C2) |  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…) ProxyAdmin](https://etherscan.io/address/0xf5a49B10c86F36C49aC5Df6605A14c37D37F83e3) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -129,6 +133,7 @@
 |  [KELP ESpoke](https://etherscan.io/address/0x3131FE68C4722e726fe6B2819ED68e514395B9a4) |  [GIVER POSITION MANAGER](https://etherscan.io/address/0x17A54b8d6D9C68e7fa1C7112AC998EA1BA51d11e), [TAKER POSITION MANAGER](https://etherscan.io/address/0x6c044c0D3801499bCAbfAd458B70880bc518e9F7), [CONFIG POSITION MANAGER](https://etherscan.io/address/0x51305839CE822a7b4b12AA7D86eA7005052d575c), [NATIVE TOKEN GATEWAY](https://etherscan.io/address/0xe68ab4F90Fe026B9873F5F276eD2d7efBbbE42Be), [SIGNATURE GATEWAY](https://etherscan.io/address/0xfbC184337Dc6595D8bf62968Bda46e7De7AF9c3d) | |--------|--------|
 |  [LIDO ESpoke](https://etherscan.io/address/0xe1900480ac69f0B296841Cd01cC37546d92F35Cd) |  [GIVER POSITION MANAGER](https://etherscan.io/address/0x17A54b8d6D9C68e7fa1C7112AC998EA1BA51d11e), [TAKER POSITION MANAGER](https://etherscan.io/address/0x6c044c0D3801499bCAbfAd458B70880bc518e9F7), [CONFIG POSITION MANAGER](https://etherscan.io/address/0x51305839CE822a7b4b12AA7D86eA7005052d575c), [NATIVE TOKEN GATEWAY](https://etherscan.io/address/0xe68ab4F90Fe026B9873F5F276eD2d7efBbbE42Be), [SIGNATURE GATEWAY](https://etherscan.io/address/0xfbC184337Dc6595D8bf62968Bda46e7De7AF9c3d) | |--------|--------|
 |  [USDG MAPLE ESpoke](https://etherscan.io/address/0x774b9655413c34809c1f1b16b654465A89EBE989) |  [GIVER POSITION MANAGER](https://etherscan.io/address/0x17A54b8d6D9C68e7fa1C7112AC998EA1BA51d11e), [TAKER POSITION MANAGER](https://etherscan.io/address/0x6c044c0D3801499bCAbfAd458B70880bc518e9F7), [CONFIG POSITION MANAGER](https://etherscan.io/address/0x51305839CE822a7b4b12AA7D86eA7005052d575c), [SIGNATURE GATEWAY](https://etherscan.io/address/0xfbC184337Dc6595D8bf62968Bda46e7De7AF9c3d) | |--------|--------|
+|  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…)](https://etherscan.io/address/0xAD75cE6354f87F3135cE10621d385d8D1e2562C2) |  [GIVER POSITION MANAGER](https://etherscan.io/address/0x17A54b8d6D9C68e7fa1C7112AC998EA1BA51d11e), [TAKER POSITION MANAGER](https://etherscan.io/address/0x6c044c0D3801499bCAbfAd458B70880bc518e9F7), [CONFIG POSITION MANAGER](https://etherscan.io/address/0x51305839CE822a7b4b12AA7D86eA7005052d575c), [SIGNATURE GATEWAY](https://etherscan.io/address/0xfbC184337Dc6595D8bf62968Bda46e7De7AF9c3d) | |--------|--------|
 
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
@@ -146,4 +151,10 @@
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517), [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) | |--------|--------|
+
+### New/untracked hubs and spokes
+| contract |type |hubs |discovered via |
+|----------|----------|----------|----------|
+|  [Untracked Spoke @ GLOBAL_DOLLAR Hub (0xad75ce…)](https://etherscan.io/address/0xad75ce6354f87f3135ce10621d385d8d1e2562c2) |  Spoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList, accessManagerTarget | |--------|--------|--------|--------|
+|  [waGlobalDollarPAXG TokenizationSpoke (0x6493a2…)](https://etherscan.io/address/0x6493a23874b506d5bb6038ea44ae9cc74cd00849) |  TokenizationSpoke |  [GLOBAL DOLLAR Hub](https://etherscan.io/address/0x62d63197660c080236193CA60b70E49A08E90368) |  hubSpokeList | |--------|--------|--------|--------|
 
