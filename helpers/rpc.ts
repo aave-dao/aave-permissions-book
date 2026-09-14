@@ -38,6 +38,7 @@ const RPC_ENV_BY_CHAIN: Record<number, string> = {
   [ChainId.mantle]: 'RPC_MANTLE',
   [ChainId.xLayer]: 'RPC_XLAYER',
   [ChainId.monad]: 'RPC_MONAD',
+  [ChainId.arc]: 'RPC_ARC',
 };
 
 const getHttpConfig = () => {
