@@ -104,7 +104,7 @@
 |  POOL_ADMIN |  [Executor_lvl1](https://www.oklink.com/x-layer/address/0xE2E8Badc5d50f8a6188577B89f50701cDE2D4e19), [Aave Protocol Guardian XLayer](https://www.oklink.com/x-layer/address/0xD0D1CcB0391aADF1EaD96814ce7ab4008Ebdb336) | |--------|--------|
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian XLayer](https://www.oklink.com/x-layer/address/0xD0D1CcB0391aADF1EaD96814ce7ab4008Ebdb336) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
-|  FLASH_BORROWER |   | |--------|--------|
+|  FLASH_BORROWER |  [0x714A871d3B471FF7Ee6A1896B16c5f55884fd910](https://www.oklink.com/x-layer/address/0x714A871d3B471FF7Ee6A1896B16c5f55884fd910), [0x18a6704775570afA8dB0D3FC0242515D90d120C0](https://www.oklink.com/x-layer/address/0x18a6704775570afA8dB0D3FC0242515D90d120C0) | |--------|--------|
 |  RISK_ADMIN |  [Manual AGRS](https://www.oklink.com/x-layer/address/0x7D0219C7037819B3F5d73E235C595189C3F8c224) | |--------|--------|
 
 ### Granular Guardian Admins
