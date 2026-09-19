@@ -68,5 +68,35 @@
         "firstIndexedAt": 51450529
       }
     }
+  },
+  "V4": {
+    "latestBlockNumber": 51513661,
+    "indexedContracts": {
+      "ACCESS_MANAGER": {
+        "address": "0x4010C94698EDE9d895814502B6EB122D764a1Cc6",
+        "deploymentBlock": 51478811,
+        "firstIndexedAt": 51478811
+      }
+    }
+  },
+  "V4_SPOKE_PM": {
+    "latestBlockNumber": 51513661,
+    "indexedContracts": {
+      "0x7081ce7eb1282c53cf38ea9b622f6269cb8fefdc": {
+        "address": "0x7081ce7eb1282c53cf38ea9b622f6269cb8fefdc",
+        "deploymentBlock": 51478811,
+        "firstIndexedAt": 51478811
+      },
+      "0x17905db0e4a3514467539956c084180616ae7b8d": {
+        "address": "0x17905db0e4a3514467539956c084180616ae7b8d",
+        "deploymentBlock": 51478811,
+        "firstIndexedAt": 51478811
+      },
+      "0x5f8d0102f5b51fae6de9d2f2561bda63fb5db674": {
+        "address": "0x5f8d0102f5b51fae6de9d2f2561bda63fb5db674",
+        "deploymentBlock": 51478811,
+        "firstIndexedAt": 51478811
+      }
+    }
   }
 }
