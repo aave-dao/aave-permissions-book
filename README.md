@@ -65,6 +65,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  ARC |  V4 |  [Permissions](./out/ARC-V4.md#contracts) | |--------|--------|--------|
 |  BASE |  V3 |  [Permissions](./out/BASE-V3.md#contracts) | |--------|--------|--------|
 |  BASE |  GHO |  [Permissions](./out/BASE-GHO.md#contracts) | |--------|--------|--------|
+|  BASE |  V4 |  [Permissions](./out/BASE-V4.md#contracts) | |--------|--------|--------|
 |  PLASMA |  V3 |  [Permissions](./out/PLASMA-V3.md#contracts) | |--------|--------|--------|
 |  PLASMA |  GHO |  [Permissions](./out/PLASMA-GHO.md#contracts) | |--------|--------|--------|
 |  ARBITRUM |  V3 |  [Permissions](./out/ARBITRUM-V3.md#contracts) | |--------|--------|--------|
