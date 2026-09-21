@@ -29,11 +29,11 @@
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
 |----------|----------|----------|----------|----------|
-|  [GIVER POSITION MANAGER](https://basescan.org/address/0x9E81c2fDE4E34CAB3AB1667ca3c932dBAED95F08) |  - |  onlyOwner |  [0x4C11ed256D43762811B093145e6F6b58F2be4782](https://basescan.org/address/0x4C11ed256D43762811B093145e6F6b58F2be4782) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
-|  [TAKER POSITION MANAGER](https://basescan.org/address/0x8481204E528735aF2F3391AD98f36E757A56D695) |  - |  onlyOwner |  [0x4C11ed256D43762811B093145e6F6b58F2be4782](https://basescan.org/address/0x4C11ed256D43762811B093145e6F6b58F2be4782) |  registerSpoke | |--------|--------|--------|--------|--------|
-|  [CONFIG POSITION MANAGER](https://basescan.org/address/0xe90F830bEe4b190B4910e146908437075b0BDaaF) |  - |  onlyOwner |  [0x4C11ed256D43762811B093145e6F6b58F2be4782](https://basescan.org/address/0x4C11ed256D43762811B093145e6F6b58F2be4782) |  registerSpoke | |--------|--------|--------|--------|--------|
-|  [NATIVE TOKEN GATEWAY](https://basescan.org/address/0xdFC11f7037Ba11D9cC29A822844f5dC19C42B70d) |  - |  onlyOwner |  [0x4C11ed256D43762811B093145e6F6b58F2be4782](https://basescan.org/address/0x4C11ed256D43762811B093145e6F6b58F2be4782) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
-|  [SIGNATURE GATEWAY](https://basescan.org/address/0x5d488d3EAAa86DDb6D4f834FC34938054eC505A7) |  - |  onlyOwner |  [0x4C11ed256D43762811B093145e6F6b58F2be4782](https://basescan.org/address/0x4C11ed256D43762811B093145e6F6b58F2be4782) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
+|  [GIVER POSITION MANAGER](https://basescan.org/address/0x9E81c2fDE4E34CAB3AB1667ca3c932dBAED95F08) |  - |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
+|  [TAKER POSITION MANAGER](https://basescan.org/address/0x8481204E528735aF2F3391AD98f36E757A56D695) |  - |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke | |--------|--------|--------|--------|--------|
+|  [CONFIG POSITION MANAGER](https://basescan.org/address/0xe90F830bEe4b190B4910e146908437075b0BDaaF) |  - |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke | |--------|--------|--------|--------|--------|
+|  [NATIVE TOKEN GATEWAY](https://basescan.org/address/0xdFC11f7037Ba11D9cC29A822844f5dC19C42B70d) |  - |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
+|  [SIGNATURE GATEWAY](https://basescan.org/address/0x5d488d3EAAa86DDb6D4f834FC34938054eC505A7) |  - |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  registerSpoke, renouncePositionManagerRole | |--------|--------|--------|--------|--------|
 
 ### Spoke PositionManagers
 | spoke |active position managers |
