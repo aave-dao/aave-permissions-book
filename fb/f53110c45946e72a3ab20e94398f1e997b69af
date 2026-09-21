@@ -1,0 +1,29 @@
+helpers/configs/networks/base.ts
+  s_5cb454b1abacbb::t_85134c00c6ca3f 3,98-99
+out/BASE-V4.md
+  s_5cb454b1abacbb::t_78f02d2250d686 46
+out/permissions/8453-permissions.json
+  s_5cb454b1abacbb::t_080430f05c28f0 2343,2445,2511,2542,2688
+out/permissions/metadata/8453-metadata.json
+  s_5cb454b1abacbb::t_2c5a69f6472863 73,83
+package-lock.json
+  s_5cb454b1abacbb::t_acfd09b67bf0d6 16,26-28,1060-1062
+package.json
+  s_5cb454b1abacbb::t_33dd574ef1ce8c 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "fbf53110c45946e72a3ab20e94398f1e997b69af",
+  "prompts": {},
+  "sessions": {
+    "s_5cb454b1abacbb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cf6c5f8c-2bd0-4298-a34d-805f54004688",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
