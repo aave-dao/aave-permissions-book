@@ -11333,6 +11333,49 @@
             "functions": []
           }
         ]
+      },
+      "Manual AGRS": {
+        "address": "0x6f48d9Cdb8EE6E17c96B2d8Aec128af426A295c1",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setConfig",
+              "setAddressRestricted"
+            ]
+          },
+          {
+            "modifier": "onlyRiskCouncil",
+            "addresses": [
+              {
+                "address": "0x47c71dFEB55Ebaa431Ae3fbF99Ea50e0D3d30fA8",
+                "owners": [
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "updateHubAssetIRs",
+              "updateHubSpokeCaps",
+              "updateReserveConfigs",
+              "updateDynamicReserveConfigs",
+              "addDynamicReserveConfigs",
+              "updateSpokeLiquidationConfigs",
+              "updateLstPriceCaps",
+              "updateStablePriceCaps",
+              "updatePendleDiscountRates"
+            ]
+          }
+        ]
       }
     },
     "roles": {},

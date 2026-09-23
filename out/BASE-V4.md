@@ -8,11 +8,17 @@
 |  [MAG7 Spoke](https://basescan.org/address/0x17905Db0e4A3514467539956c084180616AE7B8D) |  V4 Security Council | |--------|--------|
 |  [SpokeConfigurator](https://basescan.org/address/0x0191B1Aa743c6B3C545119B5D56a0577D7f3a57F) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://basescan.org/address/0x5F8d0102F5B51Fae6DE9d2F2561bda63Fb5Db674) |  V4 Security Council | |--------|--------|
+|  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  not upgradeable | |--------|--------|
 
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
 |----------|----------|
 |  [EQUITIES USDC TokenizationSpoke](https://basescan.org/address/0x7081CE7EB1282c53CF38EA9B622f6269cb8FeFDc) |  V4 Security Council | |--------|--------|
+
+### Actions type
+| type |can be executed by |
+|----------|----------|
+|  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -25,6 +31,9 @@
 |  [MAG7 Spoke](https://basescan.org/address/0x17905Db0e4A3514467539956c084180616AE7B8D) |  [MAG7 Spoke ProxyAdmin](https://basescan.org/address/0x45eb3a4CAE1E8f74f03E08B6aC45f68a3A518ba4) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 |  [SpokeConfigurator](https://basescan.org/address/0x0191B1Aa743c6B3C545119B5D56a0577D7f3a57F) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://basescan.org/address/0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addLiquidationFee, updateLiquidationFee, addDynamicReserveConfig, updateDynamicReserveConfig, pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve, updatePositionManager | |--------|--------|--------|--------|--------|
 |  [TreasurySpoke](https://basescan.org/address/0x5F8d0102F5B51Fae6DE9d2F2561bda63Fb5Db674) |  [TreasurySpoke ProxyAdmin](https://basescan.org/address/0x14d27703A0dA83260BB54B7F14314B2914Be7C47) |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
+|  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  - |  onlyOwner |  [0x4C11ed256D43762811B093145e6F6b58F2be4782](https://basescan.org/address/0x4C11ed256D43762811B093145e6F6b58F2be4782) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
+|  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  - |  onlyRiskCouncil |  [Risk Council](https://basescan.org/address/0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1) |  updateHubAssetIRs, updateHubSpokeCaps, updateReserveConfigs, updateDynamicReserveConfigs, addDynamicReserveConfigs, updateSpokeLiquidationConfigs, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates | |--------|--------|--------|--------|--------|
+|  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  - |  pendingOwner |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) |  acceptOwnership | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -44,6 +53,7 @@
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
 |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://basescan.org/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc), [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://basescan.org/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://basescan.org/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://basescan.org/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://basescan.org/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://basescan.org/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://basescan.org/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://basescan.org/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C) | |--------|--------|--------|--------|
+|  [Risk Council](https://basescan.org/address/0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1) |  2/2 |  0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1 |  [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://basescan.org/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://basescan.org/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef) | |--------|--------|--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |

@@ -10,6 +10,7 @@
 |  [AVAX CORRELATED Spoke](https://snowscan.xyz/address/0x3b517594277c67307CF2d7CBE6FE1D4399B68c41) |  V4 Security Council | |--------|--------|
 |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://snowscan.xyz/address/0x2C4Aea1A5F000889c6DfFE8f52377aFc2CB113a6) |  V4 Security Council | |--------|--------|
+|  [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) |  not upgradeable | |--------|--------|
 
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
@@ -21,6 +22,11 @@
 |  [CORE WETHe TokenizationSpoke](https://snowscan.xyz/address/0xF5c849468318c8D5670020fdb96ae135FED37070) |  V4 Security Council | |--------|--------|
 |  [CORE EURC TokenizationSpoke](https://snowscan.xyz/address/0x7b538a1840EAf2Ed92EEB67eE744AE627335e201) |  V4 Security Council | |--------|--------|
 |  [CORE sAVAX TokenizationSpoke](https://snowscan.xyz/address/0x6c27A7435040B7cC512319d5690BeEF234dfE76e) |  V4 Security Council | |--------|--------|
+
+### Actions type
+| type |can be executed by |
+|----------|----------|
+|  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -37,6 +43,8 @@
 |  [AVAX CORRELATED Spoke](https://snowscan.xyz/address/0x3b517594277c67307CF2d7CBE6FE1D4399B68c41) |  [AVAX CORRELATED Spoke ProxyAdmin](https://snowscan.xyz/address/0x34F5392e2CFEDf971223f070d3c51BD5165196F4) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addLiquidationFee, updateLiquidationFee, addDynamicReserveConfig, updateDynamicReserveConfig, pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve, updatePositionManager | |--------|--------|--------|--------|--------|
 |  [TreasurySpoke](https://snowscan.xyz/address/0x2C4Aea1A5F000889c6DfFE8f52377aFc2CB113a6) |  [TreasurySpoke ProxyAdmin](https://snowscan.xyz/address/0x0b448c233298d33B163D877aC43bF8Fa884480e1) |  onlyOwner |  [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
+|  [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
+|  [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) |  - |  onlyRiskCouncil |  [Risk Council](https://snowscan.xyz/address/0xCa66149425E7DC8f81276F6D80C4b486B9503D1a) |  updateHubAssetIRs, updateHubSpokeCaps, updateReserveConfigs, updateDynamicReserveConfigs, addDynamicReserveConfigs, updateSpokeLiquidationConfigs, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -58,6 +66,7 @@
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
 |  [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://snowscan.xyz/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C), [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://snowscan.xyz/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://snowscan.xyz/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://snowscan.xyz/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://snowscan.xyz/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://snowscan.xyz/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://snowscan.xyz/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://snowscan.xyz/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+|  [Risk Council](https://snowscan.xyz/address/0xCa66149425E7DC8f81276F6D80C4b486B9503D1a) |  2/2 |  0xCa66149425E7DC8f81276F6D80C4b486B9503D1a |  [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://snowscan.xyz/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://snowscan.xyz/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef) | |--------|--------|--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |
