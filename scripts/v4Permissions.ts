@@ -2,6 +2,7 @@ import { Address, Client, getAddress, getContract, toFunctionSelector } from 'vi
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
 import { rescuableAbi } from '../abis/rescuableAbi.js';
+import { v4RiskStewardAbi } from '../abis/v4RiskStewardAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
 import {
@@ -441,7 +442,52 @@ export const resolveV4Modifiers = async (
     }
   }
 
+  if (typeof addressBook.RISK_STEWARD === 'string') {
+    obj['Manual AGRS'] = await resolveV4RiskSteward(
+      addressBook.RISK_STEWARD,
+      provider,
+      permissionsObject,
+      ownerResolver,
+    );
+  }
+
   return { contracts: obj, roleLabels };
+};
+
+const resolveV4RiskSteward = async (
+  address: string,
+  provider: Client,
+  permissionsObject: PermissionsJson,
+  ownerResolver: ReturnType<typeof createOwnerResolver>,
+): Promise<Contracts[string]> => {
+  const contract = getContract({
+    address: getAddress(address),
+    abi: v4RiskStewardAbi,
+    client: provider,
+  });
+  const [owner, pendingOwner, riskCouncil] = await Promise.all([
+    contract.read.owner(),
+    contract.read.pendingOwner(),
+    contract.read.RISK_COUNCIL(),
+  ]);
+  const functionsFor = (role: string) =>
+    permissionsObject
+      .find((c) => c.contract === 'RiskSteward')
+      ?.functions.filter((f) => f.roles.includes(role))
+      .map((f) => f.name) || [];
+  const holder = async (addr: Address) => {
+    const info = await ownerResolver.resolve(addr);
+    return { address: addr, owners: info.owners, signersThreshold: info.threshold };
+  };
+
+  const modifiers = [
+    { modifier: 'onlyOwner', addresses: [await holder(owner)], functions: functionsFor('onlyOwner') },
+    { modifier: 'onlyRiskCouncil', addresses: [await holder(riskCouncil)], functions: functionsFor('onlyRiskCouncil') },
+  ];
+  if (pendingOwner !== ZERO_ADDRESS) {
+    modifiers.push({ modifier: 'pendingOwner', addresses: [await holder(pendingOwner)], functions: functionsFor('pendingOwner') });
+  }
+  return { address, modifiers };
 };
 
 /**

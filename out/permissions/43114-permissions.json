@@ -3658,6 +3658,49 @@
             "functions": []
           }
         ]
+      },
+      "Manual AGRS": {
+        "address": "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setConfig",
+              "setAddressRestricted"
+            ]
+          },
+          {
+            "modifier": "onlyRiskCouncil",
+            "addresses": [
+              {
+                "address": "0xCa66149425E7DC8f81276F6D80C4b486B9503D1a",
+                "owners": [
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "updateHubAssetIRs",
+              "updateHubSpokeCaps",
+              "updateReserveConfigs",
+              "updateDynamicReserveConfigs",
+              "addDynamicReserveConfigs",
+              "updateSpokeLiquidationConfigs",
+              "updateLstPriceCaps",
+              "updateStablePriceCaps",
+              "updatePendleDiscountRates"
+            ]
+          }
+        ]
       }
     },
     "roles": {},

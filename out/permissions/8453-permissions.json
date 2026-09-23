@@ -2547,6 +2547,62 @@
             "functions": []
           }
         ]
+      },
+      "Manual AGRS": {
+        "address": "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x4C11ed256D43762811B093145e6F6b58F2be4782",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setConfig",
+              "setAddressRestricted"
+            ]
+          },
+          {
+            "modifier": "onlyRiskCouncil",
+            "addresses": [
+              {
+                "address": "0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1",
+                "owners": [
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "updateHubAssetIRs",
+              "updateHubSpokeCaps",
+              "updateReserveConfigs",
+              "updateDynamicReserveConfigs",
+              "addDynamicReserveConfigs",
+              "updateSpokeLiquidationConfigs",
+              "updateLstPriceCaps",
+              "updateStablePriceCaps",
+              "updatePendleDiscountRates"
+            ]
+          },
+          {
+            "modifier": "pendingOwner",
+            "addresses": [
+              {
+                "address": "0x9390B1735def18560c509E2d0bc090E9d6BA257a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "acceptOwnership"
+            ]
+          }
+        ]
       }
     },
     "roles": {},

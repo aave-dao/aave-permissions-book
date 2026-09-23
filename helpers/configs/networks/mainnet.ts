@@ -142,6 +142,7 @@ const aaveV4 = createV4({
     ACCESS_MANAGER: AaveV4Ethereum.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Ethereum.SPOKE_CONFIGURATOR,
+    RISK_STEWARD: AaveV4Ethereum.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>),
   },

@@ -31,6 +31,7 @@ const aaveV4 = createV4({
     ACCESS_MANAGER: AaveV4Arc.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Arc.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Arc.SPOKE_CONFIGURATOR,
+    RISK_STEWARD: AaveV4Arc.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Arc.POSITION_MANAGERS as Record<string, string>),
   },
