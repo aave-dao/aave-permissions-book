@@ -21,7 +21,12 @@ const v3Pool = createV3Pool({
   addressBook: {
     ...AaveV3Plasma,
     ...MiscPlasma,
+    // Hardcoded until the aave-address-book release ships these MiscPlasma constants.
+    LLAMARISK_RISK_ORACLE: '0x4f240E3825e7FD6D834EEb861b1539dF0b43BfD0',
+    LLAMARISK_PT_PARAMETER_REGISTRY: '0xED34a5374FeaaD8Ead024023d2Fc3b844bb9Bb47',
+    LLAMARISK_RISK_ORACLE_ROUTER: '0xaC8690DE68dcB7068805c0C631004E9894FAFbe0',
   },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: {
     ...GovernanceV3Plasma,
     ...MiscPlasma,
