@@ -2364,6 +2364,11 @@
                 "address": "0x9390B1735def18560c509E2d0bc090E9d6BA257a",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -2461,6 +2466,11 @@
                 "address": "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -2555,7 +2565,7 @@
             "modifier": "onlyOwner",
             "addresses": [
               {
-                "address": "0x4C11ed256D43762811B093145e6F6b58F2be4782",
+                "address": "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -2619,20 +2629,23 @@
       "roles": {
         "0": [
           "0x9390B1735def18560c509E2d0bc090E9d6BA257a",
-          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9"
+          "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+          "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70"
         ],
         "101": [
           "0x2Cd40DFF9f2F74e8765dA148102b6668A5e9778A"
         ],
         "200": [
           "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70",
-          "0x9390B1735def18560c509E2d0bc090E9d6BA257a"
+          "0x9390B1735def18560c509E2d0bc090E9d6BA257a",
+          "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f"
         ],
         "301": [
           "0x0191B1Aa743c6B3C545119B5D56a0577D7f3a57F"
         ],
         "400": [
-          "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70"
+          "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70",
+          "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f"
         ]
       },
       "functionRoles": {
