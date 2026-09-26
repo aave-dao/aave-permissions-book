@@ -46,6 +46,9 @@ export const SHARED_ADDRESSES: Record<string, string> = {
 
   // Aave Automation Cancel SAFE
   '0x441E4053fDDF1e1a77a39d00309Af389096d4124': 'Aave Automation Cancel SAFE',
+
+  // Aave Labs Guardian - retry guardian on granular guardians
+  '0x2B99790c35a401be873FA7Eb514D9220736BB1cA': 'Aave Labs Guardian',
 };
 
 /**
