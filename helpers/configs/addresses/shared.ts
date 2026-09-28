@@ -49,6 +49,9 @@ export const SHARED_ADDRESSES: Record<string, string> = {
 
   // Aave Labs Guardian - retry guardian on granular guardians
   '0x2B99790c35a401be873FA7Eb514D9220736BB1cA': 'Aave Labs Guardian',
+
+  // LlamaRisk risk-oracle admin Safe
+  '0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471': 'LlamaRisk Safe',
 };
 
 /**
