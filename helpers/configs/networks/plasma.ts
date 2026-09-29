@@ -22,6 +22,7 @@ const v3Pool = createV3Pool({
     ...AaveV3Plasma,
     ...MiscPlasma,
   },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: {
     ...GovernanceV3Plasma,
     ...MiscPlasma,
