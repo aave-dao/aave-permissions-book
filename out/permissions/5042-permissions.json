@@ -427,6 +427,93 @@
           }
         ]
       },
+      "Untracked Spoke @ CORE Hub (0x18dde0…)": {
+        "address": "0x18Dde098d25722C14e09842a6Fa7db6aAFC395a2",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0xe8b10a5a66dd5dac9698ec1256a6f3171524359e"
+      },
+      "_Untracked Spoke @ CORE Hub (0x18dde0…) ProxyAdmin": {
+        "address": "0xe8b10a5a66dd5dac9698ec1256a6f3171524359e",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x9440850335c7C2a644dc2abEBBA93463c9736F2C",
+                  "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
       "Manual AGRS": {
         "address": "0x73adb67D5De247D40152Cf06aC16174b3d87D2c8",
         "modifiers": [
@@ -594,6 +681,17 @@
           "0x9290fa00": "301",
           "0x9ca9c134": "301",
           "0xb2380e93": "301"
+        },
+        "0x18dde098d25722c14e09842a6fa7db6aafc395a2": {
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301",
+          "0x826002e2": "302",
+          "0x91c46d09": "302"
         }
       },
       "roleLabels": {
@@ -856,6 +954,25 @@
           "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
           "0xa5aa65ae1c830d2ae10853ceea42ae653adb3312",
           "0x0d36a4a21119bbbde559d59002254171d976289f"
+        ],
+        "0x18dde098d25722c14e09842a6fa7db6aafc395a2": [
+          "0x01da80eef3004ebbf90b7637b1de7ff30fbc7cf1",
+          "0xe9fae1c386c6f45b1fb3c3ef01ade424dad4bccf",
+          "0xa5aa65ae1c830d2ae10853ceea42ae653adb3312",
+          "0x0d36a4a21119bbbde559d59002254171d976289f"
+        ]
+      }
+    },
+    "untracked": {
+      "0x18dde098d25722c14e09842a6fa7db6aafc395a2": {
+        "name": "Untracked Spoke @ CORE Hub (0x18dde0…)",
+        "type": "Spoke",
+        "hubs": [
+          "0x17288dfc86205301064577b98b02b81017e6f79c"
+        ],
+        "sources": [
+          "hubSpokeList",
+          "accessManagerTarget"
         ]
       }
     }
