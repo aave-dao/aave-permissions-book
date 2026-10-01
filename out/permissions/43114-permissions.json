@@ -126,6 +126,11 @@
                 "address": "0x43632469e02CDAaEB4dE3DcBfCAaBEf310975729",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -167,6 +172,11 @@
               },
               {
                 "address": "0x43632469e02CDAaEB4dE3DcBfCAaBEf310975729",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -672,7 +682,8 @@
         "RISK_ADMIN": [
           "0xB94e515615c244Ab25f7A6e592e3Cb7EE31E99F4",
           "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
-          "0x43632469e02CDAaEB4dE3DcBfCAaBEf310975729"
+          "0x43632469e02CDAaEB4dE3DcBfCAaBEf310975729",
+          "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107"
         ],
         "FLASH_BORROWER": [
           "0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3",
@@ -3359,6 +3370,11 @@
                 "address": "0xb619fA61e795D47f517702e63ce50292370561F1",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -3572,6 +3588,11 @@
                 "address": "0xb619fA61e795D47f517702e63ce50292370561F1",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -3726,14 +3747,16 @@
         "103": [],
         "200": [
           "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
-          "0xb619fA61e795D47f517702e63ce50292370561F1"
+          "0xb619fA61e795D47f517702e63ce50292370561F1",
+          "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107"
         ],
         "301": [
           "0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642"
         ],
         "302": [],
         "400": [
-          "0xb619fA61e795D47f517702e63ce50292370561F1"
+          "0xb619fA61e795D47f517702e63ce50292370561F1",
+          "0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107"
         ]
       },
       "functionRoles": {

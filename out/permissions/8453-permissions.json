@@ -126,6 +126,11 @@
                 "address": "0x494bcfd3937aBdebEF3D2c2eae1CE8A2Fb629032",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -162,6 +167,11 @@
               },
               {
                 "address": "0x494bcfd3937aBdebEF3D2c2eae1CE8A2Fb629032",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f",
                 "owners": [],
                 "signersThreshold": 0
               },
@@ -626,7 +636,8 @@
         ],
         "RISK_ADMIN": [
           "0xC5BcC58BE6172769ca1a78B8A45752E3C5059c39",
-          "0x494bcfd3937aBdebEF3D2c2eae1CE8A2Fb629032"
+          "0x494bcfd3937aBdebEF3D2c2eae1CE8A2Fb629032",
+          "0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f"
         ]
       }
     },
@@ -2565,7 +2576,7 @@
             "modifier": "onlyOwner",
             "addresses": [
               {
-                "address": "0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70",
+                "address": "0x9390B1735def18560c509E2d0bc090E9d6BA257a",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -2597,19 +2608,6 @@
               "updateLstPriceCaps",
               "updateStablePriceCaps",
               "updatePendleDiscountRates"
-            ]
-          },
-          {
-            "modifier": "pendingOwner",
-            "addresses": [
-              {
-                "address": "0x9390B1735def18560c509E2d0bc090E9d6BA257a",
-                "owners": [],
-                "signersThreshold": 0
-              }
-            ],
-            "functions": [
-              "acceptOwnership"
             ]
           }
         ]
