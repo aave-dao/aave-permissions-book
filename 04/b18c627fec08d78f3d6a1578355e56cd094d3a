@@ -1,0 +1,21 @@
+helpers/configs/networks/arc.ts
+  s_7e797e2ce8c37d::t_04ab48230d6caf 50
+out/ARC-V4.md
+  s_7e797e2ce8c37d::t_64a98b35bae54e 41,61
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "04b18c627fec08d78f3d6a1578355e56cd094d3a",
+  "prompts": {},
+  "sessions": {
+    "s_7e797e2ce8c37d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "31f08d59-755f-4d64-b8f1-3ead49f0db82",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
