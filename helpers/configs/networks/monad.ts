@@ -17,11 +17,6 @@ const v3Pool = createV3Pool({
   addressBook: {
     ...AaveV3Monad,
     ...MiscMonad,
-    // Until the aave-address-book release with the Monad AgentHub and LlamaRisk entries ships.
-    AGENT_HUB: '0xa1Cf1e3D3fC743c0fd0e38f631A843372b7169DB',
-    LLAMARISK_RISK_ORACLE: '0x4b00A38ee9396E952d07F81B26Ed1514e480dCFC',
-    LLAMARISK_PT_PARAMETER_REGISTRY: '0xA046b090C93A7a98b18e466ff770ED01116fa695',
-    LLAMARISK_RISK_ORACLE_ROUTER: '0x8fDdd4Ab11Ecd6A95F6d67f13166031604624B71',
   },
   functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: {
