@@ -47,6 +47,7 @@ export const arcConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     [MiscArc.V4_SECURITY_COUNCIL]: 'V4 Security Council',
     [MiscArc.V4_SECURITY_COUNCIL_EXECUTOR]: 'V4 Security Council Executor',
+    [AaveV4Arc.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V4]: aaveV4,
