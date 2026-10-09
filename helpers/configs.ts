@@ -15,6 +15,7 @@
 export {
   networkConfigs,
   Pools,
+  isV4Pool,
   ghoRoleNames,
   collectorRoleNames,
   clinicStewardRoleNames,

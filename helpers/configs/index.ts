@@ -2,6 +2,7 @@
 export { networkConfigs } from './networks/index.js';
 export {
   Pools,
+  isV4Pool,
   ghoRoleNames,
   collectorRoleNames,
   clinicStewardRoleNames,

@@ -16,7 +16,10 @@ export enum Pools {
   ETHERFI = 'ETHERFI',
   V3_WHITE_LABEL = 'V3_WHITE_LABEL',
   V4 = 'V4',
+  V4_SENTORA = 'V4_SENTORA',
 }
+
+export const isV4Pool = (pool: string): boolean => pool === Pools.V4 || pool === Pools.V4_SENTORA;
 
 // ============================================================================
 // Role Names
