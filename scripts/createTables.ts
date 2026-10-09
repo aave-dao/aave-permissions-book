@@ -18,7 +18,7 @@ import {
   getEmissionAdminsByPool,
   saveJson,
 } from '../helpers/fileSystem.js';
-import { getNetowkName, networkConfigs, Pools } from '../helpers/configs.js';
+import { getNetowkName, isV4Pool, networkConfigs, Pools } from '../helpers/configs.js';
 import {
   parseCliArgs,
   getNetworksToProcess,
@@ -70,11 +70,11 @@ const buildPoolInfoContracts = (
   const networkPermits = getPermissionsByNetwork(network);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
   const isLidoOrEtherfi = pool === Pools.LIDO || pool === Pools.ETHERFI;
-  const isV4 = pool === Pools.V4;
+  const isV4 = isV4Pool(pool);
 
   if (isV4) {
     // V4 uses only its own contracts
-    return extractPoolContracts(networkPermits[Pools.V4]) as Contracts;
+    return extractPoolContracts(networkPermits[pool]) as Contracts;
   }
 
   if (isWhiteLabel) {
@@ -111,11 +111,11 @@ const buildGovPermissions = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
 
-  if (pool === Pools.V4) {
+  if (isV4Pool(pool)) {
     // V4 reuses V3's governance contracts
     return {
       ...networkPermits['V3']?.govV3?.contracts,
-      ...networkPermits[Pools.V4]?.govV3?.contracts,
+      ...networkPermits[pool]?.govV3?.contracts,
     } as Contracts;
   }
 
@@ -150,12 +150,12 @@ const buildActionPoolInfo = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
-  const isV4 = pool === Pools.V4;
+  const isV4 = isV4Pool(pool);
 
   if (isV4) {
     return {
       ...currentPoolContracts,
-      ...networkPermits[Pools.V4]?.govV3?.contracts,
+      ...networkPermits[pool]?.govV3?.contracts,
     } as Contracts;
   }
 
@@ -192,10 +192,10 @@ const buildActionGovInfo = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
 
-  if (pool === Pools.V4) {
+  if (isV4Pool(pool)) {
     return {
       ...networkPermits['V3']?.govV3?.contracts,
-      ...networkPermits[Pools.V4]?.govV3?.contracts,
+      ...networkPermits[pool]?.govV3?.contracts,
     } as Contracts;
   }
 

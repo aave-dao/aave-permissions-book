@@ -149,6 +149,53 @@ const aaveV4 = createV4({
 });
 
 // ============================================================================
+// Aave V4 Sentora
+// ============================================================================
+// WIP: placeholder addresses until the Sentora market is deployed and released in the address book
+const AaveV4EthereumSentoraCurated = {
+  ACCESS_MANAGER: '0x0000000000000000000000000000000000001001',
+  HUB_CONFIGURATOR: '0x0000000000000000000000000000000000001002',
+  SPOKE_CONFIGURATOR: '0x0000000000000000000000000000000000001003',
+  RISK_STEWARD: '0x0000000000000000000000000000000000001005',
+  PERMISSIONED_PAYLOADS_CONTROLLER: '0x6f93372d694beB1B6398Eb70Ab736Edb2e89d2d6',
+  PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR: '0x59D15D3f4e86499d64f68ad7096a8D0939dA8343',
+  ACL_MANAGER: '0xc7a5bf5fED269408d9c2250462910dA32d83f043',
+  POOL_ADDRESSES_PROVIDER: '0xFA13FCaf38bf5257DaFDB3C9d268F514eDDe46fe',
+  HUBS: {
+    SENTORA_HUB: '0x0000000000000000000000000000000000001010',
+  },
+  SPOKES: {
+    TREASURY_SPOKE: '0x0000000000000000000000000000000000001004',
+    RLUSD_YIELD_SPOKE: '0x0000000000000000000000000000000000001011',
+    RLUSD_YIELD_SPOKE_ORACLE: '0x0000000000000000000000000000000000001014',
+    OUSD_YIELD_SPOKE: '0x0000000000000000000000000000000000001012',
+    OUSD_YIELD_SPOKE_ORACLE: '0x0000000000000000000000000000000000001015',
+    BLUECHIP_SPOKE: '0x0000000000000000000000000000000000001013',
+    BLUECHIP_SPOKE_ORACLE: '0x0000000000000000000000000000000000001016',
+  },
+  POSITION_MANAGERS: {
+    GIVER_POSITION_MANAGER: '0x0000000000000000000000000000000000001017',
+    TAKER_POSITION_MANAGER: '0x0000000000000000000000000000000000001018',
+    CONFIG_POSITION_MANAGER: '0x0000000000000000000000000000000000001019',
+    NATIVE_TOKEN_GATEWAY: '0x0000000000000000000000000000000000001020',
+    SIGNATURE_GATEWAY: '0x0000000000000000000000000000000000001021',
+  },
+};
+
+// accessManagerBlock stays 0 until the deploy, which skips the pool when indexing
+const aaveV4Sentora = createV4({
+  accessManagerBlock: 0,
+  addressBook: {
+    ACCESS_MANAGER: AaveV4EthereumSentoraCurated.ACCESS_MANAGER,
+    HUB_CONFIGURATOR: AaveV4EthereumSentoraCurated.HUB_CONFIGURATOR,
+    SPOKE_CONFIGURATOR: AaveV4EthereumSentoraCurated.SPOKE_CONFIGURATOR,
+    RISK_STEWARD: AaveV4EthereumSentoraCurated.RISK_STEWARD,
+    ...deduplicateByAddress(AaveV4EthereumSentoraCurated.HUBS, AaveV4EthereumSentoraCurated.SPOKES),
+    ...AaveV4EthereumSentoraCurated.POSITION_MANAGERS,
+  },
+});
+
+// ============================================================================
 // Safety Module
 // ============================================================================
 const safetyPool = createSafetyPool(AaveSafetyModule);
@@ -204,6 +251,13 @@ export const mainnetConfig: NetworkConfig = {
     '0xE9ac5231fAecb633dA0Fe85Fcb2785b8363427d2': 'Gho direct facilitator mainnet',
     '0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9': 'V4 Security Council',
     '0x14339e2178A954d5FB839D5Ff31644fE0F25F517': 'V4 Security Council Executor',
+    [AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER]: 'Sentora PermissionedPayloadsController',
+    [AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR]: 'Sentora Executor',
+    [AaveV4EthereumSentoraCurated.ACL_MANAGER]: 'Sentora ACL Manager',
+    [AaveV4EthereumSentoraCurated.POOL_ADDRESSES_PROVIDER]: 'Sentora PoolAddressesProvider',
+    '0x6748f83C1d1F49Dffb715078B68180536aE7F40F': 'Sentora Operator Safe',
+    '0x37409c868BA42B91ff7E7b64D5BC020897444fAf': 'Sentora Emergency Operator',
+    '0x769C952ac9Bbb45524790B658fd70938a8A5d19E': 'Sentora Fee Admin',
   }),
   pools: {
     [Pools.V3]: v3Pool,
@@ -215,5 +269,6 @@ export const mainnetConfig: NetworkConfig = {
     [Pools.SAFETY_MODULE]: safetyPool,
     [Pools.V2_MISC]: v2MiscPool,
     [Pools.V4]: aaveV4,
+    [Pools.V4_SENTORA]: aaveV4Sentora,
   },
 };
