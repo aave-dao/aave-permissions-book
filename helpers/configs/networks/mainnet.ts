@@ -185,6 +185,12 @@ const AaveV4EthereumSentoraCurated = {
 // accessManagerBlock stays 0 until the deploy, which skips the pool when indexing
 const aaveV4Sentora = createV4({
   accessManagerBlock: 0,
+  ppcPermissionsJson: './statics/functionsPermissionsPpcV2.json',
+  ppcAddressBook: {
+    PERMISSIONED_PAYLOADS_CONTROLLER: AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER,
+    PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR:
+      AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR,
+  },
   addressBook: {
     ACCESS_MANAGER: AaveV4EthereumSentoraCurated.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4EthereumSentoraCurated.HUB_CONFIGURATOR,
@@ -255,7 +261,7 @@ export const mainnetConfig: NetworkConfig = {
     [AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR]: 'Sentora Executor',
     [AaveV4EthereumSentoraCurated.ACL_MANAGER]: 'Sentora ACL Manager',
     [AaveV4EthereumSentoraCurated.POOL_ADDRESSES_PROVIDER]: 'Sentora PoolAddressesProvider',
-    '0x6748f83C1d1F49Dffb715078B68180536aE7F40F': 'Sentora Operator Safe',
+    '0x6748f83C1d1F49Dffb715078B68180536aE7F40F': 'Sentora Operator',
     '0x37409c868BA42B91ff7E7b64D5BC020897444fAf': 'Sentora Emergency Operator',
     '0x769C952ac9Bbb45524790B658fd70938a8A5d19E': 'Sentora Fee Admin',
   }),

@@ -670,7 +670,6 @@ const generateNetworkPermissions = async (
         pool.ppcAddressBook,
         poolProvider,
         getStaticPermissionsJson(pool.ppcPermissionsJson),
-        Number(network),
       );
       ppc.contracts = ppcPermissions;
     }
