@@ -428,5 +428,40 @@
         "firstIndexedAt": 24720870
       }
     }
+  },
+  "V4_SENTORA": {
+    "latestBlockNumber": 26192565,
+    "indexedContracts": {
+      "ACCESS_MANAGER": {
+        "address": "0xbb8C3EF59895B48037C42c57e6E6840A902af7A2",
+        "deploymentBlock": 26190776,
+        "firstIndexedAt": 26190776
+      }
+    }
+  },
+  "V4_SENTORA_SPOKE_PM": {
+    "latestBlockNumber": 26192565,
+    "indexedContracts": {
+      "0x9ebf0c19bf7dfe859820cc09e846114b53814e52": {
+        "address": "0x9ebf0c19bf7dfe859820cc09e846114b53814e52",
+        "deploymentBlock": 26190776,
+        "firstIndexedAt": 26190776
+      },
+      "0xbb97b61ad6747d337e5805f2d159d275bb1f0828": {
+        "address": "0xbb97b61ad6747d337e5805f2d159d275bb1f0828",
+        "deploymentBlock": 26190776,
+        "firstIndexedAt": 26190776
+      },
+      "0xa37e7cdc557f3c7f745fb3f337b6439979662c46": {
+        "address": "0xa37e7cdc557f3c7f745fb3f337b6439979662c46",
+        "deploymentBlock": 26190776,
+        "firstIndexedAt": 26190776
+      },
+      "0xccc6579021a8309e3f75a8147304f04f7f7d29b7": {
+        "address": "0xccc6579021a8309e3f75a8147304f04f7f7d29b7",
+        "deploymentBlock": 26190776,
+        "firstIndexedAt": 26190776
+      }
+    }
   }
 }
