@@ -649,9 +649,11 @@ export const generateTable = (network: string, pool: string): string => {
   if (poolPermitsByContract.accessManager) {
     const am = poolPermitsByContract.accessManager;
     const labeledRoles: Record<string, string[]> = {};
-    for (const [roleId, addresses] of Object.entries(am.roles)) {
+    // Labelled roles without members (e.g. ones a pending handover will grant) still get a row
+    const roleIds = new Set([...Object.keys(am.roleLabels), ...Object.keys(am.roles)]);
+    for (const roleId of [...roleIds].sort((a, b) => Number(a) - Number(b))) {
       const label = am.roleLabels[roleId] || `Role #${roleId}`;
-      labeledRoles[label] = addresses;
+      labeledRoles[label] = am.roles[roleId] || [];
     }
     readmeByNetwork += generateRoleTable(
       { title: 'AccessManager Roles', roles: labeledRoles },
