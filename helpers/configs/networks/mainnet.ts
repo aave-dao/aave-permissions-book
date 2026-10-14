@@ -152,11 +152,12 @@ const aaveV4 = createV4({
 // Aave V4 Sentora
 // ============================================================================
 // Not in @aave-dao/aave-address-book yet: copied from its AaveV4EthereumSentoraCurated library.
-// RISK_STEWARD is left out until the steward is deployed.
 const AaveV4EthereumSentoraCurated = {
   ACCESS_MANAGER: '0xbb8C3EF59895B48037C42c57e6E6840A902af7A2',
   HUB_CONFIGURATOR: '0xa0eD3ECC19ab04BD0e6417023824cC4930d77b70',
   SPOKE_CONFIGURATOR: '0x93bd198d4F64798157233142769159329b3cBbce',
+  RISK_STEWARD: '0x0e0D14B3A52E5E3548B0C530b4C5207d7fD01785',
+  REDUCE_RISK_STEWARD_WRAPPER: '0x148391a719ff853d7E3C718a09e2Ad00659250A0',
   PERMISSIONED_PAYLOADS_CONTROLLER: '0x6f93372d694beB1B6398Eb70Ab736Edb2e89d2d6',
   PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR: '0x59D15D3f4e86499d64f68ad7096a8D0939dA8343',
   ACL_MANAGER: '0xc7a5bf5fED269408d9c2250462910dA32d83f043',
@@ -197,6 +198,7 @@ const aaveV4Sentora = createV4({
     ACCESS_MANAGER: AaveV4EthereumSentoraCurated.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4EthereumSentoraCurated.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4EthereumSentoraCurated.SPOKE_CONFIGURATOR,
+    RISK_STEWARD: AaveV4EthereumSentoraCurated.RISK_STEWARD,
     ...deduplicateByAddress(AaveV4EthereumSentoraCurated.HUBS, AaveV4EthereumSentoraCurated.SPOKES),
     ...AaveV4EthereumSentoraCurated.POSITION_MANAGERS,
   },
@@ -265,6 +267,7 @@ export const mainnetConfig: NetworkConfig = {
     [AaveV4EthereumSentoraCurated.SENTORA_OPERATOR]: 'Sentora Operator',
     [AaveV4EthereumSentoraCurated.SENTORA_EMERGENCY_ADMIN]: 'Sentora Emergency Admin',
     [AaveV4EthereumSentoraCurated.SENTORA_FEE_ADMIN]: 'Sentora Fee Admin',
+    [AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER]: 'Sentora Reduce Risk Steward Wrapper',
     '0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d': 'Sentora Deployer (to be relinquished)',
   }),
   pools: {
