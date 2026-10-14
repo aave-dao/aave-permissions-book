@@ -3,7 +3,6 @@ import {
   Contracts,
   PermissionsJson,
 } from '../helpers/types.js';
-import { ChainId } from '@aave-dao/toolbox';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { generateRoles } from '../helpers/jsonParsers.js';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
@@ -15,7 +14,6 @@ export const resolvePpcModifiers = async (
   addressBook: AddressBook,
   provider: Client,
   permissionsObject: PermissionsJson,
-  chainId: typeof ChainId | number,
 ) => {
   const obj: Contracts = {};
   const roles = generateRoles(permissionsObject);
@@ -132,7 +130,23 @@ export const resolvePpcModifiers = async (
       ],
     };
 
-    if (chainId === ChainId.mainnet) {
+    // The V2 permissions json gates the delay and payloads manager on the owner alone
+    if (roles['PermissionedPayloadsController']['onlyOwner']) {
+      obj['PermissionedPayloadsController'].modifiers.push({
+        modifier: 'onlyOwner',
+        addresses: [
+          {
+            address: pcOwner,
+            owners: pcOwnerInfo.owners,
+            signersThreshold: pcOwnerInfo.threshold,
+          },
+        ],
+        functions: roles['PermissionedPayloadsController']['onlyOwner'],
+      });
+    }
+
+    // Only the V1 permissions json gates a function on the guardian alone
+    if (roles['PermissionedPayloadsController']['onlyGuardian']) {
       obj['PermissionedPayloadsController'].modifiers.push(
         {
           modifier: 'onlyGuardian',

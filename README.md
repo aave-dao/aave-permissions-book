@@ -46,6 +46,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  ETHEREUM |  SAFETY_MODULE |  [Permissions](./out/ETHEREUM-SAFETY_MODULE.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  V2_MISC |  [Permissions](./out/ETHEREUM-V2_MISC.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  V4 |  [Permissions](./out/ETHEREUM-V4.md#contracts) | |--------|--------|--------|
+|  ETHEREUM |  V4_SENTORA |  [Permissions](./out/ETHEREUM-V4_SENTORA.md#contracts) | |--------|--------|--------|
 |  OPTIMISM |  V3 |  [Permissions](./out/OPTIMISM-V3.md#contracts) | |--------|--------|--------|
 |  BINANCE |  V3 |  [Permissions](./out/BINANCE-V3.md#contracts) | |--------|--------|--------|
 |  GNOSIS |  V3 |  [Permissions](./out/GNOSIS-V3.md#contracts) | |--------|--------|--------|
