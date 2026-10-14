@@ -265,6 +265,7 @@ export const mainnetConfig: NetworkConfig = {
     [AaveV4EthereumSentoraCurated.SENTORA_OPERATOR]: 'Sentora Operator',
     [AaveV4EthereumSentoraCurated.SENTORA_EMERGENCY_ADMIN]: 'Sentora Emergency Admin',
     [AaveV4EthereumSentoraCurated.SENTORA_FEE_ADMIN]: 'Sentora Fee Admin',
+    '0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d': 'Sentora Deployer (to be relinquished)',
   }),
   pools: {
     [Pools.V3]: v3Pool,
