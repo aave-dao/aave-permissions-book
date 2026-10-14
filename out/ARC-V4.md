@@ -68,10 +68,12 @@
 | Role |Contract |
 |----------|----------|
 |  ACCESS_MANAGER_DEFAULT_ADMIN |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5) | |--------|--------|
+|  HUB_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://explorer.arc.io/address/0x419cF771E08d927b23F2F1691968C5135Ad8B659), [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  HUB_FEE_MINTER_ROLE |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  HUB_DEFICIT_ELIMINATOR_ROLE |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) | |--------|--------|
+|  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://explorer.arc.io/address/0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576), [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) | |--------|--------|

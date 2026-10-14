@@ -72,10 +72,12 @@
 | Role |Contract |
 |----------|----------|
 |  ACCESS_MANAGER_DEFAULT_ADMIN |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090), [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
+|  HUB_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://snowscan.xyz/address/0xbdf92ed96FF6D678469aFAFFa1e7d37B25beaa33) | |--------|--------|
 |  HUB_FEE_MINTER_ROLE |   | |--------|--------|
 |  HUB_DEFICIT_ELIMINATOR_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090), [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) | |--------|--------|
+|  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) | |--------|--------|

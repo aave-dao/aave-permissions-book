@@ -58,8 +58,13 @@
 | Role |Contract |
 |----------|----------|
 |  ACCESS_MANAGER_DEFAULT_ADMIN |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a), [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://basescan.org/address/0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70) | |--------|--------|
+|  HUB_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://basescan.org/address/0x2Cd40DFF9f2F74e8765dA148102b6668A5e9778A) | |--------|--------|
+|  HUB_FEE_MINTER_ROLE |   | |--------|--------|
+|  HUB_DEFICIT_ELIMINATOR_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://basescan.org/address/0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70), [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a), [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) | |--------|--------|
+|  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://basescan.org/address/0x0191B1Aa743c6B3C545119B5D56a0577D7f3a57F) | |--------|--------|
+|  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://basescan.org/address/0xA9D9923A1ADC1200771aaaA38CFeD6A5b8483d70), [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) | |--------|--------|
 
