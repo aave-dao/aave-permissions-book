@@ -4,6 +4,7 @@ import { pendingOwnerAbi } from '../abis/pendingOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
 import { rescuableAbi } from '../abis/rescuableAbi.js';
 import { v4RiskStewardAbi } from '../abis/v4RiskStewardAbi.js';
+import { reduceRiskStewardWrapperAbi } from '../abis/reduceRiskStewardWrapperAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
 import {
@@ -523,7 +524,45 @@ export const resolveV4Modifiers = async (
     );
   }
 
+  if (typeof addressBook.REDUCE_RISK_STEWARD_WRAPPER === 'string') {
+    obj['Reduce Risk Steward Wrapper'] = await resolveV4ReduceRiskStewardWrapper(
+      addressBook.REDUCE_RISK_STEWARD_WRAPPER,
+      provider,
+      permissionsObject,
+      ownerResolver,
+    );
+  }
+
   return { contracts: obj, roleLabels };
+};
+
+/**
+ * The wrapper is immutable and unowned: its RISK_COUNCIL is the only caller, and it forwards
+ * reduce-only updates to RISK_STEWARD, which lists the wrapper as its own risk council.
+ */
+const resolveV4ReduceRiskStewardWrapper = async (
+  address: string,
+  provider: Client,
+  permissionsObject: PermissionsJson,
+  ownerResolver: ReturnType<typeof createOwnerResolver>,
+): Promise<Contracts[string]> => {
+  const contract = getContract({
+    address: getAddress(address),
+    abi: reduceRiskStewardWrapperAbi,
+    client: provider,
+  });
+  const riskCouncil = (await contract.read.RISK_COUNCIL()) as Address;
+  const info = await ownerResolver.resolve(riskCouncil);
+  return {
+    address,
+    modifiers: [
+      {
+        modifier: 'onlyRiskCouncil',
+        addresses: [{ address: riskCouncil, owners: info.owners, signersThreshold: info.threshold }],
+        functions: functionsForRole(permissionsObject, 'ReduceRiskStewardWrapper', 'onlyRiskCouncil'),
+      },
+    ],
+  };
 };
 
 const resolveV4RiskSteward = async (

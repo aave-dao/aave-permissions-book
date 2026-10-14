@@ -165,6 +165,7 @@ const aaveV4Sentora = createV4({
     HUB_CONFIGURATOR: AaveV4EthereumSentoraCurated.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4EthereumSentoraCurated.SPOKE_CONFIGURATOR,
     RISK_STEWARD: AaveV4EthereumSentoraCurated.RISK_STEWARD,
+    REDUCE_RISK_STEWARD_WRAPPER: AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER,
     ...deduplicateByAddress(AaveV4EthereumSentoraCurated.HUBS, AaveV4EthereumSentoraCurated.SPOKES),
     ...AaveV4EthereumSentoraCurated.POSITION_MANAGERS,
   },

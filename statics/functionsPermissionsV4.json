@@ -523,5 +523,18 @@
         "roles": ["pendingOwner"]
       }
     ]
+  },
+  {
+    "contract": "ReduceRiskStewardWrapper",
+    "functions": [
+      {
+        "name": "reduceHubSpokeCaps",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "addReducedDynamicReserveConfigs",
+        "roles": ["onlyRiskCouncil"]
+      }
+    ]
   }
 ]
