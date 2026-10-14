@@ -72,8 +72,15 @@
 | Role |Contract |
 |----------|----------|
 |  ACCESS_MANAGER_DEFAULT_ADMIN |  [Sentora Deployer (to be relinquished)](https://etherscan.io/address/0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d) | |--------|--------|
+|  HUB_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://etherscan.io/address/0xa0eD3ECC19ab04BD0e6417023824cC4930d77b70) | |--------|--------|
+|  HUB_FEE_MINTER_ROLE |   | |--------|--------|
+|  HUB_DEFICIT_ELIMINATOR_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Sentora Deployer (to be relinquished)](https://etherscan.io/address/0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d) | |--------|--------|
+|  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) | |--------|--------|
+|  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Sentora Deployer (to be relinquished)](https://etherscan.io/address/0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d) | |--------|--------|
+|  SENTORA_RISK_ROLE |   | |--------|--------|
+|  SENTORA_EMERGENCY_ROLE |   | |--------|--------|
 
