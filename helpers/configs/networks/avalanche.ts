@@ -37,15 +37,9 @@ const v3Pool = createV3Pool({
 // ============================================================================
 // Aave V4
 // ============================================================================
-// Ethena Ecosystem Spoke is deployed but not yet in the address-book package.
-const manualV4Spokes: Record<string, string> = {
-  ETHENA_ECOSYSTEM_SPOKE: '0xaf22446124e566e54845f65b722E4dCbf12b650A',
-};
-
 const deduplicatedV4Addresses = deduplicateByAddress(
   AaveV4Avalanche.HUBS as Record<string, string>,
   AaveV4Avalanche.SPOKES as Record<string, string>,
-  manualV4Spokes,
   AaveV4Avalanche.TOKENIZATION_SPOKES as Record<string, string>,
 );
 
