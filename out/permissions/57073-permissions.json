@@ -191,8 +191,7 @@
                   "0xfa3f1c37969b75F215C2828f9372C757a2411dcb",
                   "0x56A0f31BB43Bcc938dbDa07381221DA9075a4D53",
                   "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
-                  "0xc10EE2614B90944Bbc88587f19024941C6dc21e1",
-                  "0x2746F3BA4F69Ac0B4462208aC1B5c1e5a981dCcA"
+                  "0xc10EE2614B90944Bbc88587f19024941C6dc21e1"
                 ],
                 "signersThreshold": 4
               }
@@ -220,8 +219,7 @@
                   "0xfa3f1c37969b75F215C2828f9372C757a2411dcb",
                   "0x56A0f31BB43Bcc938dbDa07381221DA9075a4D53",
                   "0x329c54289Ff5D6B7b7daE13592C6B1EDA1543eD4",
-                  "0xc10EE2614B90944Bbc88587f19024941C6dc21e1",
-                  "0x2746F3BA4F69Ac0B4462208aC1B5c1e5a981dCcA"
+                  "0xc10EE2614B90944Bbc88587f19024941C6dc21e1"
                 ],
                 "signersThreshold": 4
               }
@@ -581,8 +579,7 @@
                     "0xE9CD92079Ee565a9557c500448F37A091FB50205",
                     "0xfa3f1c37969b75F215C2828f9372C757a2411dcb",
                     "0x56A0f31BB43Bcc938dbDa07381221DA9075a4D53",
-                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340",
-                    "0x2746F3BA4F69Ac0B4462208aC1B5c1e5a981dCcA"
+                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340"
                   ],
                   "signersThreshold": 4
                 },
@@ -623,8 +620,7 @@
                     "0xE9CD92079Ee565a9557c500448F37A091FB50205",
                     "0xfa3f1c37969b75F215C2828f9372C757a2411dcb",
                     "0x56A0f31BB43Bcc938dbDa07381221DA9075a4D53",
-                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340",
-                    "0x2746F3BA4F69Ac0B4462208aC1B5c1e5a981dCcA"
+                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340"
                   ],
                   "signersThreshold": 4
                 },
@@ -638,8 +634,7 @@
                     "0xE9CD92079Ee565a9557c500448F37A091FB50205",
                     "0xfa3f1c37969b75F215C2828f9372C757a2411dcb",
                     "0x56A0f31BB43Bcc938dbDa07381221DA9075a4D53",
-                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340",
-                    "0x2746F3BA4F69Ac0B4462208aC1B5c1e5a981dCcA"
+                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340"
                   ],
                   "signersThreshold": 4
                 }
@@ -661,14 +656,27 @@
                     "0xE9CD92079Ee565a9557c500448F37A091FB50205",
                     "0xfa3f1c37969b75F215C2828f9372C757a2411dcb",
                     "0x56A0f31BB43Bcc938dbDa07381221DA9075a4D53",
-                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340",
-                    "0x2746F3BA4F69Ac0B4462208aC1B5c1e5a981dCcA"
+                    "0xE1436888Ae97c44D92eC13bc96D4915055aB4340"
                   ],
                   "signersThreshold": 4
                 }
               ],
               "functions": [
                 "createPayload"
+              ]
+            },
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x1dF462e2712496373A347f8ad10802a5E95f053D",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "setExecutionDelay",
+                "updatePayloadsManager"
               ]
             }
           ]
@@ -855,7 +863,8 @@
             "0x1bBcC6F0BB563067Ca45450023a13E34fa963Fa9"
           ],
           "RETRY_ROLE": [
-            "0x81D251dA015A0C7bD882918Ca1ec6B7B8E094585"
+            "0x81D251dA015A0C7bD882918Ca1ec6B7B8E094585",
+            "0x2B99790c35a401be873FA7Eb514D9220736BB1cA"
           ]
         }
       },
@@ -874,6 +883,14 @@
                     "0x5811d9FF80ff4B73A8F9bA42A6082FaB82E89Ea7"
                   ],
                   "signersThreshold": 2
+                },
+                {
+                  "address": "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "owners": [
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a"
+                  ],
+                  "signersThreshold": 1
                 }
               ],
               "functions": [

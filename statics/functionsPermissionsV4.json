@@ -347,6 +347,10 @@
       {
         "name": "transfer",
         "roles": ["onlyOwner"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
       }
     ]
   },
@@ -368,6 +372,10 @@
       {
         "name": "rescueToken",
         "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
       }
     ]
   },
@@ -385,6 +393,10 @@
       {
         "name": "rescueToken",
         "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
       }
     ]
   },
@@ -402,6 +414,10 @@
       {
         "name": "rescueToken",
         "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
       }
     ]
   },
@@ -423,6 +439,10 @@
       {
         "name": "rescueToken",
         "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
       }
     ]
   },
@@ -444,6 +464,76 @@
       {
         "name": "rescueToken",
         "roles": ["onlyRescueGuardian"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
+      }
+    ]
+  },
+  {
+    "contract": "RiskSteward",
+    "functions": [
+      {
+        "name": "setConfig",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setAddressRestricted",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "updateHubAssetIRs",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updateHubSpokeCaps",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updateReserveConfigs",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updateDynamicReserveConfigs",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "addDynamicReserveConfigs",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updateSpokeLiquidationConfigs",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updateLstPriceCaps",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updateStablePriceCaps",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "updatePendleDiscountRates",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["pendingOwner"]
+      }
+    ]
+  },
+  {
+    "contract": "ReduceRiskStewardWrapper",
+    "functions": [
+      {
+        "name": "reduceHubSpokeCaps",
+        "roles": ["onlyRiskCouncil"]
+      },
+      {
+        "name": "addReducedDynamicReserveConfigs",
+        "roles": ["onlyRiskCouncil"]
       }
     ]
   },

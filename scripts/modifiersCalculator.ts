@@ -22,6 +22,7 @@ import {
   ghoGSMRoleNames,
   ghoRoleNames,
   granularGuardianRoleNames,
+  isV4Pool,
   networkConfigs,
   Pools,
   protocolRoleNames,
@@ -338,7 +339,7 @@ const generateNetworkPermissions = async (
       saveEmissionAdminsByPool(network, poolKey, emissionAdmins);
     }
 
-    if (poolKey === Pools.V4) {
+    if (isV4Pool(poolKey)) {
       logTableGeneration(network, poolKey, undefined, indexedLatestBlock || pool.accessManagerBlock);
 
       if (Object.keys(pool.addressBook).length > 0 && pool.accessManagerBlock) {
@@ -717,7 +718,6 @@ const generateNetworkPermissions = async (
         pool.ppcAddressBook,
         poolProvider,
         getStaticPermissionsJson(pool.ppcPermissionsJson),
-        Number(network),
       );
       ppc.contracts = ppcPermissions;
     }

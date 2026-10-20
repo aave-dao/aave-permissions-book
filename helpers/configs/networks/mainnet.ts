@@ -6,6 +6,7 @@ import {
   AaveV3EthereumLido,
   AaveV3EthereumEtherFi,
   AaveV4Ethereum,
+  AaveV4EthereumSentoraCurated,
   GovernanceV3Ethereum,
   MiscEthereum,
   GhoEthereum,
@@ -145,8 +146,31 @@ const aaveV4 = createV4({
     // Shared with the V3 market, so no aclBlock: the V3 pool indexes it
     POOL_ADDRESSES_PROVIDER: AaveV3Ethereum.POOL_ADDRESSES_PROVIDER,
     ACL_MANAGER: AaveV3Ethereum.ACL_MANAGER,
+    RISK_STEWARD: AaveV4Ethereum.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>),
+  },
+});
+
+// ============================================================================
+// Aave V4 Sentora
+// ============================================================================
+const aaveV4Sentora = createV4({
+  accessManagerBlock: 26190776,
+  ppcPermissionsJson: './statics/functionsPermissionsPpcV2.json',
+  ppcAddressBook: {
+    PERMISSIONED_PAYLOADS_CONTROLLER: AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER,
+    PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR:
+      AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR,
+  },
+  addressBook: {
+    ACCESS_MANAGER: AaveV4EthereumSentoraCurated.ACCESS_MANAGER,
+    HUB_CONFIGURATOR: AaveV4EthereumSentoraCurated.HUB_CONFIGURATOR,
+    SPOKE_CONFIGURATOR: AaveV4EthereumSentoraCurated.SPOKE_CONFIGURATOR,
+    RISK_STEWARD: AaveV4EthereumSentoraCurated.RISK_STEWARD,
+    REDUCE_RISK_STEWARD_WRAPPER: AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER,
+    ...deduplicateByAddress(AaveV4EthereumSentoraCurated.HUBS, AaveV4EthereumSentoraCurated.SPOKES),
+    ...AaveV4EthereumSentoraCurated.POSITION_MANAGERS,
   },
 });
 
@@ -206,6 +230,15 @@ export const mainnetConfig: NetworkConfig = {
     '0xE9ac5231fAecb633dA0Fe85Fcb2785b8363427d2': 'Gho direct facilitator mainnet',
     '0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9': 'V4 Security Council',
     '0x14339e2178A954d5FB839D5Ff31644fE0F25F517': 'V4 Security Council Executor',
+    [AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER]: 'Sentora PermissionedPayloadsController',
+    [AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER_EXECUTOR]: 'Sentora Executor',
+    [AaveV4EthereumSentoraCurated.ACL_MANAGER]: 'Sentora ACL Manager',
+    [AaveV4EthereumSentoraCurated.POOL_ADDRESSES_PROVIDER]: 'Sentora PoolAddressesProvider',
+    [AaveV4EthereumSentoraCurated.SENTORA_OPERATOR]: 'Sentora Operator',
+    [AaveV4EthereumSentoraCurated.SENTORA_EMERGENCY_ADMIN]: 'Sentora Emergency Admin',
+    [AaveV4EthereumSentoraCurated.SENTORA_FEE_ADMIN]: 'Sentora Fee Admin',
+    [AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER]: 'Sentora Reduce Risk Steward Wrapper',
+    '0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d': 'Sentora Deployer (to be relinquished)',
   }),
   pools: {
     [Pools.V3]: v3Pool,
@@ -217,5 +250,6 @@ export const mainnetConfig: NetworkConfig = {
     [Pools.SAFETY_MODULE]: safetyPool,
     [Pools.V2_MISC]: v2MiscPool,
     [Pools.V4]: aaveV4,
+    [Pools.V4_SENTORA]: aaveV4Sentora,
   },
 };

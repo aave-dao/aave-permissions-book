@@ -14,6 +14,8 @@ export interface V4Config {
   tokenizationSpokesAddressBook?: Record<string, string>;
   /** ACLManager deployment block, when the market has a V3-style ACL periphery */
   aclBlock?: number;
+  ppcPermissionsJson?: string;
+  ppcAddressBook?: AddressBook;
 }
 
 /**

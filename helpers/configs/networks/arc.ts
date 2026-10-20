@@ -34,6 +34,7 @@ const aaveV4 = createV4({
     SPOKE_CONFIGURATOR: AaveV4Arc.SPOKE_CONFIGURATOR,
     POOL_ADDRESSES_PROVIDER: MiscArc.POOL_ADDRESSES_PROVIDER,
     ACL_MANAGER: MiscArc.ACL_MANAGER,
+    RISK_STEWARD: AaveV4Arc.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Arc.POSITION_MANAGERS as Record<string, string>),
   },
@@ -49,6 +50,7 @@ export const arcConfig: NetworkConfig = {
   addressesNames: mergeAddressNames({
     [MiscArc.V4_SECURITY_COUNCIL]: 'V4 Security Council',
     [MiscArc.V4_SECURITY_COUNCIL_EXECUTOR]: 'V4 Security Council Executor',
+    [AaveV4Arc.RISK_COUNCIL]: 'Risk Council',
   }),
   pools: {
     [Pools.V4]: aaveV4,

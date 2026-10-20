@@ -66,6 +66,7 @@ const aaveV4 = createV4({
     // Shared with the V3 market, so no aclBlock: the V3 pool indexes it
     POOL_ADDRESSES_PROVIDER: AaveV3Avalanche.POOL_ADDRESSES_PROVIDER,
     ACL_MANAGER: AaveV3Avalanche.ACL_MANAGER,
+    RISK_STEWARD: AaveV4Avalanche.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Avalanche.POSITION_MANAGERS as Record<string, string>),
   },

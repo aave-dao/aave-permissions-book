@@ -18,6 +18,7 @@ const v3Pool = createV3Pool({
     ...AaveV3Monad,
     ...MiscMonad,
   },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: {
     ...GovernanceV3Monad,
     ...MiscMonad,
