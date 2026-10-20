@@ -1140,6 +1140,11 @@
                   "address": "0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A",
                   "owners": [],
                   "signersThreshold": 0
+                },
+                {
+                  "address": "0xB5c5D35553826d681F3f3CC5Bae6cfA0446dE706",
+                  "owners": [],
+                  "signersThreshold": 0
                 }
               ],
               "functions": [
@@ -1159,6 +1164,11 @@
                 },
                 {
                   "address": "0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A",
+                  "owners": [],
+                  "signersThreshold": 0
+                },
+                {
+                  "address": "0xB5c5D35553826d681F3f3CC5Bae6cfA0446dE706",
                   "owners": [],
                   "signersThreshold": 0
                 }
@@ -1198,7 +1208,8 @@
             "0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A"
           ],
           "FUNDS_ADMIN_ROLE": [
-            "0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A"
+            "0x47aAdaAE1F05C978E6aBb7568d11B7F6e0FC4d6A",
+            "0xB5c5D35553826d681F3f3CC5Bae6cfA0446dE706"
           ]
         }
       }

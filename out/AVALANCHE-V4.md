@@ -8,7 +8,6 @@
 |  [MAIN Spoke](https://snowscan.xyz/address/0x435272CefF93a1E657E8ABfdf0A13e95900A3a56) |  V4 Security Council | |--------|--------|
 |  [FOREX Spoke](https://snowscan.xyz/address/0x6a37776B5E026dBdF043b4F933c323C84DD1B514) |  V4 Security Council | |--------|--------|
 |  [AVAX CORRELATED Spoke](https://snowscan.xyz/address/0x3b517594277c67307CF2d7CBE6FE1D4399B68c41) |  V4 Security Council | |--------|--------|
-|  [ETHENA ECOSYSTEM Spoke](https://snowscan.xyz/address/0xaf22446124e566e54845f65b722E4dCbf12b650A) |  V4 Security Council | |--------|--------|
 |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://snowscan.xyz/address/0x2C4Aea1A5F000889c6DfFE8f52377aFc2CB113a6) |  V4 Security Council | |--------|--------|
 |  [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) |  not upgradeable | |--------|--------|
@@ -42,7 +41,6 @@
 |  [FOREX Spoke](https://snowscan.xyz/address/0x6a37776B5E026dBdF043b4F933c323C84DD1B514) |  [FOREX Spoke ProxyAdmin](https://snowscan.xyz/address/0x00D7c7d0D021715eaA921F72F60489D6653ecCfE) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 |  [AVAX CORRELATED Spoke](https://snowscan.xyz/address/0x3b517594277c67307CF2d7CBE6FE1D4399B68c41) |  [AVAX CORRELATED Spoke ProxyAdmin](https://snowscan.xyz/address/0x34F5392e2CFEDf971223f070d3c51BD5165196F4) |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) |  updateLiquidationConfig, addReserve, updateReserveConfig, updateDynamicReserveConfig, addDynamicReserveConfig, updatePositionManager, updateReservePriceSource | |--------|--------|--------|--------|--------|
 |  [AVAX CORRELATED Spoke](https://snowscan.xyz/address/0x3b517594277c67307CF2d7CBE6FE1D4399B68c41) |  [AVAX CORRELATED Spoke ProxyAdmin](https://snowscan.xyz/address/0x34F5392e2CFEDf971223f070d3c51BD5165196F4) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
-|  [ETHENA ECOSYSTEM Spoke](https://snowscan.xyz/address/0xaf22446124e566e54845f65b722E4dCbf12b650A) |  [ETHENA ECOSYSTEM Spoke ProxyAdmin](https://snowscan.xyz/address/0xF0a4EB056941533d43696c8DbaB57e8863BA7Dd9) |  - |  - |  - | |--------|--------|--------|--------|--------|
 |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addLiquidationFee, updateLiquidationFee, addDynamicReserveConfig, updateDynamicReserveConfig, pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve, updatePositionManager | |--------|--------|--------|--------|--------|
 |  [TreasurySpoke](https://snowscan.xyz/address/0x2C4Aea1A5F000889c6DfFE8f52377aFc2CB113a6) |  [TreasurySpoke ProxyAdmin](https://snowscan.xyz/address/0x0b448c233298d33B163D877aC43bF8Fa884480e1) |  onlyOwner |  [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) |  - |  onlyOwner |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
@@ -74,10 +72,12 @@
 | Role |Contract |
 |----------|----------|
 |  ACCESS_MANAGER_DEFAULT_ADMIN |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090), [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
+|  HUB_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_ROLE |  [HubConfigurator](https://snowscan.xyz/address/0xbdf92ed96FF6D678469aFAFFa1e7d37B25beaa33) | |--------|--------|
 |  HUB_FEE_MINTER_ROLE |   | |--------|--------|
 |  HUB_DEFICIT_ELIMINATOR_ROLE |   | |--------|--------|
 |  HUB_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090), [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) | |--------|--------|
+|  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) | |--------|--------|

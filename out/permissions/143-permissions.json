@@ -173,6 +173,16 @@
                 "address": "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0x9047f3084Dd26d0d8a6b0Ef9Bb8643b01dA726D3",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0xa89C6f877380af190AFD839c0F9cBF57474162f1",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -222,6 +232,16 @@
               },
               {
                 "address": "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x9047f3084Dd26d0d8a6b0Ef9Bb8643b01dA726D3",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0xa89C6f877380af190AFD839c0F9cBF57474162f1",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -628,7 +648,9 @@
         "FLASH_BORROWER": [],
         "RISK_ADMIN": [
           "0xA5Ba213867E175A182a5dd6A9193C6158738105A",
-          "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34"
+          "0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34",
+          "0x9047f3084Dd26d0d8a6b0Ef9Bb8643b01dA726D3",
+          "0xa89C6f877380af190AFD839c0F9cBF57474162f1"
         ]
       }
     },
@@ -1003,6 +1025,11 @@
                   "address": "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2",
                   "owners": [],
                   "signersThreshold": 0
+                },
+                {
+                  "address": "0x72EAfbD4331dD482f5c8135fF0452d97da6F77B0",
+                  "owners": [],
+                  "signersThreshold": 0
                 }
               ],
               "functions": [
@@ -1022,6 +1049,11 @@
                 },
                 {
                   "address": "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2",
+                  "owners": [],
+                  "signersThreshold": 0
+                },
+                {
+                  "address": "0x72EAfbD4331dD482f5c8135fF0452d97da6F77B0",
                   "owners": [],
                   "signersThreshold": 0
                 }
@@ -1061,7 +1093,8 @@
             "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2"
           ],
           "FUNDS_ADMIN_ROLE": [
-            "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2"
+            "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2",
+            "0x72EAfbD4331dD482f5c8135fF0452d97da6F77B0"
           ]
         }
       }
@@ -1071,6 +1104,42 @@
     "ppc": {},
     "agentHub": {
       "contracts": {
+        "PendleDiscountRateAgent": {
+          "address": "0x9047f3084Dd26d0d8a6b0Ef9Bb8643b01dA726D3",
+          "modifiers": [
+            {
+              "modifier": "onlyAgentHub",
+              "addresses": [
+                {
+                  "address": "0xa1Cf1e3D3fC743c0fd0e38f631A843372b7169DB",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "inject"
+              ]
+            }
+          ]
+        },
+        "EModeCategoryAgent": {
+          "address": "0xa89C6f877380af190AFD839c0F9cBF57474162f1",
+          "modifiers": [
+            {
+              "modifier": "onlyAgentHub",
+              "addresses": [
+                {
+                  "address": "0xa1Cf1e3D3fC743c0fd0e38f631A843372b7169DB",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "inject"
+              ]
+            }
+          ]
+        },
         "AgentHub": {
           "address": "0xa1Cf1e3D3fC743c0fd0e38f631A843372b7169DB",
           "proxyAdmin": "0xd0c2b3da49e7316ce8f8387d80f76ac09265f799",
@@ -1096,6 +1165,19 @@
             {
               "modifier": "onlyOwnerOrAgentAdmin",
               "addresses": [
+                {
+                  "address": "0xc887455536CBD4e615B745e70CaCde15B3117e74",
+                  "owners": [
+                    "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                    "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                    "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                    "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                    "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                    "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                    "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                  ],
+                  "signersThreshold": 4
+                },
                 {
                   "address": "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2",
                   "owners": [],
@@ -1137,6 +1219,38 @@
                 "changeProxyAdmin",
                 "upgrade",
                 "upgradeAndCall"
+              ]
+            }
+          ]
+        },
+        "RangeValidationModule": {
+          "address": "0x863D5B3f24E6b84564432dd20606a82bB1C61dC5",
+          "modifiers": [
+            {
+              "modifier": "onlyHubOwnerOrAgentAdmin",
+              "addresses": [
+                {
+                  "address": "0xc887455536CBD4e615B745e70CaCde15B3117e74",
+                  "owners": [
+                    "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                    "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                    "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                    "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                    "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                    "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                    "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                  ],
+                  "signersThreshold": 4
+                },
+                {
+                  "address": "0xa9d0EAFF48cE1DF468f9eAeb7e628c413343F6A2",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "setDefaultRangeConfig",
+                "setRangeConfigByMarket"
               ]
             }
           ]

@@ -1,8 +1,10 @@
 import { Address, Client, getAddress, getContract, toFunctionSelector } from 'viem';
 import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
+import { pendingOwnerAbi } from '../abis/pendingOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
 import { rescuableAbi } from '../abis/rescuableAbi.js';
 import { v4RiskStewardAbi } from '../abis/v4RiskStewardAbi.js';
+import { reduceRiskStewardWrapperAbi } from '../abis/reduceRiskStewardWrapperAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
 import {
@@ -226,6 +228,67 @@ const fetchRoleLabels = async (
 };
 
 /**
+ * Lists every role the AccessManagerEnumerable tracks, so labelled roles with no members or
+ * targets yet still get a label and a row. Returns [] if the AccessManager is not enumerable.
+ */
+const fetchAccessManagerRoleIds = async (
+  accessManagerAddress: string,
+  provider: Client,
+): Promise<string[]> => {
+  try {
+    const contract = getContract({
+      address: getAddress(accessManagerAddress),
+      abi: accessManagerAbi,
+      client: provider,
+    });
+    const count = await contract.read.getRoleCount();
+    const roles = await contract.read.getRoles([0n, count]);
+    return roles.map((roleId) => roleId.toString());
+  } catch {
+    return [];
+  }
+};
+
+/**
+ * Reads `pendingOwner()` on an Ownable2Step contract. Returns a `pendingOwner` modifier while a
+ * transfer is pending, null otherwise or if the contract has no `pendingOwner()`.
+ */
+const resolvePendingOwnerModifier = async (
+  address: string,
+  provider: Client,
+  ownerResolver: ReturnType<typeof createOwnerResolver>,
+  functions: string[],
+) => {
+  try {
+    const contract = getContract({
+      address: getAddress(address),
+      abi: pendingOwnerAbi,
+      client: provider,
+    });
+    const pendingOwner = (await contract.read.pendingOwner()) as Address;
+    if (pendingOwner === ZERO_ADDRESS) return null;
+    const info = await ownerResolver.resolve(pendingOwner);
+    return {
+      modifier: 'pendingOwner',
+      addresses: [{ address: pendingOwner, owners: info.owners, signersThreshold: info.threshold }],
+      functions,
+    };
+  } catch {
+    return null;
+  }
+};
+
+const functionsForRole = (
+  permissionsObject: PermissionsJson,
+  contractType: string,
+  role: string,
+): string[] =>
+  permissionsObject
+    .find((c) => c.contract === contractType)
+    ?.functions.filter((f) => f.roles.includes(role))
+    .map((f) => f.name) || [];
+
+/**
  * Resolves the proxy admin for a contract and reads the ProxyAdmin's owner.
  * Returns null if the contract is not behind a proxy (zero address or read failure).
  */
@@ -319,9 +382,12 @@ export const resolveV4Modifiers = async (
   for (const roleId of Object.keys(roleAddresses)) {
     allRoleIds.add(roleId);
   }
+  const accessManagerAddress = addressBook.ACCESS_MANAGER as string;
+  for (const roleId of await fetchAccessManagerRoleIds(accessManagerAddress, provider)) {
+    allRoleIds.add(roleId);
+  }
 
   // Fetch role labels on-chain, with config labels as fallback
-  const accessManagerAddress = addressBook.ACCESS_MANAGER as string;
   const roleLabels = await fetchRoleLabels(
     accessManagerAddress,
     provider,
@@ -348,6 +414,12 @@ export const resolveV4Modifiers = async (
         });
         const owner = (await contract.read.owner()) as Address;
         const ownerInfo = await ownerResolver.resolve(owner);
+        const pending = await resolvePendingOwnerModifier(
+          address,
+          provider,
+          ownerResolver,
+          functionsForRole(permissionsObject, 'TreasurySpoke', 'pendingOwner'),
+        );
 
         obj[instance.displayName] = {
           address,
@@ -363,6 +435,7 @@ export const resolveV4Modifiers = async (
               ],
               functions: ownerFunctions,
             },
+            ...(pending ? [pending] : []),
           ],
         };
       } catch {
@@ -451,7 +524,45 @@ export const resolveV4Modifiers = async (
     );
   }
 
+  if (typeof addressBook.REDUCE_RISK_STEWARD_WRAPPER === 'string') {
+    obj['Reduce Risk Steward Wrapper'] = await resolveV4ReduceRiskStewardWrapper(
+      addressBook.REDUCE_RISK_STEWARD_WRAPPER,
+      provider,
+      permissionsObject,
+      ownerResolver,
+    );
+  }
+
   return { contracts: obj, roleLabels };
+};
+
+/**
+ * The wrapper is immutable and unowned: its RISK_COUNCIL is the only caller, and it forwards
+ * reduce-only updates to RISK_STEWARD, which lists the wrapper as its own risk council.
+ */
+const resolveV4ReduceRiskStewardWrapper = async (
+  address: string,
+  provider: Client,
+  permissionsObject: PermissionsJson,
+  ownerResolver: ReturnType<typeof createOwnerResolver>,
+): Promise<Contracts[string]> => {
+  const contract = getContract({
+    address: getAddress(address),
+    abi: reduceRiskStewardWrapperAbi,
+    client: provider,
+  });
+  const riskCouncil = (await contract.read.RISK_COUNCIL()) as Address;
+  const info = await ownerResolver.resolve(riskCouncil);
+  return {
+    address,
+    modifiers: [
+      {
+        modifier: 'onlyRiskCouncil',
+        addresses: [{ address: riskCouncil, owners: info.owners, signersThreshold: info.threshold }],
+        functions: functionsForRole(permissionsObject, 'ReduceRiskStewardWrapper', 'onlyRiskCouncil'),
+      },
+    ],
+  };
 };
 
 const resolveV4RiskSteward = async (
@@ -619,6 +730,16 @@ export const resolveV4PositionManagerModifiers = async (
       }
     } catch {
       // owner() not available
+    }
+
+    const pending = await resolvePendingOwnerModifier(
+      address,
+      provider,
+      ownerResolver,
+      contractType ? functionsForRole(permissionsObject, contractType, 'pendingOwner') : [],
+    );
+    if (pending) {
+      modifiers.push(pending);
     }
 
     // Resolve rescue guardian (Rescuable)
