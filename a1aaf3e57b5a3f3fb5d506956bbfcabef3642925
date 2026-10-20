@@ -1,0 +1,23 @@
+out/permissions/1-permissions.json
+  s_87d82a2a9bbbe0::t_02e268a65c2e4a 13357-13418
+out/ETHEREUM-V4_SENTORA.md
+  s_87d82a2a9bbbe0::t_02e268a65c2e4a 13-18,35-37
+out/permissions/metadata/1-metadata.json
+  s_87d82a2a9bbbe0::t_02e268a65c2e4a 433,443
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a1aaf3e57b5a3f3fb5d506956bbfcabef3642925",
+  "prompts": {},
+  "sessions": {
+    "s_87d82a2a9bbbe0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c5d841a-2583-449d-9e05-e5e041fb0345",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
