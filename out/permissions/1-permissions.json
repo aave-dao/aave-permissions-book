@@ -13442,7 +13442,7 @@
             "modifier": "onlyOwner",
             "addresses": [
               {
-                "address": "0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d",
+                "address": "0x769C952ac9Bbb45524790B658fd70938a8A5d19E",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -13452,19 +13452,6 @@
               "supplySkimmed",
               "withdraw",
               "transfer"
-            ]
-          },
-          {
-            "modifier": "pendingOwner",
-            "addresses": [
-              {
-                "address": "0x769C952ac9Bbb45524790B658fd70938a8A5d19E",
-                "owners": [],
-                "signersThreshold": 0
-              }
-            ],
-            "functions": [
-              "acceptOwnership"
             ]
           }
         ],
