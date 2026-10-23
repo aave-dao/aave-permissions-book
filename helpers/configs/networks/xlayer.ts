@@ -19,15 +19,7 @@ const v3Pool = createV3Pool({
   crossChainControllerBlock: 43479400,
   granularGuardianBlock: 43481310,
   emissionManagerBlock: 42872540,
-  addressBook: {
-    ...AaveV3XLayer,
-    ...MiscXLayer,
-    // Until the aave-address-book release with the X Layer AgentHub and LlamaRisk entries ships.
-    AGENT_HUB: '0x7532F38Be8AB746DD6c1B686A9aAED3400eD35a0',
-    LLAMARISK_RISK_ORACLE: '0x3e0C920C2bdDF6DF87f9A39Ea4db9CF65Cec1EDE',
-    LLAMARISK_PT_PARAMETER_REGISTRY: '0x101D7eA4D0F8Ab848D3CC24e7b391F19DaaF6a2d',
-    LLAMARISK_RISK_ORACLE_ROUTER: '0xfC354324B152E2A358A17182d2AF0d3f882c27D2',
-  },
+  addressBook: { ...AaveV3XLayer, ...MiscXLayer },
   functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: { ...GovernanceV3XLayer, ...MiscXLayer, TRANSPARENT_PROXY_FACTORY: '0xEB0682d148e874553008730f0686ea89db7DA412' },
   addresses: {
