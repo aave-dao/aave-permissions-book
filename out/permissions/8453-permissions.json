@@ -588,7 +588,7 @@
               {
                 "address": "0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1",
                 "owners": [
-                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                  "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
                   "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
                 ],
                 "signersThreshold": 2
@@ -2592,7 +2592,7 @@
               {
                 "address": "0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1",
                 "owners": [
-                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc",
+                  "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
                   "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
                 ],
                 "signersThreshold": 2
