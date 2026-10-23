@@ -24,6 +24,8 @@
 |  [SpokeConfigurator](https://etherscan.io/address/0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://etherscan.io/address/0xB9B0b8616f6Bf6841972a52058132BE08d723155) |  V4 Security Council | |--------|--------|
 |  [Manual AGRS](https://etherscan.io/address/0x6f48d9Cdb8EE6E17c96B2d8Aec128af426A295c1) |  not upgradeable | |--------|--------|
+|  [PoolAddressesProvider](https://etherscan.io/address/0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e) |  not upgradeable | |--------|--------|
+|  [ACLManager](https://etherscan.io/address/0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0) |  not upgradeable | |--------|--------|
 
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
@@ -68,6 +70,8 @@
 ### Actions type
 | type |can be executed by |
 |----------|----------|
+|  adminsConfiguration |  Governance | |--------|--------|
+|  protocolUpgradeablity |  Governance | |--------|--------|
 |  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
@@ -116,6 +120,8 @@
 |  [TreasurySpoke](https://etherscan.io/address/0xB9B0b8616f6Bf6841972a52058132BE08d723155) |  [TreasurySpoke ProxyAdmin](https://etherscan.io/address/0x890B79dDcdCCd663B4D7fC121A7A70184489b505) |  onlyOwner |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://etherscan.io/address/0x6f48d9Cdb8EE6E17c96B2d8Aec128af426A295c1) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://etherscan.io/address/0x6f48d9Cdb8EE6E17c96B2d8Aec128af426A295c1) |  - |  onlyRiskCouncil |  [Risk Council](https://etherscan.io/address/0x47c71dFEB55Ebaa431Ae3fbF99Ea50e0D3d30fA8) |  updateHubAssetIRs, updateHubSpokeCaps, updateReserveConfigs, updateDynamicReserveConfigs, addDynamicReserveConfigs, updateSpokeLiquidationConfigs, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates | |--------|--------|--------|--------|--------|
+|  [PoolAddressesProvider](https://etherscan.io/address/0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setMarketId, setAddress, setAddressAsProxy, setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, setPoolDataProvider | |--------|--------|--------|--------|--------|
+|  [ACLManager](https://etherscan.io/address/0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0) |  - |  onlyRole |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setRoleAdmin | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -148,6 +154,16 @@
 |----------|----------|----------|----------|
 |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://etherscan.io/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://etherscan.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://etherscan.io/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://etherscan.io/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://etherscan.io/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://etherscan.io/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://etherscan.io/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://etherscan.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
 |  [Risk Council](https://etherscan.io/address/0x47c71dFEB55Ebaa431Ae3fbF99Ea50e0D3d30fA8) |  2/2 |  0x47c71dFEB55Ebaa431Ae3fbF99Ea50e0D3d30fA8 |  [0x2B99790c35a401be873FA7Eb514D9220736BB1cA](https://etherscan.io/address/0x2B99790c35a401be873FA7Eb514D9220736BB1cA), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://etherscan.io/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef) | |--------|--------|--------|--------|
+
+### Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) | |--------|--------|
+|  POOL_ADMIN |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) | |--------|--------|
+|  EMERGENCY_ADMIN |  [Aave Protocol Guardian Ethereum](https://etherscan.io/address/0x2CFe3ec4d5a6811f4B8067F0DE7e47DfA938Aa30) | |--------|--------|
+|  FLASH_BORROWER |  [0xd9D8e68717Ce24CCbf162868aaad7E38d81b05d1](https://etherscan.io/address/0xd9D8e68717Ce24CCbf162868aaad7E38d81b05d1), [0x72915D41982DfCAf30b871290618E59C45Edba7F](https://etherscan.io/address/0x72915D41982DfCAf30b871290618E59C45Edba7F), [0x8761e0370f94f68Db8EaA731f4fC581f6AD0Bd68](https://etherscan.io/address/0x8761e0370f94f68Db8EaA731f4fC581f6AD0Bd68), [0xab515542d621574f9b5212d50593cD0C07e641bD](https://etherscan.io/address/0xab515542d621574f9b5212d50593cD0C07e641bD), [0x85105b7E11c442Ca6fF6b4d90d7a439f68376Ac4](https://etherscan.io/address/0x85105b7E11c442Ca6fF6b4d90d7a439f68376Ac4), [0x45c00508C14601fd1C1e296eB3C0e3eEEdCa45D0](https://etherscan.io/address/0x45c00508C14601fd1C1e296eB3C0e3eEEdCa45D0), [0x6e8ac99B2ec2e08600c7d0Aab970f31e9b11957a](https://etherscan.io/address/0x6e8ac99B2ec2e08600c7d0Aab970f31e9b11957a), [0x3a657Ec8a755d2E43DDbfDeaDc15899EDaf8dcf8](https://etherscan.io/address/0x3a657Ec8a755d2E43DDbfDeaDc15899EDaf8dcf8), [0xb5b29320d2Dde5BA5BAFA1EbcD270052070483ec](https://etherscan.io/address/0xb5b29320d2Dde5BA5BAFA1EbcD270052070483ec), [0x0274a704a6D9129F90A62dDC6f6024b33EcDad36](https://etherscan.io/address/0x0274a704a6D9129F90A62dDC6f6024b33EcDad36), [0x49d9409111a6363d82C4371fFa43fAEA660C917B](https://etherscan.io/address/0x49d9409111a6363d82C4371fFa43fAEA660C917B), [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://etherscan.io/address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7), [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://etherscan.io/address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
+|  RISK_ADMIN |  [Core GHO Aave Steward](https://etherscan.io/address/0x98217A06721Ebf727f2C8d9aD7718ec28b7aAe34), [Gho Core Direct Minter](https://etherscan.io/address/0x5513224daaEABCa31af5280727878d52097afA05), [Manual AGRS](https://etherscan.io/address/0x13a9CC64344b02bACC5AD9Cf38B5711F1B9ec3d4), [PendleDiscountRateAgent](https://etherscan.io/address/0x529e2374afB38AC465D71979E7540ad93C05F6c5), [EModeCategoryAgent](https://etherscan.io/address/0xbe2840440d4f77CD98CEC2de09913e6851907744), [Manual AGRS](https://etherscan.io/address/0x6f48d9Cdb8EE6E17c96B2d8Aec128af426A295c1) | |--------|--------|
+|  ASSET_LISTING_ADMIN |   | |--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |
