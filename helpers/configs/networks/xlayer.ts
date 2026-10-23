@@ -20,6 +20,7 @@ const v3Pool = createV3Pool({
   granularGuardianBlock: 43481310,
   emissionManagerBlock: 42872540,
   addressBook: { ...AaveV3XLayer, ...MiscXLayer },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: { ...GovernanceV3XLayer, ...MiscXLayer, TRANSPARENT_PROXY_FACTORY: '0xEB0682d148e874553008730f0686ea89db7DA412' },
   addresses: {
   },
