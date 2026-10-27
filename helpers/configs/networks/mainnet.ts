@@ -119,9 +119,16 @@ const v2MiscPool = {
 // ============================================================================
 // Aave V4
 // ============================================================================
+// PAXG Paxos ESpoke: deployed but not yet in the address book package.
+const manualV4Spokes = {
+  PAXG_PAXOS_ESPOKE: '0x115aF1C2db26cD8ECa3f29055E4E424AF4edF616',
+  PAXG_PAXOS_ESPOKE_ORACLE: '0x6b3800e96Bb4AA38a879b2c143B6E2f5f2687b77',
+};
+
 const deduplicatedV4Addresses = deduplicateByAddress(
   AaveV4Ethereum.HUBS as Record<string, string>,
   AaveV4Ethereum.SPOKES as Record<string, string>,
+  manualV4Spokes,
   AaveV4Ethereum.TOKENIZATION_SPOKES as Record<string, string>,
 );
 
