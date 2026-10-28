@@ -9,6 +9,8 @@
 |  [SpokeConfigurator](https://basescan.org/address/0x0191B1Aa743c6B3C545119B5D56a0577D7f3a57F) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://basescan.org/address/0x5F8d0102F5B51Fae6DE9d2F2561bda63Fb5Db674) |  V4 Security Council | |--------|--------|
 |  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  not upgradeable | |--------|--------|
+|  [PoolAddressesProvider](https://basescan.org/address/0xe20fCBdBfFC4Dd138cE8b2E6FBb6CB49777ad64D) |  not upgradeable | |--------|--------|
+|  [ACLManager](https://basescan.org/address/0x43955b0899Ab7232E3a454cf84AedD22Ad46FD33) |  not upgradeable | |--------|--------|
 
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
@@ -18,6 +20,8 @@
 ### Actions type
 | type |can be executed by |
 |----------|----------|
+|  adminsConfiguration |  Governance | |--------|--------|
+|  protocolUpgradeablity |  Governance | |--------|--------|
 |  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
@@ -33,6 +37,8 @@
 |  [TreasurySpoke](https://basescan.org/address/0x5F8d0102F5B51Fae6DE9d2F2561bda63Fb5Db674) |  [TreasurySpoke ProxyAdmin](https://basescan.org/address/0x14d27703A0dA83260BB54B7F14314B2914Be7C47) |  onlyOwner |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  - |  onlyOwner |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) |  - |  onlyRiskCouncil |  [Risk Council](https://basescan.org/address/0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1) |  updateHubAssetIRs, updateHubSpokeCaps, updateReserveConfigs, updateDynamicReserveConfigs, addDynamicReserveConfigs, updateSpokeLiquidationConfigs, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates | |--------|--------|--------|--------|--------|
+|  [PoolAddressesProvider](https://basescan.org/address/0xe20fCBdBfFC4Dd138cE8b2E6FBb6CB49777ad64D) |  - |  onlyOwner |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) |  setMarketId, setAddress, setAddressAsProxy, setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, setPoolDataProvider | |--------|--------|--------|--------|--------|
+|  [ACLManager](https://basescan.org/address/0x43955b0899Ab7232E3a454cf84AedD22Ad46FD33) |  - |  onlyRole |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) |  setRoleAdmin | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -53,6 +59,16 @@
 |----------|----------|----------|----------|
 |  [V4 Security Council](https://basescan.org/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://basescan.org/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc), [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://basescan.org/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://basescan.org/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://basescan.org/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://basescan.org/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://basescan.org/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://basescan.org/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://basescan.org/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C) | |--------|--------|--------|--------|
 |  [Risk Council](https://basescan.org/address/0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1) |  2/2 |  0xfbeB4AcB31340bA4de9C87B11dfBf7e2bc8C0bF1 |  [0x2B99790c35a401be873FA7Eb514D9220736BB1cA](https://basescan.org/address/0x2B99790c35a401be873FA7Eb514D9220736BB1cA), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://basescan.org/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef) | |--------|--------|--------|--------|
+
+### Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) | |--------|--------|
+|  POOL_ADMIN |  [Executor_lvl1](https://basescan.org/address/0x9390B1735def18560c509E2d0bc090E9d6BA257a) | |--------|--------|
+|  EMERGENCY_ADMIN |  [Aave Protocol Guardian Base](https://basescan.org/address/0x56C1a4b54921DEA9A344967a8693C7E661D72968) | |--------|--------|
+|  ASSET_LISTING_ADMIN |  [0x4B09DAEAe857b93c9103392028294F0602C5fD5b](https://basescan.org/address/0x4B09DAEAe857b93c9103392028294F0602C5fD5b) | |--------|--------|
+|  FLASH_BORROWER |  [0xab515542d621574f9b5212d50593cD0C07e641bD](https://basescan.org/address/0xab515542d621574f9b5212d50593cD0C07e641bD), [0xA672e882aCBB96486393D43E0efdab5EBEbDDC1d](https://basescan.org/address/0xA672e882aCBB96486393D43E0efdab5EBEbDDC1d), [0x15E2F06138aed58ca2A6AfB5A1333bBC5f728f80](https://basescan.org/address/0x15E2F06138aed58ca2A6AfB5A1333bBC5f728f80), [0xbA5F6A0D2AC21a3feC7a6C40FACd23407AA84663](https://basescan.org/address/0xbA5F6A0D2AC21a3feC7a6C40FACd23407AA84663), [0xC1E02884AF4A283cA25ab63C45360d220d69DA52](https://basescan.org/address/0xC1E02884AF4A283cA25ab63C45360d220d69DA52), [0x1c980456751AE40315Ff73CaaC0843Be643321Be](https://basescan.org/address/0x1c980456751AE40315Ff73CaaC0843Be643321Be), [0xeDE61eefa4850b459E3B09Fe6d8d371480D6fF00](https://basescan.org/address/0xeDE61eefa4850b459E3B09Fe6d8d371480D6fF00), [0x53a4716a8f7DBC9543ebf9cd711952033cC64d43](https://basescan.org/address/0x53a4716a8f7DBC9543ebf9cd711952033cC64d43), [0xd2f23773bF5e2d59F6bB925c2232F6e83f3f79e0](https://basescan.org/address/0xd2f23773bF5e2d59F6bB925c2232F6e83f3f79e0), [0x9e0501537723c71250307F5B1A8eE60e167D21C9](https://basescan.org/address/0x9e0501537723c71250307F5B1A8eE60e167D21C9), [0xCAF08BF08D0c87e2c74dd9EBEC9C776037bD7e8E](https://basescan.org/address/0xCAF08BF08D0c87e2c74dd9EBEC9C776037bD7e8E), [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://basescan.org/address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7), [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://basescan.org/address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
+|  RISK_ADMIN |  [Base Gho Aave Steward](https://basescan.org/address/0xC5BcC58BE6172769ca1a78B8A45752E3C5059c39), [Manual AGRS](https://basescan.org/address/0x494bcfd3937aBdebEF3D2c2eae1CE8A2Fb629032), [Manual AGRS](https://basescan.org/address/0x577dD4c67d4c7278CdF3bC03aE9a391C4C72DB4f) | |--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |

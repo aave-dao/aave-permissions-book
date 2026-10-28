@@ -71,6 +71,9 @@ const aaveV4 = createV4({
     ACCESS_MANAGER: AaveV4Base.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Base.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Base.SPOKE_CONFIGURATOR,
+    // Shared with the V3 market, so no aclBlock: the V3 pool indexes it
+    POOL_ADDRESSES_PROVIDER: AaveV3Base.POOL_ADDRESSES_PROVIDER,
+    ACL_MANAGER: AaveV3Base.ACL_MANAGER,
     RISK_STEWARD: AaveV4Base.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Base.POSITION_MANAGERS as Record<string, string>),
