@@ -257,6 +257,11 @@ export const mainnetConfig: NetworkConfig = {
     '0xE6ec1f0Ae6Cd023bd0a9B4d0253BDC755103253c': 'Aave Labs Horizon Ops Multisig',
     '0x09e8E1408a68778CEDdC1938729Ea126710E7Dda': 'Horizon Phase-One Listing Executor',
     [AaveV3EthereumHorizon.GHO_DIRECT_MINTER]: 'Gho Horizon Direct Minter',
+    '0xad309BB6f13074128b4F23EF9EA2fe8552AfCA83': 'Superstate USTB Authorized Address',
+    '0x8abC89D9b56dFD90dA18e8E18CFaC9111100bDd1': 'Superstate USCC Authorized Address',
+    '0x7Bf090B97f896fB77e852CC98aa52A8Cb7DC02eC': 'Centrifuge JTRSY/JAAA Authorized Address',
+    '0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9': 'Securitize ACRED/VBILL Authorized Address',
+    '0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f': 'Midas mGLOBAL Authorized Address',
   }),
   pools: {
     [Pools.V3]: v3Pool,
