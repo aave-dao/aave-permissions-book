@@ -1,0 +1,21 @@
+helpers/configs/networks/mainnet.ts
+  s_2bc10e7d26489f::t_c168af6a3c7b31 260-264
+out/ETHEREUM-HORIZON.md
+  s_2bc10e7d26489f::t_8e100304283aa5 58-64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7ad28954971784e10b7929bbcae652f8f7ff4130",
+  "prompts": {},
+  "sessions": {
+    "s_2bc10e7d26489f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c17fbce8-c529-4890-a816-221a667180e8",
+        "model": "unknown"
+      },
+      "human_author": "Alexandru Niculae <43644109+avniculae@users.noreply.github.com>"
+    }
+  }
+}
