@@ -1,0 +1,53 @@
+README.md
+  s_2bc10e7d26489f::t_952385d8c9d859 43
+abis/horizon.ts
+  s_2bc10e7d26489f::t_2369cac73ec7b6 1-50
+helpers/adminRoles.ts
+  s_2bc10e7d26489f::t_610d6921084b11 20-24,45-49,62,70,76,79
+helpers/configs.ts
+  s_2bc10e7d26489f::t_7fb07d84d92401 24
+helpers/configs/constants.ts
+  s_2bc10e7d26489f::t_91facbefc9340e 17,62-64
+helpers/configs/index.ts
+  s_2bc10e7d26489f::t_9632abf8f38552 11
+helpers/configs/networks/mainnet.ts
+  s_2bc10e7d26489f::t_a084b132f0d621 8,82-97,256-259,265
+helpers/configs/poolBuilder.ts
+  s_2bc10e7d26489f::t_91347f01e19b70 64-65
+helpers/eventIndexer.ts
+  s_2bc10e7d26489f::t_a2262bc4a922e0 299,352-361
+helpers/types.ts
+  s_2bc10e7d26489f::t_8ac886175dddda 51-53,97,137-138
+out/ETHEREUM-GHO.md
+  s_2bc10e7d26489f::t_0af67cf631a84b 33
+out/ETHEREUM-HORIZON.md
+  s_2bc10e7d26489f::t_64f66e25a05140 1-98
+out/permissions/1-permissions.json
+  s_2bc10e7d26489f::t_133a2ea3ee7237 13993-14770
+out/permissions/metadata/1-metadata.json
+  s_2bc10e7d26489f::t_b6982bd0a55270 466-495
+scripts/createTables.ts
+  s_2bc10e7d26489f::t_394e24ea6605a9 72,86,414
+scripts/horizonPermissions.ts
+  s_2bc10e7d26489f::t_c457646fc47b26 1-160
+scripts/modifiersCalculator.ts
+  s_2bc10e7d26489f::t_54ca9b850cdeab 29,53,89,161,184,203,595,744-766,822
+statics/functionsPermissionsHorizon.json
+  s_2bc10e7d26489f::t_9b918615e31027 1-94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cdbbf338d579af5d4d4379e3a768d2c40454fc90",
+  "prompts": {},
+  "sessions": {
+    "s_2bc10e7d26489f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c17fbce8-c529-4890-a816-221a667180e8",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Alexandru Niculae <43644109+avniculae@users.noreply.github.com>"
+    }
+  }
+}
