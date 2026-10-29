@@ -26,6 +26,7 @@ import {
   networkConfigs,
   Pools,
   protocolRoleNames,
+  horizonProtocolRoleNames,
   umbrellaIncentivesRoleNames,
   umbrellaRoleNames,
 } from '../helpers/configs.js';
@@ -49,7 +50,7 @@ import { getRoleAdmins } from '../helpers/adminRoles.js';
 import { resolveV2Modifiers } from './v2Permissions.js';
 import { resolveV3Modifiers } from './v3Permissions.js';
 import { resolveGovV2Modifiers } from './governancePermissions.js';
-import { AgentHub, ClinicSteward, Collector, Contracts, EmissionAdminsByToken, GovV3, Ppc, PositionManagers, Roles, TokenizationSpokes, Umbrella } from '../helpers/types.js';
+import { AgentHub, ClinicSteward, Collector, Contracts, EmissionAdminsByToken, GovV3, Ppc, PositionManagers, Roles, RwaATokenManager, TokenizationSpokes, Umbrella } from '../helpers/types.js';
 import { resolveSafetyV2Modifiers } from './safetyPermissions.js';
 import { resolveV2MiscModifiers } from './v2MiscPermissions.js';
 import { getSenders } from '../helpers/crossChainControllerLogs.js';
@@ -85,6 +86,7 @@ import { getLimit } from '../helpers/limits.js';
 import { resolvePpcModifiers } from './ppcPermissions.js';
 import { resolveAgentHubModifiers } from './agentHubPermissions.js';
 import { resolveLlamaRiskModifiers } from './llamaRiskPermissions.js';
+import { getRwaAuthorizedTransferRoleCodes, resolveHorizonModifiers } from './horizonPermissions.js';
 import {
   getProviderForPool,
   getV3ProviderForPool,
@@ -156,6 +158,7 @@ const generateNetworkPermissions = async (
     let gsmAdmins = {} as Record<string, Roles>;
     let collector = {} as Collector;
     let clinicSteward = {} as ClinicSteward;
+    let rwaATokenManager: RwaATokenManager | undefined;
     let umbrella = {} as Umbrella;
     let govV3 = {} as GovV3;
     let ppc = {} as Ppc;
@@ -178,6 +181,7 @@ const generateNetworkPermissions = async (
       pool.ghoBlock ||
       pool.collectorBlock ||
       pool.clinicStewardBlock ||
+      pool.rwaATokenManagerBlock ||
       pool.umbrellaBlock ||
       pool.crossChainControllerBlock ||
       pool.granularGuardianBlock ||
@@ -196,6 +200,7 @@ const generateNetworkPermissions = async (
         aclBlock: pool.aclBlock,
         collectorBlock: pool.collectorBlock,
         clinicStewardBlock: pool.clinicStewardBlock,
+        rwaATokenManagerBlock: pool.rwaATokenManagerBlock,
         umbrellaBlock: pool.umbrellaBlock,
         umbrellaIncentivesBlock: pool.umbrellaIncentivesBlock,
         crossChainControllerBlock: pool.crossChainControllerBlock,
@@ -587,7 +592,7 @@ const generateNetworkPermissions = async (
         const aclEvents = indexedEvents['ACL_MANAGER'] || [];
         const aclRoles = getRoleAdmins({
           oldRoles: (fullJson[poolKey]?.roles?.role) || {},
-          roleNames: protocolRoleNames,
+          roleNames: poolKey === Pools.HORIZON ? horizonProtocolRoleNames : protocolRoleNames,
           eventLogs: aclEvents,
         });
         admins = {
@@ -736,6 +741,29 @@ const generateNetworkPermissions = async (
       poolPermissions = { ...poolPermissions, ...llamaRiskPermissions };
     }
 
+    if (pool.functionsPermissionsHorizonJson) {
+      logTableGeneration(network, poolKey, 'Horizon RWA contracts', indexedLatestBlock || pool.rwaATokenManagerBlock);
+
+      // Process RWA_A_TOKEN_MANAGER roles from indexed events
+      const rwaATokenManagerRoles: Roles = {
+        role: getRoleAdmins({
+          oldRoles: (fullJson[poolKey]?.rwaATokenManager?.rwaATokenManagerRoles?.role) || {},
+          roleNames: [],
+          roleCodes: await getRwaAuthorizedTransferRoleCodes(pool.addressBook, poolProvider),
+          eventLogs: indexedEvents['RWA_A_TOKEN_MANAGER'] || [],
+        }),
+      };
+
+      const { horizonPermissions } = await resolveHorizonModifiers(
+        pool.addressBook,
+        poolProvider,
+        getStaticPermissionsJson(pool.functionsPermissionsHorizonJson),
+        rwaATokenManagerRoles.role,
+      );
+      poolPermissions = { ...poolPermissions, ...horizonPermissions };
+      rwaATokenManager = { rwaATokenManagerRoles };
+    }
+
     // =========================================================================
     // GOVERNANCE (CrossChainController + GranularGuardian)
     // =========================================================================
@@ -791,6 +819,7 @@ const generateNetworkPermissions = async (
       govV3: govV3,
       collector: collector,
       clinicSteward: clinicSteward,
+      ...(rwaATokenManager ? { rwaATokenManager } : {}),
       umbrella: umbrella,
       ppc: ppc,
       agentHub: agentHub,

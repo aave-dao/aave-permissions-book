@@ -463,5 +463,35 @@
         "firstIndexedAt": 26190776
       }
     }
+  },
+  "HORIZON": {
+    "latestBlockNumber": 26299662,
+    "indexedContracts": {
+      "ACL_MANAGER": {
+        "address": "0xEFD5df7b87d2dCe6DD454b4240b3e0A4db562321",
+        "deploymentBlock": 23125535,
+        "firstIndexedAt": 23125535
+      },
+      "COLLECTOR": {
+        "address": "0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c",
+        "deploymentBlock": 21765718,
+        "firstIndexedAt": 21765718
+      },
+      "RWA_A_TOKEN_MANAGER": {
+        "address": "0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9",
+        "deploymentBlock": 23125534,
+        "firstIndexedAt": 23125534
+      }
+    }
+  },
+  "HORIZON_EMISSION": {
+    "latestBlockNumber": 26299662,
+    "indexedContracts": {
+      "EMISSION_MANAGER": {
+        "address": "0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F",
+        "deploymentBlock": 23125533,
+        "firstIndexedAt": 26299662
+      }
+    }
   }
 }

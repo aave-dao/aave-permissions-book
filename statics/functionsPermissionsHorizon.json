@@ -1,0 +1,94 @@
+[
+  {
+    "contract": "RwaATokenManager",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "grantRole",
+        "roles": ["onlyDefaultAdmin"]
+      },
+      {
+        "name": "revokeRole",
+        "roles": ["onlyDefaultAdmin"]
+      },
+      {
+        "name": "grantAuthorizedTransferRole",
+        "roles": ["onlyDefaultAdmin"]
+      },
+      {
+        "name": "revokeAuthorizedTransferRole",
+        "roles": ["onlyDefaultAdmin"]
+      },
+      {
+        "name": "transferRwaAToken",
+        "roles": ["onlyAuthorizedTransfer"]
+      }
+    ]
+  },
+  {
+    "contract": "RwaOracleParameterRegistry",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setUpdater",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "renounceOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "acceptOwnership",
+        "roles": ["onlyPendingOwner"]
+      },
+      {
+        "name": "setParametersForAsset",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setMaxExpectedApy",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setUpperBoundTolerance",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setLowerBoundTolerance",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setMaxDiscount",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setIsUpperBoundEnabled",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setIsLowerBoundEnabled",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setIsActionTakingEnabled",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setLookbackWindowSize",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setOracle",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "deleteAsset",
+        "roles": ["onlyUpdater"]
+      }
+    ]
+  }
+]

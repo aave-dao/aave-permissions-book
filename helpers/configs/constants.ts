@@ -14,6 +14,7 @@ export enum Pools {
   GHO_GSM = 'GHO_GSM',
   LIDO = 'LIDO',
   ETHERFI = 'ETHERFI',
+  HORIZON = 'HORIZON',
   V3_WHITE_LABEL = 'V3_WHITE_LABEL',
   V4 = 'V4',
   V4_SENTORA = 'V4_SENTORA',
@@ -57,6 +58,9 @@ export const protocolRoleNames = [
   'POOL_ADMIN',
   'RISK_ADMIN',
 ];
+
+// Horizon's RwaATokenManager holds ATOKEN_ADMIN on the Horizon ACLManager
+export const horizonProtocolRoleNames = [...protocolRoleNames, 'ATOKEN_ADMIN'];
 
 export const granularGuardianRoleNames = [
   'DEFAULT_ADMIN',

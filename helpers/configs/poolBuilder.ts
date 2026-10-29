@@ -61,6 +61,8 @@ export interface V3PoolConfig {
   ppcAddressBook?: AddressBook;
   functionsPermissionsAgentHubJson?: string;
   functionsPermissionsLlamaRiskJson?: string;
+  functionsPermissionsHorizonJson?: string;
+  rwaATokenManagerBlock?: number;
   addresses?: Record<string, string>;
   emissionManagerBlock?: number;
 }
