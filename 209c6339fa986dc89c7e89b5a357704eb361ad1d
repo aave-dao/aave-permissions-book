@@ -1,0 +1,23 @@
+out/permissions/5042-permissions.json
+  s_915080d038b234::t_0e3eef088d2c5f 18-23,27,44-49,53,66-71,75,94-99,103,163-168,172,191-196,200,220-225,229,250-255,259,278-283,287,307-312,316,373-378,382,404-409,413,570-575,579,600-605,609,630-635,639,660-665,669,689-694,698,717-722,726,744-749,753,771-776,780
+out/ARC-V4.md
+  s_915080d038b234::t_e1da519d09313e 52
+out/permissions/metadata/5042-metadata.json
+  s_915080d038b234::t_0e3eef088d2c5f 3,13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "209c6339fa986dc89c7e89b5a357704eb361ad1d",
+  "prompts": {},
+  "sessions": {
+    "s_915080d038b234": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "27fdde38-9f52-47ac-b2b9-ee29b9ef0f1d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

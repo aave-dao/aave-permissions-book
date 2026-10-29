@@ -1,0 +1,33 @@
+out/ETHEREUM-V4_SENTORA.md
+  s_32968bf00a8405::t_77e7501d8853a1 15-16,21-22,47-48,82-90
+  s_32968bf00a8405::t_f33c35d4d3f1ea 91
+out/permissions/metadata/1-metadata.json
+  s_32968bf00a8405::t_77e7501d8853a1 439-443
+helpers/configs/networks/base.ts
+  s_32968bf00a8405::t_54f0edffabfb05 74-76
+out/BASE-V4.md
+  s_32968bf00a8405::t_77e7501d8853a1 12-13,23-24,40-41,63-71
+  s_32968bf00a8405::t_370aaea822cf5d 72
+out/permissions/1-permissions.json
+  s_32968bf00a8405::t_77e7501d8853a1 13633-13691
+out/permissions/8453-permissions.json
+  s_32968bf00a8405::t_77e7501d8853a1 2617-2697
+helpers/configs/networks/mainnet.ts
+  s_32968bf00a8405::t_54f0edffabfb05 160,171-172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ceaa62fbfce6109b8730f505fa1f90628727a148",
+  "prompts": {},
+  "sessions": {
+    "s_32968bf00a8405": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "96c82682-874c-453b-88a6-64d83ca75b11",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

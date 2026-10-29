@@ -1,0 +1,19 @@
+helpers/configs/addresses/shared.ts
+  s_6e8cca96b9c243::t_d2dc207486b98f 49-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "57e0adaf2fe8b1a2a8fdf8eac1797524113808d1",
+  "prompts": {},
+  "sessions": {
+    "s_6e8cca96b9c243": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "add8f129-6fb1-4604-9bf0-d75cc756c639",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

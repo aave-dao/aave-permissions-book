@@ -1,0 +1,29 @@
+scripts/v4Permissions.ts
+  s_87d82a2a9bbbe0::t_a1fe2760fae9ae 3,229-289,384-387,416-421,437
+  s_87d82a2a9bbbe0::t_8e24509e3ea2f3 696-703
+  s_87d82a2a9bbbe0::t_e50fb2ca56255e 704-705
+abis/pendingOwnerAbi.ts
+  s_87d82a2a9bbbe0::t_f589a38c19bce1 1-15
+scripts/createTables.ts
+  s_87d82a2a9bbbe0::t_8e24509e3ea2f3 652-654,656
+abis/accessManagerAbi.ts
+  s_87d82a2a9bbbe0::t_f589a38c19bce1 101-137
+statics/functionsPermissionsV4.json
+  s_87d82a2a9bbbe0::t_0c61c6c6b7dfef 350-353,375-378,396-399,417-420,442-445,467-470
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3e4b6e171a73b8cb96888799e487a5d1fac32004",
+  "prompts": {},
+  "sessions": {
+    "s_87d82a2a9bbbe0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c5d841a-2583-449d-9e05-e5e041fb0345",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

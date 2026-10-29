@@ -1,0 +1,23 @@
+helpers/configs/networks/mainnet.ts
+  s_87d82a2a9bbbe0::t_0261dc45d878cd 9
+package.json
+  s_87d82a2a9bbbe0::t_e2e2a59ca5c510 23
+package-lock.json
+  s_87d82a2a9bbbe0::t_13b38d2289d937 16,26-28,1060-1062
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "56b7fbd33d1ebb4f4ab7618d78c9683baf5ed8d7",
+  "prompts": {},
+  "sessions": {
+    "s_87d82a2a9bbbe0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c5d841a-2583-449d-9e05-e5e041fb0345",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

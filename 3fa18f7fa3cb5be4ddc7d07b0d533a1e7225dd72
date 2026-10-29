@@ -1,0 +1,27 @@
+out/ETHEREUM-V4.md
+  s_5358d873e12e92::t_c3cb7a903c8613 18,65,97-98,131
+out/permissions/1-permissions.json
+  s_5358d873e12e92::t_4d8367ee731387 10883-10884,10914,10916-10917,10923-10934,10941-10942,10972,10974-10975,10981-10983,10990-10991,11021,11023-11024,11048-11049,11079,11081-11082,11106-11107,11137,11139-11140,11164-11165,11195,11197-11198,12668-12697,12892-12897
+out/permissions/metadata/1-metadata.json
+  s_5358d873e12e92::t_ff4523d202521b 153,163
+package-lock.json
+  s_5358d873e12e92::t_eed5b126246b8d 16,26-28,1060-1062
+package.json
+  s_5358d873e12e92::t_4648755bbd5f9c 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3fa18f7fa3cb5be4ddc7d07b0d533a1e7225dd72",
+  "prompts": {},
+  "sessions": {
+    "s_5358d873e12e92": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a05c-b902-7583-9ce2-0ca8dedacee8",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "AlbertoCentonze <11707683+AlbertoCentonze@users.noreply.github.com>"
+    }
+  }
+}

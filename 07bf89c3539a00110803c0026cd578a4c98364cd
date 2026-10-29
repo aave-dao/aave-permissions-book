@@ -1,0 +1,58 @@
+helpers/configs/poolBuilder.ts
+  s_915080d038b234::t_8046938e76c440 15-16
+out/permissions/metadata/43114-metadata.json
+  s_915080d038b234::t_959495d9b37ed6 73,83
+scripts/v4Permissions.ts
+  s_915080d038b234::t_8046938e76c440 5,8-9,450-508
+  s_915080d038b234::t_12a592c74f8c6d 509-510
+out/permissions/metadata/5042-metadata.json
+  s_915080d038b234::t_959495d9b37ed6 3,9-13,18
+helpers/configs/networks/arc.ts
+  s_915080d038b234::t_8046938e76c440 29,35-36
+out/ETHEREUM-V4.md
+  s_915080d038b234::t_37b0895b610f36 25-26,67-69,72,115-116,148-156
+  s_915080d038b234::t_fd6e0c480f3561 70-71
+  s_915080d038b234::t_58d15dbf9ad054 157
+out/permissions/1-permissions.json
+  s_915080d038b234::t_58060088c0c538 11279-11359
+statics/functionsPermissionsV4.json
+  s_915080d038b234::t_8046938e76c440 449-503
+out/AVALANCHE-V4.md
+  s_915080d038b234::t_37b0895b610f36 13-14,27-29,32,48-49,72-80
+  s_915080d038b234::t_fd6e0c480f3561 30-31
+  s_915080d038b234::t_f52bdb97a3f8c2 81
+out/permissions/metadata/1-metadata.json
+  s_915080d038b234::t_58060088c0c538 153,163
+scripts/modifiersCalculator.ts
+  s_915080d038b234::t_8046938e76c440 59,496-541
+  s_915080d038b234::t_98d4b547aae635 542
+helpers/configs/networks/avalanche.ts
+  s_915080d038b234::t_8046938e76c440 66-68
+scripts/createTables.ts
+  s_915080d038b234::t_c5e89c98994835 156-166,169
+helpers/configs/networks/mainnet.ts
+  s_915080d038b234::t_8046938e76c440 145-147
+out/ARC-V4.md
+  s_915080d038b234::t_37b0895b610f36 12-13,23-28,42-43,64-72
+  s_915080d038b234::t_1c995357027da6 73
+out/permissions/5042-permissions.json
+  s_915080d038b234::t_959495d9b37ed6 419-493
+out/permissions/43114-permissions.json
+  s_915080d038b234::t_959495d9b37ed6 3661-3729
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "07bf89c3539a00110803c0026cd578a4c98364cd",
+  "prompts": {},
+  "sessions": {
+    "s_915080d038b234": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "27fdde38-9f52-47ac-b2b9-ee29b9ef0f1d",
+        "model": "claude-opus-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

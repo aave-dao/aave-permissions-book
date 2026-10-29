@@ -1,0 +1,16 @@
+out/permissions/metadata/1-metadata.json
+  h_739c25e72c37fb 3,43,53,63,83,98,123,128,133,138,143,148,153
+out/permissions/metadata/43114-metadata.json
+  h_739c25e72c37fb 3,33,63,68,73
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.18",
+  "base_commit_sha": "d7a89dff6cdf13cf80964dbcb23b5556fc33d968",
+  "prompts": {},
+  "humans": {
+    "h_739c25e72c37fb": {
+      "author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

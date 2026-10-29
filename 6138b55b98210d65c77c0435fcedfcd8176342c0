@@ -1,0 +1,89 @@
+README.md
+  s_5358d873e12e92::t_7ccf997ffac20d 65
+helpers/configs/networks/arc.ts
+  s_5358d873e12e92::t_e5418f8d920ae7 1-53
+helpers/configs/networks/index.ts
+  s_5358d873e12e92::t_29a008b75ee264 26,57
+helpers/rpc.ts
+  s_5358d873e12e92::t_7e903dedb565f4 41
+out/ARC-V4.md
+  s_5358d873e12e92::t_1cdd60a180f1be 1-65
+out/ETHEREUM-ETHERFI.md
+  s_5358d873e12e92::t_5fa7aedb9c892d 83-84,86,88
+out/ETHEREUM-LIDO.md
+  s_5358d873e12e92::t_ff9e62a4a5fecc 96,98
+out/ETHEREUM-V3.md
+  s_5358d873e12e92::t_64a3a1b38bf8a0 58,65,83-84,181-182,184,186,225
+out/ETHEREUM-V4.md
+  s_5358d873e12e92::t_ea3328bd131dd7 30,107-108,136,155-158
+out/permissions/1-permissions.json
+  s_5358d873e12e92::t_89593a827a9905 544-553,598-607,1581-1583,2819-2854,2880-2892,2937-2968,4915-4927,4972-5003,5676-5711,5737-5749,5794-5825,11166-11194,11593-11603,11619-11648,12924-12941
+out/permissions/5042-permissions.json
+  s_5358d873e12e92::t_6c0a579a6629ce 1-807
+out/permissions/metadata/1-metadata.json
+  s_5358d873e12e92::t_6be3632b745f3e 3,43,53,63,83,98,123,128,133,138,143,148,153,163,424-428
+out/permissions/metadata/10-metadata.json
+  s_5358d873e12e92::t_bff927cdc0ce93 3,53,58
+out/permissions/metadata/100-metadata.json
+  s_5358d873e12e92::t_14a94730e1f001 3,33,43,48
+out/permissions/metadata/1088-metadata.json
+  s_5358d873e12e92::t_e289cf5b26e45d 3,33,38
+out/permissions/metadata/137-metadata.json
+  s_5358d873e12e92::t_edc0ab058c3c06 3,33,63,68
+out/permissions/metadata/143-metadata.json
+  s_5358d873e12e92::t_a873ec1e618210 3,28,33
+out/permissions/metadata/146-metadata.json
+  s_5358d873e12e92::t_d19e114f0c5b58 3,28,33
+out/permissions/metadata/1868-metadata.json
+  s_5358d873e12e92::t_cdc48306c00c21 3,28,33
+out/permissions/metadata/196-metadata.json
+  s_5358d873e12e92::t_d2a10fa32be039 3,28,33,38
+out/permissions/metadata/324-metadata.json
+  s_5358d873e12e92::t_cb66ffef2fe8be 3,33,38
+out/permissions/metadata/42161-metadata.json
+  s_5358d873e12e92::t_54bc915689f693 3,53,58
+out/permissions/metadata/42220-metadata.json
+  s_5358d873e12e92::t_7cf33c77eb3da6 3,28,33
+out/permissions/metadata/43114-metadata.json
+  s_5358d873e12e92::t_41ce848bb0fea8 3,33,63,68,73,83
+out/permissions/metadata/4326-metadata.json
+  s_5358d873e12e92::t_b5b866061d5029 3,28,33
+out/permissions/metadata/5000-metadata.json
+  s_5358d873e12e92::t_32620f05ac5a83 3,28,38,43
+out/permissions/metadata/5042-metadata.json
+  s_5358d873e12e92::t_b0395a14968666 1-52
+out/permissions/metadata/534352-metadata.json
+  s_5358d873e12e92::t_5f9315fa5c7a0c 3,33,38
+out/permissions/metadata/56-metadata.json
+  s_5358d873e12e92::t_dda65bb05176f8 3,58,63
+out/permissions/metadata/57073-metadata.json
+  s_5358d873e12e92::t_fc40aed0d3cdcb 3,18,33,43,48
+out/permissions/metadata/59144-metadata.json
+  s_5358d873e12e92::t_e6ba12eace4c8e 3,63,68
+out/permissions/metadata/60808-metadata.json
+  s_5358d873e12e92::t_50b4e9b173d642 3
+out/permissions/metadata/8453-metadata.json
+  s_5358d873e12e92::t_cabdedc24f772c 3,53,63,68
+out/permissions/metadata/9745-metadata.json
+  s_5358d873e12e92::t_3bc23bc3b92fd2 3,28,43,48
+package-lock.json
+  s_5358d873e12e92::t_0e7c5a31cece27 12,16,26-28,39-41,1060-1062,1067-1069
+package.json
+  s_5358d873e12e92::t_b3d38f7634768b 23,32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6138b55b98210d65c77c0435fcedfcd8176342c0",
+  "prompts": {},
+  "sessions": {
+    "s_5358d873e12e92": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0a05c-b902-7583-9ce2-0ca8dedacee8",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "AlbertoCentonze <11707683+AlbertoCentonze@users.noreply.github.com>"
+    }
+  }
+}

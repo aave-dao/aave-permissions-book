@@ -1,0 +1,24 @@
+helpers/configs/networks/mainnet.ts
+  s_2843833aabf52a::t_85b0ff0277bc7f 188-193,264
+scripts/ppcPermissions.ts
+  s_2843833aabf52a::t_cc1ebeba5034a0 133-147
+  s_2843833aabf52a::t_85b0ff0277bc7f 148-149
+helpers/configs/poolBuilder.ts
+  s_2843833aabf52a::t_7342ff107e597d 15-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7f70420734bd54482032ceb93ce099f545381ff8",
+  "prompts": {},
+  "sessions": {
+    "s_2843833aabf52a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ae63ebf5-88d7-4dfe-976c-39793e6bfe86",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

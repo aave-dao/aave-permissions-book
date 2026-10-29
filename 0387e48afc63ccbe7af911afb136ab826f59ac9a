@@ -1,0 +1,77 @@
+abis/v4SpokeAbi.ts
+  s_cbfc7fde4fc4ee::t_60e158ebd87c3d 1-213
+helpers/eventIndexer.ts
+  s_cbfc7fde4fc4ee::t_f9824332231a23 284-287
+  s_cbfc7fde4fc4ee::t_d1f67667749911 200-203
+  s_cbfc7fde4fc4ee::t_5dfc83f7e4ea07 283
+out/permissions/43114-permissions.json
+  s_cbfc7fde4fc4ee::t_562312b8cb5143 4148-4170
+scripts/modifiersCalculator.ts
+  s_cbfc7fde4fc4ee::t_75e4cc6980a885 354-406,408-437,439-456,464,469,472,474,484,486
+  s_cbfc7fde4fc4ee::t_d2641a01fdf472 57-61,63-66,70-78
+  s_cbfc7fde4fc4ee::t_d2a42721c15e41 96
+  s_cbfc7fde4fc4ee::t_d61004a915e34e 438
+  s_cbfc7fde4fc4ee::t_86850e4e9d3a2d 62
+  s_cbfc7fde4fc4ee::t_087abd7f3bfefb 788
+  s_cbfc7fde4fc4ee::t_58e17c9a464c60 407
+  s_cbfc7fde4fc4ee::t_ca9a545132400e 67
+  s_cbfc7fde4fc4ee::t_95b3825fdf67fa 164
+out/permissions/metadata/1-metadata.json
+  s_cbfc7fde4fc4ee::t_bd3be9360fb18c 153,163
+  s_cbfc7fde4fc4ee::t_d41f6c5ed989bd 161-162,164-393
+  s_cbfc7fde4fc4ee::t_ec714e69f337a9 394-395
+out/ETHEREUM-V4.md
+  s_cbfc7fde4fc4ee::t_a2ba35affc27cb 113-127
+out/AVALANCHE-V4.md
+  s_cbfc7fde4fc4ee::t_079ec387e94107 50-56
+out/permissions/1-permissions.json
+  s_cbfc7fde4fc4ee::t_d41f6c5ed989bd 12196-12273
+helpers/rpc.ts
+  s_cbfc7fde4fc4ee::t_7b2158236be654 136
+  s_cbfc7fde4fc4ee::t_566f9907565533 9
+scripts/createTables.ts
+  s_cbfc7fde4fc4ee::t_6a1e23a055992b 564-589
+  s_cbfc7fde4fc4ee::t_c7dcd7e9a35c87 697-721
+scripts/v4Permissions.ts
+  s_cbfc7fde4fc4ee::t_506190a576927a 592
+  s_cbfc7fde4fc4ee::t_953e27a882cbcc 18-19,21,23-24
+  s_cbfc7fde4fc4ee::t_895d77caa19cb6 454,459,465-466,468
+  s_cbfc7fde4fc4ee::t_3911febf2b3eb3 301,307,311
+  s_cbfc7fde4fc4ee::t_c94f665f314a56 104-129,148-156
+  s_cbfc7fde4fc4ee::t_9ad1530ea26677 333
+  s_cbfc7fde4fc4ee::t_a565e25dc67006 563
+  s_cbfc7fde4fc4ee::t_afa7981c66b26e 130-147
+  s_cbfc7fde4fc4ee::t_60d69af53e7bb7 523,532-541,543-546
+  s_cbfc7fde4fc4ee::t_9b561981bc0978 96-103,157-182
+helpers/types.ts
+  s_cbfc7fde4fc4ee::t_7781972e53bb23 3
+  s_cbfc7fde4fc4ee::t_3e6d631d6bcb52 100
+  s_cbfc7fde4fc4ee::t_4ad6b761bd56e5 76
+helpers/v4Discovery.ts
+  s_cbfc7fde4fc4ee::t_d339d5b5445329 1-298
+out/permissions/metadata/43114-metadata.json
+  s_cbfc7fde4fc4ee::t_562312b8cb5143 73,81-138
+  s_cbfc7fde4fc4ee::t_104b9afc2d9413 139-140
+USAGE.md
+  s_cbfc7fde4fc4ee::t_5c929b032b8bf2 135
+  s_cbfc7fde4fc4ee::t_2981703160778d 375
+  s_cbfc7fde4fc4ee::t_715d6332abb8d9 100,102,104-121
+abis/v4HubAbi.ts
+  s_cbfc7fde4fc4ee::t_e9fa050161e26d 1-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "0387e48afc63ccbe7af911afb136ab826f59ac9a",
+  "prompts": {},
+  "sessions": {
+    "s_cbfc7fde4fc4ee": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aa4a54ae-3768-45d4-8cec-4e6eb50315b8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

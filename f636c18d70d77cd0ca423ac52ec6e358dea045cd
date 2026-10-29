@@ -1,0 +1,26 @@
+scripts/v4Permissions.ts
+  s_87d82a2a9bbbe0::t_7295bc38e32582 7,527-535,539-565
+  s_87d82a2a9bbbe0::t_c73d3e66f90f5d 566-567
+statics/functionsPermissionsV4.json
+  s_87d82a2a9bbbe0::t_7295bc38e32582 526-538
+helpers/configs/networks/mainnet.ts
+  s_87d82a2a9bbbe0::t_7295bc38e32582 168
+abis/reduceRiskStewardWrapperAbi.ts
+  s_87d82a2a9bbbe0::t_7295bc38e32582 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f636c18d70d77cd0ca423ac52ec6e358dea045cd",
+  "prompts": {},
+  "sessions": {
+    "s_87d82a2a9bbbe0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2c5d841a-2583-449d-9e05-e5e041fb0345",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}

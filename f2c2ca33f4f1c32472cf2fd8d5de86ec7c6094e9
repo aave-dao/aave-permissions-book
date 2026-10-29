@@ -1,0 +1,205 @@
+out/METIS-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 73,95,113
+helpers/configs/addresses/shared.ts
+  s_32968bf00a8405::t_0a367494aef7dc 49-54
+out/BINANCE-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 90,124,142
+out/permissions/metadata/4326-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,33
+out/permissions/metadata/137-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,33,63,68
+out/POLYGON-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 98,137,155
+statics/functionsPermissionsV4.json
+  s_32968bf00a8405::t_0a367494aef7dc 350-353,375-378,396-399,417-420,442-445,467-536
+helpers/configs.ts
+  s_32968bf00a8405::t_0a367494aef7dc 18
+out/AVALANCHE-V4.md
+  s_32968bf00a8405::t_bc3d269b430499 86
+  s_32968bf00a8405::t_0a367494aef7dc 11,14,34,42,49-50,52-53,77,93,97-98,101
+out/permissions/196-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 458-461,478-479,498-505
+out/permissions/metadata/10-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,53,58
+out/INK-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 24,45,53
+helpers/configs/networks/avalanche.ts
+  s_32968bf00a8405::t_0a367494aef7dc 69
+out/AVALANCHE-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 42,49,66-67,98,134,144,152
+out/permissions/143-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 176-185,237-246,463-632,651-653,1028-1032,1054-1058,1096-1097,1106-1258
+out/MANTLE-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 74,98,116
+helpers/configs/poolBuilder.ts
+  s_32968bf00a8405::t_0a367494aef7dc 17-18
+abis/v4RiskStewardAbi.ts
+  s_32968bf00a8405::t_0a367494aef7dc 1-1925
+out/permissions/146-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 489-490,509-516
+out/permissions/metadata/43114-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,33,63,68,139-141
+  s_32968bf00a8405::t_75060f700247f4 73,83
+  s_32968bf00a8405::t_bb6fd930adffed 142-143
+out/permissions/metadata/5000-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,38,43
+out/permissions/metadata/60808-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3
+out/ARC-V4.md
+  s_32968bf00a8405::t_bc3d269b430499 50,76-77
+  s_32968bf00a8405::t_0a367494aef7dc 10,13,30,38,43-45,47-48,65,71,86-87,91-92,95
+package.json
+  s_32968bf00a8405::t_0a367494aef7dc 23
+out/permissions/metadata/8453-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,53,63,68-98
+scripts/v4Permissions.ts
+  s_32968bf00a8405::t_0a367494aef7dc 3,7-8,233-293,388-391,420-425,441,521-537,604-667,799-806
+  s_32968bf00a8405::t_6ac5ab8f59b0a5 603
+  s_32968bf00a8405::t_df8036d985b5da 538,807-808
+out/permissions/metadata/42220-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,33
+out/MEGAETH-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 74,94,98,116
+out/permissions/59144-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 564-565,584-591
+out/LINEA-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 84,116,134
+out/permissions/9745-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 124-133,173-182,566-735,756-758,773-774,793-800,1143-1147,1169-1173,1211-1212,1222-1257,1283-1295,1340-1371
+helpers/configs/networks/plasma.ts
+  s_32968bf00a8405::t_0a367494aef7dc 25
+out/ETHEREUM-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 83-84,120,123-126,135,206,211,214,225,233
+out/permissions/57073-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 194,222,582,623,637,659,667-680,866-867,886-893
+out/INK-V3_WHITE_LABEL.md
+  s_32968bf00a8405::t_0a367494aef7dc 81,87,91
+out/MONAD-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 16-18,60-61,72-80,105-114,120,132,145
+out/permissions/42220-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 410-411,430-437
+abis/reduceRiskStewardWrapperAbi.ts
+  s_32968bf00a8405::t_0a367494aef7dc 1-15
+helpers/configs/constants.ts
+  s_32968bf00a8405::t_0a367494aef7dc 19,22
+  s_32968bf00a8405::t_3091587d5e29fd 23
+out/permissions/1868-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 409-410,429-436
+out/permissions/metadata/42161-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,53,58
+abis/accessManagerAbi.ts
+  s_32968bf00a8405::t_0a367494aef7dc 101-137
+out/BASE-V4.md
+  s_32968bf00a8405::t_0a367494aef7dc 1-70
+scripts/createTables.ts
+  s_32968bf00a8405::t_0a367494aef7dc 21,73,77,114,118,153,170,207,210,664-666,668
+out/permissions/metadata/59144-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,63,68
+out/SCROLL-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 78,102,120
+out/permissions/metadata/324-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,33,38
+out/permissions/metadata/534352-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,33,38
+out/permissions/metadata/57073-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,18,33,43,48
+README.md
+  s_32968bf00a8405::t_0a367494aef7dc 49,69
+scripts/modifiersCalculator.ts
+  s_32968bf00a8405::t_0a367494aef7dc 25,342
+out/permissions/8453-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 129-133,173-177,639-640,2298-2918
+out/permissions/1-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 554-558,613-617,1592-1593,1633-1635,1639,10461-10465,10901-10958,11269-11273,11361-11362,11510-11511,11520-11521,11742-11752,11757,11762,12819-12848,13043-13048,13084-14150
+  s_32968bf00a8405::t_75060f700247f4 11363-11403,11481-11482
+  s_32968bf00a8405::t_0a644e1532381f 14151
+out/permissions/metadata/143-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,33
+helpers/configs/index.ts
+  s_32968bf00a8405::t_0a367494aef7dc 5
+out/permissions/metadata/1868-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,33
+out/CELO-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 74,99,117
+helpers/configs/networks/monad.ts
+  s_32968bf00a8405::t_0a367494aef7dc 21
+out/OPTIMISM-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 90,125,143
+out/permissions/5000-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 475-476,495-502
+out/SONIC-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 83,111,129
+out/permissions/metadata/196-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,33,38
+out/ETHEREUM-V4_SENTORA.md
+  s_32968bf00a8405::t_0a367494aef7dc 1-97
+out/permissions/metadata/100-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,33,43,48
+out/XLAYER-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 74,98,108,116
+out/permissions/43114-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 129-133,178-182,685-686,3373-3377,3581-3610,3621-3625,3713-3714,3849-3850,3857-3858,3957,3962
+  s_32968bf00a8405::t_75060f700247f4 3715-3755,3817-3818
+out/BASE-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 36,43,59-60,88,120,131,138
+out/GNOSIS-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 90,125,142
+out/permissions/metadata/1-metadata.json
+  s_32968bf00a8405::t_75060f700247f4 153,163
+  s_32968bf00a8405::t_0a367494aef7dc 3,43,53,63,83,98,123,128,133,138,143,148,419-463
+out/permissions/metadata/1088-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,33,38
+out/permissions/metadata/5042-metadata.json
+  s_32968bf00a8405::t_75060f700247f4 3,18
+  s_32968bf00a8405::t_0a367494aef7dc 54-56
+  s_32968bf00a8405::t_b0af1991064ed0 57-58
+out/permissions/metadata/56-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,58,63
+out/permissions/metadata/9745-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,43,48
+out/ARBITRUM-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 90,124,142
+out/SONEIUM-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 74,98,116
+out/PLASMA-V3.md
+  s_32968bf00a8405::t_0a367494aef7dc 20-22,64-65,84-92,98,120-121,123,125,134,136,147,154,160
+out/permissions/5042-permissions.json
+  s_32968bf00a8405::t_75060f700247f4 519-559,615-619,632-637,642
+  s_32968bf00a8405::t_0a367494aef7dc 120-124,328-414,425-429,517-518,657-658,671-672,682-683,767-777,782,787,1042-1043
+  s_32968bf00a8405::t_92faaffbb4f81a 1044-1047
+helpers/configs/networks/mainnet.ts
+  s_32968bf00a8405::t_0a367494aef7dc 9,149,155-176,233-241,253
+scripts/ppcPermissions.ts
+  s_32968bf00a8405::t_0a367494aef7dc 133-149
+out/ETHEREUM-V4.md
+  s_32968bf00a8405::t_0a367494aef7dc 18,26,68,75,92,107-108,119,121-122,145,156,172,176-177,180
+  s_32968bf00a8405::t_bc3d269b430499 165
+out/permissions/4326-permissions.json
+  s_32968bf00a8405::t_0a367494aef7dc 71,73,103,105,137,139,163,165,209,211,240,242,272,274,475-476,495-502
+helpers/configs/networks/arc.ts
+  s_32968bf00a8405::t_0a367494aef7dc 37,53
+abis/pendingOwnerAbi.ts
+  s_32968bf00a8405::t_0a367494aef7dc 1-15
+out/permissions/metadata/146-metadata.json
+  s_32968bf00a8405::t_0a367494aef7dc 3,28,33
+helpers/configs/networks/base.ts
+  s_32968bf00a8405::t_0a367494aef7dc 3,10-15,47-79,99-100,105
+package-lock.json
+  s_32968bf00a8405::t_0e9dfa9f34725d 16,26-28,1060-1062
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f2c2ca33f4f1c32472cf2fd8d5de86ec7c6094e9",
+  "prompts": {},
+  "sessions": {
+    "s_32968bf00a8405": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "96c82682-874c-453b-88a6-64d83ca75b11",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "DhairyaSethi <55102840+DhairyaSethi@users.noreply.github.com>"
+    }
+  }
+}
