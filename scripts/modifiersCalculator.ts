@@ -495,14 +495,6 @@ const generateNetworkPermissions = async (
         };
       }
 
-      // A V4 market can also have a V3-style ACLManager + PoolAddressesProvider
-      // backing its periphery. Those sit outside the AccessManager graph, so
-      // their roles come from ACL RoleGranted/RoleRevoked events.
-      //
-      // Arc has no V3 market and deploys its own pair, indexed here. Where the
-      // network does have a V3 market, the V4 pool points at that market's ACL
-      // manager, so the roles the V3 pool already indexed are reused instead of
-      // replaying the same contract's full history a second time.
       if (pool.addressBook.ACL_MANAGER) {
         const v3AclManager = pools[Pools.V3]?.addressBook?.ACL_MANAGER as string | undefined;
         const sharedWithV3 =

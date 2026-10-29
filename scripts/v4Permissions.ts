@@ -539,12 +539,6 @@ export const resolveV4Modifiers = async (
   return { contracts: obj, roleLabels };
 };
 
-/**
- * Resolves the V3-style PoolAddressesProvider and ACLManager that back a V4
- * market's periphery access control. They sit outside the AccessManager graph,
- * so permissions come from `owner()` and the ACL manager's DEFAULT_ADMIN
- * holders instead of function role mappings.
- */
 export const resolveV4AclModifiers = async (
   addressBook: AddressBook,
   provider: Client,
