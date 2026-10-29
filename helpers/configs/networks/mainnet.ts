@@ -5,6 +5,7 @@ import {
   AaveV3Ethereum,
   AaveV3EthereumLido,
   AaveV3EthereumEtherFi,
+  AaveV3EthereumHorizon,
   AaveV4Ethereum,
   AaveV4EthereumSentoraCurated,
   GovernanceV3Ethereum,
@@ -75,6 +76,22 @@ const etherFiPool = createV3Pool({
     ...AaveV3EthereumEtherFi,
     ...MiscEthereum,
     COLLECTOR: AaveV3Ethereum.COLLECTOR,
+  },
+});
+
+// ============================================================================
+// Horizon Pool
+// ============================================================================
+const horizonPool = createV3Pool({
+  aclBlock: 23125535,
+  emissionManagerBlock: 23125533,
+  collectorBlock: 21765718,
+  rwaATokenManagerBlock: 23125534,
+  functionsPermissionsHorizonJson: './statics/functionsPermissionsHorizon.json',
+  addressBook: {
+    ...AaveV3EthereumHorizon,
+    // Horizon's own registry, until the address book release that replaces the Lido registry entry
+    POOL_ADDRESSES_PROVIDER_REGISTRY: '0xE35Ee1C82fdf6524834e1Ef6Af7820bf6B1fbf0D',
   },
 });
 
@@ -236,11 +253,16 @@ export const mainnetConfig: NetworkConfig = {
     [AaveV4EthereumSentoraCurated.SENTORA_FEE_ADMIN]: 'Sentora Fee Admin',
     [AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER]: 'Sentora Reduce Risk Steward Wrapper',
     '0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d': 'Sentora Deployer (to be relinquished)',
+    '0x13B57382c36BAB566E75C72303622AF29E27e1d3': 'Aave Labs Horizon Emergency Multisig',
+    '0xE6ec1f0Ae6Cd023bd0a9B4d0253BDC755103253c': 'Aave Labs Horizon Ops Multisig',
+    '0x09e8E1408a68778CEDdC1938729Ea126710E7Dda': 'Horizon Phase-One Listing Executor',
+    [AaveV3EthereumHorizon.GHO_DIRECT_MINTER]: 'Gho Horizon Direct Minter',
   }),
   pools: {
     [Pools.V3]: v3Pool,
     [Pools.LIDO]: lidoPool,
     [Pools.ETHERFI]: etherFiPool,
+    [Pools.HORIZON]: horizonPool,
     [Pools.GHO]: ghoPool,
     [Pools.V2]: v2Pool,
     [Pools.V2_AMM]: v2AmmPool,

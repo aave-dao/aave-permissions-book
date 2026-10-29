@@ -69,7 +69,7 @@ const buildPoolInfoContracts = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
-  const isLidoOrEtherfi = pool === Pools.LIDO || pool === Pools.ETHERFI;
+  const isLidoOrEtherfi = pool === Pools.LIDO || pool === Pools.ETHERFI || pool === Pools.HORIZON;
   const isV4 = isV4Pool(pool);
 
   if (isV4) {
@@ -83,7 +83,7 @@ const buildPoolInfoContracts = (
   }
 
   if (isLidoOrEtherfi) {
-    // LIDO/ETHERFI pools: current pool + V3's sections (excluding V3's main contracts)
+    // LIDO/ETHERFI/HORIZON pools: current pool + V3's sections (excluding V3's main contracts)
     return {
       ...currentPoolContracts,
       ...networkPermits['V3'].collector?.contracts,
@@ -411,7 +411,7 @@ export const generateTable = (network: string, pool: string): string => {
   // a/v/s tokens (aTokens, variableDebtTokens, stableDebtTokens) are upgradeable
   // via the PoolConfigurator but are not tracked as individual contracts.
   // Their upgradeability is controlled by governance (or PPC for white-label pools).
-  if (pool.includes('V3') || pool.includes('V2') || pool.includes('LIDO') || pool.includes('ETHERFI')) {
+  if (pool.includes('V3') || pool.includes('V2') || pool.includes('LIDO') || pool.includes('ETHERFI') || pool.includes('HORIZON')) {
     decentralizationTableBody += getTableBody([
       `Aave a/v/s tokens`,
       `${pool === Pools.V3_WHITE_LABEL ? 'PPC Multi-sig' : 'Governance'}`,

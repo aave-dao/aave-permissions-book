@@ -17,7 +17,11 @@ export const defaultRolesAdmin =
  * left-padded ASCII encoding (bytes32("FUNDS_ADMIN")) instead of keccak256.
  * This is a legacy design from the original Aave V2 Collector implementation.
  */
-const initializeRoleCodeMap = (roleNames: string[], collector?: boolean): Map<string, string> => {
+const initializeRoleCodeMap = (
+  roleNames: string[],
+  collector?: boolean,
+  roleCodes?: Record<string, string>,
+): Map<string, string> => {
   const roleCodeMap = new Map<string, string>([
     [
       '0x0000000000000000000000000000000000000000000000000000000000000000',
@@ -38,6 +42,11 @@ const initializeRoleCodeMap = (roleNames: string[], collector?: boolean): Map<st
     );
   }
 
+  // Roles whose hash is not keccak256(roleName), e.g. the per-aToken roles of Horizon's RwaATokenManager
+  for (const [code, roleName] of Object.entries(roleCodes ?? {})) {
+    roleCodeMap.set(code.toLowerCase(), roleName);
+  }
+
   return roleCodeMap;
 };
 
@@ -50,6 +59,7 @@ const initializeRoleCodeMap = (roleNames: string[], collector?: boolean): Map<st
  * @param oldRoles - Previously known role assignments (from saved JSON)
  * @param roleNames - List of role names to track
  * @param collector - Whether this is for the Collector contract (has special FUNDS_ADMIN_ROLE)
+ * @param roleCodes - Extra role hash to role name entries, for roles not derived from their name
  * @param eventLogs - Array of RoleGranted/RoleRevoked event logs
  * @returns Updated role assignments
  */
@@ -57,14 +67,16 @@ export const getRoleAdmins = ({
   oldRoles,
   roleNames,
   collector,
+  roleCodes,
   eventLogs,
 }: {
   oldRoles: Record<string, string[]>;
   roleNames: string[];
   collector?: boolean;
+  roleCodes?: Record<string, string>;
   eventLogs: RoleEventLog[];
 }): Record<string, string[]> => {
-  const roleHexToNameMap = initializeRoleCodeMap(roleNames, collector);
+  const roleHexToNameMap = initializeRoleCodeMap(roleNames, collector, roleCodes);
   const roles: Record<string, string[]> = { ...oldRoles };
 
   for (const eventLog of eventLogs) {
