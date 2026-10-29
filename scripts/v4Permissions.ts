@@ -3,10 +3,13 @@ import { onlyOwnerAbi } from '../abis/onlyOwnerAbi.js';
 import { pendingOwnerAbi } from '../abis/pendingOwnerAbi.js';
 import { accessManagerAbi } from '../abis/accessManagerAbi.js';
 import { rescuableAbi } from '../abis/rescuableAbi.js';
+import { poolAddressProviderAbi } from '../abis/lendingPoolAddressProviderAbi.js';
 import { v4RiskStewardAbi } from '../abis/v4RiskStewardAbi.js';
 import { reduceRiskStewardWrapperAbi } from '../abis/reduceRiskStewardWrapperAbi.js';
 import { getProxyAdmin } from '../helpers/proxyAdmin.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
+import { generateRoles } from '../helpers/jsonParsers.js';
+import { mapRoleAddresses } from '../helpers/contractResolvers.js';
 import {
   AddressBook,
   Contracts,
@@ -534,6 +537,61 @@ export const resolveV4Modifiers = async (
   }
 
   return { contracts: obj, roleLabels };
+};
+
+export const resolveV4AclModifiers = async (
+  addressBook: AddressBook,
+  provider: Client,
+  permissionsObject: PermissionsJson,
+  adminRoles: Record<string, string[]>,
+): Promise<Contracts> => {
+  const obj: Contracts = {};
+  const roles = generateRoles(permissionsObject);
+  const ownerResolver = createOwnerResolver(provider);
+
+  if (addressBook.POOL_ADDRESSES_PROVIDER) {
+    const addressesProvider = getContract({
+      address: getAddress(addressBook.POOL_ADDRESSES_PROVIDER as string),
+      abi: poolAddressProviderAbi,
+      client: provider,
+    });
+    const owner = (await addressesProvider.read.owner()) as Address;
+    const ownerInfo = await ownerResolver.resolve(owner);
+
+    obj['PoolAddressesProvider'] = {
+      address: addressBook.POOL_ADDRESSES_PROVIDER as string,
+      modifiers: [
+        {
+          modifier: 'onlyOwner',
+          addresses: [
+            {
+              address: owner,
+              owners: ownerInfo.owners,
+              signersThreshold: ownerInfo.threshold,
+            },
+          ],
+          functions: roles['PoolAddressesProvider']['onlyOwner'],
+        },
+      ],
+    };
+  }
+
+  if (addressBook.ACL_MANAGER) {
+    const roleOwners = await ownerResolver.resolveRoleOwners(adminRoles);
+
+    obj['ACLManager'] = {
+      address: addressBook.ACL_MANAGER as string,
+      modifiers: [
+        {
+          modifier: 'onlyRole',
+          addresses: mapRoleAddresses('DEFAULT_ADMIN', adminRoles, roleOwners),
+          functions: roles['ACLManager']['onlyRole'],
+        },
+      ],
+    };
+  }
+
+  return obj;
 };
 
 /**

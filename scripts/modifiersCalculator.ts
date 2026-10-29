@@ -57,6 +57,7 @@ import { resolveGovV3Modifiers } from './govV3Permissions.js';
 import { resolveGHOModifiers } from './ghoPermissions.js';
 import {
   resolveV4Modifiers,
+  resolveV4AclModifiers,
   resolveTokenizationSpokeUpgradeability,
   resolveV4PositionManagerModifiers,
   getTrackedV4Addresses,
@@ -491,6 +492,45 @@ const generateNetworkPermissions = async (
           roles: v4Roles,
           functionRoles: v4FunctionRoles,
           roleLabels: v4Result.roleLabels,
+        };
+      }
+
+      if (pool.addressBook.ACL_MANAGER) {
+        const v3AclManager = pools[Pools.V3]?.addressBook?.ACL_MANAGER as string | undefined;
+        const sharedWithV3 =
+          !!v3AclManager &&
+          getAddress(v3AclManager) === getAddress(pool.addressBook.ACL_MANAGER as string);
+
+        let aclRoles: Record<string, string[]>;
+        if (sharedWithV3) {
+          logTableGeneration(network, poolKey, 'ACL Manager (shared with V3)');
+          aclRoles = fullJson[Pools.V3]?.roles?.role || {};
+        } else {
+          if (!pool.aclBlock) {
+            throw new Error(
+              `${poolKey} on network ${network} has an ACL_MANAGER that no V3 pool shares, but no aclBlock to index it from`,
+            );
+          }
+          logTableGeneration(network, poolKey, 'ACL Manager', indexedLatestBlock || pool.aclBlock);
+          aclRoles = getRoleAdmins({
+            oldRoles: (fullJson[poolKey]?.roles?.role) || {},
+            roleNames: protocolRoleNames,
+            eventLogs: indexedEvents['ACL_MANAGER'] || [],
+          });
+        }
+
+        admins = {
+          role: aclRoles,
+        };
+
+        poolPermissions = {
+          ...poolPermissions,
+          ...(await resolveV4AclModifiers(
+            pool.addressBook,
+            poolProvider,
+            permissionsJson,
+            admins.role,
+          )),
         };
       }
     } else if (

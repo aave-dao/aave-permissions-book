@@ -143,6 +143,8 @@ const aaveV4 = createV4({
     ACCESS_MANAGER: AaveV4Ethereum.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Ethereum.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Ethereum.SPOKE_CONFIGURATOR,
+    POOL_ADDRESSES_PROVIDER: AaveV3Ethereum.POOL_ADDRESSES_PROVIDER,
+    ACL_MANAGER: AaveV3Ethereum.ACL_MANAGER,
     RISK_STEWARD: AaveV4Ethereum.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Ethereum.POSITION_MANAGERS as Record<string, string>),
@@ -154,6 +156,7 @@ const aaveV4 = createV4({
 // ============================================================================
 const aaveV4Sentora = createV4({
   accessManagerBlock: 26190776,
+  aclBlock: 26177038,
   ppcPermissionsJson: './statics/functionsPermissionsPpcV2.json',
   ppcAddressBook: {
     PERMISSIONED_PAYLOADS_CONTROLLER: AaveV4EthereumSentoraCurated.PERMISSIONED_PAYLOADS_CONTROLLER,
@@ -164,6 +167,8 @@ const aaveV4Sentora = createV4({
     ACCESS_MANAGER: AaveV4EthereumSentoraCurated.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4EthereumSentoraCurated.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4EthereumSentoraCurated.SPOKE_CONFIGURATOR,
+    POOL_ADDRESSES_PROVIDER: AaveV4EthereumSentoraCurated.POOL_ADDRESSES_PROVIDER,
+    ACL_MANAGER: AaveV4EthereumSentoraCurated.ACL_MANAGER,
     RISK_STEWARD: AaveV4EthereumSentoraCurated.RISK_STEWARD,
     REDUCE_RISK_STEWARD_WRAPPER: AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER,
     ...deduplicateByAddress(AaveV4EthereumSentoraCurated.HUBS, AaveV4EthereumSentoraCurated.SPOKES),
