@@ -168,6 +168,16 @@
                 "address": "0x7D0219C7037819B3F5d73E235C595189C3F8c224",
                 "owners": [],
                 "signersThreshold": 0
+              },
+              {
+                "address": "0xb00251C67dB290D0AD779903bfFeB092DAE76fFa",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x19ae7c91dfd35a4515595cEd305d2102C3b1B02D",
+                "owners": [],
+                "signersThreshold": 0
               }
             ],
             "functions": [
@@ -212,6 +222,16 @@
               },
               {
                 "address": "0x7D0219C7037819B3F5d73E235C595189C3F8c224",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0xb00251C67dB290D0AD779903bfFeB092DAE76fFa",
+                "owners": [],
+                "signersThreshold": 0
+              },
+              {
+                "address": "0x19ae7c91dfd35a4515595cEd305d2102C3b1B02D",
                 "owners": [],
                 "signersThreshold": 0
               }
@@ -630,7 +650,9 @@
           "0x18a6704775570afA8dB0D3FC0242515D90d120C0"
         ],
         "RISK_ADMIN": [
-          "0x7D0219C7037819B3F5d73E235C595189C3F8c224"
+          "0x7D0219C7037819B3F5d73E235C595189C3F8c224",
+          "0xb00251C67dB290D0AD779903bfFeB092DAE76fFa",
+          "0x19ae7c91dfd35a4515595cEd305d2102C3b1B02D"
         ]
       }
     },
@@ -1042,6 +1064,42 @@
     "ppc": {},
     "agentHub": {
       "contracts": {
+        "PendleDiscountRateAgent": {
+          "address": "0xb00251C67dB290D0AD779903bfFeB092DAE76fFa",
+          "modifiers": [
+            {
+              "modifier": "onlyAgentHub",
+              "addresses": [
+                {
+                  "address": "0x7532F38Be8AB746DD6c1B686A9aAED3400eD35a0",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "inject"
+              ]
+            }
+          ]
+        },
+        "EModeCategoryAgent": {
+          "address": "0x19ae7c91dfd35a4515595cEd305d2102C3b1B02D",
+          "modifiers": [
+            {
+              "modifier": "onlyAgentHub",
+              "addresses": [
+                {
+                  "address": "0x7532F38Be8AB746DD6c1B686A9aAED3400eD35a0",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "inject"
+              ]
+            }
+          ]
+        },
         "AgentHub": {
           "address": "0x7532F38Be8AB746DD6c1B686A9aAED3400eD35a0",
           "proxyAdmin": "0x51bb390fcd68cbe5358cd213b96b44d3244d1dcf",
@@ -1067,6 +1125,19 @@
             {
               "modifier": "onlyOwnerOrAgentAdmin",
               "addresses": [
+                {
+                  "address": "0xD0D1CcB0391aADF1EaD96814ce7ab4008Ebdb336",
+                  "owners": [
+                    "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                    "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                    "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                    "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                    "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                    "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                    "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                  ],
+                  "signersThreshold": 4
+                },
                 {
                   "address": "0xE2E8Badc5d50f8a6188577B89f50701cDE2D4e19",
                   "owners": [],
@@ -1108,6 +1179,38 @@
                 "changeProxyAdmin",
                 "upgrade",
                 "upgradeAndCall"
+              ]
+            }
+          ]
+        },
+        "RangeValidationModule": {
+          "address": "0x863D5B3f24E6b84564432dd20606a82bB1C61dC5",
+          "modifiers": [
+            {
+              "modifier": "onlyHubOwnerOrAgentAdmin",
+              "addresses": [
+                {
+                  "address": "0xD0D1CcB0391aADF1EaD96814ce7ab4008Ebdb336",
+                  "owners": [
+                    "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                    "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                    "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                    "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                    "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                    "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                    "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                  ],
+                  "signersThreshold": 4
+                },
+                {
+                  "address": "0xE2E8Badc5d50f8a6188577B89f50701cDE2D4e19",
+                  "owners": [],
+                  "signersThreshold": 0
+                }
+              ],
+              "functions": [
+                "setDefaultRangeConfig",
+                "setRangeConfigByMarket"
               ]
             }
           ]
