@@ -296,6 +296,7 @@ interface PoolConfig {
   aclBlock?: number;
   collectorBlock?: number;
   clinicStewardBlock?: number;
+  rwaATokenManagerBlock?: number;
   umbrellaBlock?: number;
   umbrellaIncentivesBlock?: number;
   crossChainControllerBlock?: number;
@@ -344,6 +345,16 @@ export const buildPoolContractConfigs = (pool: PoolConfig): ContractEventConfig[
       id: 'CLINIC_STEWARD',
       address: pool.addressBook.CLINIC_STEWARD,
       deploymentBlock: pool.clinicStewardBlock,
+      eventTypes: ROLE_EVENT_TYPES,
+    });
+  }
+
+  // RWA_A_TOKEN_MANAGER (Horizon)
+  if (pool.addressBook.RWA_A_TOKEN_MANAGER && pool.rwaATokenManagerBlock) {
+    configs.push({
+      id: 'RWA_A_TOKEN_MANAGER',
+      address: pool.addressBook.RWA_A_TOKEN_MANAGER,
+      deploymentBlock: pool.rwaATokenManagerBlock,
       eventTypes: ROLE_EVENT_TYPES,
     });
   }

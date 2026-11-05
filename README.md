@@ -40,6 +40,7 @@ A [permissions document](./out) has been generated for every pool on every netwo
 |  ETHEREUM |  V3 |  [Permissions](./out/ETHEREUM-V3.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  LIDO |  [Permissions](./out/ETHEREUM-LIDO.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  ETHERFI |  [Permissions](./out/ETHEREUM-ETHERFI.md#contracts) | |--------|--------|--------|
+|  ETHEREUM |  HORIZON |  [Permissions](./out/ETHEREUM-HORIZON.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  GHO |  [Permissions](./out/ETHEREUM-GHO.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  V2 |  [Permissions](./out/ETHEREUM-V2.md#contracts) | |--------|--------|--------|
 |  ETHEREUM |  V2_AMM |  [Permissions](./out/ETHEREUM-V2_AMM.md#contracts) | |--------|--------|--------|

@@ -21,6 +21,7 @@ export {
   clinicStewardRoleNames,
   ghoGSMRoleNames,
   protocolRoleNames,
+  horizonProtocolRoleNames,
   granularGuardianRoleNames,
   umbrellaRoleNames,
   umbrellaIncentivesRoleNames,
