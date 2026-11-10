@@ -8,12 +8,14 @@
 |  [PoolConfigurator](https://etherscan.io/address/0x83Cb1B4af26EEf6463aC20AFbAC9c0e2E017202F) |  Governance | |--------|--------|
 |  [AaveOracle](https://etherscan.io/address/0x985BcfAB7e0f4EF2606CC5b64FC1A16311880442) |  not upgradeable | |--------|--------|
 |  [RewardsController](https://etherscan.io/address/0x1D5D386a90CEA8AcEa9fa75389e97CF5F1AE21D3) |  Governance | |--------|--------|
+|  [WrappedTokenGatewayV3](https://etherscan.io/address/0x973195fB8F67F5B0afe7beDB2A02cec829d89991) |  not upgradeable | |--------|--------|
 |  [EmissionManager](https://etherscan.io/address/0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F) |  not upgradeable | |--------|--------|
 |  [PoolAddressesProviderRegistry](https://etherscan.io/address/0xE35Ee1C82fdf6524834e1Ef6Af7820bf6B1fbf0D) |  not upgradeable | |--------|--------|
+|  [ProxyAdmin](https://etherscan.io/address/0xD3cF979e676265e4f6379749DECe4708B9A22476) |  not upgradeable | |--------|--------|
 |  [ACLManager](https://etherscan.io/address/0xEFD5df7b87d2dCe6DD454b4240b3e0A4db562321) |  not upgradeable | |--------|--------|
 |  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  not upgradeable | |--------|--------|
 |  [RwaOracleParameterRegistry](https://etherscan.io/address/0x69D55D504BC9556E377b340D19818E736bbB318b) |  not upgradeable | |--------|--------|
-|  [Collector](https://etherscan.io/address/0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c) |  Not owned | |--------|--------|
+|  [Collector](https://etherscan.io/address/0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c) |  Governance | |--------|--------|
 |  Aave a/v/s tokens |  Governance | |--------|--------|
 
 ### Actions type
@@ -36,6 +38,8 @@
 |  retryAndInvalidateMessages |  Multi-sig,Governance | |--------|--------|
 |  configureGovernance |  Governance | |--------|--------|
 |  cancelProposal |  Multi-sig | |--------|--------|
+|  rwaATokenTransfer |  External Contract | |--------|--------|
+|  rwaATokenTransferRoles |  Multi-sig | |--------|--------|
 
 ### Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -50,9 +54,11 @@
 |  [PoolConfigurator](https://etherscan.io/address/0x83Cb1B4af26EEf6463aC20AFbAC9c0e2E017202F) |  [PoolAddressesProvider](https://etherscan.io/address/0x5D39E06b825C1F2B80bf2756a73e28eFAA128ba0) |  onlyEmergencyOrPoolAdmin |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A), [Aave Labs Horizon Emergency Multisig](https://etherscan.io/address/0x13B57382c36BAB566E75C72303622AF29E27e1d3) |  setPoolPause, setReservePause | |--------|--------|--------|--------|--------|
 |  [AaveOracle](https://etherscan.io/address/0x985BcfAB7e0f4EF2606CC5b64FC1A16311880442) |  - |  onlyAssetListingOrPoolAdmins |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A), [Aave Labs Horizon Emergency Multisig](https://etherscan.io/address/0x13B57382c36BAB566E75C72303622AF29E27e1d3), [Horizon Phase-One Listing Executor](https://etherscan.io/address/0x09e8E1408a68778CEDdC1938729Ea126710E7Dda) |  setAssetSources, setFallbackOracle | |--------|--------|--------|--------|--------|
 |  [RewardsController](https://etherscan.io/address/0x1D5D386a90CEA8AcEa9fa75389e97CF5F1AE21D3) |  [PoolAddressesProvider](https://etherscan.io/address/0x5D39E06b825C1F2B80bf2756a73e28eFAA128ba0) |  onlyEmissionManager |  [EmissionManager](https://etherscan.io/address/0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F) |  configureAssets, setTransferStrategy, setRewardOracle, setClaimer | |--------|--------|--------|--------|--------|
+|  [WrappedTokenGatewayV3](https://etherscan.io/address/0x973195fB8F67F5B0afe7beDB2A02cec829d89991) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  emergencyTokenTransfer, emergencyEtherTransfer | |--------|--------|--------|--------|--------|
 |  [EmissionManager](https://etherscan.io/address/0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setClaimer, setEmissionAdmin, setRewardsController, renounceOwnership, transferOwnership | |--------|--------|--------|--------|--------|
 |  [EmissionManager](https://etherscan.io/address/0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F) |  - |  onlyEmissionAdmin |  [ACI Safe](https://etherscan.io/address/0xac140648435d03f784879cd789130F22Ef588Fcd) |  configureAssets, setTransferStrategy, setRewardOracle, setDistributionEnd, setEmissionPerSecond | |--------|--------|--------|--------|--------|
 |  [PoolAddressesProviderRegistry](https://etherscan.io/address/0xE35Ee1C82fdf6524834e1Ef6Af7820bf6B1fbf0D) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  registerAddressesProvider, unregisterAddressesProvider | |--------|--------|--------|--------|--------|
+|  [ProxyAdmin](https://etherscan.io/address/0xD3cF979e676265e4f6379749DECe4708B9A22476) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  changeProxyAdmin, upgrade, upgradeAndCall | |--------|--------|--------|--------|--------|
 |  [ACLManager](https://etherscan.io/address/0xEFD5df7b87d2dCe6DD454b4240b3e0A4db562321) |  - |  onlyRole |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setRoleAdmin | |--------|--------|--------|--------|--------|
 |  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyDefaultAdmin |  [Aave Labs Horizon Emergency Multisig](https://etherscan.io/address/0x13B57382c36BAB566E75C72303622AF29E27e1d3) |  grantRole, revokeRole, grantAuthorizedTransferRole, revokeAuthorizedTransferRole | |--------|--------|--------|--------|--------|
 |  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyAuthorizedTransfer(ACRED) |  [Securitize ACRED/VBILL Authorized Address](https://etherscan.io/address/0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9) |  transferRwaAToken | |--------|--------|--------|--------|--------|
@@ -61,7 +67,7 @@
 |  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyAuthorizedTransfer(USCC) |  [Superstate USCC Authorized Address](https://etherscan.io/address/0x8abC89D9b56dFD90dA18e8E18CFaC9111100bDd1) |  transferRwaAToken | |--------|--------|--------|--------|--------|
 |  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyAuthorizedTransfer(USTB) |  [Superstate USTB Authorized Address](https://etherscan.io/address/0xad309BB6f13074128b4F23EF9EA2fe8552AfCA83) |  transferRwaAToken | |--------|--------|--------|--------|--------|
 |  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyAuthorizedTransfer(VBILL) |  [Securitize ACRED/VBILL Authorized Address](https://etherscan.io/address/0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9) |  transferRwaAToken | |--------|--------|--------|--------|--------|
-|  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyAuthorizedTransfer(mGLOBAL) |  [Midas mGLOBAL Authorized Address](https://etherscan.io/address/0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f) |  transferRwaAToken | |--------|--------|--------|--------|--------|
+|  [RwaATokenManager](https://etherscan.io/address/0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9) |  - |  onlyAuthorizedTransfer(mGLOBAL) |  [Midas mGLOBAL/mWIN Authorized Address](https://etherscan.io/address/0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f) |  transferRwaAToken | |--------|--------|--------|--------|--------|
 |  [RwaOracleParameterRegistry](https://etherscan.io/address/0x69D55D504BC9556E377b340D19818E736bbB318b) |  - |  onlyOwner |  [Aave Labs Horizon Ops Multisig](https://etherscan.io/address/0xE6ec1f0Ae6Cd023bd0a9B4d0253BDC755103253c) |  setUpdater, transferOwnership, renounceOwnership | |--------|--------|--------|--------|--------|
 |  [RwaOracleParameterRegistry](https://etherscan.io/address/0x69D55D504BC9556E377b340D19818E736bbB318b) |  - |  onlyUpdater |  [Aave Labs Horizon Ops Multisig](https://etherscan.io/address/0xE6ec1f0Ae6Cd023bd0a9B4d0253BDC755103253c) |  setParametersForAsset, setMaxExpectedApy, setUpperBoundTolerance, setLowerBoundTolerance, setMaxDiscount, setIsUpperBoundEnabled, setIsLowerBoundEnabled, setIsActionTakingEnabled, setLookbackWindowSize, setOracle, deleteAsset | |--------|--------|--------|--------|--------|
 |  [Collector](https://etherscan.io/address/0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c) |  [ProxyAdmin](https://etherscan.io/address/0xD3cF979e676265e4f6379749DECe4708B9A22476) |  onlyFundsAdmin |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A), [ClinicSteward](https://etherscan.io/address/0xf00E2de0E78DFf055A92AD4719a179CE275b6Ef7), [Lido ClinicSteward](https://etherscan.io/address/0x7571F419F7Df2d0622C1A20154a0D4250B2265cC), [PoolExposureSteward](https://etherscan.io/address/0x22aC12a6937BBBC0a301AF9154d08EaD95673122), [ClinicStewardV2](https://etherscan.io/address/0x6A14eBe9A934c8EFE15C3811a999149472876b56), [ClinicStewardV2 AMM](https://etherscan.io/address/0xE1e62c3ee0c581F715fBb0e23CDA536Fc29eeB2c), [SwapSteward](https://etherscan.io/address/0xb7D402138Cb01BfE97d95181C849379d6AD14d19) |  approve, transfer, setFundsAdmin, createStream | |--------|--------|--------|--------|--------|
@@ -84,6 +90,18 @@
 |  ASSET_LISTING_ADMIN |  [Horizon Phase-One Listing Executor](https://etherscan.io/address/0x09e8E1408a68778CEDdC1938729Ea126710E7Dda) | |--------|--------|
 |  RISK_ADMIN |  [Horizon Phase-One Listing Executor](https://etherscan.io/address/0x09e8E1408a68778CEDdC1938729Ea126710E7Dda), [Aave Labs Horizon Ops Multisig](https://etherscan.io/address/0xE6ec1f0Ae6Cd023bd0a9B4d0253BDC755103253c), [Gho Horizon Direct Minter](https://etherscan.io/address/0xe10C78A3AC7f016eD2DE1A89c5479b1039EAB9eA) | |--------|--------|
 |  FLASH_BORROWER |   | |--------|--------|
+
+### RwaATokenManager Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [Aave Labs Horizon Emergency Multisig](https://etherscan.io/address/0x13B57382c36BAB566E75C72303622AF29E27e1d3) | |--------|--------|
+|  AUTHORIZED_TRANSFER_USTB |  [Superstate USTB Authorized Address](https://etherscan.io/address/0xad309BB6f13074128b4F23EF9EA2fe8552AfCA83) | |--------|--------|
+|  AUTHORIZED_TRANSFER_USCC |  [Superstate USCC Authorized Address](https://etherscan.io/address/0x8abC89D9b56dFD90dA18e8E18CFaC9111100bDd1) | |--------|--------|
+|  AUTHORIZED_TRANSFER_JTRSY |  [Centrifuge JTRSY/JAAA Authorized Address](https://etherscan.io/address/0x7Bf090B97f896fB77e852CC98aa52A8Cb7DC02eC) | |--------|--------|
+|  AUTHORIZED_TRANSFER_JAAA |  [Centrifuge JTRSY/JAAA Authorized Address](https://etherscan.io/address/0x7Bf090B97f896fB77e852CC98aa52A8Cb7DC02eC) | |--------|--------|
+|  AUTHORIZED_TRANSFER_ACRED |  [Securitize ACRED/VBILL Authorized Address](https://etherscan.io/address/0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9) | |--------|--------|
+|  AUTHORIZED_TRANSFER_VBILL |  [Securitize ACRED/VBILL Authorized Address](https://etherscan.io/address/0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9) | |--------|--------|
+|  AUTHORIZED_TRANSFER_mGLOBAL |  [Midas mGLOBAL/mWIN Authorized Address](https://etherscan.io/address/0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f) | |--------|--------|
 
 ### Collector Admins
 | Role |Contract |

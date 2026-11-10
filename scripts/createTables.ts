@@ -69,7 +69,7 @@ const buildPoolInfoContracts = (
 ): Contracts => {
   const networkPermits = getPermissionsByNetwork(network);
   const isWhiteLabel = pool === Pools.V3_WHITE_LABEL;
-  const isLidoOrEtherfi = pool === Pools.LIDO || pool === Pools.ETHERFI || pool === Pools.HORIZON;
+  const isLidoOrEtherfiOrHorizon = pool === Pools.LIDO || pool === Pools.ETHERFI || pool === Pools.HORIZON;
   const isV4 = isV4Pool(pool);
 
   if (isV4) {
@@ -82,7 +82,7 @@ const buildPoolInfoContracts = (
     return extractPoolContracts(networkPermits['V3_WHITE_LABEL']) as Contracts;
   }
 
-  if (isLidoOrEtherfi) {
+  if (isLidoOrEtherfiOrHorizon) {
     // LIDO/ETHERFI/HORIZON pools: current pool + V3's sections (excluding V3's main contracts)
     return {
       ...currentPoolContracts,
@@ -681,6 +681,12 @@ export const generateTable = (network: string, pool: string): string => {
     : undefined;
   readmeByNetwork += generateRoleTable(
     { title: 'Umbrella Admins', roles: umbrellaRoles },
+    tableCtx,
+  );
+
+  // RwaATokenManager Admins table (Horizon)
+  readmeByNetwork += generateRoleTable(
+    { title: 'RwaATokenManager Admins', roles: poolPermitsByContract.rwaATokenManager?.rwaATokenManagerRoles?.role },
     tableCtx,
   );
 

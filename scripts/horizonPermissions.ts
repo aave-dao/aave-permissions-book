@@ -1,13 +1,4 @@
-import {
-  Address,
-  Client,
-  encodeAbiParameters,
-  getAddress,
-  getContract,
-  keccak256,
-  toBytes,
-  zeroAddress,
-} from 'viem';
+import { Address, Client, getAddress, getContract, Hex, zeroAddress } from 'viem';
 import {
   AddressBook,
   AddressInfo,
@@ -23,16 +14,16 @@ import {
 } from '../helpers/contractResolvers.js';
 import {
   ERC20_SYMBOL_ABI,
+  RWA_A_TOKEN_MANAGER_ABI,
   RWA_ORACLE_PARAMETER_REGISTRY_ABI,
   RWA_POOL_ABI,
 } from '../abis/horizon.js';
 
-const AUTHORIZED_TRANSFER_ROLE = keccak256(toBytes('AUTHORIZED_TRANSFER'));
 const AUTHORIZED_TRANSFER_PREFIX = 'AUTHORIZED_TRANSFER_';
 
 /**
- * Maps the RwaATokenManager's per-aToken transfer roles, keccak256(abi.encode(AUTHORIZED_TRANSFER, aToken)),
- * to a readable name per reserve, e.g. AUTHORIZED_TRANSFER_USTB. Built from the pool's reserves on every
+ * Maps the RwaATokenManager's per-aToken transfer roles, read from getAuthorizedTransferRole, to a readable
+ * name per reserve, e.g. AUTHORIZED_TRANSFER_USTB. Built from the pool's reserves on every
  * run, so new listings are picked up without a config change.
  */
 export const getRwaAuthorizedTransferRoleCodes = async (
@@ -42,6 +33,11 @@ export const getRwaAuthorizedTransferRoleCodes = async (
   const pool = getContract({
     address: getAddress(addressBook.POOL as string),
     abi: RWA_POOL_ABI,
+    client: provider,
+  });
+  const manager = getContract({
+    address: getAddress(addressBook.RWA_A_TOKEN_MANAGER as string),
+    abi: RWA_A_TOKEN_MANAGER_ABI,
     client: provider,
   });
   const reserves = (await pool.read.getReservesList()) as Address[];
@@ -54,12 +50,7 @@ export const getRwaAuthorizedTransferRoleCodes = async (
       abi: ERC20_SYMBOL_ABI,
       client: provider,
     }).read.symbol()) as string;
-    const roleCode = keccak256(
-      encodeAbiParameters(
-        [{ type: 'bytes32' }, { type: 'address' }],
-        [AUTHORIZED_TRANSFER_ROLE, aToken],
-      ),
-    );
+    const roleCode = (await manager.read.getAuthorizedTransferRole([aToken])) as Hex;
     roleCodes[roleCode] = `${AUTHORIZED_TRANSFER_PREFIX}${symbol}`;
   }
   return roleCodes;

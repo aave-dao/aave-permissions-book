@@ -90,8 +90,7 @@ const horizonPool = createV3Pool({
   functionsPermissionsHorizonJson: './statics/functionsPermissionsHorizon.json',
   addressBook: {
     ...AaveV3EthereumHorizon,
-    // Horizon's own registry, until the address book release that replaces the Lido registry entry
-    POOL_ADDRESSES_PROVIDER_REGISTRY: '0xE35Ee1C82fdf6524834e1Ef6Af7820bf6B1fbf0D',
+    PROXY_ADMIN: MiscEthereum.PROXY_ADMIN,
   },
 });
 
@@ -108,6 +107,7 @@ const ghoPool = createGhoPool({
   addresses: {
     '0x5513224daaEABCa31af5280727878d52097afA05': 'Gho Core Direct Minter',
     '0x2cE01c87Fec1b71A9041c52CaED46Fc5f4807285': 'Gho Lido Direct Minter',
+    [AaveV3EthereumHorizon.GHO_DIRECT_MINTER]: 'Gho Horizon Direct Minter',
   },
 });
 
@@ -266,7 +266,8 @@ export const mainnetConfig: NetworkConfig = {
     '0x8abC89D9b56dFD90dA18e8E18CFaC9111100bDd1': 'Superstate USCC Authorized Address',
     '0x7Bf090B97f896fB77e852CC98aa52A8Cb7DC02eC': 'Centrifuge JTRSY/JAAA Authorized Address',
     '0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9': 'Securitize ACRED/VBILL Authorized Address',
-    '0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f': 'Midas mGLOBAL Authorized Address',
+    '0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f': 'Midas mGLOBAL/mWIN Authorized Address',
+    '0x59c1eAcEc450c57Dcb9b8725d0F96635C2b676Ee': 'Securitize HINC Authorized Address',
   }),
   pools: {
     [Pools.V3]: v3Pool,

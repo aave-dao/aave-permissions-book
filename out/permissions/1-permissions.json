@@ -10008,7 +10008,7 @@
           }
         ]
       },
-      "facilitator-5": {
+      "Gho Horizon Direct Minter": {
         "address": "0xe10C78A3AC7f016eD2DE1A89c5479b1039EAB9eA",
         "proxyAdmin": "0x8abd1892a1c31b8e52fc1210098fe4cac4e52acc",
         "modifiers": [
@@ -10052,7 +10052,7 @@
           }
         ]
       },
-      "facilitator-5-proxyAdmin": {
+      "Gho Horizon Direct Minter-proxyAdmin": {
         "address": "0x8abd1892a1c31b8e52fc1210098fe4cac4e52acc",
         "modifiers": [
           {
@@ -14587,6 +14587,25 @@
           }
         ]
       },
+      "WrappedTokenGatewayV3": {
+        "address": "0x973195fB8F67F5B0afe7beDB2A02cec829d89991",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "emergencyTokenTransfer",
+              "emergencyEtherTransfer"
+            ]
+          }
+        ]
+      },
       "EmissionManager": {
         "address": "0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F",
         "modifiers": [
@@ -14644,6 +14663,26 @@
             "functions": [
               "registerAddressesProvider",
               "unregisterAddressesProvider"
+            ]
+          }
+        ]
+      },
+      "ProxyAdmin": {
+        "address": "0xD3cF979e676265e4f6379749DECe4708B9A22476",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "changeProxyAdmin",
+              "upgrade",
+              "upgradeAndCall"
             ]
           }
         ]

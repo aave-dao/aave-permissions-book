@@ -95,7 +95,7 @@
     }
   },
   "GHO": {
-    "latestBlockNumber": 26382988,
+    "latestBlockNumber": 26383614,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
@@ -480,7 +480,7 @@
     }
   },
   "HORIZON": {
-    "latestBlockNumber": 26299662,
+    "latestBlockNumber": 26383612,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xEFD5df7b87d2dCe6DD454b4240b3e0A4db562321",
@@ -500,7 +500,7 @@
     }
   },
   "HORIZON_EMISSION": {
-    "latestBlockNumber": 26299662,
+    "latestBlockNumber": 26383613,
     "indexedContracts": {
       "EMISSION_MANAGER": {
         "address": "0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F",

@@ -22,6 +22,16 @@ export const RWA_ORACLE_PARAMETER_REGISTRY_ABI = [
   },
 ] as const;
 
+export const RWA_A_TOKEN_MANAGER_ABI = [
+  {
+    type: 'function',
+    name: 'getAuthorizedTransferRole',
+    inputs: [{ name: 'aToken', type: 'address', internalType: 'address' }],
+    outputs: [{ name: '', type: 'bytes32', internalType: 'bytes32' }],
+    stateMutability: 'pure',
+  },
+] as const;
+
 export const RWA_POOL_ABI = [
   {
     type: 'function',
