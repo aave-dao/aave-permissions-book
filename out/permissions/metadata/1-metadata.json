@@ -1,6 +1,6 @@
 {
   "V3": {
-    "latestBlockNumber": 26373648,
+    "latestBlockNumber": 26380821,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
@@ -40,7 +40,7 @@
     }
   },
   "V2": {
-    "latestBlockNumber": 26373651,
+    "latestBlockNumber": 26380822,
     "indexedContracts": {
       "COLLECTOR": {
         "address": "0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c",
@@ -50,7 +50,7 @@
     }
   },
   "V2_AMM": {
-    "latestBlockNumber": 26373651,
+    "latestBlockNumber": 26380822,
     "indexedContracts": {
       "COLLECTOR": {
         "address": "0x464C71f6c2F760DdA6093dCB91C24c39e5d6e18c",
@@ -60,7 +60,7 @@
     }
   },
   "LIDO": {
-    "latestBlockNumber": 26373649,
+    "latestBlockNumber": 26380821,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x013E2C7567b6231e865BB9273F8c7656103611c0",
@@ -80,7 +80,7 @@
     }
   },
   "ETHERFI": {
-    "latestBlockNumber": 26373650,
+    "latestBlockNumber": 26380821,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0x3cE8E2eb6501d4705477643E96881B1bef6A2DB3",
@@ -95,7 +95,7 @@
     }
   },
   "GHO": {
-    "latestBlockNumber": 26373650,
+    "latestBlockNumber": 26380822,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xc2aaCf6553D20d1e9d78E365AAba8032af9c85b0",
@@ -120,37 +120,37 @@
     }
   },
   "V3_EMISSION": {
-    "latestBlockNumber": 26373648,
+    "latestBlockNumber": 26380821,
     "indexedContracts": {
       "EMISSION_MANAGER": {
         "address": "0x223d844fc4B006D67c0cDbd39371A9F73f69d974",
         "deploymentBlock": 16291117,
-        "firstIndexedAt": 26366469
+        "firstIndexedAt": 26373648
       }
     }
   },
   "LIDO_EMISSION": {
-    "latestBlockNumber": 26373649,
+    "latestBlockNumber": 26380821,
     "indexedContracts": {
       "EMISSION_MANAGER": {
         "address": "0x223d844fc4B006D67c0cDbd39371A9F73f69d974",
         "deploymentBlock": 20262410,
-        "firstIndexedAt": 26366470
+        "firstIndexedAt": 26373649
       }
     }
   },
   "ETHERFI_EMISSION": {
-    "latestBlockNumber": 26373650,
+    "latestBlockNumber": 26380821,
     "indexedContracts": {
       "EMISSION_MANAGER": {
         "address": "0x223d844fc4B006D67c0cDbd39371A9F73f69d974",
         "deploymentBlock": 20625515,
-        "firstIndexedAt": 26366471
+        "firstIndexedAt": 26373650
       }
     }
   },
   "V4": {
-    "latestBlockNumber": 26373651,
+    "latestBlockNumber": 26380822,
     "indexedContracts": {
       "ACCESS_MANAGER": {
         "address": "0x08aE3BE30958cDd1847ec58fFfd4C451a87fDF01",
@@ -160,7 +160,7 @@
     }
   },
   "V4_SPOKE_PM": {
-    "latestBlockNumber": 26373651,
+    "latestBlockNumber": 26380822,
     "indexedContracts": {
       "0x7320cf22ac095ba2a2e0a652f77efb836c2e751b": {
         "address": "0x7320cf22ac095ba2a2e0a652f77efb836c2e751b",
@@ -426,11 +426,21 @@
         "address": "0x6493a23874b506d5bb6038ea44ae9cc74cd00849",
         "deploymentBlock": 24720870,
         "firstIndexedAt": 24720870
+      },
+      "0x092508a2eb395cb3861a3fdb65405744d706476f": {
+        "address": "0x092508a2eb395cb3861a3fdb65405744d706476f",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
+      },
+      "0x115af1c2db26cd8eca3f29055e4e424af4edf616": {
+        "address": "0x115af1c2db26cd8eca3f29055e4e424af4edf616",
+        "deploymentBlock": 24720870,
+        "firstIndexedAt": 24720870
       }
     }
   },
   "V4_SENTORA": {
-    "latestBlockNumber": 26373652,
+    "latestBlockNumber": 26380833,
     "indexedContracts": {
       "ACCESS_MANAGER": {
         "address": "0xbb8C3EF59895B48037C42c57e6E6840A902af7A2",
@@ -445,7 +455,7 @@
     }
   },
   "V4_SENTORA_SPOKE_PM": {
-    "latestBlockNumber": 26373652,
+    "latestBlockNumber": 26380833,
     "indexedContracts": {
       "0x9ebf0c19bf7dfe859820cc09e846114b53814e52": {
         "address": "0x9ebf0c19bf7dfe859820cc09e846114b53814e52",

@@ -794,11 +794,11 @@
                 "owners": [
                   "0x397eE87383787812fe0828Ead2BCAda6AE8FAc6F",
                   "0x27a3Fc3D99EACE1FdCA71900A72079F6c3a4b4F8",
-                  "0x70d80eb5390C7872233D4a9B0b0d74Ea749294c1",
+                  "0xB2578731F304CF96F1153315b84cF4CD74333d4E",
                   "0x59d07dc34B135B17b87840a86BFF7302039E7EDf",
                   "0x8ecd93982FfbB2f937ADa6c6e50d1950974081C0",
                   "0x28939ef21690Fe8358E93d661d1ce6d7fA9154F3",
-                  "0x75D95fF8D48E2Ca5c4235322A8AC8e52A76124cD",
+                  "0x3528a7b761A1Eac8BB95C371CC05260e465f2347",
                   "0x1Aa35Ee905b481b0497c597392Fc41E2DA92d74B",
                   "0x8D0855047b59a5f11262f095ee724b5A59a89710"
                 ],
@@ -11358,6 +11358,64 @@
           }
         ]
       },
+      "Untracked Spoke @ GLOBAL_DOLLAR Hub (0x115af1…)": {
+        "address": "0x115aF1C2db26cD8ECa3f29055E4E424AF4edF616",
+        "modifiers": [
+          {
+            "modifier": "SPOKE_CONFIGURATOR_ROLE",
+            "addresses": [
+              {
+                "address": "0x9BFFf48BFb5A7AE70c348d4d4cb97E8DEFa5389a",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "updateLiquidationConfig",
+              "addReserve",
+              "updateReserveConfig",
+              "updateDynamicReserveConfig",
+              "addDynamicReserveConfig",
+              "updatePositionManager",
+              "updateReservePriceSource"
+            ]
+          },
+          {
+            "modifier": "SPOKE_USER_POSITION_UPDATER_ROLE",
+            "addresses": [],
+            "functions": [
+              "updateUserDynamicConfig",
+              "updateUserRiskPremium"
+            ]
+          }
+        ],
+        "proxyAdmin": "0x02e21f3f07994a7609601ae6c15f703903a99aa1"
+      },
+      "_Untracked Spoke @ GLOBAL_DOLLAR Hub (0x115af1…) ProxyAdmin": {
+        "address": "0x02e21f3f07994a7609601ae6c15f703903a99aa1",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                "owners": [
+                  "0x6F0A37801E9dC215AA70117553B5501e65FEea0C",
+                  "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                  "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                  "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                  "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                  "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                  "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                  "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                ],
+                "signersThreshold": 5
+              }
+            ],
+            "functions": []
+          }
+        ]
+      },
       "Manual AGRS": {
         "address": "0x6f48d9Cdb8EE6E17c96B2d8Aec128af426A295c1",
         "modifiers": [
@@ -11750,6 +11808,17 @@
           "0xb2380e93": "301",
           "0x826002e2": "302",
           "0x91c46d09": "302"
+        },
+        "0x115af1c2db26cd8eca3f29055e4e424af4edf616": {
+          "0x87107a6d": "301",
+          "0x4de8d2ba": "301",
+          "0xa0f5b9ab": "301",
+          "0xe903e1bd": "301",
+          "0x9290fa00": "301",
+          "0x9ca9c134": "301",
+          "0xb2380e93": "301",
+          "0x826002e2": "302",
+          "0x91c46d09": "302"
         }
       },
       "roleLabels": {
@@ -11767,6 +11836,36 @@
     },
     "tokenizationSpokes": {
       "contracts": {
+        "waCorecirBTC TokenizationSpoke (0x092508…)": {
+          "address": "0x092508a2Eb395cb3861a3fdB65405744d706476f",
+          "modifiers": [],
+          "proxyAdmin": "0xeeaf288bca8737751826ff99de97f95d8b706f5e"
+        },
+        "_waCorecirBTC TokenizationSpoke (0x092508…) ProxyAdmin": {
+          "address": "0xeeaf288bca8737751826ff99de97f95d8b706f5e",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x6F0A37801E9dC215AA70117553B5501e65FEea0C",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
         "CORE WETH TokenizationSpoke": {
           "address": "0x7320CF22Ac095bA2a2e0a652F77efB836c2E751b",
           "modifiers": [],
@@ -13078,6 +13177,35 @@
           "0x6c044c0d3801499bcabfad458b70880bc518e9f7",
           "0x51305839ce822a7b4b12aa7d86ea7005052d575c",
           "0xfbc184337dc6595d8bf62968bda46e7de7af9c3d"
+        ],
+        "0x115af1c2db26cd8eca3f29055e4e424af4edf616": [
+          "0x17a54b8d6d9c68e7fa1c7112ac998ea1ba51d11e",
+          "0x6c044c0d3801499bcabfad458b70880bc518e9f7",
+          "0x51305839ce822a7b4b12aa7d86ea7005052d575c",
+          "0xfbc184337dc6595d8bf62968bda46e7de7af9c3d"
+        ]
+      }
+    },
+    "untracked": {
+      "0x092508a2eb395cb3861a3fdb65405744d706476f": {
+        "name": "waCorecirBTC TokenizationSpoke (0x092508…)",
+        "type": "TokenizationSpoke",
+        "hubs": [
+          "0xcca852bc40e560adc3b1cc58ca5b55638ce826c9"
+        ],
+        "sources": [
+          "hubSpokeList"
+        ]
+      },
+      "0x115af1c2db26cd8eca3f29055e4e424af4edf616": {
+        "name": "Untracked Spoke @ GLOBAL_DOLLAR Hub (0x115af1…)",
+        "type": "Spoke",
+        "hubs": [
+          "0x62d63197660c080236193ca60b70e49a08e90368"
+        ],
+        "sources": [
+          "hubSpokeList",
+          "accessManagerTarget"
         ]
       }
     }
