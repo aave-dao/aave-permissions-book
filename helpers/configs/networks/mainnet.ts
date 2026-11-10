@@ -5,6 +5,7 @@ import {
   AaveV3Ethereum,
   AaveV3EthereumLido,
   AaveV3EthereumEtherFi,
+  AaveV3EthereumHorizon,
   AaveV4Ethereum,
   AaveV4EthereumSentoraCurated,
   GovernanceV3Ethereum,
@@ -79,6 +80,21 @@ const etherFiPool = createV3Pool({
 });
 
 // ============================================================================
+// Horizon Pool
+// ============================================================================
+const horizonPool = createV3Pool({
+  aclBlock: 23125535,
+  emissionManagerBlock: 23125533,
+  collectorBlock: 21765718,
+  rwaATokenManagerBlock: 23125534,
+  functionsPermissionsHorizonJson: './statics/functionsPermissionsHorizon.json',
+  addressBook: {
+    ...AaveV3EthereumHorizon,
+    PROXY_ADMIN: MiscEthereum.PROXY_ADMIN,
+  },
+});
+
+// ============================================================================
 // GHO Pool
 // ============================================================================
 const ghoPool = createGhoPool({
@@ -91,6 +107,7 @@ const ghoPool = createGhoPool({
   addresses: {
     '0x5513224daaEABCa31af5280727878d52097afA05': 'Gho Core Direct Minter',
     '0x2cE01c87Fec1b71A9041c52CaED46Fc5f4807285': 'Gho Lido Direct Minter',
+    [AaveV3EthereumHorizon.GHO_DIRECT_MINTER]: 'Gho Horizon Direct Minter',
   },
 });
 
@@ -241,11 +258,22 @@ export const mainnetConfig: NetworkConfig = {
     [AaveV4EthereumSentoraCurated.SENTORA_FEE_ADMIN]: 'Sentora Fee Admin',
     [AaveV4EthereumSentoraCurated.REDUCE_RISK_STEWARD_WRAPPER]: 'Sentora Reduce Risk Steward Wrapper',
     '0x043a48d1Bd61c59f67C09215D5Eae6b743Fe533d': 'Sentora Deployer (to be relinquished)',
+    '0x13B57382c36BAB566E75C72303622AF29E27e1d3': 'Aave Horizon Emergency Multisig',
+    '0xE6ec1f0Ae6Cd023bd0a9B4d0253BDC755103253c': 'Aave Horizon Ops Multisig',
+    '0x09e8E1408a68778CEDdC1938729Ea126710E7Dda': 'Horizon Phase-One Listing Executor',
+    [AaveV3EthereumHorizon.GHO_DIRECT_MINTER]: 'Gho Horizon Direct Minter',
+    '0xad309BB6f13074128b4F23EF9EA2fe8552AfCA83': 'Superstate USTB Authorized Address',
+    '0x8abC89D9b56dFD90dA18e8E18CFaC9111100bDd1': 'Superstate USCC Authorized Address',
+    '0x7Bf090B97f896fB77e852CC98aa52A8Cb7DC02eC': 'Centrifuge JTRSY/JAAA Authorized Address',
+    '0x0C607d48fAe9ac1D3eA0c035864Ba3bAfB09D2d9': 'Securitize ACRED/VBILL Authorized Address',
+    '0x8003544D32eE074aA8A1fb72129Fa8Ef7fe02E5f': 'Midas mGLOBAL/mWIN Authorized Address',
+    '0x59c1eAcEc450c57Dcb9b8725d0F96635C2b676Ee': 'Securitize HINC Authorized Address',
   }),
   pools: {
     [Pools.V3]: v3Pool,
     [Pools.LIDO]: lidoPool,
     [Pools.ETHERFI]: etherFiPool,
+    [Pools.HORIZON]: horizonPool,
     [Pools.GHO]: ghoPool,
     [Pools.V2]: v2Pool,
     [Pools.V2_AMM]: v2AmmPool,

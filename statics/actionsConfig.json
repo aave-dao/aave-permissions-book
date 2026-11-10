@@ -94,5 +94,12 @@
     "updateCollateralSide",
     "updateLstPriceCaps",
     "updateStablePriceCaps"
+  ],
+  "rwaATokenTransfer": [
+    "transferRwaAToken"
+  ],
+  "rwaATokenTransferRoles": [
+    "grantAuthorizedTransferRole",
+    "revokeAuthorizedTransferRole"
   ]
 }

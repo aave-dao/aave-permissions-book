@@ -48,6 +48,9 @@ export type ClinicSteward = {
   contracts: Contracts;
   clinicStewardRoles: Roles;
 };
+export type RwaATokenManager = {
+  rwaATokenManagerRoles: Roles;
+};
 export type Umbrella = {
   contracts: Contracts;
   umbrellaRoles: Roles;
@@ -91,6 +94,7 @@ export type PoolInfo = {
   govV3?: GovV3;
   collector?: Collector;
   clinicSteward?: ClinicSteward;
+  rwaATokenManager?: RwaATokenManager;
   umbrella?: Umbrella;
   ppc?: Ppc;
   agentHub?: AgentHub;
@@ -130,6 +134,8 @@ export type PoolConfigs = {
 
   functionsPermissionsAgentHubJson?: string;
   functionsPermissionsLlamaRiskJson?: string;
+  functionsPermissionsHorizonJson?: string;
+  rwaATokenManagerBlock?: number;
 
   accessManagerBlock?: number;
   roleLabels?: Record<string, string>;

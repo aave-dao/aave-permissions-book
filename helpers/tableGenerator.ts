@@ -1,4 +1,5 @@
 import { explorerAddressUrlComposer } from './explorer.js';
+import { isUnknownRoleKey } from './adminRoles.js';
 import { getLineSeparator, getTableBody, getTableHeader } from './tables.js';
 import { AddressInfo, Contracts, ContractsByAddress, EmissionAdminsByToken, PoolGuardians } from './types.js';
 
@@ -182,7 +183,7 @@ export const generateRoleTable = (
   for (const role of Object.keys(roles)) {
     const roleAddresses = roles[role] || [];
     table += getTableBody([
-      role,
+      isUnknownRoleKey(role) ? `Unknown role ${role}` : role,
       roleAddresses
         .map((roleAddress: string) =>
           ctx.generateTableAddress(
