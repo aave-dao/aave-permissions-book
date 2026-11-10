@@ -1,0 +1,39 @@
+abis/horizon.ts
+  s_2bc10e7d26489f::t_cee8564ea603ed 25-34
+helpers/configs/networks/mainnet.ts
+  s_2bc10e7d26489f::t_d82d2de34821fd 93,110,269-270
+out/ETHEREUM-GHO.md
+  s_2bc10e7d26489f::t_9e1fb0d66dd6a1 17-18,55-57
+out/ETHEREUM-HORIZON.md
+  s_2bc10e7d26489f::t_44bac78d9feefd 11,14,18,41-42,57,61,70,94-105
+out/permissions/1-permissions.json
+  s_2bc10e7d26489f::t_48c8c187a1e7cc 10011,10055,14590-14608,14670-14689
+out/permissions/metadata/1-metadata.json
+  s_2bc10e7d26489f::t_2fd8d101ee9f97 98,483,503
+package-lock.json
+  s_2bc10e7d26489f::t_69882d28c8cc27 16,26-28,1060-1062
+package.json
+  s_2bc10e7d26489f::t_674c4aa5b17ac6 23
+scripts/createTables.ts
+  s_2bc10e7d26489f::t_d037172051e65a 72,85,687-692
+scripts/horizonPermissions.ts
+  s_2bc10e7d26489f::t_ed23cee37eedfb 1,17,25-26,38-42,53
+statics/actionsConfig.json
+  s_2bc10e7d26489f::t_36456afa8148ec 97-103,105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f9483d876af35cacde55732c4b62595496476c14",
+  "prompts": {},
+  "sessions": {
+    "s_2bc10e7d26489f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c17fbce8-c529-4890-a816-221a667180e8",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Alexandru Niculae <43644109+avniculae@users.noreply.github.com>"
+    }
+  }
+}
