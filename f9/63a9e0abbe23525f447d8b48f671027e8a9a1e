@@ -1,0 +1,19 @@
+scripts/horizonPermissions.ts
+  s_2bc10e7d26489f::t_42e7a952f8f46a 1-8,60-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f963a9e0abbe23525f447d8b48f671027e8a9a1e",
+  "prompts": {},
+  "sessions": {
+    "s_2bc10e7d26489f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c17fbce8-c529-4890-a816-221a667180e8",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Alexandru Niculae <43644109+avniculae@users.noreply.github.com>"
+    }
+  }
+}
