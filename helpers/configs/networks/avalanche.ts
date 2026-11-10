@@ -63,6 +63,8 @@ const aaveV4 = createV4({
     ACCESS_MANAGER: AaveV4Avalanche.ACCESS_MANAGER,
     HUB_CONFIGURATOR: AaveV4Avalanche.HUB_CONFIGURATOR,
     SPOKE_CONFIGURATOR: AaveV4Avalanche.SPOKE_CONFIGURATOR,
+    POOL_ADDRESSES_PROVIDER: AaveV3Avalanche.POOL_ADDRESSES_PROVIDER,
+    ACL_MANAGER: AaveV3Avalanche.ACL_MANAGER,
     RISK_STEWARD: AaveV4Avalanche.RISK_STEWARD,
     ...v4MainAddressBook,
     ...(AaveV4Avalanche.POSITION_MANAGERS as Record<string, string>),

@@ -12,10 +12,14 @@
 |  [TreasurySpoke](https://etherscan.io/address/0xcCC6579021A8309E3f75a8147304f04f7f7D29B7) |  V4 Security Council | |--------|--------|
 |  [Manual AGRS](https://etherscan.io/address/0x0e0D14B3A52E5E3548B0C530b4C5207d7fD01785) |  not upgradeable | |--------|--------|
 |  [Reduce Risk Steward Wrapper](https://etherscan.io/address/0x148391a719ff853d7E3C718a09e2Ad00659250A0) |  not upgradeable | |--------|--------|
+|  [PoolAddressesProvider](https://etherscan.io/address/0xFA13FCaf38bf5257DaFDB3C9d268F514eDDe46fe) |  not upgradeable | |--------|--------|
+|  [ACLManager](https://etherscan.io/address/0xc7a5bf5fED269408d9c2250462910dA32d83f043) |  not upgradeable | |--------|--------|
 
 ### Actions type
 | type |can be executed by |
 |----------|----------|
+|  adminsConfiguration |  Governance | |--------|--------|
+|  protocolUpgradeablity |  Governance | |--------|--------|
 |  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
@@ -33,13 +37,15 @@
 |  [OUSD YIELD Spoke](https://etherscan.io/address/0xbb97b61Ad6747D337E5805F2d159d275BB1f0828) |  [OUSD YIELD Spoke ProxyAdmin](https://etherscan.io/address/0xFC00Bd204B671d1b7B1FCfa7b7Ce5C16bDd3285b) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 |  [BLUECHIP Spoke](https://etherscan.io/address/0xA37e7cdC557f3C7f745FB3F337b6439979662c46) |  [BLUECHIP Spoke ProxyAdmin](https://etherscan.io/address/0x253d61009E030C4bd3f00389ee78eC1bb0711021) |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) |  updateLiquidationConfig, addReserve, updateReserveConfig, updateDynamicReserveConfig, addDynamicReserveConfig, updatePositionManager, updateReservePriceSource | |--------|--------|--------|--------|--------|
 |  [BLUECHIP Spoke](https://etherscan.io/address/0xA37e7cdC557f3C7f745FB3F337b6439979662c46) |  [BLUECHIP Spoke ProxyAdmin](https://etherscan.io/address/0x253d61009E030C4bd3f00389ee78eC1bb0711021) |  SPOKE_USER_POSITION_UPDATER_ROLE |   |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
-|  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addLiquidationFee, updateLiquidationFee, updatePositionManager | |--------|--------|--------|--------|--------|
+|  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517), [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addLiquidationFee, updateLiquidationFee, updatePositionManager | |--------|--------|--------|--------|--------|
 |  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) |  - |  SENTORA_RISK_ROLE |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343), [Manual AGRS](https://etherscan.io/address/0x0e0D14B3A52E5E3548B0C530b4C5207d7fD01785), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517) |  addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addDynamicReserveConfig, updateDynamicReserveConfig | |--------|--------|--------|--------|--------|
 |  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) |  - |  SENTORA_EMERGENCY_ROLE |  [Sentora Emergency Admin](https://etherscan.io/address/0x37409c868BA42B91ff7E7b64D5BC020897444fAf), [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517) |  pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve | |--------|--------|--------|--------|--------|
 |  [TreasurySpoke](https://etherscan.io/address/0xcCC6579021A8309E3f75a8147304f04f7f7D29B7) |  [TreasurySpoke ProxyAdmin](https://etherscan.io/address/0xB73edB24752457229f15B598A9bB4F53384Add3c) |  onlyOwner |  [Sentora Fee Admin](https://etherscan.io/address/0x769C952ac9Bbb45524790B658fd70938a8A5d19E) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://etherscan.io/address/0x0e0D14B3A52E5E3548B0C530b4C5207d7fD01785) |  - |  onlyOwner |  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://etherscan.io/address/0x0e0D14B3A52E5E3548B0C530b4C5207d7fD01785) |  - |  onlyRiskCouncil |  [Sentora Reduce Risk Steward Wrapper](https://etherscan.io/address/0x148391a719ff853d7E3C718a09e2Ad00659250A0) |  updateHubAssetIRs, updateHubSpokeCaps, updateReserveConfigs, updateDynamicReserveConfigs, addDynamicReserveConfigs, updateSpokeLiquidationConfigs, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates | |--------|--------|--------|--------|--------|
 |  [Reduce Risk Steward Wrapper](https://etherscan.io/address/0x148391a719ff853d7E3C718a09e2Ad00659250A0) |  - |  onlyRiskCouncil |  [Sentora Emergency Admin](https://etherscan.io/address/0x37409c868BA42B91ff7E7b64D5BC020897444fAf) |  reduceHubSpokeCaps, addReducedDynamicReserveConfigs | |--------|--------|--------|--------|--------|
+|  [PoolAddressesProvider](https://etherscan.io/address/0xFA13FCaf38bf5257DaFDB3C9d268F514eDDe46fe) |  - |  onlyOwner |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setMarketId, setAddress, setAddressAsProxy, setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, setPoolDataProvider | |--------|--------|--------|--------|--------|
+|  [ACLManager](https://etherscan.io/address/0xc7a5bf5fED269408d9c2250462910dA32d83f043) |  - |  onlyRole |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) |  setRoleAdmin | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -71,7 +77,17 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://etherscan.io/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://etherscan.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://etherscan.io/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://etherscan.io/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://etherscan.io/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://etherscan.io/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://etherscan.io/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://etherscan.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+|  [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x6F0A37801E9dC215AA70117553B5501e65FEea0C](https://etherscan.io/address/0x6F0A37801E9dC215AA70117553B5501e65FEea0C), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://etherscan.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://etherscan.io/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://etherscan.io/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://etherscan.io/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://etherscan.io/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://etherscan.io/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://etherscan.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+
+### Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [Executor_lvl1](https://etherscan.io/address/0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A) | |--------|--------|
+|  RISK_ADMIN |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343) | |--------|--------|
+|  ASSET_LISTING_ADMIN |   | |--------|--------|
+|  EMERGENCY_ADMIN |   | |--------|--------|
+|  FLASH_BORROWER |   | |--------|--------|
+|  POOL_ADMIN |   | |--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |
@@ -85,7 +101,7 @@
 |  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://etherscan.io/address/0x93bd198d4F64798157233142769159329b3cBbce) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
-|  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517) | |--------|--------|
+|  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517), [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  SENTORA_RISK_ROLE |  [Sentora Executor](https://etherscan.io/address/0x59D15D3f4e86499d64f68ad7096a8D0939dA8343), [Manual AGRS](https://etherscan.io/address/0x0e0D14B3A52E5E3548B0C530b4C5207d7fD01785), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517) | |--------|--------|
 |  SENTORA_EMERGENCY_ROLE |  [Sentora Emergency Admin](https://etherscan.io/address/0x37409c868BA42B91ff7E7b64D5BC020897444fAf), [V4 Security Council](https://etherscan.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://etherscan.io/address/0x14339e2178A954d5FB839D5Ff31644fE0F25F517) | |--------|--------|
 

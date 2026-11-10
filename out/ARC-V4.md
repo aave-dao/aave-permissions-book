@@ -11,6 +11,8 @@
 |  [SpokeConfigurator](https://explorer.arc.io/address/0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576) |  not upgradeable | |--------|--------|
 |  [TreasurySpoke](https://explorer.arc.io/address/0xcbd466CB8709D9f6dd8312668B4dbef394cE0e15) |  V4 Security Council | |--------|--------|
 |  [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) |  not upgradeable | |--------|--------|
+|  [PoolAddressesProvider](https://explorer.arc.io/address/0xf74284E5aeDC3AD57CD2Fa2461bf2E1762422a12) |  not upgradeable | |--------|--------|
+|  [ACLManager](https://explorer.arc.io/address/0x4d4B307857eFff79E786923F2A277ea298E88aEA) |  not upgradeable | |--------|--------|
 
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
@@ -23,6 +25,8 @@
 ### Actions type
 | type |can be executed by |
 |----------|----------|
+|  adminsConfiguration |  Multi-sig | |--------|--------|
+|  protocolUpgradeablity |  Multi-sig | |--------|--------|
 |  updateRiskParameters |  Steward | |--------|--------|
 
 ### Contracts
@@ -38,10 +42,12 @@
 |  [FOREX Spoke](https://explorer.arc.io/address/0x4164EBCAF74670aa74C8D4F59de6157c0780F1bB) |  [FOREX Spoke ProxyAdmin](https://explorer.arc.io/address/0xE8d75bb46C15c70dB2A464886f51b8a46A871108) |  SPOKE_USER_POSITION_UPDATER_ROLE |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
 |  [USDC MAPLE ESpoke](https://explorer.arc.io/address/0x18Dde098d25722C14e09842a6Fa7db6aAFC395a2) |  [USDC MAPLE ESpoke ProxyAdmin](https://explorer.arc.io/address/0xe8b10a5a66dD5DAC9698EC1256A6F3171524359E) |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://explorer.arc.io/address/0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576), [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  updateLiquidationConfig, addReserve, updateReserveConfig, updateDynamicReserveConfig, addDynamicReserveConfig, updatePositionManager, updateReservePriceSource | |--------|--------|--------|--------|--------|
 |  [USDC MAPLE ESpoke](https://explorer.arc.io/address/0x18Dde098d25722C14e09842a6Fa7db6aAFC395a2) |  [USDC MAPLE ESpoke ProxyAdmin](https://explorer.arc.io/address/0xe8b10a5a66dD5DAC9698EC1256A6F3171524359E) |  SPOKE_USER_POSITION_UPDATER_ROLE |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  updateUserDynamicConfig, updateUserRiskPremium | |--------|--------|--------|--------|--------|
-|  [SpokeConfigurator](https://explorer.arc.io/address/0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addLiquidationFee, updateLiquidationFee, addDynamicReserveConfig, updateDynamicReserveConfig, pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve, updatePositionManager | |--------|--------|--------|--------|--------|
+|  [SpokeConfigurator](https://explorer.arc.io/address/0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576) |  - |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8), [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  updateReservePriceSource, updateLiquidationTargetHealthFactor, updateHealthFactorForMaxBonus, updateLiquidationBonusFactor, updateLiquidationConfig, addReserve, updatePaused, updateFrozen, updateBorrowable, updateReceiveSharesEnabled, updateCollateralRisk, addCollateralFactor, updateCollateralFactor, addMaxLiquidationBonus, updateMaxLiquidationBonus, addLiquidationFee, updateLiquidationFee, addDynamicReserveConfig, updateDynamicReserveConfig, pauseAllReserves, freezeAllReserves, pauseReserve, freezeReserve, updatePositionManager | |--------|--------|--------|--------|--------|
 |  [TreasurySpoke](https://explorer.arc.io/address/0xcbd466CB8709D9f6dd8312668B4dbef394cE0e15) |  [TreasurySpoke ProxyAdmin](https://explorer.arc.io/address/0xfa12D100A649c8D4dCC0047f9618b2bB4939f6A0) |  onlyOwner |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  supply, supplySkimmed, withdraw, transfer | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) |  - |  onlyOwner |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5) |  setConfig, setAddressRestricted | |--------|--------|--------|--------|--------|
 |  [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) |  - |  onlyRiskCouncil |  [Risk Council](https://explorer.arc.io/address/0xa3b6DA2C0853357dfd5bd0ae1A4f07dDB52682d1) |  updateHubAssetIRs, updateHubSpokeCaps, updateReserveConfigs, updateDynamicReserveConfigs, addDynamicReserveConfigs, updateSpokeLiquidationConfigs, updateLstPriceCaps, updateStablePriceCaps, updatePendleDiscountRates | |--------|--------|--------|--------|--------|
+|  [PoolAddressesProvider](https://explorer.arc.io/address/0xf74284E5aeDC3AD57CD2Fa2461bf2E1762422a12) |  - |  onlyOwner |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  setMarketId, setAddress, setAddressAsProxy, setPoolImpl, setPoolConfiguratorImpl, setPriceOracle, setACLManager, setACLAdmin, setPriceOracleSentinel, setPoolDataProvider | |--------|--------|--------|--------|--------|
+|  [ACLManager](https://explorer.arc.io/address/0x4d4B307857eFff79E786923F2A277ea298E88aEA) |  - |  onlyRole |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5) |  setRoleAdmin | |--------|--------|--------|--------|--------|
 
 ### PositionManagers Contracts
 | contract |proxyAdmin |modifier |permission owner |functions |
@@ -61,8 +67,18 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://explorer.arc.io/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://explorer.arc.io/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://explorer.arc.io/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://explorer.arc.io/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://explorer.arc.io/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0x9440850335c7C2a644dc2abEBBA93463c9736F2C](https://explorer.arc.io/address/0x9440850335c7C2a644dc2abEBBA93463c9736F2C), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://explorer.arc.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://explorer.arc.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
+|  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) |  5/8 |  0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9 |  [0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF](https://explorer.arc.io/address/0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF), [0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749](https://explorer.arc.io/address/0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749), [0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065](https://explorer.arc.io/address/0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065), [0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884](https://explorer.arc.io/address/0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884), [0x75C26ED4D9c5D331665766394D933E12f8597a55](https://explorer.arc.io/address/0x75C26ED4D9c5D331665766394D933E12f8597a55), [0x6F0A37801E9dC215AA70117553B5501e65FEea0C](https://explorer.arc.io/address/0x6F0A37801E9dC215AA70117553B5501e65FEea0C), [0xbf113Fa52454A94185b65e6f2E818B7f178f937a](https://explorer.arc.io/address/0xbf113Fa52454A94185b65e6f2E818B7f178f937a), [0x606dC57cd166643760E049609bfd1D8a698D3bAc](https://explorer.arc.io/address/0x606dC57cd166643760E049609bfd1D8a698D3bAc) | |--------|--------|--------|--------|
 |  [Risk Council](https://explorer.arc.io/address/0xa3b6DA2C0853357dfd5bd0ae1A4f07dDB52682d1) |  2/2 |  0xa3b6DA2C0853357dfd5bd0ae1A4f07dDB52682d1 |  [0x2B99790c35a401be873FA7Eb514D9220736BB1cA](https://explorer.arc.io/address/0x2B99790c35a401be873FA7Eb514D9220736BB1cA), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://explorer.arc.io/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef) | |--------|--------|--------|--------|
+
+### Admins
+| Role |Contract |
+|----------|----------|
+|  DEFAULT_ADMIN |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5) | |--------|--------|
+|  RISK_ADMIN |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) | |--------|--------|
+|  ASSET_LISTING_ADMIN |   | |--------|--------|
+|  EMERGENCY_ADMIN |   | |--------|--------|
+|  FLASH_BORROWER |   | |--------|--------|
+|  POOL_ADMIN |   | |--------|--------|
 
 ### AccessManager Roles
 | Role |Contract |
@@ -76,5 +92,5 @@
 |  SPOKE_DOMAIN_ADMIN_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://explorer.arc.io/address/0x102610d2A7Fd87A85ad8fdCfC78879be8Fd40576), [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |  [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
-|  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8) | |--------|--------|
+|  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://explorer.arc.io/address/0x8e79b0541122d3822eC93082cEB1ab03EDBc1Fd5), [Manual AGRS](https://explorer.arc.io/address/0x73adb67D5De247D40152Cf06aC16174b3d87D2c8), [V4 Security Council](https://explorer.arc.io/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
 
