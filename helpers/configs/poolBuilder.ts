@@ -12,6 +12,7 @@ export interface V4Config {
   addressBook: AddressBook;
   roleLabels?: Record<string, string>;
   tokenizationSpokesAddressBook?: Record<string, string>;
+  aclBlock?: number;
   ppcPermissionsJson?: string;
   ppcAddressBook?: AddressBook;
 }

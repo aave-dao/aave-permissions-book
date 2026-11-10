@@ -153,8 +153,16 @@ const buildActionPoolInfo = (
   const isV4 = isV4Pool(pool);
 
   if (isV4) {
+    // Executors only: a shared ACLManager's admin lives in V3 governance, and the rest of V3 governance would add actions V4 lacks
+    const v3GovExecutors = Object.fromEntries(
+      Object.entries(networkPermits['V3']?.govV3?.contracts ?? {}).filter(
+        ([contractName]) => contractName.startsWith('Executor'),
+      ),
+    );
+
     return {
       ...currentPoolContracts,
+      ...v3GovExecutors,
       ...networkPermits[pool]?.govV3?.contracts,
     } as Contracts;
   }
