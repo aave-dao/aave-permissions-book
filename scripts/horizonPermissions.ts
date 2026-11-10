@@ -13,6 +13,7 @@ import {
   PermissionsJson,
 } from '../helpers/types.js';
 import { generateRoles } from '../helpers/jsonParsers.js';
+import { isUnknownRoleKey } from '../helpers/adminRoles.js';
 import { uniqueAddresses } from '../helpers/addressUtils.js';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
 import {
@@ -86,12 +87,16 @@ export const resolveHorizonModifiers = async (
       ownerResolver,
     );
 
+    // Every role other than the default admin gates transferRwaAToken for the aToken it was derived from,
+    // including roles whose aToken is not a current reserve
     const authorizedTransferModifiers = Object.keys(rwaATokenManagerRoles)
-      .filter((roleName) => roleName.startsWith(AUTHORIZED_TRANSFER_PREFIX))
+      .filter((roleName) => roleName !== 'DEFAULT_ADMIN')
       .filter((roleName) => rwaATokenManagerRoles[roleName].length > 0)
       .sort()
       .map((roleName) => ({
-        modifier: `onlyAuthorizedTransfer(${roleName.slice(AUTHORIZED_TRANSFER_PREFIX.length)})`,
+        modifier: isUnknownRoleKey(roleName)
+          ? `onlyAuthorizedTransfer(unknown aToken, role ${roleName})`
+          : `onlyAuthorizedTransfer(${roleName.slice(AUTHORIZED_TRANSFER_PREFIX.length)})`,
         addresses: uniqueAddresses(
           mapRoleAddresses(roleName, rwaATokenManagerRoles, owners),
         ),

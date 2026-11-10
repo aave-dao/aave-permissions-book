@@ -50,11 +50,22 @@ const initializeRoleCodeMap = (
   return roleCodeMap;
 };
 
+const ROLE_CODE_REGEX = /^0x[0-9a-f]{64}$/;
+
+/**
+ * Whether a role key is a raw role hash, i.e. a role that had no known name when its events were processed.
+ */
+export const isUnknownRoleKey = (roleKey: string): boolean => ROLE_CODE_REGEX.test(roleKey);
+
 /**
  * Processes RoleGranted/RoleRevoked events to determine current role assignments.
  *
  * This is a pure function that takes event logs and returns the computed roles.
  * It does NOT make any RPC calls.
+ *
+ * Roles without a known name are kept under their raw hash instead of being dropped, since events are
+ * indexed incrementally and a dropped event is never processed again. Once a name becomes known, the
+ * hash entry is merged into it.
  *
  * @param oldRoles - Previously known role assignments (from saved JSON)
  * @param roleNames - List of role names to track
@@ -77,29 +88,37 @@ export const getRoleAdmins = ({
   eventLogs: RoleEventLog[];
 }): Record<string, string[]> => {
   const roleHexToNameMap = initializeRoleCodeMap(roleNames, collector, roleCodes);
-  const roles: Record<string, string[]> = { ...oldRoles };
+  const roles: Record<string, string[]> = {};
+
+  // Previously unknown roles that now have a name are merged into it
+  for (const [roleKey, accounts] of Object.entries(oldRoles)) {
+    const key = isUnknownRoleKey(roleKey) ? (roleHexToNameMap.get(roleKey) ?? roleKey) : roleKey;
+    roles[key] = [...new Set([...(roles[key] ?? []), ...accounts])];
+  }
 
   for (const eventLog of eventLogs) {
     const { role, account } = eventLog.args;
-    const roleName = roleHexToNameMap.get(role);
+    const roleCode = role.toLowerCase();
+    const roleKey = roleHexToNameMap.get(roleCode) ?? roleCode;
 
     if (eventLog.eventName === 'RoleGranted') {
-      if (roleName && !roles[roleName]) {
-        roles[roleName] = [];
+      if (!roles[roleKey]) {
+        roles[roleKey] = [];
       }
-
-      if (roleName && roles[roleName]) {
-        const accountFound = roles[roleName].find(
-          (roleAddress) => roleAddress === account,
-        );
-        if (!accountFound) {
-          roles[roleName].push(account);
-        }
+      if (!roles[roleKey].includes(account)) {
+        roles[roleKey].push(account);
       }
     } else if (eventLog.eventName === 'RoleRevoked') {
-      if (roleName && roles[roleName]) {
-        roles[roleName] = roles[roleName].filter((addr) => addr !== account);
+      if (roles[roleKey]) {
+        roles[roleKey] = roles[roleKey].filter((addr) => addr !== account);
       }
+    }
+  }
+
+  // Unknown roles with no holders left carry no information
+  for (const roleKey of Object.keys(roles)) {
+    if (isUnknownRoleKey(roleKey) && roles[roleKey].length === 0) {
+      delete roles[roleKey];
     }
   }
 

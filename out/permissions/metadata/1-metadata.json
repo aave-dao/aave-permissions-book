@@ -479,8 +479,18 @@
       }
     }
   },
+  "HORIZON_EMISSION": {
+    "latestBlockNumber": 26383741,
+    "indexedContracts": {
+      "EMISSION_MANAGER": {
+        "address": "0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F",
+        "deploymentBlock": 23125533,
+        "firstIndexedAt": 26383613
+      }
+    }
+  },
   "HORIZON": {
-    "latestBlockNumber": 26383612,
+    "latestBlockNumber": 26383724,
     "indexedContracts": {
       "ACL_MANAGER": {
         "address": "0xEFD5df7b87d2dCe6DD454b4240b3e0A4db562321",
@@ -496,16 +506,6 @@
         "address": "0x803e5Db3E26e88AD0a682A46c3E04cdd053D0EB9",
         "deploymentBlock": 23125534,
         "firstIndexedAt": 23125534
-      }
-    }
-  },
-  "HORIZON_EMISSION": {
-    "latestBlockNumber": 26383613,
-    "indexedContracts": {
-      "EMISSION_MANAGER": {
-        "address": "0xC2201708289b2C6A1d461A227A7E5ee3e7fE9A2F",
-        "deploymentBlock": 23125533,
-        "firstIndexedAt": 26299662
       }
     }
   }
