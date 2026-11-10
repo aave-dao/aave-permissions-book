@@ -1,4 +1,11 @@
-import { Address, Client, getAddress, getContract, Hex, zeroAddress } from 'viem';
+import {
+  Address,
+  Client,
+  getAddress,
+  getContract,
+  Hex,
+  zeroAddress,
+} from 'viem';
 import {
   AddressBook,
   AddressInfo,
@@ -50,7 +57,9 @@ export const getRwaAuthorizedTransferRoleCodes = async (
       abi: ERC20_SYMBOL_ABI,
       client: provider,
     }).read.symbol()) as string;
-    const roleCode = (await manager.read.getAuthorizedTransferRole([aToken])) as Hex;
+    const roleCode = (await manager.read.getAuthorizedTransferRole([
+      aToken,
+    ])) as Hex;
     roleCodes[roleCode] = `${AUTHORIZED_TRANSFER_PREFIX}${symbol}`;
   }
   return roleCodes;
