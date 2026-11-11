@@ -31,7 +31,7 @@
 
 ### 1. Update Address Book
 
-Ensure the new network is supported in `@bgd-labs/aave-address-book` package.
+Ensure the new network is supported in `@aave-dao/aave-address-book` package.
 
 ### 2. Update Configuration
 
