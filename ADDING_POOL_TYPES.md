@@ -494,7 +494,7 @@ import { createMyPool } from '../poolBuilder.js';
 import { Pools } from '../constants.js';
 
 const myPool = createMyPool({
-  addressBook: MyPoolAddressBook,    // From @bgd-labs/aave-address-book
+  addressBook: MyPoolAddressBook,    // From @aave-dao/aave-address-book
   myContractBlock: 12345678,         // Block where your contract was deployed
   addresses: {                       // Custom address names (optional)
     '0x...': 'My Custom Contract',

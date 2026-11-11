@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bgd-labs/aave-permissions-list.git"
+    "url": "git+https://github.com/aave-dao/aave-permissions-book.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bgd-labs/aave-permissions-list/issues"
+    "url": "https://github.com/aave-dao/aave-permissions-book/issues"
   },
-  "homepage": "https://github.com/bgd-labs/aave-permissions-list#readme",
+  "homepage": "https://github.com/aave-dao/aave-permissions-book#readme",
   "devDependencies": {
     "@aave-dao/aave-address-book": "^4.77.2",
     "@types/node": "^18.8.3",
