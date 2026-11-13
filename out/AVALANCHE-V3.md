@@ -142,7 +142,7 @@
 |  EMERGENCY_ADMIN |  [Aave Protocol Guardian Avalanche](https://snowscan.xyz/address/0x56C1a4b54921DEA9A344967a8693C7E661D72968) | |--------|--------|
 |  ASSET_LISTING_ADMIN |   | |--------|--------|
 |  RISK_ADMIN |  [Proof Of Reserve Executor V3](https://snowscan.xyz/address/0xB94e515615c244Ab25f7A6e592e3Cb7EE31E99F4), [Gho Aave Steward](https://snowscan.xyz/address/0xA5Ba213867E175A182a5dd6A9193C6158738105A), [Manual AGRS](https://snowscan.xyz/address/0x43632469e02CDAaEB4dE3DcBfCAaBEf310975729), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107) | |--------|--------|
-|  FLASH_BORROWER |  [0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3](https://snowscan.xyz/address/0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3), [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://snowscan.xyz/address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7), [0xdeCC46a4b09162F5369c5C80383AAa9159bCf192](https://snowscan.xyz/address/0xdeCC46a4b09162F5369c5C80383AAa9159bCf192) | |--------|--------|
+|  FLASH_BORROWER |  [0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3](https://snowscan.xyz/address/0x14F8e5Fe35b2d0D67dBcE9329f1b5d09f60c06C3), [0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7](https://snowscan.xyz/address/0x352423e2fA5D5c99343d371C9e3bC56C87723Cc7), [0xD2CC30cB0e77B80a34b879ccB6da67799e4ecD83](https://snowscan.xyz/address/0xD2CC30cB0e77B80a34b879ccB6da67799e4ecD83), [0x0C6F0D008B5Ee6CdFbb8BF1CFB0148052e96ac14](https://snowscan.xyz/address/0x0C6F0D008B5Ee6CdFbb8BF1CFB0148052e96ac14) | |--------|--------|
 
 ### Granular Guardian Admins
 | Role |Contract |
