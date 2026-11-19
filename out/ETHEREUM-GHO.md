@@ -62,7 +62,7 @@
 ### Guardians 
 | Guardian |Threshold |Address |Owners |
 |----------|----------|----------|----------|
-|  [Gho Risk Council](https://etherscan.io/address/0x8513e6F37dBc52De87b166980Fa3F50639694B60) |  2/3 |  0x8513e6F37dBc52De87b166980Fa3F50639694B60 |  [0x4b752551fC6345A7de82F76fd7a5015CA16d1a74](https://etherscan.io/address/0x4b752551fC6345A7de82F76fd7a5015CA16d1a74), [0xb291232F480F41c75802C4a60F1D2AC03404Afef](https://etherscan.io/address/0xb291232F480F41c75802C4a60F1D2AC03404Afef), [0x9DE1d45e2786b03498289959203F25b29B4D1193](https://etherscan.io/address/0x9DE1d45e2786b03498289959203F25b29B4D1193) | |--------|--------|--------|--------|
+|  [Gho Risk Council](https://etherscan.io/address/0x8513e6F37dBc52De87b166980Fa3F50639694B60) |  2/3 |  0x8513e6F37dBc52De87b166980Fa3F50639694B60 |  [0x2B99790c35a401be873FA7Eb514D9220736BB1cA](https://etherscan.io/address/0x2B99790c35a401be873FA7Eb514D9220736BB1cA), [0x0341F189E9a56bd146E6FC4F6295ced38B6A8e3c](https://etherscan.io/address/0x0341F189E9a56bd146E6FC4F6295ced38B6A8e3c), [0x9DE1d45e2786b03498289959203F25b29B4D1193](https://etherscan.io/address/0x9DE1d45e2786b03498289959203F25b29B4D1193) | |--------|--------|--------|--------|
 
 ### Admins
 | Role |Contract |
