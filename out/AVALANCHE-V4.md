@@ -18,6 +18,7 @@
 ### TokenizationSpokes upgradeability
 | contract |upgradeable by |
 |----------|----------|
+|  [waCoreUSAT TokenizationSpoke (0x653f25…)](https://snowscan.xyz/address/0x653F2541E7d51a846e92fA6F7866bA92e465a379) |  V4 Security Council | |--------|--------|
 |  [CORE WAVAX TokenizationSpoke](https://snowscan.xyz/address/0x1604D602f8A05CBA2d8Ff5d14DE4C3498f15B6B4) |  V4 Security Council | |--------|--------|
 |  [CORE BTCb TokenizationSpoke](https://snowscan.xyz/address/0x7cd3Ccc737f442050a861EC6b00768AE96B2F58E) |  V4 Security Council | |--------|--------|
 |  [CORE USDC TokenizationSpoke](https://snowscan.xyz/address/0x01D7f7B7CE2123192fECC20bd1caF3e4d9e4C10D) |  V4 Security Council | |--------|--------|
@@ -101,4 +102,9 @@
 |  SPOKE_CONFIGURATOR_ROLE |  [SpokeConfigurator](https://snowscan.xyz/address/0x8F72573F1Aa0A1e39fFD2a2A69e9EDAa8B982642) | |--------|--------|
 |  SPOKE_USER_POSITION_UPDATER_ROLE |   | |--------|--------|
 |  SPOKE_CONFIGURATOR_DOMAIN_ADMIN_ROLE |  [V4 Security Council Executor](https://snowscan.xyz/address/0xb619fA61e795D47f517702e63ce50292370561F1), [Manual AGRS](https://snowscan.xyz/address/0xd8d7AbC42c1c938BdEC94fF8da1b3cd5b7e3b107), [Executor_lvl1](https://snowscan.xyz/address/0x3C06dce358add17aAf230f2234bCCC4afd50d090), [V4 Security Council](https://snowscan.xyz/address/0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9) | |--------|--------|
+
+### New/untracked hubs and spokes
+| contract |type |hubs |discovered via |
+|----------|----------|----------|----------|
+|  [waCoreUSAT TokenizationSpoke (0x653f25…)](https://snowscan.xyz/address/0x653f2541e7d51a846e92fa6f7866ba92e465a379) |  TokenizationSpoke |  [CORE Hub](https://snowscan.xyz/address/0xd07369fAE4A5BB13c9Ce446B052c7867B1AbDf6e) |  hubSpokeList | |--------|--------|--------|--------|
 

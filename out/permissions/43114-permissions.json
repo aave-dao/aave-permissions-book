@@ -4032,6 +4032,36 @@
     },
     "tokenizationSpokes": {
       "contracts": {
+        "waCoreUSAT TokenizationSpoke (0x653f25…)": {
+          "address": "0x653F2541E7d51a846e92fA6F7866bA92e465a379",
+          "modifiers": [],
+          "proxyAdmin": "0x74e7cb0ff2cd695560ca084cc00514a587ecca1b"
+        },
+        "_waCoreUSAT TokenizationSpoke (0x653f25…) ProxyAdmin": {
+          "address": "0x74e7cb0ff2cd695560ca084cc00514a587ecca1b",
+          "modifiers": [
+            {
+              "modifier": "onlyOwner",
+              "addresses": [
+                {
+                  "address": "0x187AAE17d4931310B3fc75743e7F16Bdc9eD77e9",
+                  "owners": [
+                    "0x6F0A37801E9dC215AA70117553B5501e65FEea0C",
+                    "0x76c82c2cB7C5dB3B053A251F3281081C6EC40FDF",
+                    "0x9AB4e51a7cd8cE1279D9dbfA01Ad61367C3e3749",
+                    "0xc0A15667D6c63ac2CBFCAf5ABbFA0639018B2065",
+                    "0x437B97618dFB8c8B1f403Bd2E9436730f0f9D884",
+                    "0x75C26ED4D9c5D331665766394D933E12f8597a55",
+                    "0xbf113Fa52454A94185b65e6f2E818B7f178f937a",
+                    "0x606dC57cd166643760E049609bfd1D8a698D3bAc"
+                  ],
+                  "signersThreshold": 5
+                }
+              ],
+              "functions": []
+            }
+          ]
+        },
         "CORE WAVAX TokenizationSpoke": {
           "address": "0x1604D602f8A05CBA2d8Ff5d14DE4C3498f15B6B4",
           "modifiers": [],
@@ -4412,6 +4442,18 @@
           "0x5a5a711560eb9293ef6f4bc33cd8589b4a603d10",
           "0x50be00c5ebf6cc230b8970f4205cd0b5a70eaeb1",
           "0x6e3b91a951da9b515a5e98f0c7d210a697382e7f"
+        ]
+      }
+    },
+    "untracked": {
+      "0x653f2541e7d51a846e92fa6f7866ba92e465a379": {
+        "name": "waCoreUSAT TokenizationSpoke (0x653f25…)",
+        "type": "TokenizationSpoke",
+        "hubs": [
+          "0xd07369fae4a5bb13c9ce446b052c7867b1abdf6e"
+        ],
+        "sources": [
+          "hubSpokeList"
         ]
       }
     }
