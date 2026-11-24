@@ -246,25 +246,32 @@ export const generateTableAddress = (
   // Cross-chain addresses (e.g., a governance executor on mainnet referenced
   // from a sidechain pool) need to be resolved against the remote chain's contracts.
   // Display name is suffixed with the network name: "PayloadsController(Ethereum)"
+  let remoteContractsByAddress: Record<string, string> = {};
   if (chainId) {
     const newContractsByAddress = generateContractsByAddress({
-      ...getPermissionsByNetwork(chainId)['V3'].govV3?.contracts,
-      ...getPermissionsByNetwork(chainId)['V3'].ppc?.contracts,
+      ...getPermissionsByNetwork(chainId)['V3']?.govV3?.contracts,
+      ...getPermissionsByNetwork(chainId)['V3']?.ppc?.contracts,
       ...getPermissionsByNetwork(chainId)['V3_WHITE_LABEL']?.govV3?.contracts,
       ...getPermissionsByNetwork(chainId)['V3_WHITE_LABEL']?.ppc?.contracts,
     });
     const networkContractsByAddress: Record<string, string> = {};
     Object.keys(newContractsByAddress).forEach((key) => {
-      networkContractsByAddress[key] = `${newContractsByAddress[key]}(${getNetowkName[chainId]})`;
+      networkContractsByAddress[key] = `${newContractsByAddress[key]}(${getNetowkName[chainId] ?? chainId})`;
     });
     contractsByAddress = {
       ...contractsByAddress,
       ...networkContractsByAddress,
     };
+    remoteContractsByAddress = networkContractsByAddress;
   }
 
   // Resolve display name (priority order)
   const resolveDisplayName = (): string => {
+    // 0. A remote address is named after the remote chain's contract, even if the
+    //    same address means something else on this chain
+    if (remoteContractsByAddress[checkSummedAddress]) {
+      return remoteContractsByAddress[checkSummedAddress];
+    }
     // 1. Check addressesNames with original address
     if (addressesNames[address]) {
       return addressesNames[address];

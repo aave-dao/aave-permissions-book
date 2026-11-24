@@ -10,6 +10,8 @@ import { ICrossChainController_ABI } from '../abis/crossChainController.js';
 import { Address, Client, getAddress, getContract, zeroAddress } from 'viem';
 import { createOwnerResolver } from '../helpers/ownerResolver.js';
 import { resolveAllRoleOwners, mapRoleAddresses } from '../helpers/contractResolvers.js';
+import { networkConfigs } from '../helpers/configs/networks/index.js';
+import { getNetowkName } from '../helpers/configs/constants.js';
 
 export const resolveGovV3Modifiers = async (
   addressBook: AddressBook,
@@ -252,42 +254,89 @@ export const resolveGovV3Modifiers = async (
       const bridges: string[] = await cccContract.read.getReceiverBridgeAdaptersByChain([supportedChains[i]]) as string[];
       bridges.map((bridge) => receiverBridges.add(bridge));
     }
-
     const receiverBridgesArray = Array.from(receiverBridges);
-    for (let i = 0; i < receiverBridgesArray.length; i++) {
-      const trustedRemotes: { address: string; chain: string }[] = [];
-      for (let j = 0; j < supportedChains.length; j++) {
-        const bridgeAdapterContract = getContract({ address: getAddress(receiverBridgesArray[i]), abi: baseAdapter, client: provider });
-        const trustedRemote: string = await bridgeAdapterContract.read.getTrustedRemoteByChainId([supportedChains[j]]) as Address;
 
-        if (trustedRemote === zeroAddress) break;
-        trustedRemotes.push({ address: trustedRemote, chain: supportedChains[j].toString() });
+    // The CCC exposes no list of forwarding destinations, so probe every chain the book knows about.
+    const candidateDestinations = Array.from(
+      new Set([
+        ...Object.keys(networkConfigs).map(Number),
+        ...Object.keys(getNetowkName).map(Number),
+        ...supportedChains.map(Number),
+      ]),
+    )
+      .filter((destination) => destination !== Number(chainId))
+      .sort((a, b) => a - b);
+    // sending adapter -> [{ destination chain, adapter on the destination chain }]
+    const forwarderBridges: Map<string, { address: string; chain: string }[]> = new Map();
+    for (const destination of candidateDestinations) {
+      const configs = await cccContract.read.getForwarderBridgeAdaptersByChain([BigInt(destination)]) as {
+        destinationBridgeAdapter: Address;
+        currentChainBridgeAdapter: Address;
+      }[];
+      for (const config of configs) {
+        const routes = forwarderBridges.get(config.currentChainBridgeAdapter) ?? [];
+        routes.push({ address: config.destinationBridgeAdapter, chain: destination.toString() });
+        forwarderBridges.set(config.currentChainBridgeAdapter, routes);
       }
+    }
 
+    const adapterAddresses = Array.from(new Set([...receiverBridgesArray, ...forwarderBridges.keys()]));
+    const adapterNames: Record<string, string> = {};
+    for (let i = 0; i < adapterAddresses.length; i++) {
       let bridgeAdapterName = `BridgeAdapter${i}`;
       try {
-        const bridgeAdapterContract = getContract({ address: getAddress(receiverBridgesArray[i]), abi: baseAdapter, client: provider });
+        const bridgeAdapterContract = getContract({ address: getAddress(adapterAddresses[i]), abi: baseAdapter, client: provider });
         bridgeAdapterName = await bridgeAdapterContract.read.adapterName() as string;
       } catch (error) {
-        if (addressNames && addressNames[receiverBridgesArray[i]] !== '') {
-          bridgeAdapterName = addressNames[receiverBridgesArray[i]];
+        if (addressNames && addressNames[adapterAddresses[i]]) {
+          bridgeAdapterName = addressNames[adapterAddresses[i]];
         }
       }
+      adapterNames[adapterAddresses[i]] = bridgeAdapterName;
+    }
+    // Several adapter generations of the same bridge can be live at once (e.g. one CCIP adapter per
+    // group of destinations). Entries are keyed by name, so suffix the address when a name is shared.
+    const adapterKey = (address: string): string => {
+      const name = adapterNames[address];
+      const shared = adapterAddresses.some((other) => other !== address && adapterNames[other] === name);
+      return shared ? `${name} (${address.slice(0, 6)}...${address.slice(-4)})` : name;
+    };
 
-      obj[bridgeAdapterName] = {
-        address: receiverBridgesArray[i],
-        modifiers: [
-          {
-            modifier: 'trustedRemote',
-            addresses: trustedRemotes.map((trustedRemote) => ({
-              address: trustedRemote.address,
-              owners: [],
-              chain: trustedRemote.chain.toString(),
-            })),
-            functions: ['receiveMessage'],
-          },
-        ],
-      };
+    for (const adapter of adapterAddresses) {
+      const modifiers: Contracts[string]['modifiers'] = [];
+
+      if (receiverBridges.has(adapter)) {
+        const trustedRemotes: { address: string; chain: string }[] = [];
+        for (let j = 0; j < supportedChains.length; j++) {
+          const bridgeAdapterContract = getContract({ address: getAddress(adapter), abi: baseAdapter, client: provider });
+          const trustedRemote: string = await bridgeAdapterContract.read.getTrustedRemoteByChainId([supportedChains[j]]) as Address;
+
+          if (trustedRemote === zeroAddress) break;
+          trustedRemotes.push({ address: trustedRemote, chain: supportedChains[j].toString() });
+        }
+        modifiers.push({
+          modifier: 'trustedRemote',
+          addresses: trustedRemotes.map((trustedRemote) => ({
+            address: trustedRemote.address,
+            owners: [],
+            chain: trustedRemote.chain.toString(),
+          })),
+          functions: ['receiveMessage'],
+        });
+      }
+
+      const routes = forwarderBridges.get(adapter);
+      if (routes) {
+        // Not access control: the CCC delegatecalls forwardMessage. Lists the adapter each
+        // destination chain receives on, so the table shows which chains this adapter sends to.
+        modifiers.push({
+          modifier: 'destinationAdapters',
+          addresses: routes.map((route) => ({ address: route.address, owners: [], chain: route.chain })),
+          functions: ['forwardMessage'],
+        });
+      }
+
+      obj[adapterKey(adapter)] = { address: adapter, modifiers };
     }
 
     obj['CrossChainController'] = {

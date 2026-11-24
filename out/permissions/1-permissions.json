@@ -1971,7 +1971,7 @@
             }
           ]
         },
-        "CCIP adapter": {
+        "CCIP adapter (0xB7a6...Ef29)": {
           "address": "0xB7a6618df58626C3a122ABAFD6Ee63Af63f3Ef29",
           "modifiers": [
             {
@@ -1991,6 +1991,29 @@
               "functions": [
                 "receiveMessage"
               ]
+            },
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xAE93BEa44dcbE52B625169588574d31e36fb3A67",
+                  "owners": [],
+                  "chain": "56"
+                },
+                {
+                  "address": "0xe79757D55a1600eF28D816a893E78E9FCDE2019E",
+                  "owners": [],
+                  "chain": "137"
+                },
+                {
+                  "address": "0x2b88C83727B0E290B76EB3F6133994fF81B7f355",
+                  "owners": [],
+                  "chain": "43114"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
             }
           ]
         },
@@ -2009,10 +2032,23 @@
               "functions": [
                 "receiveMessage"
               ]
+            },
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x853649f897383f89d8441346Cf26a9ed02720B02",
+                  "owners": [],
+                  "chain": "137"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
             }
           ]
         },
-        "LayerZero adapter": {
+        "LayerZero adapter (0x8410...0FCC)": {
           "address": "0x8410d9BD353b420ebA8C48ff1B0518426C280FCC",
           "modifiers": [
             {
@@ -2032,10 +2068,43 @@
               "functions": [
                 "receiveMessage"
               ]
+            },
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xa5cc218513305221201f196760E9e64e9D49d98A",
+                  "owners": [],
+                  "chain": "56"
+                },
+                {
+                  "address": "0x9b6f5ef589A3DD08670Dd146C11C4Fb33E04494F",
+                  "owners": [],
+                  "chain": "100"
+                },
+                {
+                  "address": "0x7FAE7765abB4c8f778d57337bB720d0BC53057e3",
+                  "owners": [],
+                  "chain": "137"
+                },
+                {
+                  "address": "0x83BC62fbeA15B7Bfe11e8eEE57997afA5451f38C",
+                  "owners": [],
+                  "chain": "42220"
+                },
+                {
+                  "address": "0x10f02995a399C0dC0FaF29914220E9C1bCdE8640",
+                  "owners": [],
+                  "chain": "43114"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
             }
           ]
         },
-        "Hyperlane adapter": {
+        "Hyperlane adapter (0x01dc...cCC1)": {
           "address": "0x01dcb90Cf13b82Cde4A0BAcC655585a83Af3cCC1",
           "modifiers": [
             {
@@ -2054,6 +2123,445 @@
               ],
               "functions": [
                 "receiveMessage"
+              ]
+            },
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x3F006299eC88985c18E6e885EeA29A49eC579882",
+                  "owners": [],
+                  "chain": "56"
+                },
+                {
+                  "address": "0xA806DA549FcB2B4912a7dFFE4c1aA7A1ed0Bd5C9",
+                  "owners": [],
+                  "chain": "100"
+                },
+                {
+                  "address": "0x3e72665008dC237bdd91C04C10782Ed1987a4019",
+                  "owners": [],
+                  "chain": "137"
+                },
+                {
+                  "address": "0x1098F187F5f444Bc1c77cD9beE99e8d460347F5F",
+                  "owners": [],
+                  "chain": "146"
+                },
+                {
+                  "address": "0x7b065E68E70f346B18636Ab86779980287ec73e0",
+                  "owners": [],
+                  "chain": "42220"
+                },
+                {
+                  "address": "0x617332a777780F546261247F621051d0b98975Eb",
+                  "owners": [],
+                  "chain": "43114"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Optimism native adapter": {
+          "address": "0x0e24524778fdc67f53eEf144b8cbf50261E930B3",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xAE93BEa44dcbE52B625169588574d31e36fb3A67",
+                  "owners": [],
+                  "chain": "10"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Gnosis native adapter": {
+          "address": "0x7238d75fD75bb936E83b75854c653F104Ce9c9d8",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
+                  "owners": [],
+                  "chain": "100"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Hyperlane adapter (0x6bda...Bc67)": {
+          "address": "0x6bda311748E6542d578b167d791A4130f3FbBc67",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xb8F8aFdB7f1F4Ca9D842adFF86d052cb0C9f20CA",
+                  "owners": [],
+                  "chain": "143"
+                },
+                {
+                  "address": "0x13Dc9eBb19bb1A14aa56215b443B2703A07ba2D5",
+                  "owners": [],
+                  "chain": "9745"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "CCIP adapter (0x7c28...91F6)": {
+          "address": "0x7c28CEb47b49cFAC40e718dD407e4249F9C891F6",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x7Cd4245433185A08084E9cf80300682397F733AC",
+                  "owners": [],
+                  "chain": "143"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "LayerZero adapter (0xf948...0a53)": {
+          "address": "0xf9482751C9937fF940b93B5921B8984645dD0a53",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xb544322f8e59B71d7875e0E2EbceB7f3783257BE",
+                  "owners": [],
+                  "chain": "143"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "CCIP adapter (0xe3a0...f7AE)": {
+          "address": "0xe3a0d9754aD3452D687cf580Ba3674c2D7D2f7AE",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x1905fCdDa41241C0871A5eC3f9dcC3E8d247261D",
+                  "owners": [],
+                  "chain": "146"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "LayerZero adapter (0x8FD7...ABbe)": {
+          "address": "0x8FD7D8dd557817966181F584f2abB53549B4ABbe",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x7B8FaC105A7a85f02C3f31559d2ee7313BDC5d7f",
+                  "owners": [],
+                  "chain": "146"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "XLayer native adapter": {
+          "address": "0x9fD570da8fFe3384F1093833D44072ea79ABdEB0",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xEbc2c80073E4752e9A1D2e9A9bC98e8F4EeE9Be9",
+                  "owners": [],
+                  "chain": "196"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "ZkSync native adapter": {
+          "address": "0x6aD9d4147467f08b165e1b6364584C5d28898b84",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x1BC5C10CAe378fDbd7D52ec4F9f34590a619c68E",
+                  "owners": [],
+                  "chain": "324"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Metis native adapter": {
+          "address": "0x6B3Dc800E7c813Db3fe8D0F30fDCaE636935dC14",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xf41193E25408F652AF878c47E4401A01B5E4B682",
+                  "owners": [],
+                  "chain": "1088"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Soneium native adapter": {
+          "address": "0xe66973c4571F733CafEb1BDE1fa58Ff35416d901",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x5698e43Ef1be85C68Dec568B5925dD5DB7903e39",
+                  "owners": [],
+                  "chain": "1868"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "MegaEth native adapter": {
+          "address": "0xC88f3Ffa9923BfAA93681D62864a24d0D10D68d3",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x9Ec11a4c2fEc289Db81D75eF31140c358CB93CC6",
+                  "owners": [],
+                  "chain": "4326"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Mantle native adapter": {
+          "address": "0xb66FA987fa7975Cac3d12B629c9c44e459e50990",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x4E740ac02b866b429738a9e225e92A15F4452521",
+                  "owners": [],
+                  "chain": "5000"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Base native adapter": {
+          "address": "0xa5948b0ac79f72966dFFC5C13E44f6dfDD3D58A0",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x7120b1f8e5b73c0C0DC99C6e52Fe4937E7EA11e0",
+                  "owners": [],
+                  "chain": "8453"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "CCIP adapter (0x352C...46B0)": {
+          "address": "0x352C71092fB60ce2f94DFF4ACda330DdffD946B0",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x719e23D7B48Fc5AEa65Cff1bc58865C2b8d89A34",
+                  "owners": [],
+                  "chain": "9745"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "LayerZero adapter (0xBA0E...6792)": {
+          "address": "0xBA0Ee375e9d0c815097D9eB7EB9Db20b59c06792",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x99950E7C7eB320A8551916e8676a42b90b058d5D",
+                  "owners": [],
+                  "chain": "9745"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Arbitrum native adapter": {
+          "address": "0x88d6D01e08d3e64513b15fD46528dBbA7d755883",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xc8a2ADC4261c6b669CdFf69E717E77C9cFeB420d",
+                  "owners": [],
+                  "chain": "42161"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "CCIP adapter (0x5848...2B6f)": {
+          "address": "0x58489B249BfBCF5ef4B30bdE2792086e83122B6f",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x3d534E8964e7aAcfc702751cc9A2BB6A9fe7d928",
+                  "owners": [],
+                  "chain": "42220"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Ink native adapter": {
+          "address": "0x98E78C2cD3013BF13a658E210e27C3732c8Dc48A",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xC2cD4F76B7a77AEaE3C04A9B6B105EC1Ad28e984",
+                  "owners": [],
+                  "chain": "57073"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Linea native adapter": {
+          "address": "0x8097555ffDa4176C93FEf92dF473b9763e467686",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0xB3332d31ECFC3ef3BF6Cda79833D11d1A53f5cE6",
+                  "owners": [],
+                  "chain": "59144"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Bob native adapter": {
+          "address": "0x1e2bFEF32EdAbf6b3EF8B674044DC00f082Addff",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x2171E8AD4045342AF92DdC1227ADC659f2a00535",
+                  "owners": [],
+                  "chain": "60808"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
+              ]
+            }
+          ]
+        },
+        "Scroll native adapter": {
+          "address": "0xA4dC3F123e1c601A19B3DC8382BB9311F678cafA",
+          "modifiers": [
+            {
+              "modifier": "destinationAdapters",
+              "addresses": [
+                {
+                  "address": "0x3C06dce358add17aAf230f2234bCCC4afd50d090",
+                  "owners": [],
+                  "chain": "534352"
+                }
+              ],
+              "functions": [
+                "forwardMessage"
               ]
             }
           ]
