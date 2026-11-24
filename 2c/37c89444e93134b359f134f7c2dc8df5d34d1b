@@ -1,0 +1,32 @@
+helpers/configs/constants.ts
+  s_438b8b77cd74ed::t_2bc5da23803f36 95-107
+scripts/govV3Permissions.ts
+  s_438b8b77cd74ed::t_2bc5da23803f36 13-14,258-279,281,283-285,288,291-292,295-303,305-339
+out/ETHEREUM-V3.md
+  s_438b8b77cd74ed::t_9d03f2243c199e 47,49-72,174-175,177-180,182-203,208
+  s_438b8b77cd74ed::t_42df8bc4e7be1a 181
+scripts/createTables.ts
+  s_438b8b77cd74ed::t_473290bf6b2496 249,265,270-274
+  s_438b8b77cd74ed::t_2bc5da23803f36 259
+  s_438b8b77cd74ed::t_42df8bc4e7be1a 252-253
+out/permissions/1-permissions.json
+  s_438b8b77cd74ed::t_7ead482e1acadd 1974,1994-2016,2035-2047,2051,2071-2103,2107,2127-2565
+out/permissions/metadata/1-metadata.json
+  s_438b8b77cd74ed::t_c4ea4d76ce940a 3,123,128
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2c37c89444e93134b359f134f7c2dc8df5d34d1b",
+  "prompts": {},
+  "sessions": {
+    "s_438b8b77cd74ed": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c94abfb3-3c90-4c42-ad59-d1dcaa9b2ac4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "AlbertoCentonze <11707683+AlbertoCentonze@users.noreply.github.com>"
+    }
+  }
+}
