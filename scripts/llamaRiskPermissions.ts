@@ -4,6 +4,7 @@ import { generateRoles } from "../helpers/jsonParsers.js";
 import { uniqueAddresses } from "../helpers/addressUtils.js";
 import { createOwnerResolver } from "../helpers/ownerResolver.js";
 import {
+  CAPS_BORROW_FORWARDER_ABI,
   CAPS_PARAMETER_REGISTRY_ABI,
   CAPS_RANGE_VALIDATION_MODULE_ABI,
   LLAMAGUARD_RISK_ORACLE_ROUTER_ABI,
@@ -19,8 +20,8 @@ import {
  *
  * Caps stack: its own RiskOracle and Router (same contracts and roles as the PT ones), the
  * CapsParameterRegistry holding the workflow parameters, the CapsRangeValidationModule that bounds
- * every cap change of the raise and cut agents, and the adminless CapsReducerOracle the cut agents
- * read from.
+ * every cap change of the raise and cut agents, the adminless CapsReducerOracle the cut agents
+ * read from, and the CapsBorrowForwarder that raises a borrow cap and borrows in one call.
  *
  * None of these is registered in the AgentHub, so unlike the agents they are not discovered by
  * enumeration and are resolved from their address book entries instead.
@@ -244,6 +245,48 @@ export const resolveLlamaRiskModifiers = async (
           functions: roles["LlamaRiskCapsRangeValidationModule"]["onlyRiskCouncil"],
         },
       ],
+    };
+  }
+
+  // Forwarder: owned by the Aave executor. `isCaller` is a mapping with no enumeration, so the Risk
+  // Council Safe of the forwarder's RVM is checked directly rather than listed: it is the only caller
+  // the stack allowlists. It is read from the RVM because `RISK_COUNCIL` in the merged address book
+  // can be another Safe (on Arbitrum the GHO address book overrides it).
+  if (addressBook.LLAMARISK_CAPS_BORROW_FORWARDER) {
+    const forwarder = getContract({
+      address: getAddress(addressBook.LLAMARISK_CAPS_BORROW_FORWARDER as string),
+      abi: CAPS_BORROW_FORWARDER_ABI,
+      client: provider,
+    });
+    const owner = (await forwarder.read.owner()) as Address;
+
+    const modifiers = [
+      {
+        modifier: "onlyOwner",
+        addresses: [await resolveEntry(owner)],
+        functions: roles["LlamaRiskCapsBorrowForwarder"]["onlyOwner"],
+      },
+    ];
+
+    const rvmAddress = (await forwarder.read.RVM()) as Address;
+    const rvm = getContract({
+      address: getAddress(rvmAddress),
+      abi: CAPS_RANGE_VALIDATION_MODULE_ABI,
+      client: provider,
+    });
+    const riskCouncil = (await rvm.read.riskCouncil()) as Address;
+    const riskCouncilIsCaller = (await forwarder.read.isCaller([riskCouncil])) as boolean;
+    if (riskCouncilIsCaller) {
+      modifiers.push({
+        modifier: "onlyCaller",
+        addresses: [await resolveEntry(riskCouncil)],
+        functions: roles["LlamaRiskCapsBorrowForwarder"]["onlyCaller"],
+      });
+    }
+
+    obj["LlamaRiskCapsBorrowForwarder"] = {
+      address: addressBook.LLAMARISK_CAPS_BORROW_FORWARDER as string,
+      modifiers,
     };
   }
 

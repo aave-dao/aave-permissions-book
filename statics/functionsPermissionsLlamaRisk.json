@@ -224,5 +224,31 @@
         "roles": ["onlyRiskCouncil"]
       }
     ]
+  },
+  {
+    "contract": "LlamaRiskCapsBorrowForwarder",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setCaller",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setLimits",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "raiseCapAndBorrow",
+        "roles": ["onlyCaller"]
+      },
+      {
+        "name": "raiseCapAndBorrowBatch",
+        "roles": ["onlyCaller"]
+      }
+    ]
   }
 ]
