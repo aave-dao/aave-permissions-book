@@ -19,7 +19,21 @@ const v3Pool = createV3Pool({
   crossChainControllerBlock: 112113800,
   granularGuardianBlock: 233088975,
   clinicStewardBlock: 311843330,
-  addressBook: { ...AaveV3Arbitrum, ...MiscArbitrum, ...GhoArbitrum },
+  addressBook: {
+    ...AaveV3Arbitrum,
+    ...MiscArbitrum,
+    ...GhoArbitrum,
+    // Until the aave-address-book release with the Arbitrum LlamaGuard caps entries ships.
+    LLAMARISK_RISK_ORACLE_ADMIN_SAFE: '0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471',
+    LLAMARISK_CAPS_RISK_ORACLE: '0x556c75E6bbf0672bf3510b839Ad229450C474f23',
+    LLAMARISK_CAPS_RISK_ORACLE_ROUTER: '0x74d8dd6CfCC3BeED9C4Db3fd6c4e471aD721d9F0',
+    LLAMARISK_CAPS_PARAMETER_REGISTRY: '0x2662d3A9d07589DCAbAA10ea85F66572b51c260d',
+    LLAMARISK_CAPS_RANGE_VALIDATION_MODULE: '0x039C0E59F728bA984dFAA96dFF977B977aA82Beb',
+    LLAMARISK_CAPS_REDUCER_ORACLE: '0xC8D89bd6894C315Fb13bBD057357D1380771C181',
+    LLAMARISK_CAPS_RAISE_AGENT: '0x996126C29374EbBA1A3AC91c2564C29D0E634765',
+    LLAMARISK_CAPS_CUT_AGENT: '0x3Fe54E476007CB315B23284BC1064cCC01a1f666',
+  },
+  functionsPermissionsLlamaRiskJson: './statics/functionsPermissionsLlamaRisk.json',
   governanceAddressBook: GovernanceV3Arbitrum,
   addresses: {
     '0x3829943c53F2d00e20B58475aF19716724bF90Ba': 'ArbAdapter',
