@@ -57,11 +57,11 @@
   },
   "0x5A7d6b2F92C77FAD6CCaBd7EE0624E64907Eaf3E": {
     "symbol": "ZK",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xE818A67EE5c0531AFaa31Aa6e20bcAC36227A641": {
     "symbol": "aZksweETH",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xf31E1599b4480d07Fa96a7248c4f05cA84DA7fa8": {
     "symbol": "variableDebtZksweETH",
@@ -69,11 +69,11 @@
   },
   "0xc1Fa6E2E8667d9bE0Ca938a54c7E0285E9Df924a": {
     "symbol": "weETH",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xF3c9d58B76AC6Ee6811520021e9A9318c49E4CFa": {
     "symbol": "aZkssUSDe",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xDeBb4ddaaaB1676775214552a7a05D6A13f905Da": {
     "symbol": "variableDebtZkssUSDe",
@@ -81,11 +81,11 @@
   },
   "0xAD17Da2f6Ac76746EF261E835C50b2651ce36DA8": {
     "symbol": "sUSDe",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x5722921bb6C37EaEb78b993765Aa5D79CC50052F": {
     "symbol": "aZkswrsETH",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x97deC07366Be72884331BE21704Fd93BF35286f9": {
     "symbol": "variableDebtZkswrsETH",
@@ -93,6 +93,6 @@
   },
   "0xd4169E045bcF9a86cC00101225d9ED61D2F51af2": {
     "symbol": "wrsETH",
-    "emissionAdmin": "0x95Cbff6e45C499d45dd8627f3ce179057B5Fbfcc"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   }
 }

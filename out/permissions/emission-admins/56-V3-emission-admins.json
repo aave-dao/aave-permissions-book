@@ -81,11 +81,11 @@
   },
   "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409": {
     "symbol": "FDUSD",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xBDFd4E51D3c14a232135f04988a42576eFb31519": {
     "symbol": "aBnbwstETH",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x2c391998308c56D7572A8F501D58CB56fB9Fe1C5": {
     "symbol": "variableDebtBnbwstETH",
@@ -93,6 +93,6 @@
   },
   "0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C": {
     "symbol": "wstETH",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   }
 }

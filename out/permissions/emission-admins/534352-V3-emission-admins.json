@@ -33,7 +33,7 @@
   },
   "0xf610A9dfB7C89644979b4A0f27063E9e7d7Cda32": {
     "symbol": "wstETH",
-    "emissionAdmin": "0xC18F11735C6a1941431cCC5BcF13AF0a052A5022"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xd80A5e16DBDC52Bd1C947CEDfA22c562Be9129C8": {
     "symbol": "aScrweETH",
@@ -49,7 +49,7 @@
   },
   "0x25718130C2a8eb94e2e1FAFB5f1cDd4b459aCf64": {
     "symbol": "aScrSCR",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xFFbA405BBF25B2e6C454d18165F2fd8786858c6B": {
     "symbol": "variableDebtScrSCR",
@@ -57,6 +57,6 @@
   },
   "0xd29687c813D741E2F938F4aC377128810E217b1b": {
     "symbol": "SCR",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   }
 }

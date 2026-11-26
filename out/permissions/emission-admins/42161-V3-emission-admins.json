@@ -81,7 +81,7 @@
   },
   "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196": {
     "symbol": "AAVE",
-    "emissionAdmin": "0xbbd9f90699c1FA0D7A65870D241DD1f1217c96Eb"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x6d80113e533a2C0fe82EaBD35f1875DcEA89Ea97": {
     "symbol": "aArbEURS",
@@ -105,7 +105,7 @@
   },
   "0x5979D7b546E38E414F7E9822514be443A4800529": {
     "symbol": "wstETH",
-    "emissionAdmin": "0xC18F11735C6a1941431cCC5BcF13AF0a052A5022"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xc45A479877e1e9Dfe9FcD4056c699575a1045dAA": {
     "symbol": "aArbMAI",
@@ -177,7 +177,7 @@
   },
   "0x912CE59144191C1204E64559FE8253a0e49E6548": {
     "symbol": "ARB",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x8437d7C167dFB82ED4Cb79CD44B7a32A1dd95c77": {
     "symbol": "aArbweETH",
@@ -205,7 +205,7 @@
   },
   "0xEA1132120ddcDDA2F119e99Fa7A27a0d036F7Ac9": {
     "symbol": "aArbezETH",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x1fFD28689DA7d0148ff0fCB669e9f9f0Fc13a219": {
     "symbol": "variableDebtArbezETH",
@@ -213,11 +213,11 @@
   },
   "0x2416092f143378750bb29b79eD961ab195CcEea5": {
     "symbol": "ezETH",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x6b030Ff3FB9956B1B69f475B77aE0d3Cf2CC5aFa": {
     "symbol": "aArbrsETH",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x80cA0d8C38d2e2BcbaB66aA1648Bd1C7160500FE": {
     "symbol": "variableDebtArbrsETH",
@@ -225,11 +225,11 @@
   },
   "0x4186BFC76E2E237523CBC30FD220FE055156b41F": {
     "symbol": "rsETH",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0x62fC96b27a510cF4977B59FF952Dc32378Cc221d": {
     "symbol": "aArbtBTC",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   },
   "0xB5b46F918C2923fC7f26DB76e8a6A6e9C4347Cf9": {
     "symbol": "variableDebtArbtBTC",
@@ -237,6 +237,10 @@
   },
   "0x6c84a8f1c29108F47a79964b5Fe888D4f4D0dE40": {
     "symbol": "tBTC",
-    "emissionAdmin": "0xac140648435d03f784879cd789130F22Ef588Fcd"
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
+  },
+  "0x13Ad51ed4F1B7e9Dc168d8a00cB3f4dDD85EfA60": {
+    "symbol": "LDO",
+    "emissionAdmin": "0x0000000000000000000000000000000000000000"
   }
 }
