@@ -1744,3 +1744,683 @@ export const LLAMAGUARD_RISK_ORACLE_ROUTER_ABI = [
     "inputs": []
   }
 ] as const;
+
+// Only the getters the generator reads and the role-gated functions it lists.
+export const CAPS_PARAMETER_REGISTRY_ABI = [
+  {
+    "type": "function",
+    "name": "addMarket",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct ICapsParameterRegistry.MarketParams",
+        "components": [
+          {
+            "name": "defaultParams",
+            "type": "tuple",
+            "internalType": "struct ICapsParameterRegistry.WorkflowParams",
+            "components": [
+              {
+                "name": "enabled",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "triggerBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              },
+              {
+                "name": "marginBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              },
+              {
+                "name": "minMarginTokens",
+                "type": "uint64",
+                "internalType": "uint64"
+              }
+            ]
+          },
+          {
+            "name": "rvm",
+            "type": "address",
+            "internalType": "address"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "addReserve",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct ICapsParameterRegistry.ReserveOverride",
+        "components": [
+          {
+            "name": "enabled",
+            "type": "uint8",
+            "internalType": "enum ICapsParameterRegistry.EnabledOverride"
+          },
+          {
+            "name": "triggerBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "marginBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "minMarginTokens",
+            "type": "uint64",
+            "internalType": "uint64"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "removeMarket",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "removeReserve",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setEnabled",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "enabled",
+        "type": "uint8",
+        "internalType": "enum ICapsParameterRegistry.EnabledOverride"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setMarketParams",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct ICapsParameterRegistry.MarketParams",
+        "components": [
+          {
+            "name": "defaultParams",
+            "type": "tuple",
+            "internalType": "struct ICapsParameterRegistry.WorkflowParams",
+            "components": [
+              {
+                "name": "enabled",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "triggerBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              },
+              {
+                "name": "marginBps",
+                "type": "uint16",
+                "internalType": "uint16"
+              },
+              {
+                "name": "minMarginTokens",
+                "type": "uint64",
+                "internalType": "uint64"
+              }
+            ]
+          },
+          {
+            "name": "rvm",
+            "type": "address",
+            "internalType": "address"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setReserveOverride",
+    "inputs": [
+      {
+        "name": "market",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "params",
+        "type": "tuple",
+        "internalType": "struct ICapsParameterRegistry.ReserveOverride",
+        "components": [
+          {
+            "name": "enabled",
+            "type": "uint8",
+            "internalType": "enum ICapsParameterRegistry.EnabledOverride"
+          },
+          {
+            "name": "triggerBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "marginBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "minMarginTokens",
+            "type": "uint64",
+            "internalType": "uint64"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setUpdater",
+    "inputs": [
+      {
+        "name": "updater_",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updater",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  }
+] as const;
+
+// Only the getters the generator reads and the role-gated functions it lists.
+export const CAPS_RANGE_VALIDATION_MODULE_ABI = [
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "riskCouncil",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setAgent",
+    "inputs": [
+      {
+        "name": "agentId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "direction",
+        "type": "uint8",
+        "internalType": "enum ICapsRangeValidationModule.Direction"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setBounds",
+    "inputs": [
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "enum ICapsRangeValidationModule.CapKind"
+      },
+      {
+        "name": "bounds",
+        "type": "tuple",
+        "internalType": "struct ICapsRangeValidationModule.Bounds",
+        "components": [
+          {
+            "name": "alphaBpsLimit",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "cutBandBpsLimit",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "maxIncreaseBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "cooldown",
+            "type": "uint40",
+            "internalType": "uint40"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setHold",
+    "inputs": [
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "enum ICapsRangeValidationModule.CapKind"
+      },
+      {
+        "name": "until",
+        "type": "uint40",
+        "internalType": "uint40"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setOnboarding",
+    "inputs": [
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "enum ICapsRangeValidationModule.CapKind"
+      },
+      {
+        "name": "until",
+        "type": "uint40",
+        "internalType": "uint40"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setRateLimitConfig",
+    "inputs": [
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
+        "internalType": "enum ICapsRangeValidationModule.CapKind"
+      },
+      {
+        "name": "rateLimitConfig",
+        "type": "tuple",
+        "internalType": "struct ICapsRangeValidationModule.RateLimitConfig",
+        "components": [
+          {
+            "name": "maxCap",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "maxHeadroom",
+            "type": "uint64",
+            "internalType": "uint64"
+          },
+          {
+            "name": "alphaBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          },
+          {
+            "name": "cutBandBps",
+            "type": "uint16",
+            "internalType": "uint16"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setRiskCouncil",
+    "inputs": [
+      {
+        "name": "riskCouncil_",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+] as const;
+
+// Only the getters the generator reads and the role-gated functions it lists.
+export const CAPS_BORROW_FORWARDER_ABI = [
+  {
+    "type": "function",
+    "name": "RVM",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "isCaller",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "allowed",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "raiseCapAndBorrow",
+    "inputs": [
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "onBehalfOf",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "raiseCapAndBorrowBatch",
+    "inputs": [
+      {
+        "name": "asset",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "requests",
+        "type": "tuple[]",
+        "internalType": "struct ICapsBorrowForwarder.BorrowRequest[]",
+        "components": [
+          {
+            "name": "onBehalfOf",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "amount",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setCaller",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "allowed",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setLimits",
+    "inputs": [
+      {
+        "name": "maxRaiseBuffers_",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "minRaiseDelay_",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+] as const;

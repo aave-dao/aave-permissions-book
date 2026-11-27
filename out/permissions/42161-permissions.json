@@ -576,6 +576,263 @@
             ]
           }
         ]
+      },
+      "LlamaRiskCapsRiskOracle": {
+        "address": "0x556c75E6bbf0672bf3510b839Ad229450C474f23",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0xb3c2337f50D597e6239cE03f0B0023407Dc6A417",
+                  "0x560681900Fa88Ea4A2F78C62C4a1aC6F8B8B11cB",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "addAuthorizedSender",
+              "removeAuthorizedSender",
+              "addUpdateType",
+              "transferOwnership",
+              "renounceOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyAuthorized",
+            "addresses": [
+              {
+                "address": "0x74d8dd6CfCC3BeED9C4Db3fd6c4e471aD721d9F0",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "publishRiskParameterUpdate",
+              "publishBulkRiskParameterUpdates"
+            ]
+          }
+        ]
+      },
+      "LlamaguardCapsRiskOracleRouter": {
+        "address": "0x74d8dd6CfCC3BeED9C4Db3fd6c4e471aD721d9F0",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0x95e6dEEb6863Adb187969De2f8B163E6536B52BA",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "addRoute",
+              "removeRoute",
+              "setRiskOracle",
+              "setAgentHub",
+              "setUpdater",
+              "setGuardian",
+              "unpause",
+              "transferOwnership",
+              "renounceOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyUpdater",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0xb3c2337f50D597e6239cE03f0B0023407Dc6A417",
+                  "0x560681900Fa88Ea4A2F78C62C4a1aC6F8B8B11cB",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "setRouteEnabled",
+              "setAgentIds",
+              "setRouteThrottle",
+              "setRouteMaxReportAge"
+            ]
+          },
+          {
+            "modifier": "onlyOwnerOrGuardian",
+            "addresses": [
+              {
+                "address": "0xCb45E82419baeBCC9bA8b1e5c7858e48A3B26Ea6",
+                "owners": [
+                  "0x3fa960f8355D00874D9C7E3350147f5E94859bc2",
+                  "0xa2DCdD6e0b5e0d118E2Fa8922552AC0Fe26EFe58",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef",
+                  "0xe6838d834674eC35EDd53D485770Baa10bdd6AAe",
+                  "0xc2674C1A1aF0557E1d217fF4F13DF44A637c7C13",
+                  "0x4Ab2Bed1d667260dB34244Ba412817651C2dD52b",
+                  "0xd4af2E86a27F8F77B0556E081F97B215C9cA8f2E"
+                ],
+                "signersThreshold": 4
+              },
+              {
+                "address": "0x95e6dEEb6863Adb187969De2f8B163E6536B52BA",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "pause"
+            ]
+          }
+        ]
+      },
+      "LlamaRiskCapsParameterRegistry": {
+        "address": "0x2662d3A9d07589DCAbAA10ea85F66572b51c260d",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0xFF1137243698CaA18EE364Cc966CF0e02A4e6327",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setUpdater",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyUpdater",
+            "addresses": [
+              {
+                "address": "0x1a0267E9E5929a5914Ae9DbBf23Bc07B14365471",
+                "owners": [
+                  "0xb3c2337f50D597e6239cE03f0B0023407Dc6A417",
+                  "0x560681900Fa88Ea4A2F78C62C4a1aC6F8B8B11cB",
+                  "0x8811e7DFef1CfFD041A9fd39F7e42D0eEd7eCcC3",
+                  "0x49cE85E1c55cb5b41b8Da2Db85826E3b63A47E00"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "addMarket",
+              "setMarketParams",
+              "removeMarket",
+              "addReserve",
+              "setReserveOverride",
+              "setEnabled",
+              "removeReserve"
+            ]
+          }
+        ]
+      },
+      "LlamaRiskCapsRangeValidationModule": {
+        "address": "0x039C0E59F728bA984dFAA96dFF977B977aA82Beb",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0xFF1137243698CaA18EE364Cc966CF0e02A4e6327",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setAgent",
+              "setBounds",
+              "setRiskCouncil",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyRiskCouncilOrOwner",
+            "addresses": [
+              {
+                "address": "0x3Be327F22eB4BD8042e6944073b8826dCf357Aa2",
+                "owners": [
+                  "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+                ],
+                "signersThreshold": 2
+              },
+              {
+                "address": "0xFF1137243698CaA18EE364Cc966CF0e02A4e6327",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setRateLimitConfig",
+              "setOnboarding"
+            ]
+          },
+          {
+            "modifier": "onlyRiskCouncil",
+            "addresses": [
+              {
+                "address": "0x3Be327F22eB4BD8042e6944073b8826dCf357Aa2",
+                "owners": [
+                  "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "setHold"
+            ]
+          }
+        ]
+      },
+      "LlamaRiskCapsBorrowForwarder": {
+        "address": "0x6bDBAF2B3aCdA83391D1C30b58dD137C5767eAdd",
+        "modifiers": [
+          {
+            "modifier": "onlyOwner",
+            "addresses": [
+              {
+                "address": "0xFF1137243698CaA18EE364Cc966CF0e02A4e6327",
+                "owners": [],
+                "signersThreshold": 0
+              }
+            ],
+            "functions": [
+              "setCaller",
+              "setLimits",
+              "transferOwnership"
+            ]
+          },
+          {
+            "modifier": "onlyCaller",
+            "addresses": [
+              {
+                "address": "0x3Be327F22eB4BD8042e6944073b8826dCf357Aa2",
+                "owners": [
+                  "0x2B99790c35a401be873FA7Eb514D9220736BB1cA",
+                  "0xb291232F480F41c75802C4a60F1D2AC03404Afef"
+                ],
+                "signersThreshold": 2
+              }
+            ],
+            "functions": [
+              "raiseCapAndBorrow",
+              "raiseCapAndBorrowBatch"
+            ]
+          }
+        ]
+      },
+      "LlamaRiskCapsReducerOracle": {
+        "address": "0xC8D89bd6894C315Fb13bBD057357D1380771C181",
+        "modifiers": []
       }
     },
     "roles": {

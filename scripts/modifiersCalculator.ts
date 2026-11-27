@@ -766,7 +766,7 @@ const generateNetworkPermissions = async (
     }
 
     if (pool.functionsPermissionsLlamaRiskJson) {
-      logTableGeneration(network, poolKey, 'LlamaRisk PT Oracle');
+      logTableGeneration(network, poolKey, 'LlamaRisk oracles');
 
       const { llamaRiskPermissions } = await resolveLlamaRiskModifiers(
         pool.addressBook,

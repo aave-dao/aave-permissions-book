@@ -148,5 +148,107 @@
         "roles": ["onlyOwnerOrGuardian"]
       }
     ]
+  },
+  {
+    "contract": "LlamaRiskCapsParameterRegistry",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setUpdater",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "addMarket",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setMarketParams",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "removeMarket",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "addReserve",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setReserveOverride",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "setEnabled",
+        "roles": ["onlyUpdater"]
+      },
+      {
+        "name": "removeReserve",
+        "roles": ["onlyUpdater"]
+      }
+    ]
+  },
+  {
+    "contract": "LlamaRiskCapsRangeValidationModule",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setAgent",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setBounds",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setRiskCouncil",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setRateLimitConfig",
+        "roles": ["onlyRiskCouncilOrOwner"]
+      },
+      {
+        "name": "setOnboarding",
+        "roles": ["onlyRiskCouncilOrOwner"]
+      },
+      {
+        "name": "setHold",
+        "roles": ["onlyRiskCouncil"]
+      }
+    ]
+  },
+  {
+    "contract": "LlamaRiskCapsBorrowForwarder",
+    "proxyAdmin": false,
+    "functions": [
+      {
+        "name": "setCaller",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "setLimits",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "transferOwnership",
+        "roles": ["onlyOwner"]
+      },
+      {
+        "name": "raiseCapAndBorrow",
+        "roles": ["onlyCaller"]
+      },
+      {
+        "name": "raiseCapAndBorrowBatch",
+        "roles": ["onlyCaller"]
+      }
+    ]
   }
 ]
